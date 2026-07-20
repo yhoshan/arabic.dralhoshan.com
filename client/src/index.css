@@ -1,6 +1,6 @@
 /*
- * تصميم عام: محاكاة مكنز مرجعي بهوية تركوازية أكاديمية هادئة. خط أميري هو الأساس،
- * وتبقى كلمة «مِكنز» أصغر بصرياً من عنوان «اللغة العربية وعلومها» في كل المقاسات.
+ * تصميم عام: محاكاة مكنز مرجعي بهوية #00B2A9 ونص أبيض ناصع فوق مساحات الهوية.
+ * خط أميري هو الأساس، وتبقى «مِكنز» أصغر من «اللغة العربية وعلومها» في سطر واحد.
  */
 @import "tailwindcss";
 @import "tw-animate-css";
@@ -31,10 +31,10 @@
   --primary-foreground: oklch(0.99 0.004 180);
   --border: oklch(0.85 0.026 181);
   --ring: oklch(0.61 0.11 184);
-  --teal: #10b6b0;
-  --teal-bright: #52dfd3;
-  --teal-deep: #064a4a;
-  --teal-ink: #073331;
+  --teal: #00b2a9;
+  --teal-bright: #ffffff;
+  --teal-deep: #007a74;
+  --teal-ink: #075d59;
   --paper: #f7fbf8;
   --paper-muted: #edf5f2;
   --ink: #123e3c;
@@ -118,7 +118,7 @@ img {
   min-height: 616px;
   overflow: hidden;
   isolation: isolate;
-  background-color: var(--teal-deep);
+  background-color: #00b2a9;
   background-position: center;
   background-size: cover;
   color: #f9ffff;
@@ -130,8 +130,8 @@ img {
   inset: 0;
   content: "";
   background:
-    linear-gradient(180deg, rgba(2, 37, 38, 0.38) 0%, rgba(1, 53, 52, 0.28) 42%, rgba(1, 44, 43, 0.78) 100%),
-    linear-gradient(90deg, rgba(4, 58, 57, 0.45), transparent 44%, rgba(3, 45, 45, 0.45));
+    linear-gradient(180deg, rgba(0, 178, 169, 0.78) 0%, rgba(0, 178, 169, 0.86) 48%, rgba(0, 178, 169, 0.96) 100%),
+    linear-gradient(90deg, rgba(0, 178, 169, 0.28), transparent 48%, rgba(0, 178, 169, 0.24));
 }
 
 .hero__texture {
@@ -263,29 +263,24 @@ img {
 }
 
 .hero__kicker {
-  margin: 0 0 -14px;
-  color: #effffb;
-  font-size: clamp(2.55rem, 5.4vw, 4.35rem);
+  margin: 0 0 -7px;
+  color: #ffffff;
+  font-size: clamp(2.05rem, 3.45vw, 3.25rem);
   font-weight: 700;
   line-height: 1;
   text-shadow: 0 3px 17px rgba(0, 35, 34, 0.24);
 }
 
 .hero h1 {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
   margin: 0;
-  color: #fff;
-  font-size: clamp(3.7rem, 7.1vw, 6.25rem);
+  max-width: 100%;
+  color: #ffffff;
+  font-size: clamp(3.25rem, 5.15vw, 5rem);
+  white-space: nowrap;
   font-weight: 700;
   letter-spacing: -0.035em;
   line-height: 0.96;
   text-shadow: 0 5px 26px rgba(0, 36, 34, 0.26);
-}
-
-.hero h1 span:last-child {
-  margin-top: -0.07em;
 }
 
 .hero__description {
@@ -312,7 +307,7 @@ img {
   padding: 14px 17px;
   border: 1px solid rgba(214, 255, 249, 0.21);
   border-radius: 18px;
-  background: rgba(3, 55, 54, 0.45);
+  background: rgba(0, 178, 169, 0.22);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.09), 0 15px 30px rgba(0, 24, 24, 0.1);
   color: #f8ffff;
   font-size: clamp(1rem, 1.65vw, 1.23rem);
@@ -457,9 +452,9 @@ img {
 }
 
 .category-chip--active {
-  border-color: var(--teal-deep);
-  background: var(--teal-deep);
-  color: white;
+  border-color: var(--teal);
+  background: var(--teal);
+  color: #ffffff;
 }
 
 .select-row {
@@ -1019,9 +1014,9 @@ img {
 }
 
 .thesaurus-page--dark .category-chip--active {
-  border-color: var(--teal-bright);
-  background: var(--teal-bright);
-  color: #063c3a;
+  border-color: var(--teal);
+  background: var(--teal);
+  color: #ffffff;
 }
 
 .thesaurus-page--dark .select-control,
@@ -1153,7 +1148,8 @@ img {
   }
 
   .hero h1 {
-    font-size: clamp(3.3rem, 16vw, 4.5rem);
+    font-size: clamp(1.9rem, 8.45vw, 2.45rem);
+    letter-spacing: -0.045em;
   }
 
   .hero__description {
