@@ -25,6 +25,7 @@ import {
   CORPUS_METADATA,
   displayCount,
   filterMaterials,
+  isStandalonePoetryDiwan,
   MATERIAL_CATEGORY_LABELS,
   MATERIALS,
   type MaterialCategory,
@@ -65,7 +66,7 @@ function matchesStatFilter(material: (typeof MATERIALS)[number], filter: StatFil
   if (filter === "lexicon-literature-rhetoric") {
     return hasAnyTag(material, ["معجم لغوي", "شعر وأدب", "بلاغة"]);
   }
-  return hasAnyTag(material, ["ديوان شعري"]);
+  return isStandalonePoetryDiwan(material);
 }
 
 const STAT_CARDS: StatCard[] = [
@@ -172,6 +173,19 @@ function SignatureLink() {
 }
 
 function MaterialCard({ material }: { material: (typeof MATERIALS)[number] }) {
+  const [copied, setCopied] = useState(false);
+
+  const copyMaterialLink = async () => {
+    try {
+      if (!navigator.clipboard?.writeText) return;
+      await navigator.clipboard.writeText(material.sourceUrl);
+      setCopied(true);
+      window.setTimeout(() => setCopied(false), 2000);
+    } catch {
+      setCopied(false);
+    }
+  };
+
   return (
     <article className="material-card">
       <div className="material-card__icon" aria-hidden="true">
@@ -202,16 +216,15 @@ function MaterialCard({ material }: { material: (typeof MATERIALS)[number] }) {
           </div>
         </dl>
       </div>
-      <a
+      <button
+        type="button"
         className="material-card__link"
-        href={CORPUS_METADATA.sourceIndexUrl}
-        target="_blank"
-        rel="noreferrer"
-        title="فتح صفحة المصدر"
+        onClick={copyMaterialLink}
+        title="نسخ رابط المادة من موقع بحوث"
       >
-        <span>فتح المصدر</span>
-        <ExternalLink size={16} aria-hidden="true" />
-      </a>
+        {copied ? <Check size={16} aria-hidden="true" /> : <Copy size={16} aria-hidden="true" />}
+        <span>{copied ? "تم النسخ" : "نسخ الرابط"}</span>
+      </button>
     </article>
   );
 }

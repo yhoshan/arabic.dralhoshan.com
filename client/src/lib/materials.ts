@@ -63,6 +63,9 @@ export const JOURNAL_SOURCES = corpus.metadata.journalSources;
 const ARABIC_DIACRITICS = /[\u0610-\u061A\u064B-\u065F\u0670\u06D6-\u06ED]/g;
 const SEARCH_PUNCTUATION = /[^\u0621-\u063A\u0641-\u064A0-9\s]/g;
 const SEARCH_SPACES = /\s+/g;
+const DIWAN_TITLE_PREFIX = /^ديوان\s+/;
+const DIWAN_STUDY_SIGNALS =
+  /[:؛،]|(دراسة|شرح|تحقيق|فهرس|مجموع|مختارات|رسالة|اثر|قضية|نقد|شعر|شعرية|ديوانين|دواوين|رؤية|تشكيل|تحليل|قراءة)/;
 
 /** تطبيعٌ محدود للحروف يجعل البحث متسامحاً مع الهمزات والتشكيل والفواصل. */
 export function normalizeArabic(value: string): string {
@@ -78,6 +81,26 @@ export function normalizeArabic(value: string): string {
     .replace(SEARCH_SPACES, " ")
     .trim()
     .toLocaleLowerCase("ar");
+}
+
+/**
+ * يقتصر الديوان الشعري على عنوان «ديوان ...» المستقل، ويستبعد الدراسات
+ * والشروح والفهارس والمجاميع؛ فلا تحسب دراسة عن ديوان ضمن إحصاء الدواوين.
+ */
+export function isStandalonePoetryDiwan(
+  material: Pick<Material, "title" | "tags">,
+): boolean {
+  if (!material.tags.includes("ديوان شعري")) return false;
+
+  const title = String(material.title ?? "")
+    .normalize("NFKC")
+    .replace(/[أإآ]/g, "ا")
+    .replace(/ى/g, "ي")
+    .replace(/ـ/g, "")
+    .replace(/\s+/g, " ")
+    .trim();
+
+  return DIWAN_TITLE_PREFIX.test(title) && !DIWAN_STUDY_SIGNALS.test(title);
 }
 
 function includesEveryToken(haystack: string, normalizedQuery: string): boolean {
