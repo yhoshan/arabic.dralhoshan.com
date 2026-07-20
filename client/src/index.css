@@ -1,7 +1,7 @@
 /*
  * فلسفة التصميم لهذا الملف: بنية مكنز أصول الفقه المرجعية بهوية سماوية ثابتة.
  * خط المهند للعناوين الرئيسة، وخط أميري لكل النصوص؛ لا تتغير الهوية أو الخط هنا.
- * عنوان الغلاف يتبع نموذج المستخدم: «مكنز» أصغر فوق الاسم، وتباعد عمودي مضغوط وواضح.
+ * الغلاف يحافظ على السماء الصافية: «مكنز» أصغر فوق الاسم بخط المهند، ووصف أميري، وبطاقات إحصاء بيضاء الحدود تبقى فارغة حتى ورود البيانات المعتمدة.
  */
 @import "tailwindcss";
 @import "tw-animate-css";
@@ -129,7 +129,7 @@ img {
   overflow: hidden;
   min-height: 482px;
   color: var(--pure-white);
-  background: linear-gradient(135deg, #8ed1fc 0%, #45aef5 48%, #168fe8 100%);
+  background: linear-gradient(110deg, #79c8f4 0%, #50b5ee 42%, #2196e3 100%);
 }
 
 .hero::before {
@@ -138,9 +138,7 @@ img {
   inset: 0;
   content: "";
   pointer-events: none;
-  background:
-    radial-gradient(circle at 14% 86%, rgba(255, 255, 255, 0.12), transparent 28%),
-    radial-gradient(circle at 88% 12%, rgba(255, 255, 255, 0.12), transparent 25%);
+  background: none;
 }
 
 .hero__top-line,
@@ -260,8 +258,8 @@ img {
   display: block;
   margin: 0;
   color: var(--pure-white);
-  font-size: clamp(2.6rem, 6.1vw, 5.75rem);
-  line-height: 0.91;
+  font-size: clamp(2.08rem, 4.9vw, 4.6rem);
+  line-height: 0.93;
   letter-spacing: -0.02em;
 }
 
@@ -270,7 +268,7 @@ img {
   max-width: 100%;
   margin: 0;
   color: var(--pure-white);
-  font-size: clamp(3.3rem, 9.8vw, 9rem);
+  font-size: clamp(2.5rem, 7.35vw, 6.75rem);
   line-height: 1.08;
   letter-spacing: -0.046em;
   white-space: nowrap;
@@ -279,31 +277,66 @@ img {
 .hero__description {
   display: grid;
   gap: 0;
-  margin: 17px 0 25px;
-  color: rgba(255, 255, 255, 0.94);
-  font-size: clamp(1.08rem, 1.6vw, 1.32rem);
-  font-weight: 700;
-  line-height: 1.42;
+  margin: 19px 0 0;
 }
 
 .hero__description span {
   display: block;
 }
 
-.hero__stats {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 9px;
-  width: min(100%, 420px);
+.hero-subtitle {
+  color: #ffffff;
+  font-family: "Amiri", serif;
+  font-size: clamp(22px, 1.8vw, 30px);
+  font-weight: 700;
+  line-height: 1.7;
+  text-align: center;
+  text-shadow: 0 2px 8px rgba(0, 80, 150, 0.22);
 }
 
-.hero-stat {
-  min-height: 58px;
-  border: 1px solid rgba(255, 255, 255, 0.44);
-  border-radius: 11px;
-  background: rgba(9, 104, 186, 0.22);
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.14);
-  backdrop-filter: blur(6px);
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  width: min(1180px, 74vw);
+  margin: 34px auto 0;
+}
+
+.stat-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 150px;
+  padding: 18px 18px 24px;
+  border: 2px solid #ffffff !important;
+  border-color: #ffffff !important;
+  border-radius: 22px;
+  background: rgba(20, 139, 220, 0.24);
+  box-shadow: 0 8px 22px rgba(0, 82, 150, 0.15);
+}
+
+.stat-number {
+  display: block;
+  min-height: clamp(34px, 2.6vw, 46px);
+  margin-top: auto;
+  color: #ffffff;
+  font-family: Arial, Inter, sans-serif;
+  font-size: clamp(34px, 2.6vw, 46px);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0;
+  text-shadow: none;
+}
+
+.stat-label {
+  min-height: 1.7em;
+  color: #ffffff;
+  font-family: "Amiri", serif;
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 1.7;
+  text-align: center;
 }
 
 /* الهيدر السفلي المرجعي: بحث، تصنيف، مصادر، ثم سطر إجمالي فقط. */
@@ -1026,31 +1059,46 @@ img {
   }
 
   .hero-title__kicker {
-    font-size: clamp(2.18rem, 10vw, 3rem);
+    font-size: clamp(1.75rem, 8vw, 2.4rem);
     line-height: 0.93;
   }
 
   .hero-title__name {
     margin-top: 0;
-    font-size: clamp(2.12rem, 8.5vw, 3.8rem);
+    font-size: clamp(1.6rem, 6.4vw, 2.85rem);
     line-height: 1.1;
     letter-spacing: -0.034em;
   }
 
   .hero__description {
-    margin-top: 15px;
-    margin-bottom: 21px;
-    font-size: 18px;
+    margin-top: 17px;
   }
 
-  .hero__stats {
-    width: min(100%, 330px);
-    gap: 7px;
+  .hero-subtitle {
+    font-size: clamp(20px, 5.55vw, 22px);
+    line-height: 1.65;
   }
 
-  .hero-stat {
-    min-height: 48px;
-    border-radius: 9px;
+  .stats-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: min(74vw, 330px);
+    gap: 8px;
+    margin-top: 28px;
+  }
+
+  .stat-card {
+    min-height: 92px;
+    padding: 13px 6px;
+    border-radius: 15px;
+  }
+
+  .stat-number {
+    font-size: 26px;
+  }
+
+  .stat-label {
+    margin-top: 6px;
+    font-size: 15px;
   }
 
   .reference-search__inner {
@@ -1150,5 +1198,552 @@ img {
     transition-duration: 0.01ms !important;
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
+  }
+}
+
+
+/*
+ * فلسفة التصميم لهذه الإضافة: الهوية المرجعية للمكنز تركوازية، بحثية، ومقروءة.
+ * تُستخدم الخلفيات الأصلية في الطبقات البارزة فقط، بينما تبقى بطاقات المواد عملية وواضحة للباحث.
+ */
+:root {
+  --background: #f7fffe;
+  --foreground: #123f40;
+  --card: #ffffff;
+  --card-foreground: #123f40;
+  --primary: #0ea9a4;
+  --primary-foreground: #f7ffff;
+  --border: #cdebea;
+  --ring: #4fe1d5;
+  --sky-light: #8be0da;
+  --sky-main: #0ea9a4;
+  --sky-deep: #087a78;
+  --sky-ink: #064a4a;
+  --pure-white: #f7ffff;
+  --paper: #f7fffe;
+  --paper-muted: #e5f7f5;
+  --ink: #123f40;
+  --ink-muted: #5c7e7d;
+  --footer: #075b5b;
+  --footer-deep: #043f40;
+  --line: rgba(8, 122, 120, 0.16);
+}
+
+.thesaurus-page {
+  background-color: var(--paper);
+  background-image: linear-gradient(rgba(247, 255, 254, 0.89), rgba(247, 255, 254, 0.89)), url("/manus-storage/arabic-thesaurus-pattern_93c05460.jpg");
+  background-repeat: repeat;
+  background-size: auto, 540px 540px;
+}
+
+.hero {
+  min-height: 510px;
+  background:
+    linear-gradient(112deg, rgba(4, 52, 54, 0.94) 0%, rgba(5, 86, 87, 0.83) 49%, rgba(5, 66, 70, 0.79) 100%),
+    url("/manus-storage/arabic-thesaurus-hero_239417d9.jpg") center / cover no-repeat;
+}
+
+.hero::before {
+  background:
+    radial-gradient(circle at 53% 16%, rgba(79, 225, 213, 0.26), transparent 26%),
+    linear-gradient(90deg, rgba(5, 49, 52, 0.25), transparent 55%, rgba(4, 47, 48, 0.18));
+}
+
+.hero__top-line,
+.hero__bottom-line {
+  background: rgba(207, 255, 250, 0.72);
+}
+
+.hero-title {
+  text-shadow: 0 2px 18px rgba(0, 38, 40, 0.55);
+}
+
+.hero-mark {
+  width: clamp(48px, 5vw, 66px);
+  height: clamp(48px, 5vw, 66px);
+  margin: 1px 0 6px;
+  object-fit: contain;
+  filter: drop-shadow(0 5px 14px rgba(0, 23, 25, 0.3));
+}
+
+.hero-subtitle {
+  text-shadow: 0 2px 12px rgba(0, 33, 35, 0.48);
+}
+
+.stat-card {
+  appearance: none;
+  width: 100%;
+  border-color: rgba(238, 255, 252, 0.92) !important;
+  background: rgba(4, 74, 74, 0.36);
+  cursor: pointer;
+  font: inherit;
+  transition: transform 180ms var(--ease-out), background-color 180ms var(--ease-out), box-shadow 180ms var(--ease-out);
+}
+
+.stat-card:hover {
+  background: rgba(7, 122, 120, 0.46);
+  box-shadow: 0 14px 30px rgba(0, 31, 33, 0.28);
+  transform: translateY(-3px);
+}
+
+.stat-card:focus-visible {
+  outline-color: #bffaf4;
+}
+
+.stat-number {
+  font-family: "Al Mohanad", "Amiri", serif;
+}
+
+.reference-search {
+  border-bottom-color: var(--line);
+  box-shadow: 0 1px 10px rgba(2, 74, 73, 0.07);
+}
+
+.search-field {
+  border-color: #c5e9e7;
+  box-shadow: 0 1px 2px rgba(5, 87, 87, 0.06);
+}
+
+.search-field > svg {
+  color: var(--sky-main);
+}
+
+.filter-button {
+  border-color: #58c3bd;
+  color: var(--sky-ink);
+}
+
+.filter-button:hover {
+  border-color: var(--sky-deep);
+  background: #ecfbfa;
+}
+
+.filter-button--active,
+.source-filter--open {
+  border-color: var(--sky-deep);
+  background: var(--sky-main);
+  color: var(--pure-white);
+}
+
+.source-panel {
+  padding: 14px 0 3px;
+  border-top-color: var(--line);
+}
+
+.source-panel__heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 0 13px 10px;
+  color: var(--ink-muted);
+  font-size: 15px;
+}
+
+.source-panel__heading button {
+  border: 0;
+  background: transparent;
+  color: var(--sky-deep);
+  font: inherit;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.source-panel__list {
+  display: flex;
+  max-height: 175px;
+  flex-wrap: wrap;
+  gap: 7px;
+  overflow: auto;
+  padding: 0 13px 11px;
+}
+
+.source-panel__item {
+  border: 1px solid #cbe9e7;
+  border-radius: 999px;
+  background: #f8fffe;
+  color: var(--ink);
+  font: inherit;
+  font-size: 14px;
+  line-height: 1.45;
+  padding: 3px 10px 4px;
+  transition: background-color 160ms var(--ease-out), border-color 160ms var(--ease-out), color 160ms var(--ease-out);
+}
+
+.source-panel__item:hover,
+.source-panel__item--active {
+  border-color: var(--sky-main);
+  background: #dff8f5;
+  color: #064a4a;
+}
+
+.materials-section {
+  position: relative;
+  isolation: isolate;
+  min-height: 370px;
+  padding-top: 43px;
+}
+
+.materials-section::before {
+  position: absolute;
+  z-index: -1;
+  inset: 12px -10vw auto auto;
+  width: min(570px, 62vw);
+  height: 255px;
+  content: "";
+  opacity: 0.12;
+  background: url("/manus-storage/arabic-thesaurus-section-art_6e2c9089.jpg") center / cover no-repeat;
+  mask-image: linear-gradient(90deg, #000 0%, rgba(0, 0, 0, 0.75) 45%, transparent 100%);
+}
+
+.materials-section__heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.materials-section__eyebrow {
+  margin: 0 0 2px;
+  color: var(--sky-deep);
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.materials-section__heading h2 {
+  margin: 0;
+  color: var(--ink);
+  font-family: "Al Mohanad", "Amiri", serif;
+  font-size: clamp(1.8rem, 3vw, 2.35rem);
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.materials-section__page-note {
+  margin: 0 0 5px;
+  color: var(--ink-muted);
+  font-size: 15px;
+}
+
+.materials-list {
+  display: grid;
+  gap: 12px;
+}
+
+.material-card {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  gap: 16px;
+  align-items: center;
+  padding: 17px 19px;
+  border: 1px solid rgba(9, 123, 120, 0.18);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.91);
+  box-shadow: 0 4px 17px rgba(3, 75, 73, 0.055);
+  backdrop-filter: blur(2px);
+  transition: border-color 180ms var(--ease-out), box-shadow 180ms var(--ease-out), transform 180ms var(--ease-out);
+}
+
+.material-card:hover {
+  border-color: rgba(14, 169, 164, 0.62);
+  box-shadow: 0 10px 24px rgba(3, 75, 73, 0.1);
+  transform: translateY(-2px);
+}
+
+.material-card__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 11px;
+  background: #e1f7f5;
+  color: var(--sky-deep);
+}
+
+.material-card__body {
+  min-width: 0;
+}
+
+.material-card__topline {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 5px 10px;
+  margin-bottom: 4px;
+  color: var(--ink-muted);
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.material-card__category {
+  color: var(--sky-deep);
+  font-weight: 700;
+}
+
+.material-card__source {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.material-card h3 {
+  margin: 0;
+  color: var(--ink);
+  font-size: clamp(20px, 2.1vw, 24px);
+  font-weight: 700;
+  line-height: 1.52;
+}
+
+.material-card__metadata {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px 17px;
+  margin: 7px 0 0;
+  color: var(--ink-muted);
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.material-card__metadata > div {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 5px;
+}
+
+.material-card__metadata dt {
+  color: #5e8582;
+  font-weight: 700;
+}
+
+.material-card__metadata dd {
+  margin: 0;
+}
+
+.material-card__tags {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.material-card__tags span {
+  padding: 0 6px 1px;
+  border-radius: 999px;
+  background: #edfafa;
+  color: #197a76;
+  font-size: 13px;
+}
+
+.material-card__link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-height: 38px;
+  padding: 5px 11px 6px;
+  border: 1px solid #83d7d1;
+  border-radius: 8px;
+  color: #076c69;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 160ms var(--ease-out), background-color 160ms var(--ease-out), color 160ms var(--ease-out);
+}
+
+.material-card__link:hover {
+  background: var(--sky-main);
+  color: var(--pure-white);
+  transform: translateY(-1px);
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin: 27px auto 0;
+  color: var(--ink-muted);
+  font-size: 15px;
+}
+
+.pagination button,
+.empty-reset {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  min-height: 38px;
+  padding: 5px 12px 6px;
+  border: 1px solid #8cd4ce;
+  border-radius: 8px;
+  background: #ffffff;
+  color: var(--sky-ink);
+  font: inherit;
+  font-size: 15px;
+  font-weight: 700;
+  transition: background-color 160ms var(--ease-out), color 160ms var(--ease-out), transform 160ms var(--ease-out);
+}
+
+.pagination button:hover:not(:disabled),
+.empty-reset:hover {
+  background: var(--sky-main);
+  color: var(--pure-white);
+}
+
+.pagination button:active,
+.empty-reset:active {
+  transform: scale(0.97);
+}
+
+.pagination button:disabled {
+  opacity: 0.42;
+  cursor: not-allowed;
+}
+
+.empty-reset {
+  margin-top: 13px;
+}
+
+.source-index-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 12px;
+  color: #bffaf4;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.footer-sources__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  padding: 0 0 16px;
+  color: #d9f6f4;
+  font-size: 14px;
+}
+
+.footer-sources__list span {
+  padding: 2px 9px 3px;
+  border: 1px solid rgba(165, 240, 233, 0.22);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.disclaimer-modal {
+  border-color: rgba(126, 235, 226, 0.5);
+  background: linear-gradient(160deg, #075a5b 0%, #043f40 100%);
+}
+
+.disclaimer-modal__accent,
+.modal-confirm,
+.report-link {
+  background: linear-gradient(135deg, #087a78, #10b6b0);
+}
+
+.disclaimer-modal__header > svg {
+  color: #bffaf4;
+}
+
+.broken-link-card {
+  border-color: #caeae7;
+  box-shadow: 0 3px 12px rgba(5, 98, 96, 0.07);
+}
+
+.share-section h2 {
+  color: #d6fffb;
+}
+
+.share-section > p {
+  color: #a9e6e1;
+}
+
+.copy-link {
+  background: var(--sky-main);
+}
+
+.thesaurus-page--dark {
+  --paper: #062f30;
+  --paper-muted: #0a4344;
+  --card: #083d3e;
+  --ink: #e3fffc;
+  --ink-muted: #a9d5d1;
+  --line: rgba(169, 235, 229, 0.18);
+  --border: #176e6e;
+}
+
+.thesaurus-page--dark .materials-list .material-card {
+  border-color: rgba(133, 225, 215, 0.2);
+  background: rgba(6, 57, 58, 0.94);
+}
+
+.thesaurus-page--dark .material-card h3 {
+  color: var(--ink);
+}
+
+.thesaurus-page--dark .material-card__tags span,
+.thesaurus-page--dark .source-panel__item {
+  background: #0d5152;
+  color: #d3fffa;
+}
+
+.thesaurus-page--dark .source-panel__item {
+  border-color: #287c7b;
+}
+
+@media (max-width: 760px) {
+  .hero-mark {
+    width: 46px;
+    height: 46px;
+    margin-bottom: 4px;
+  }
+
+  .materials-section::before {
+    inset: 28px -22vw auto auto;
+    width: 112vw;
+    opacity: 0.08;
+  }
+
+  .materials-section__heading,
+  .source-panel__heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .materials-section__page-note {
+    margin-bottom: 0;
+  }
+
+  .source-panel__list {
+    max-height: 198px;
+  }
+
+  .material-card {
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: 11px;
+    padding: 15px;
+  }
+
+  .material-card__link {
+    grid-column: 1 / -1;
+    width: 100%;
+  }
+
+  .material-card__source {
+    max-width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .stat-card,
+  .material-card,
+  .material-card__link,
+  .pagination button,
+  .empty-reset {
+    transition: none;
   }
 }

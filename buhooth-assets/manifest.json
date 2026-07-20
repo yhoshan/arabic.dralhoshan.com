@@ -1,0 +1,23 @@
+{
+    "name": "Buhooth",
+    "short_name": "Buhooth",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#000000",
+    "theme_color": "#000000",
+    "description": "",
+    "orientation": "portrait-primary",
+    "prefer_related_applications": false,
+    "icons": [
+        {
+            "src": "icons/Icon-192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "icons/Icon-500.png",
+            "sizes": "500x500",
+            "type": "image/png"
+        }
+    ]
+}
