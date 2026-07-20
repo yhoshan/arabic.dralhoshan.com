@@ -1243,7 +1243,9 @@ img {
 
 .materials-list {
   display: grid;
-  gap: 12px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  align-items: stretch;
 }
 
 .material-card {
@@ -1416,6 +1418,12 @@ img {
 .footer-sources__empty a:hover {
   color: var(--pure-white);
   text-decoration: underline;
+}
+
+@media (max-width: 860px) {
+  .materials-list {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 700px) {
