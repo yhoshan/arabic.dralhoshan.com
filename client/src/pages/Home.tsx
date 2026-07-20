@@ -38,36 +38,56 @@ const PAGE_SIZE = 12;
 const WHATSAPP_ICON_PATH =
   "M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z";
 
+type StatFilter = "all" | "linguistics" | "lexicon-literature-rhetoric" | "diwans";
+
 type StatCard = {
-  id: "references" | "dictionaries" | "diwans" | "journals";
+  id: StatFilter;
   label: string;
   count: number;
-  category?: MaterialCategory;
 };
+
+const STAT_FILTER_LABELS: Record<StatFilter, string> = {
+  all: "إجمالي المواد",
+  linguistics: "النحو والدراسات اللغوية",
+  "lexicon-literature-rhetoric": "المعاجم والأدب والبلاغة",
+  diwans: "الدواوين الشعرية",
+};
+
+function hasAnyTag(material: (typeof MATERIALS)[number], tags: string[]) {
+  return tags.some((tag) => material.tags.includes(tag as (typeof material.tags)[number]));
+}
+
+function matchesStatFilter(material: (typeof MATERIALS)[number], filter: StatFilter) {
+  if (filter === "all") return true;
+  if (filter === "linguistics") {
+    return hasAnyTag(material, ["نحو", "صرف", "دراسات لغوية"]);
+  }
+  if (filter === "lexicon-literature-rhetoric") {
+    return hasAnyTag(material, ["معجم لغوي", "شعر وأدب", "بلاغة"]);
+  }
+  return hasAnyTag(material, ["ديوان شعري"]);
+}
 
 const STAT_CARDS: StatCard[] = [
   {
-    id: "references",
-    label: "المصادر والمراجع",
-    count: CORPUS_METADATA.statistics.sourcesAndReferences,
-    category: "references",
+    id: "all",
+    label: STAT_FILTER_LABELS.all,
+    count: MATERIALS.length,
   },
   {
-    id: "dictionaries",
-    label: "المعاجم اللغوية",
-    count: CORPUS_METADATA.statistics.linguisticDictionaries,
-    category: "dictionaries",
+    id: "linguistics",
+    label: STAT_FILTER_LABELS.linguistics,
+    count: MATERIALS.filter((material) => matchesStatFilter(material, "linguistics")).length,
+  },
+  {
+    id: "lexicon-literature-rhetoric",
+    label: STAT_FILTER_LABELS["lexicon-literature-rhetoric"],
+    count: MATERIALS.filter((material) => matchesStatFilter(material, "lexicon-literature-rhetoric")).length,
   },
   {
     id: "diwans",
-    label: "الدواوين الشعرية",
-    count: CORPUS_METADATA.statistics.poetryDiwans,
-    category: "diwans",
-  },
-  {
-    id: "journals",
-    label: "المجلات العلمية",
-    count: CORPUS_METADATA.statistics.academicJournals,
+    label: STAT_FILTER_LABELS.diwans,
+    count: MATERIALS.filter((material) => matchesStatFilter(material, "diwans")).length,
   },
 ];
 
@@ -203,6 +223,7 @@ export default function Home() {
   const [footerSourcesOpen, setFooterSourcesOpen] = useState(false);
   const [query, setQuery] = useState("");
   const [category, setCategory] = useState<MaterialCategory>("all");
+  const [statFilter, setStatFilter] = useState<StatFilter>("all");
   const [page, setPage] = useState(1);
   const [copied, setCopied] = useState(false);
 
@@ -214,8 +235,11 @@ export default function Home() {
   const shareUrl = encodeURIComponent(`${shareText}\n${currentUrl}`);
 
   const filteredMaterials = useMemo(
-    () => filterMaterials(MATERIALS, query, category, "all"),
-    [query, category],
+    () =>
+      filterMaterials(MATERIALS, query, category, "all").filter((material) =>
+        matchesStatFilter(material, statFilter),
+      ),
+    [query, category, statFilter],
   );
   const pageCount = Math.max(1, Math.ceil(filteredMaterials.length / PAGE_SIZE));
   const safePage = Math.min(page, pageCount);
@@ -226,26 +250,20 @@ export default function Home() {
 
   useEffect(() => {
     setPage(1);
-  }, [query, category]);
+  }, [query, category, statFilter]);
 
   const clearFilters = () => {
     setQuery("");
     setCategory("all");
+    setStatFilter("all");
   };
 
   const chooseStat = (stat: StatCard) => {
-    if (stat.category) {
-      setCategory(stat.category);
-      setShowSources(false);
-      document
-        .getElementById("materials-title")
-        ?.scrollIntoView({ behavior: "smooth", block: "start" });
-      return;
-    }
-
-    setShowSources(true);
+    setCategory("all");
+    setStatFilter(stat.id);
+    setShowSources(false);
     document
-      .getElementById("source-panel")
+      .getElementById("materials-title")
       ?.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
@@ -356,7 +374,10 @@ export default function Home() {
                   type="button"
                   key={filter}
                   className={`filter-button ${category === filter ? "filter-button--active" : ""}`}
-                  onClick={() => setCategory(filter)}
+                  onClick={() => {
+                    setCategory(filter);
+                    setStatFilter("all");
+                  }}
                   aria-pressed={category === filter}
                 >
                   {MATERIAL_CATEGORY_LABELS[filter]}
@@ -397,7 +418,7 @@ export default function Home() {
             <span>
               النتائج: <strong>{displayCount(filteredMaterials.length)}</strong> من {displayCount(CORPUS_METADATA.statistics.totalMaterials)} مادة علمية
             </span>
-            {(query || category !== "all") && (
+            {(query || category !== "all" || statFilter !== "all") && (
               <button type="button" onClick={clearFilters}>
                 <X size={13} aria-hidden="true" />
                 مسح الفلاتر
@@ -410,7 +431,11 @@ export default function Home() {
       <section className="materials-section reference-shell" aria-labelledby="materials-title">
         <div className="materials-section__heading">
           <h2 id="materials-title">
-            {category === "all" ? "المواد العلمية" : MATERIAL_CATEGORY_LABELS[category]}
+            {statFilter !== "all"
+              ? STAT_FILTER_LABELS[statFilter]
+              : category === "all"
+                ? "المواد العلمية"
+                : MATERIAL_CATEGORY_LABELS[category]}
           </h2>
           {filteredMaterials.length > 0 && (
             <p className="materials-section__page-note">
