@@ -1,6 +1,7 @@
 /**
- * تصميم الصفحة: محاكاة هادئة لمكنز أصول الفقه، بهوية #00B2A9 ونص أبيض ناصع،
- * وخط أميري وواجهة RTL. تبقى «مِكنز» أصغر من عنوان «اللغة العربية وعلومها» في سطر واحد.
+ * الهوية البصرية: تدرّج سماوي #8ED1FC → #45AEF5 → #168FE8،
+ * وخط المهند لعنواني الغلاف فقط، مع خط أميري لبقية النصوص العربية.
+ * لا تُعدَّل بيانات المربعات أو عددها أو محتوى شريط البحث ضمن هذا الملف.
  */
 import { useMemo, useState } from "react";
 import {
@@ -19,7 +20,6 @@ import {
 } from "lucide-react";
 
 const assets = {
-  hero: "/manus-storage/arabic-thesaurus-hero_decbdaad.png",
   seal: "/manus-storage/arabic-thesaurus-seal_4dcd4c4d.png",
 };
 
@@ -100,11 +100,7 @@ export default function Home() {
       className={`thesaurus-page ${isDark ? "thesaurus-page--dark" : ""}`}
       dir="rtl"
     >
-      <section
-        className="hero"
-        id="top"
-        style={{ backgroundImage: `url(${assets.hero})` }}
-      >
+      <section className="hero" id="top">
         <div className="hero__texture" aria-hidden="true" />
         <header className="site-header shell">
           <a className="brand-lockup" href="#top" aria-label="العودة إلى أعلى الصفحة">
@@ -137,7 +133,8 @@ export default function Home() {
           <p className="hero__kicker">مِكنز</p>
           <h1>اللغة العربية وعلومها</h1>
           <p className="hero__description">
-            فهرس علمي منظم للغة العربية وعلومها ومعاجمها ودواوينها الشعرية ومراجعها.
+            <span>فهرس علمي منظم للغة العربية وعلومها</span>
+            <span>ومعاجمها ودواوينها الشعرية ومراجعها.</span>
           </p>
 
           <div className="hero__stats" role="list" aria-label="أقسام المكنز">
@@ -151,7 +148,7 @@ export default function Home() {
               return (
                 <div className="stat-card" key={item.label} role="listitem">
                   <Icon size={18} strokeWidth={1.6} aria-hidden="true" />
-                  <span>{item.label}</span>
+                  <span className="stat-label">{item.label}</span>
                 </div>
               );
             })}

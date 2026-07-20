@@ -7,6 +7,14 @@
 
 @custom-variant dark (&:is(.dark *));
 
+@font-face {
+  font-family: "Al Mohanad";
+  src: url("/manus-storage/AL-Mohanad-Bold-1_e9464049.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -31,10 +39,14 @@
   --primary-foreground: oklch(0.99 0.004 180);
   --border: oklch(0.85 0.026 181);
   --ring: oklch(0.61 0.11 184);
-  --teal: #00b2a9;
-  --teal-bright: #ffffff;
-  --teal-deep: #007a74;
-  --teal-ink: #075d59;
+  --sky-light: #8ED1FC;
+  --sky-main: #45AEF5;
+  --sky-deep: #168FE8;
+  --pure-white: #FFFFFF;
+  --teal: var(--sky-main);
+  --teal-bright: var(--pure-white);
+  --teal-deep: var(--sky-deep);
+  --teal-ink: #0B5C9A;
   --paper: #f7fbf8;
   --paper-muted: #edf5f2;
   --ink: #123e3c;
@@ -118,10 +130,8 @@ img {
   min-height: 616px;
   overflow: hidden;
   isolation: isolate;
-  background-color: #00b2a9;
-  background-position: center;
-  background-size: cover;
-  color: #f9ffff;
+  background: linear-gradient(135deg, #8ED1FC 0%, #45AEF5 48%, #168FE8 100%);
+  color: #FFFFFF;
 }
 
 .hero::before {
@@ -129,9 +139,7 @@ img {
   z-index: -2;
   inset: 0;
   content: "";
-  background:
-    linear-gradient(180deg, rgba(0, 178, 169, 0.78) 0%, rgba(0, 178, 169, 0.86) 48%, rgba(0, 178, 169, 0.96) 100%),
-    linear-gradient(90deg, rgba(0, 178, 169, 0.28), transparent 48%, rgba(0, 178, 169, 0.24));
+  background: linear-gradient(135deg, #8ED1FC 0%, #45AEF5 48%, #168FE8 100%);
 }
 
 .hero__texture {
@@ -159,7 +167,7 @@ img {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  color: #f8ffff;
+  color: #FFFFFF;
   font-size: 17px;
   font-weight: 700;
   text-decoration: none;
@@ -185,9 +193,9 @@ img {
   align-items: center;
   justify-content: center;
   gap: 7px;
-  border: 1px solid rgba(234, 255, 252, 0.22);
-  background: rgba(2, 58, 58, 0.18);
-  color: #f9ffff;
+  border: 1px solid rgba(255, 255, 255, 0.52);
+  background: rgba(22, 143, 232, 0.28);
+  color: #FFFFFF;
   transition: border-color 180ms var(--ease-out), background-color 180ms var(--ease-out), transform 160ms var(--ease-out);
 }
 
@@ -207,8 +215,8 @@ img {
 
 .header-link:hover,
 .theme-toggle:hover {
-  border-color: rgba(234, 255, 252, 0.7);
-  background: rgba(1, 51, 51, 0.52);
+  border-color: #FFFFFF;
+  background: rgba(22, 143, 232, 0.52);
 }
 
 .header-link:active,
@@ -264,31 +272,40 @@ img {
 
 .hero__kicker {
   margin: 0 0 -7px;
-  color: #ffffff;
+  color: #FFFFFF;
+  font-family: "Al Mohanad", "Amiri", serif;
   font-size: clamp(2.05rem, 3.45vw, 3.25rem);
   font-weight: 700;
   line-height: 1;
-  text-shadow: 0 3px 17px rgba(0, 35, 34, 0.24);
+  text-shadow: none;
 }
 
 .hero h1 {
   margin: 0;
   max-width: 100%;
-  color: #ffffff;
+  color: #FFFFFF;
+  font-family: "Al Mohanad", "Amiri", serif;
   font-size: clamp(3.25rem, 5.15vw, 5rem);
   white-space: nowrap;
   font-weight: 700;
   letter-spacing: -0.035em;
   line-height: 0.96;
-  text-shadow: 0 5px 26px rgba(0, 36, 34, 0.26);
+  text-shadow: none;
 }
 
 .hero__description {
+  display: grid;
+  gap: 0;
   width: min(100%, 650px);
   margin: 20px auto 28px;
-  color: rgba(246, 255, 254, 0.9);
+  color: #FFFFFF;
   font-size: clamp(1.1rem, 1.8vw, 1.42rem);
   line-height: 1.55;
+}
+
+.hero__description span {
+  display: block;
+  white-space: nowrap;
 }
 
 .hero__stats {
@@ -305,11 +322,12 @@ img {
   gap: 9px;
   min-height: 76px;
   padding: 14px 17px;
-  border: 1px solid rgba(214, 255, 249, 0.21);
-  border-radius: 18px;
-  background: rgba(0, 178, 169, 0.22);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.09), 0 15px 30px rgba(0, 24, 24, 0.1);
-  color: #f8ffff;
+  border: 2px solid #FFFFFF;
+  border-radius: 22px;
+  background: rgba(14, 126, 215, 0.32);
+  box-shadow: 0 8px 22px rgba(0, 76, 145, 0.18);
+  color: #FFFFFF !important;
+  font-family: "Amiri", serif;
   font-size: clamp(1rem, 1.65vw, 1.23rem);
   font-weight: 700;
   line-height: 1.25;
@@ -317,9 +335,29 @@ img {
   backdrop-filter: blur(10px);
 }
 
+.stat-card,
+.stat-card * {
+  color: #FFFFFF !important;
+}
+
 .stat-card svg {
   flex: 0 0 auto;
-  color: var(--teal-bright);
+}
+
+.stat-number {
+  color: #FFFFFF;
+  font-family: Arial, Inter, sans-serif;
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 1;
+  text-shadow: none;
+}
+
+.stat-label {
+  color: #FFFFFF;
+  font-family: "Amiri", serif;
+  font-size: 18px;
+  font-weight: 700;
 }
 
 .site-body {
@@ -343,10 +381,10 @@ img {
   gap: 12px;
   min-height: 66px;
   padding: 8px 10px 8px 15px;
-  border: 1px solid rgba(4, 104, 100, 0.16);
-  border-radius: 20px;
-  background: rgba(255, 255, 255, 0.98);
-  box-shadow: 0 18px 38px rgba(2, 57, 56, 0.16), 0 2px 0 rgba(255, 255, 255, 0.5) inset;
+  border: 3px solid rgba(255, 255, 255, 0.95);
+  border-radius: 999px;
+  background: #FFFFFF;
+  box-shadow: 0 10px 26px rgba(0, 88, 170, 0.18);
 }
 
 .search-shell__icon {
@@ -379,15 +417,15 @@ img {
   flex: 0 0 auto;
   border: 0;
   border-radius: 13px;
-  background: var(--teal);
-  color: white;
-  box-shadow: 0 8px 17px rgba(16, 182, 176, 0.29);
+  background: var(--sky-deep);
+  color: #FFFFFF;
+  box-shadow: 0 8px 17px rgba(0, 88, 170, 0.29);
   transition: transform 160ms var(--ease-out), background-color 180ms var(--ease-out), box-shadow 180ms var(--ease-out);
 }
 
 .search-submit:hover {
-  background: #078d89;
-  box-shadow: 0 12px 22px rgba(16, 182, 176, 0.4);
+  background: #0D7DCC;
+  box-shadow: 0 12px 22px rgba(0, 88, 170, 0.4);
 }
 
 .search-submit:active {
@@ -1148,7 +1186,7 @@ img {
   }
 
   .hero h1 {
-    font-size: clamp(1.9rem, 8.45vw, 2.45rem);
+    font-size: clamp(1.5rem, 7.4vw, 2.15rem);
     letter-spacing: -0.045em;
   }
 
@@ -1156,7 +1194,7 @@ img {
     max-width: 360px;
     margin-top: 16px;
     margin-bottom: 21px;
-    font-size: 1.05rem;
+    font-size: clamp(0.7rem, 3.3vw, 1.05rem);
   }
 
   .hero__stats {
@@ -1166,7 +1204,7 @@ img {
   .stat-card {
     min-height: 66px;
     padding: 10px 9px;
-    border-radius: 13px;
+    border-radius: 22px;
     font-size: 0.95rem;
   }
 
@@ -1183,7 +1221,7 @@ img {
     min-height: 59px;
     gap: 8px;
     padding: 7px 7px 7px 11px;
-    border-radius: 16px;
+    border-radius: 999px;
   }
 
   .search-shell__icon {
