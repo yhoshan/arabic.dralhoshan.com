@@ -1,368 +1,419 @@
 /**
- * الهوية البصرية: تدرّج سماوي #8ED1FC → #45AEF5 → #168FE8،
- * وخط المهند لعنواني الغلاف فقط، مع خط أميري لبقية النصوص العربية.
- * لا تُعدَّل بيانات المربعات أو عددها أو محتوى شريط البحث ضمن هذا الملف.
+ * فلسفة التصميم لهذا الملف: محاكاة بنية مكنز أصول الفقه المرجعية بلا عناصر إضافية.
+ * تستعمل الواجهة تدرج الهوية السماوية الثابت وخط المهند للعناوين، وخط أميري لبقية النصوص.
+ * يضبط عنوان الغلاف هرميته وتباعده وفق النموذج المرفق، من دون تغيير الخط أو اللون.
  */
-import { useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 import {
-  ArrowLeft,
-  BookOpen,
+  BookX,
+  Check,
   ChevronDown,
-  Database,
-  FileText,
-  Info,
-  Layers3,
+  Copy,
+  Library,
+  Link2,
+  Mail,
+  MessageCircle,
   Moon,
   Search,
-  SlidersHorizontal,
+  Send,
+  ShieldAlert,
   Sun,
   X,
 } from "lucide-react";
 
-const assets = {
-  seal: "/manus-storage/arabic-thesaurus-seal_4dcd4c4d.png",
-};
+const SIGNATURE_URL = "/manus-storage/user-signature-white-source_7d795c68.png";
+const MAKANEZ_ICON =
+  "https://zadwarod.dralhoshan.com/manus-storage/makanez-icon_85f25650.png";
 
-const categories = [
-  "جميع التصنيفات",
-  "النحو والدراسات اللغوية",
-  "المعاجم والأدب والبلاغة",
-  "الدواوين الشعرية",
-];
+const WHATSAPP_ICON_PATH =
+  "M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z";
 
-const sortOptions = [
-  "الترتيب الافتراضي",
-  "أ ← ي (تصاعدي)",
-  "ي ← أ (تنازلي)",
-  "الأحدث أولاً",
-  "الأقدم أولاً",
-];
+function DisclaimerModal({ onClose }: { onClose: () => void }) {
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") onClose();
+    };
 
-const structureCards = [
-  {
-    icon: FileText,
-    eyebrow: "بطاقة المادة",
-    title: "عنوان المادة العلمية",
-    detail: "يوضع هنا العنوان كما يرد في المصدر، مع إتاحة فتح صفحة التفاصيل.",
-    meta: "المؤلف أو الجهة · المصدر · التاريخ",
-  },
-  {
-    icon: BookOpen,
-    eyebrow: "إحالة منظّمة",
-    title: "مصدر المادة وتصنيفها",
-    detail: "تظهر بيانات التصنيف والنوع والإحالة الخارجية في موضع ثابت يسهل مسحه بصرياً.",
-    meta: "تصنيف · صيغة المادة · رابط الإحالة",
-  },
-  {
-    icon: Database,
-    eyebrow: "عرض بحثي",
-    title: "تفاصيل قابلة للتوسّع",
-    detail: "تُستكمل الحقول الوصفية والجداول العلمية عند إدخال المواد الفعلية.",
-    meta: "وصف · كلمات مفتاحية · ملاحظات",
-  },
-];
+    document.addEventListener("keydown", handleKeyDown);
+    return () => document.removeEventListener("keydown", handleKeyDown);
+  }, [onClose]);
 
-const detailFields = [
-  "عنوان المادة",
-  "المؤلف أو الجهة",
-  "التصنيف الرئيس والفرعي",
-  "المصدر والرابط",
-  "التاريخ والصيغة",
-  "الوصف والكلمات المفتاحية",
-];
+  return (
+    <div className="disclaimer-backdrop" role="presentation" onMouseDown={onClose}>
+      <section
+        className="disclaimer-modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="disclaimer-title"
+        onMouseDown={(event) => event.stopPropagation()}
+      >
+        <div className="disclaimer-modal__accent" />
+        <header className="disclaimer-modal__header">
+          <ShieldAlert aria-hidden="true" />
+          <h2 id="disclaimer-title">حول المكنز</h2>
+          <button
+            type="button"
+            className="modal-close"
+            onClick={onClose}
+            aria-label="إغلاق النافذة"
+          >
+            <X size={18} aria-hidden="true" />
+          </button>
+        </header>
+        <div className="disclaimer-modal__content">
+          <p>
+            مكنز اللغة العربية وعلومها فهرسٌ تجميعيٌّ للروابط والإحالات إلى مواد
+            منشورة في مصادر خارجية، أُعدّ لتيسير الوصول وخدمة الباحثين في اللغة
+            العربية وعلومها. لا يدّعي ملكية المواد ولا يضمن محتواها أو دقتها أو
+            بقاء روابطها. تبقى الحقوق لأصحابها، ويتحمّل المستخدم مسؤولية التحقق
+            من المادة وحقوق استخدامها، ومن له حق أو ملاحظة فليتواصل عبر البريد
+            الإلكتروني.
+          </p>
+        </div>
+        <div className="disclaimer-modal__actions">
+          <button type="button" className="modal-confirm" onClick={onClose}>
+            فهمت
+          </button>
+        </div>
+      </section>
+    </div>
+  );
+}
 
-const tableTabs = [
-  "المصطلحات المنهجية",
-  "الكتب",
-  "الأعلام",
-  "المدارس والاتجاهات",
-  "الموارد حسب المجال",
-];
+function WhatsappGlyph() {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+      <path d={WHATSAPP_ICON_PATH} />
+    </svg>
+  );
+}
 
-type DialogKind = "about" | "details" | null;
+function SignatureLink() {
+  return (
+    <a
+      href="https://dralhoshan.com/"
+      target="_blank"
+      rel="noreferrer"
+      title="الموقع الرسمي للدكتور يوسف بن حمود الحوشان"
+      className="footer-signature"
+    >
+      <img
+        src={SIGNATURE_URL}
+        alt="د. يوسف بن حمود الحوشان"
+        onError={(event) => {
+          event.currentTarget.style.display = "none";
+        }}
+      />
+    </a>
+  );
+}
 
 export default function Home() {
-  const [query, setQuery] = useState("");
-  const [selectedCategory, setSelectedCategory] = useState(categories[0]);
-  const [sortBy, setSortBy] = useState(sortOptions[0]);
   const [isDark, setIsDark] = useState(false);
-  const [dialog, setDialog] = useState<DialogKind>(null);
+  const [showDisclaimer, setShowDisclaimer] = useState(false);
+  const [showSources, setShowSources] = useState(false);
+  const [footerSourcesOpen, setFooterSourcesOpen] = useState(false);
+  const [query, setQuery] = useState("");
+  const [copied, setCopied] = useState(false);
 
-  const searchMessage = useMemo(() => {
-    const cleanQuery = query.trim();
-    return cleanQuery
-      ? `تم تجهيز البحث عن «${cleanQuery}». ستظهر النتائج بعد إضافة المواد.`
-      : "ابحث في العناوين والموضوعات والمصادر عند إدخال مواد المكنز.";
-  }, [query]);
+  const currentUrl =
+    typeof window === "undefined"
+      ? "https://arabic.dralhoshan.com/"
+      : window.location.href;
+  const shareText = "مكنز اللغة العربية وعلومها — فهرس للمصادر العلمية للباحثين";
+  const shareUrl = encodeURIComponent(`${shareText}\n${currentUrl}`);
+
+  const clearFilters = () => {
+    setQuery("");
+    setShowSources(false);
+  };
+
+  const copyShareLink = async () => {
+    try {
+      await navigator.clipboard?.writeText(currentUrl);
+      setCopied(true);
+      window.setTimeout(() => setCopied(false), 2000);
+    } catch {
+      setCopied(false);
+    }
+  };
 
   return (
     <main
       className={`thesaurus-page ${isDark ? "thesaurus-page--dark" : ""}`}
       dir="rtl"
     >
-      <section className="hero" id="top">
-        <div className="hero__texture" aria-hidden="true" />
-        <header className="site-header shell">
-          <a className="brand-lockup" href="#top" aria-label="العودة إلى أعلى الصفحة">
-            <img src={assets.seal} alt="رمز مكنز اللغة العربية وعلومها" />
-            <span>مكانز</span>
-          </a>
+      {showDisclaimer && (
+        <DisclaimerModal onClose={() => setShowDisclaimer(false)} />
+      )}
 
-          <nav className="site-header__actions" aria-label="أدوات الموقع">
-            <button className="header-link" onClick={() => setDialog("about")}>
-              <Info size={17} strokeWidth={1.9} aria-hidden="true" />
-              <span>حول المكنز</span>
-            </button>
-            <button
-              className="theme-toggle"
-              type="button"
-              onClick={() => setIsDark((value) => !value)}
-              aria-label={isDark ? "تفعيل النمط الفاتح" : "تفعيل النمط الداكن"}
-              title={isDark ? "تفعيل النمط الفاتح" : "تفعيل النمط الداكن"}
-            >
-              {isDark ? <Sun size={18} aria-hidden="true" /> : <Moon size={18} aria-hidden="true" />}
-            </button>
-          </nav>
-        </header>
+      <header className="hero" id="top">
+        <div className="hero__top-line" aria-hidden="true" />
 
-        <div className="hero__content shell">
-          <div className="hero__brand-mark" aria-hidden="true">
-            <span className="hero__brand-mark-dot" />
-            <span className="hero__brand-mark-line" />
-          </div>
-          <p className="hero__kicker">مِكنز</p>
-          <h1>اللغة العربية وعلومها</h1>
+        <div className="hero__about-control">
+          <button
+            type="button"
+            className="about-trigger"
+            onClick={() => setShowDisclaimer(true)}
+            aria-haspopup="dialog"
+          >
+            <ShieldAlert size={20} aria-hidden="true" />
+            <span>حول المكنز</span>
+          </button>
+        </div>
+
+        <div className="hero__theme-control">
+          <button
+            type="button"
+            className="theme-toggle"
+            onClick={() => setIsDark((value) => !value)}
+            title={isDark ? "الوضع النهاري" : "الوضع الليلي"}
+            aria-label={isDark ? "تفعيل الوضع النهاري" : "تفعيل الوضع الليلي"}
+          >
+            {isDark ? <Sun size={19} aria-hidden="true" /> : <Moon size={19} aria-hidden="true" />}
+          </button>
+        </div>
+
+        <div className="hero__content reference-shell">
+          <h1 className="hero-title" aria-label="مكنز اللغة العربية وعلومها">
+            <span className="hero-title__kicker">مكنز</span>
+            <span className="hero-title__name">اللغة العربية وعلومها</span>
+          </h1>
+
           <p className="hero__description">
-            <span>فهرس علمي منظم للغة العربية وعلومها</span>
-            <span>ومعاجمها ودواوينها الشعرية ومراجعها.</span>
+            <span>فهرس تجميعي للروابط والإحالات العلمية</span>
+            <span>في اللغة العربية وعلومها</span>
           </p>
 
-          <div className="hero__stats" role="list" aria-label="أقسام المكنز">
-            {[
-              { label: "إجمالي المواد", icon: Layers3 },
-              { label: "النحو والدراسات اللغوية", icon: BookOpen },
-              { label: "المعاجم والأدب والبلاغة", icon: FileText },
-              { label: "الدواوين الشعرية", icon: Database },
-            ].map((item) => {
-              const Icon = item.icon;
-              return (
-                <div className="stat-card" key={item.label} role="listitem">
-                  <Icon size={18} strokeWidth={1.6} aria-hidden="true" />
-                  <span className="stat-label">{item.label}</span>
-                </div>
-              );
-            })}
+          <div
+            className="hero__stats"
+            role="list"
+            aria-label="مساحات إحصاءات المكنز التي ستستكمل من البيانات المعتمدة"
+          >
+            {Array.from({ length: 4 }, (_, index) => (
+              <div
+                className="hero-stat"
+                role="listitem"
+                key={`stat-slot-${index}`}
+                aria-label={`خانة إحصاء ${index + 1} — في انتظار البيانات`}
+              />
+            ))}
+          </div>
+        </div>
+
+        <div className="hero__bottom-line" aria-hidden="true" />
+      </header>
+
+      <section className="reference-search" aria-label="البحث والتصفية">
+        <div className="reference-shell reference-search__inner">
+          <div className="search-field">
+            <Search size={20} aria-hidden="true" />
+            <input
+              type="search"
+              value={query}
+              onChange={(event) => setQuery(event.target.value)}
+              placeholder="ابحث في عناوين الكتب والمؤلفين..."
+              aria-label="البحث في مواد المكنز"
+            />
+            {query && (
+              <button
+                type="button"
+                className="search-field__clear"
+                onClick={() => setQuery("")}
+                aria-label="مسح البحث"
+              >
+                <X size={17} aria-hidden="true" />
+              </button>
+            )}
+          </div>
+
+          <div className="reference-search__filters">
+            <div className="category-filter" aria-label="فلاتر التصنيف">
+              <button type="button" className="filter-button filter-button--active">
+                جميع التصنيفات
+              </button>
+              <span className="filter-deferred-note">تُضاف الأقسام بعد اعتمادها</span>
+            </div>
+
+            <div className="source-filter-wrap">
+              <button
+                type="button"
+                className={`filter-button source-filter ${showSources ? "source-filter--open" : ""}`}
+                onClick={() => setShowSources((value) => !value)}
+                aria-expanded={showSources}
+              >
+                <Library size={15} aria-hidden="true" />
+                <span>المصادر</span>
+                <ChevronDown size={15} aria-hidden="true" />
+              </button>
+            </div>
+          </div>
+
+          {showSources && (
+            <div className="source-panel" role="status">
+              <p>تُدرج المصادر هنا بعد تزويد المكنز بها.</p>
+            </div>
+          )}
+
+          <div className="results-strip">
+            <span>
+              إجمالي المواد: <strong>—</strong> مادة علمية
+            </span>
+            {query && (
+              <button type="button" onClick={clearFilters}>
+                <X size={13} aria-hidden="true" />
+                مسح الفلاتر
+              </button>
+            )}
           </div>
         </div>
       </section>
 
-      <div className="site-body">
-        <section className="discovery shell" aria-label="أدوات الاستكشاف">
-          <div className="search-shell">
-            <Search className="search-shell__icon" size={23} strokeWidth={1.8} aria-hidden="true" />
-            <input
-              value={query}
-              onChange={(event) => setQuery(event.target.value)}
-              placeholder="ابحث في عناوين الكتب والمؤلفين والموضوعات..."
-              aria-label="البحث في مواد المكنز"
-            />
-            <button className="search-submit" type="button" aria-label="تنفيذ البحث">
-              <Search size={20} strokeWidth={2.2} aria-hidden="true" />
-            </button>
-          </div>
-          <p className="search-status" aria-live="polite">
-            {searchMessage}
-          </p>
-
-          <div className="filters-panel">
-            <div className="filters-panel__heading">
-              <SlidersHorizontal size={17} strokeWidth={1.8} aria-hidden="true" />
-              <span>مسارات التصفح</span>
-            </div>
-            <div className="category-chips" aria-label="تصفية التصنيفات">
-              {categories.map((category) => (
-                <button
-                  key={category}
-                  type="button"
-                  className={selectedCategory === category ? "category-chip category-chip--active" : "category-chip"}
-                  onClick={() => setSelectedCategory(category)}
-                  aria-pressed={selectedCategory === category}
-                >
-                  {category}
-                </button>
-              ))}
-            </div>
-            <div className="select-row">
-              <label className="select-control">
-                <span>المصادر</span>
-                <span className="select-control__field">
-                  <select aria-label="تصفية المصادر" defaultValue="all">
-                    <option value="all">جميع المصادر</option>
-                    <option disabled value="later">تظهر المصادر هنا بعد إدخال المواد</option>
-                  </select>
-                  <ChevronDown size={16} aria-hidden="true" />
-                </span>
-              </label>
-              <label className="select-control">
-                <span>الترتيب</span>
-                <span className="select-control__field">
-                  <select value={sortBy} onChange={(event) => setSortBy(event.target.value)} aria-label="ترتيب المواد">
-                    {sortOptions.map((option) => (
-                      <option key={option} value={option}>
-                        {option}
-                      </option>
-                    ))}
-                  </select>
-                  <ChevronDown size={16} aria-hidden="true" />
-                </span>
-              </label>
-            </div>
-          </div>
-        </section>
-
-        <section className="materials shell" id="materials" aria-labelledby="materials-title">
-          <div className="section-heading">
-            <div>
-              <p className="section-heading__eyebrow">واجهة قابلة للبيانات</p>
-              <h2 id="materials-title">المواد العلمية</h2>
-              <p>هذا هو قالب العرض المعتمد؛ تبقى حقوله فارغة حتى تزويد المكنز بمواده.</p>
-            </div>
-            <button className="outline-button" type="button" onClick={() => setDialog("details")}>
-              <span>معاينة التفاصيل</span>
-              <ArrowLeft size={17} strokeWidth={1.8} aria-hidden="true" />
-            </button>
-          </div>
-
-          <div className="materials-grid">
-            {structureCards.map((card) => {
-              const Icon = card.icon;
-              return (
-                <article className="material-card material-card--template" key={card.title}>
-                  <div className="material-card__topline">
-                    <span className="material-card__type">
-                      <Icon size={15} strokeWidth={1.8} aria-hidden="true" />
-                      {card.eyebrow}
-                    </span>
-                    <span className="template-label">هيكل معتمد</span>
-                  </div>
-                  <h3>{card.title}</h3>
-                  <p>{card.detail}</p>
-                  <div className="material-card__meta">{card.meta}</div>
-                  <div className="material-card__actions">
-                    <button type="button" onClick={() => setDialog("details")}>تفاصيل المادة</button>
-                    <button type="button" aria-label="رابط المادة غير متاح قبل إدخال المواد" disabled>
-                      رابط الإحالة
-                    </button>
-                  </div>
-                </article>
-              );
-            })}
-          </div>
-        </section>
-
-        <section className="research-route shell" aria-labelledby="route-title">
-          <div className="research-route__art" aria-hidden="true" />
-          <div className="research-route__content">
-            <p className="section-heading__eyebrow">هيكل الباحث</p>
-            <h2 id="route-title">من الاستكشاف إلى الإحالة</h2>
-            <p>
-              يبدأ الباحث بالبحث الحر، ثم يضيّق النتائج عبر التصنيف والمصدر والترتيب، وينتقل إلى
-              بطاقة المادة فصفحة تفاصيلها والإحالة الأصلية.
-            </p>
-            <div className="route-steps" aria-label="خطوات استعمال المكنز">
-              <span>البحث</span>
-              <ArrowLeft size={16} aria-hidden="true" />
-              <span>التصفية</span>
-              <ArrowLeft size={16} aria-hidden="true" />
-              <span>التفاصيل</span>
-              <ArrowLeft size={16} aria-hidden="true" />
-              <span>الإحالة</span>
-            </div>
-          </div>
-        </section>
-
-        <section className="detail-tables shell" aria-labelledby="tables-title">
-          <div className="detail-tables__title">
-            <Database size={26} strokeWidth={1.6} aria-hidden="true" />
-            <div>
-              <p className="section-heading__eyebrow">مساحة تحليلية</p>
-              <h2 id="tables-title">الجداول التفصيلية</h2>
-            </div>
-          </div>
-          <div className="table-tabs" role="tablist" aria-label="أنواع الجداول التفصيلية">
-            {tableTabs.map((tab, index) => (
-              <button key={tab} type="button" role="tab" aria-selected={index === 0} className={index === 0 ? "table-tab table-tab--active" : "table-tab"}>
-                {tab}
-              </button>
-            ))}
-          </div>
-          <div className="empty-table" role="status">
-            <div className="empty-table__lines" aria-hidden="true">
-              <span />
-              <span />
-              <span />
-            </div>
-            <p>تُعرض البيانات التفصيلية هنا بعد استلامها، مع البحث والفرز والتصفية من داخل الجدول.</p>
-          </div>
-        </section>
-
-        <footer className="site-footer">
-          <div className="shell site-footer__inner">
-            <div className="footer-brand">
-              <img src={assets.seal} alt="" aria-hidden="true" />
-              <div>
-                <span>مِكنز</span>
-                <strong>اللغة العربية وعلومها</strong>
-              </div>
-            </div>
-            <p>
-              <Info size={16} strokeWidth={1.8} aria-hidden="true" />
-              إخلاء مسؤولية: هذا المكنز فهرسٌ تجميعيٌّ للروابط والإحالات إلى مواد منشورة في مصادر خارجية،
-              أُعدّ لتيسير الوصول وخدمة الباحثين، ولا يدّعي ملكية المواد ولا يضمن محتواها أو دقتها أو بقاء روابطها.
-            </p>
-          </div>
-        </footer>
-      </div>
-
-      {dialog && (
-        <div className="dialog-backdrop" role="presentation" onMouseDown={() => setDialog(null)}>
-          <section
-            className="dialog-card"
-            role="dialog"
-            aria-modal="true"
-            aria-labelledby="dialog-title"
-            onMouseDown={(event) => event.stopPropagation()}
-          >
-            <button className="dialog-close" type="button" onClick={() => setDialog(null)} aria-label="إغلاق النافذة">
-              <X size={21} aria-hidden="true" />
-            </button>
-            {dialog === "about" ? (
-              <>
-                <p className="section-heading__eyebrow">عن المشروع</p>
-                <h2 id="dialog-title">مكنز اللغة العربية وعلومها</h2>
-                <p>
-                  منصة فهرسة علمية تُهيّأ لجمع مصادر اللغة العربية وعلومها وتيسير البحث فيها عبر
-                  التصنيفات والمصادر والإحالات المنظمة.
-                </p>
-              </>
-            ) : (
-              <>
-                <p className="section-heading__eyebrow">قالب صفحة المادة</p>
-                <h2 id="dialog-title">تفاصيل المادة العلمية</h2>
-                <p>تظهر هذه الحقول في صفحة كل مادة بعد تزويد المكنز بالبيانات الفعلية.</p>
-                <dl className="detail-fields">
-                  {detailFields.map((field) => (
-                    <div key={field}>
-                      <dt>{field}</dt>
-                      <dd>يُملأ عند إضافة المادة</dd>
-                    </div>
-                  ))}
-                </dl>
-              </>
-            )}
-          </section>
+      <section className="materials-section reference-shell" aria-labelledby="materials-title">
+        <h2 id="materials-title">المواد العلمية</h2>
+        <div className="materials-empty" role="status">
+          <BookX size={64} aria-hidden="true" />
+          <h3>لا توجد نتائج</h3>
+          <p>جرّب تغيير كلمات البحث أو الفلاتر المحددة</p>
         </div>
-      )}
+      </section>
+
+      <footer className="reference-footer">
+        <section className="broken-link-section reference-shell">
+          <div className="broken-link-card">
+            <h2>الإبلاغ عن رابط لا يعمل</h2>
+            <p>
+              أخي الباحث، إذا واجهتك مشكلة في تحميل أي كتاب أو مادة، يرجى كتابة
+              اسم المادة أو الرابط المعطل وسنقوم بمراجعته.
+            </p>
+            <a
+              href="mailto:yhoshan@gmail.com?subject=إبلاغ عن رابط معطل في مكنز اللغة العربية وعلومها"
+              className="report-link"
+            >
+              <Mail size={16} aria-hidden="true" />
+              <span>إرسال البلاغ للمشرف</span>
+            </a>
+          </div>
+        </section>
+
+        <section className="share-section">
+          <h2>ساهم في نشر المكنز</h2>
+          <p>الدال على الخير كفاعله</p>
+          <div className="share-actions" aria-label="مشاركة المكنز">
+            <a
+              href={`https://wa.me/?text=${shareUrl}`}
+              target="_blank"
+              rel="noreferrer"
+              className="share-action share-action--whatsapp"
+              title="مشاركة عبر واتساب"
+              aria-label="مشاركة عبر واتساب"
+            >
+              <WhatsappGlyph />
+            </a>
+            <a
+              href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(currentUrl)}&text=${encodeURIComponent(shareText)}`}
+              target="_blank"
+              rel="noreferrer"
+              className="share-action share-action--x"
+              title="مشاركة عبر X"
+              aria-label="مشاركة عبر X"
+            >
+              <span aria-hidden="true">X</span>
+            </a>
+            <a
+              href={`https://t.me/share/url?url=${encodeURIComponent(currentUrl)}&text=${encodeURIComponent(shareText)}`}
+              target="_blank"
+              rel="noreferrer"
+              className="share-action share-action--telegram"
+              title="مشاركة عبر تيليجرام"
+              aria-label="مشاركة عبر تيليجرام"
+            >
+              <Send size={19} aria-hidden="true" />
+            </a>
+            <span className="share-divider" aria-hidden="true" />
+            <button type="button" className="copy-link" onClick={copyShareLink}>
+              {copied ? <Check size={16} aria-hidden="true" /> : <Copy size={16} aria-hidden="true" />}
+              <span>{copied ? "تم النسخ" : "نسخ الرابط"}</span>
+            </button>
+          </div>
+        </section>
+
+        <section className="footer-main">
+          <div className="reference-shell footer-main__inner">
+            <div className="footer-notes">
+              <p>حقوق المواد محفوظة لمؤلفيها وناشريها.</p>
+              <p>
+                في حال عدم رغبتكم بنشر ما يخصكم، آمل المراسلة على: {" "}
+                <a href="mailto:yhoshan@gmail.com">yhoshan@gmail.com</a>
+              </p>
+              <p>
+                إذا لم تجد مادة في قسمها المتوقع، يرجى استخدام شريط البحث العام.
+              </p>
+              <p>
+                هل تبحث في السلاسل التراثية الأخرى؟ {" "}
+                <a href="https://nsooos.com/" target="_blank" rel="noreferrer">
+                  انتقل لمنصة نصوص تراثية للباحثين
+                </a>
+              </p>
+            </div>
+
+            <div className="footer-sources">
+              <button
+                type="button"
+                className="footer-sources__trigger"
+                onClick={() => setFooterSourcesOpen((value) => !value)}
+                aria-expanded={footerSourcesOpen}
+              >
+                <span>
+                  <Library size={16} aria-hidden="true" />
+                  مصادر المكنز
+                </span>
+                <ChevronDown
+                  size={17}
+                  className={footerSourcesOpen ? "footer-sources__chevron footer-sources__chevron--open" : "footer-sources__chevron"}
+                  aria-hidden="true"
+                />
+              </button>
+              {footerSourcesOpen && (
+                <div className="footer-sources__empty" role="status">
+                  لا توجد مصادر مضافة بعد.
+                </div>
+              )}
+            </div>
+
+            <div className="footer-bottom">
+              <p>جميع الحقوق محفوظة © 2026 — مكنز اللغة العربية وعلومها.</p>
+              <a
+                href="https://dralhoshan.com/"
+                target="_blank"
+                rel="noreferrer"
+                className="makanez-link"
+                title="منصة المكانز العلمية"
+              >
+                <img
+                  src={MAKANEZ_ICON}
+                  alt="المكانز"
+                  onError={(event) => {
+                    event.currentTarget.style.display = "none";
+                  }}
+                />
+              </a>
+              <SignatureLink />
+            </div>
+          </div>
+        </section>
+
+        <a
+          href={`https://wa.me/?text=${shareUrl}`}
+          target="_blank"
+          rel="noreferrer"
+          className="floating-whatsapp"
+          title="مشاركة عبر واتساب"
+          aria-label="مشاركة عبر واتساب"
+        >
+          <WhatsappGlyph />
+        </a>
+      </footer>
     </main>
   );
 }
