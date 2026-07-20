@@ -23,6 +23,7 @@ import {
 } from "lucide-react";
 import {
   CORPUS_METADATA,
+  DIWAN_SOURCE_LINKS,
   displayCount,
   filterMaterials,
   isStandalonePoetryDiwan,
@@ -174,6 +175,7 @@ function SignatureLink() {
 
 function MaterialCard({ material }: { material: (typeof MATERIALS)[number] }) {
   const [copied, setCopied] = useState(false);
+  const isDiwan = isStandalonePoetryDiwan(material);
 
   const copyMaterialLink = async () => {
     try {
@@ -196,7 +198,7 @@ function MaterialCard({ material }: { material: (typeof MATERIALS)[number] }) {
           <span className="material-card__category">
             {MATERIAL_CATEGORY_LABELS[material.primaryCategory]}
           </span>
-          <span className="material-card__source">موقع بحوث</span>
+          <span className="material-card__source">{material.source}</span>
         </div>
         <h3>{material.title}</h3>
         <dl className="material-card__metadata">
@@ -216,15 +218,28 @@ function MaterialCard({ material }: { material: (typeof MATERIALS)[number] }) {
           </div>
         </dl>
       </div>
-      <button
-        type="button"
-        className="material-card__link"
-        onClick={copyMaterialLink}
-        title="نسخ رابط المادة من موقع بحوث"
-      >
-        {copied ? <Check size={16} aria-hidden="true" /> : <Copy size={16} aria-hidden="true" />}
-        <span>{copied ? "تم النسخ" : "نسخ الرابط"}</span>
-      </button>
+      {isDiwan ? (
+        <a
+          className="material-card__link"
+          href={material.sourceUrl}
+          target="_blank"
+          rel="noreferrer"
+          title={`فتح صفحة الديوان في ${material.source}`}
+        >
+          <ExternalLink size={16} aria-hidden="true" />
+          <span>فتح صفحة الديوان</span>
+        </a>
+      ) : (
+        <button
+          type="button"
+          className="material-card__link"
+          onClick={copyMaterialLink}
+          title="نسخ رابط المادة من موقع بحوث"
+        >
+          {copied ? <Check size={16} aria-hidden="true" /> : <Copy size={16} aria-hidden="true" />}
+          <span>{copied ? "تم النسخ" : "نسخ الرابط"}</span>
+        </button>
+      )}
     </article>
   );
 }
@@ -424,12 +439,24 @@ export default function Home() {
                 موقع بحوث
                 <ExternalLink size={14} aria-hidden="true" />
               </a>
+              {DIWAN_SOURCE_LINKS.map((source) => (
+                <a
+                  className="source-index-link"
+                  href={source.url}
+                  target="_blank"
+                  rel="noreferrer"
+                  key={source.url}
+                >
+                  {source.name}
+                  <ExternalLink size={14} aria-hidden="true" />
+                </a>
+              ))}
             </div>
           )}
 
           <div className="results-strip" aria-live="polite">
             <span>
-              النتائج: <strong>{displayCount(filteredMaterials.length)}</strong> من {displayCount(CORPUS_METADATA.statistics.totalMaterials)} مادة علمية
+              النتائج: <strong>{displayCount(filteredMaterials.length)}</strong> من {displayCount(MATERIALS.length)} مادة مفهرسة
             </span>
             {(query || category !== "all" || statFilter !== "all") && (
               <button type="button" onClick={clearFilters}>
@@ -603,6 +630,16 @@ export default function Home() {
                   >
                     موقع بحوث
                   </a>
+                  {DIWAN_SOURCE_LINKS.map((source) => (
+                    <a
+                      href={source.url}
+                      target="_blank"
+                      rel="noreferrer"
+                      key={source.url}
+                    >
+                      {source.name}
+                    </a>
+                  ))}
                 </div>
               )}
             </div>

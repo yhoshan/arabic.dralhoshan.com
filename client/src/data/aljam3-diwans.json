@@ -1,0 +1,3350 @@
+{
+  "metadata": {
+    "sourceName": "الجامع",
+    "sourceIndexUrl": "https://aljam3.com/ar/categories/31",
+    "generatedAt": "2026-07-20T21:15:45Z",
+    "selectionMethod": "الكتب العربية المصنفة في قسم الدواوين الشعرية، مع رابط مباشر إلى صفحة الكتاب في المصدر.",
+    "collectionScope": "قائمة القسم كاملة بحسب الصفحات المتاحة وقت الجمع.",
+    "requests": [
+      {
+        "page": 1,
+        "url": "https://aljam3.com/ar/categories/31.turbo_stream?page=1",
+        "records": 20
+      },
+      {
+        "page": 2,
+        "url": "https://aljam3.com/ar/categories/31.turbo_stream?page=2",
+        "records": 20
+      },
+      {
+        "page": 3,
+        "url": "https://aljam3.com/ar/categories/31.turbo_stream?page=3",
+        "records": 20
+      },
+      {
+        "page": 4,
+        "url": "https://aljam3.com/ar/categories/31.turbo_stream?page=4",
+        "records": 20
+      },
+      {
+        "page": 5,
+        "url": "https://aljam3.com/ar/categories/31.turbo_stream?page=5",
+        "records": 20
+      },
+      {
+        "page": 6,
+        "url": "https://aljam3.com/ar/categories/31.turbo_stream?page=6",
+        "records": 20
+      },
+      {
+        "page": 7,
+        "url": "https://aljam3.com/ar/categories/31.turbo_stream?page=7",
+        "records": 20
+      },
+      {
+        "page": 8,
+        "url": "https://aljam3.com/ar/categories/31.turbo_stream?page=8",
+        "records": 17
+      }
+    ]
+  },
+  "materials": [
+    {
+      "id": "aljam3-11693",
+      "title": "أشعار النساء",
+      "author": "محمد بن عمران المرزباني أبو عبيد الله",
+      "source": "الجامع",
+      "relativePath": "ar/11693",
+      "sourceUrl": "https://aljam3.com/ar/11693",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 172,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11694",
+      "title": "أناشيد أبي مازن=أناشيد أبو مازن",
+      "author": "مجموعة من المصنفين",
+      "source": "الجامع",
+      "relativePath": "ar/11694",
+      "sourceUrl": "https://aljam3.com/ar/11694",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 174,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11709",
+      "title": "أناشيد إسلامية",
+      "author": "مجموعة من المؤلفين",
+      "source": "الجامع",
+      "relativePath": "ar/11709",
+      "sourceUrl": "https://aljam3.com/ar/11709",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 207,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11686",
+      "title": "الألمعيات ديوان شعر",
+      "author": "زاهر بن عواض الألمعي",
+      "source": "الجامع",
+      "relativePath": "ar/11686",
+      "sourceUrl": "https://aljam3.com/ar/11686",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 164,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11666",
+      "title": "المستدرك على دوواين الشعراء",
+      "author": "حاتم صالح الضامن",
+      "source": "الجامع",
+      "relativePath": "ar/11666",
+      "sourceUrl": "https://aljam3.com/ar/11666",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 120,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11699",
+      "title": "المعلقات العشر وأخبار شعرائها",
+      "author": "أحمد الأمين الشنقيطي",
+      "source": "الجامع",
+      "relativePath": "ar/11699",
+      "sourceUrl": "https://aljam3.com/ar/11699",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 180,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11667",
+      "title": "ديوان أبي الشمقمق",
+      "author": "مروان بن محمد أبو الشمقمق",
+      "source": "الجامع",
+      "relativePath": "ar/11667",
+      "sourceUrl": "https://aljam3.com/ar/11667",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 126,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11774",
+      "title": "ديوان أبي العتاهية",
+      "author": "أبو العتاهية",
+      "source": "الجامع",
+      "relativePath": "ar/11774",
+      "sourceUrl": "https://aljam3.com/ar/11774",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 511,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11701",
+      "title": "ديوان أبي القاسم الشابي",
+      "author": "أبو القاسم الشابي",
+      "source": "الجامع",
+      "relativePath": "ar/11701",
+      "sourceUrl": "https://aljam3.com/ar/11701",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 184,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11746",
+      "title": "ديوان أبي القاسم الشابي ورسائله",
+      "author": "أبو القاسم الشابي",
+      "source": "الجامع",
+      "relativePath": "ar/11746",
+      "sourceUrl": "https://aljam3.com/ar/11746",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 310,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11661",
+      "title": "ديوان أبي طالب عم النبي صلى الله عليه وسلم",
+      "author": "أبو طالب عبد مناف بن عبد المطلب بن هاشم",
+      "source": "الجامع",
+      "relativePath": "ar/11661",
+      "sourceUrl": "https://aljam3.com/ar/11661",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 104,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11724",
+      "title": "ديوان أبي عبد الله جمال الدين محميد بن حمير بن عمر الوصابي الهمداني",
+      "author": "جمال الدين محميد بن حمير بن عمر الوصابي الهمداني",
+      "source": "الجامع",
+      "relativePath": "ar/11724",
+      "sourceUrl": "https://aljam3.com/ar/11724",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 243,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11766",
+      "title": "ديوان أبي فراس الحمداني (ط. الكتاب العربي)",
+      "author": "الحارث بن أبي العلاء سعيد بن حمدان بن حمدون أبو فراس الحمداني",
+      "source": "الجامع",
+      "relativePath": "ar/11766",
+      "sourceUrl": "https://aljam3.com/ar/11766",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 423,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11763",
+      "title": "ديوان أسامة بن منقذ",
+      "author": "أسامة بن منقذ",
+      "source": "الجامع",
+      "relativePath": "ar/11763",
+      "sourceUrl": "https://aljam3.com/ar/11763",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 416,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11704",
+      "title": "ديوان أعشى همدان وأخباره",
+      "author": "أعشى همدان",
+      "source": "الجامع",
+      "relativePath": "ar/11704",
+      "sourceUrl": "https://aljam3.com/ar/11704",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 191,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11734",
+      "title": "ديوان أقباس في منهاج الدعوة وتوجيه الدعاة بيان وشعر",
+      "author": "عبد الرحمن حسن حبنكة الميداني",
+      "source": "الجامع",
+      "relativePath": "ar/11734",
+      "sourceUrl": "https://aljam3.com/ar/11734",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 262,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11768",
+      "title": "ديوان أوراق الخريف (ط. أوقاف المغرب)",
+      "author": "محمد الحلوي",
+      "source": "الجامع",
+      "relativePath": "ar/11768",
+      "sourceUrl": "https://aljam3.com/ar/11768",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 453,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11708",
+      "title": "ديوان أوس بن حجر",
+      "author": "أوس بن حجر",
+      "source": "الجامع",
+      "relativePath": "ar/11708",
+      "sourceUrl": "https://aljam3.com/ar/11708",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 204,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11702",
+      "title": "ديوان إبراهيم بن حسن الأسكوبي",
+      "author": "إبراهيم بن حسن الأسكوبي",
+      "source": "الجامع",
+      "relativePath": "ar/11702",
+      "sourceUrl": "https://aljam3.com/ar/11702",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 184,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11755",
+      "title": "ديوان إبراهيم ناجي",
+      "author": "إبراهيم ناجي",
+      "source": "الجامع",
+      "relativePath": "ar/11755",
+      "sourceUrl": "https://aljam3.com/ar/11755",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 370,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11759",
+      "title": "ديوان إسماعيل صبري أبو أميمة",
+      "author": "إسماعيل صبري أبو أميمة",
+      "source": "الجامع",
+      "relativePath": "ar/11759",
+      "sourceUrl": "https://aljam3.com/ar/11759",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 392,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11778",
+      "title": "ديوان ابن الأبار (ط. أوقاف المغرب)",
+      "author": "محمد بن الأبار القضاعي البلنسي أبو عبد الله",
+      "source": "الجامع",
+      "relativePath": "ar/11778",
+      "sourceUrl": "https://aljam3.com/ar/11778",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 540,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11756",
+      "title": "ديوان ابن الحداد الأندلسي",
+      "author": "ابن الحداد الأندلسي",
+      "source": "الجامع",
+      "relativePath": "ar/11756",
+      "sourceUrl": "https://aljam3.com/ar/11756",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 376,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11798",
+      "title": "ديوان ابن الرومي",
+      "author": "علي بن العباس بن جريج ابن الرومي",
+      "source": "الجامع",
+      "relativePath": "ar/11798",
+      "sourceUrl": "https://aljam3.com/ar/11798",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 3,
+      "pages": 1641,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11777",
+      "title": "ديوان ابن المعتز",
+      "author": "عبد الله بن المعتز",
+      "source": "الجامع",
+      "relativePath": "ar/11777",
+      "sourceUrl": "https://aljam3.com/ar/11777",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 523,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11732",
+      "title": "ديوان ابن حجر العسقلاني",
+      "author": "أحمد بن علي بن حجر العسقلاني أبو الفضل شهاب الدين",
+      "source": "الجامع",
+      "relativePath": "ar/11732",
+      "sourceUrl": "https://aljam3.com/ar/11732",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 259,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11730",
+      "title": "ديوان ابن خفاجة (ت_ الطباع)",
+      "author": "ابن خفاجة",
+      "source": "الجامع",
+      "relativePath": "ar/11730",
+      "sourceUrl": "https://aljam3.com/ar/11730",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 253,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11789",
+      "title": "ديوان ابن دراج القسطلي",
+      "author": "ابن دراج القسطلي",
+      "source": "الجامع",
+      "relativePath": "ar/11789",
+      "sourceUrl": "https://aljam3.com/ar/11789",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 731,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11753",
+      "title": "ديوان ابن زيدون",
+      "author": "أحمد بن عبد الله المخزومي أبو الوليد ابن زيدون",
+      "source": "الجامع",
+      "relativePath": "ar/11753",
+      "sourceUrl": "https://aljam3.com/ar/11753",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 347,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11657",
+      "title": "ديوان ابن سهل الأندلسي",
+      "author": "ابن سهل الأندلسي",
+      "source": "الجامع",
+      "relativePath": "ar/11657",
+      "sourceUrl": "https://aljam3.com/ar/11657",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 96,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11740",
+      "title": "ديوان ابن عبد ربه",
+      "author": "ابن عبد ربه الأندلسي",
+      "source": "الجامع",
+      "relativePath": "ar/11740",
+      "sourceUrl": "https://aljam3.com/ar/11740",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 287,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11726",
+      "title": "ديوان ابن عبد ربه الأندلسي مع دراسة لحياته وشعره",
+      "author": "ابن عبد ربه الأندلسي",
+      "source": "الجامع",
+      "relativePath": "ar/11726",
+      "sourceUrl": "https://aljam3.com/ar/11726",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 246,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11705",
+      "title": "ديوان ابن مشرف (ط الفلاح)",
+      "author": "أحمد بن علي بن حسين بن مشرف الوهيبي التميمي",
+      "source": "الجامع",
+      "relativePath": "ar/11705",
+      "sourceUrl": "https://aljam3.com/ar/11705",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 192,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11758",
+      "title": "ديوان ابن هاني الأندلسي",
+      "author": "محمد بن هاني الأزدي الأندلسي",
+      "source": "الجامع",
+      "relativePath": "ar/11758",
+      "sourceUrl": "https://aljam3.com/ar/11758",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 391,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11754",
+      "title": "ديوان الأخطل",
+      "author": "غياث بن غوث بن طارقة أبو مالك الأخطل",
+      "source": "الجامع",
+      "relativePath": "ar/11754",
+      "sourceUrl": "https://aljam3.com/ar/11754",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 358,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11737",
+      "title": "ديوان الأرض المباركة",
+      "author": "عدنان علي رضا النحوي",
+      "source": "الجامع",
+      "relativePath": "ar/11737",
+      "sourceUrl": "https://aljam3.com/ar/11737",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 272,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11770",
+      "title": "ديوان الأعشى الكبير",
+      "author": "ميمون بن قيس",
+      "source": "الجامع",
+      "relativePath": "ar/11770",
+      "sourceUrl": "https://aljam3.com/ar/11770",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 464,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11669",
+      "title": "ديوان الأفوه الأودي",
+      "author": "الأفوه الأودي صلاءة بن عمرو بن مالك اليمني",
+      "source": "الجامع",
+      "relativePath": "ar/11669",
+      "sourceUrl": "https://aljam3.com/ar/11669",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 128,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-1753",
+      "title": "ديوان الأفوه الأودي - ط صادر",
+      "author": "الأفوه الأودي",
+      "source": "الجامع",
+      "relativePath": "ar/1753",
+      "sourceUrl": "https://aljam3.com/ar/1753",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 128,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11760",
+      "title": "ديوان الأمراء وتحفة الشعراء",
+      "author": "ماجد طاهر المطيري",
+      "source": "الجامع",
+      "relativePath": "ar/11760",
+      "sourceUrl": "https://aljam3.com/ar/11760",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 392,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11773",
+      "title": "ديوان الأمير الصنعانى",
+      "author": "محمد بن إسماعيل الأمير الصنعاني",
+      "source": "الجامع",
+      "relativePath": "ar/11773",
+      "sourceUrl": "https://aljam3.com/ar/11773",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 483,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11683",
+      "title": "ديوان الإمام الشافعي المسمى الجوهر النفيس في شعر الإمام محمد بن إدريس (ت_ سليم)",
+      "author": "محمد بن إدريس الشافعي",
+      "source": "الجامع",
+      "relativePath": "ar/11683",
+      "sourceUrl": "https://aljam3.com/ar/11683",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 160,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11711",
+      "title": "ديوان الإمام المجاهد ابن المبارك",
+      "author": "عبد الله بن المبارك أبو عبد الرحمن",
+      "source": "الجامع",
+      "relativePath": "ar/11711",
+      "sourceUrl": "https://aljam3.com/ar/11711",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 209,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11684",
+      "title": "ديوان الإمام علي (ت_ خفاجى)",
+      "author": "علي بن أبي طالب",
+      "source": "الجامع",
+      "relativePath": "ar/11684",
+      "sourceUrl": "https://aljam3.com/ar/11684",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 160,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11801",
+      "title": "ديوان البحتري",
+      "author": "البحتري",
+      "source": "الجامع",
+      "relativePath": "ar/11801",
+      "sourceUrl": "https://aljam3.com/ar/11801",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 5,
+      "pages": 3237,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11658",
+      "title": "ديوان الحارث بن حلزة",
+      "author": "الحارث بن حلزة",
+      "source": "الجامع",
+      "relativePath": "ar/11658",
+      "sourceUrl": "https://aljam3.com/ar/11658",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 97,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11710",
+      "title": "ديوان الحطيئة برواية وشرح ابن السكيت",
+      "author": "جرول الحطيئة العبسي أبو مليكة - ابن السكيت",
+      "source": "الجامع",
+      "relativePath": "ar/11710",
+      "sourceUrl": "https://aljam3.com/ar/11710",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 208,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11781",
+      "title": "ديوان الحطيئة بشرح ابن السكيت والسكري والسجستاني",
+      "author": "جرول الحطيئة العبسي أبو مليكة - ابن السكيت - السكري - السجستاني",
+      "source": "الجامع",
+      "relativePath": "ar/11781",
+      "sourceUrl": "https://aljam3.com/ar/11781",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 551,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11749",
+      "title": "ديوان الحماسة (ط. العلمية)",
+      "author": "حبيب بن أوس الطائي أبو تمام",
+      "source": "الجامع",
+      "relativePath": "ar/11749",
+      "sourceUrl": "https://aljam3.com/ar/11749",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 336,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11651",
+      "title": "ديوان الخرنق بنت بدر بن هفان",
+      "author": "الخرنق بنت بدر بن هفان",
+      "source": "الجامع",
+      "relativePath": "ar/11651",
+      "sourceUrl": "https://aljam3.com/ar/11651",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 76,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11739",
+      "title": "ديوان الرافعي",
+      "author": "مصطفى صادق الرافعي",
+      "source": "الجامع",
+      "relativePath": "ar/11739",
+      "sourceUrl": "https://aljam3.com/ar/11739",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 2,
+      "pages": 279,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11659",
+      "title": "ديوان الشافعي (ت_ الزعبي)",
+      "author": "محمد بن إدريس الشافعي",
+      "source": "الجامع",
+      "relativePath": "ar/11659",
+      "sourceUrl": "https://aljam3.com/ar/11659",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 103,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11670",
+      "title": "ديوان الشافعي (ت_ الطباع)",
+      "author": "محمد بن إدريس الشافعي",
+      "source": "الجامع",
+      "relativePath": "ar/11670",
+      "sourceUrl": "https://aljam3.com/ar/11670",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 128,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11692",
+      "title": "ديوان الشافعي (ت_ بهجت)",
+      "author": "محمد بن إدريس الشافعي",
+      "source": "الجامع",
+      "relativePath": "ar/11692",
+      "sourceUrl": "https://aljam3.com/ar/11692",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 171,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11671",
+      "title": "ديوان الشافعي (ت_ خفاجى)",
+      "author": "محمد بن إدريس الشافعي",
+      "source": "الجامع",
+      "relativePath": "ar/11671",
+      "sourceUrl": "https://aljam3.com/ar/11671",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 128,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11665",
+      "title": "ديوان الشافعي (ت_ زرزور)",
+      "author": "محمد بن إدريس الشافعي",
+      "source": "الجامع",
+      "relativePath": "ar/11665",
+      "sourceUrl": "https://aljam3.com/ar/11665",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 114,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11715",
+      "title": "ديوان الشافعي (ت_ يعقوب)",
+      "author": "محمد بن إدريس الشافعي",
+      "source": "الجامع",
+      "relativePath": "ar/11715",
+      "sourceUrl": "https://aljam3.com/ar/11715",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 218,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11793",
+      "title": "ديوان الشامي الأعمال الكاملة",
+      "author": "أحمد بن محمد الشامي",
+      "source": "الجامع",
+      "relativePath": "ar/11793",
+      "sourceUrl": "https://aljam3.com/ar/11793",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 2,
+      "pages": 988,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11790",
+      "title": "ديوان الشيخ أحمد سحنون",
+      "author": "أحمد سحنون",
+      "source": "الجامع",
+      "relativePath": "ar/11790",
+      "sourceUrl": "https://aljam3.com/ar/11790",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 2,
+      "pages": 750,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-1754",
+      "title": "ديوان الشيخ أحمد سحنون - ط الحبر 1-2",
+      "author": "أحمد سحنون",
+      "source": "الجامع",
+      "relativePath": "ar/1754",
+      "sourceUrl": "https://aljam3.com/ar/1754",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 2,
+      "pages": 750,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11787",
+      "title": "ديوان الفرزدق",
+      "author": "همام بن غالب بن صعصعة أبو فراس الفرزدق",
+      "source": "الجامع",
+      "relativePath": "ar/11787",
+      "sourceUrl": "https://aljam3.com/ar/11787",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 668,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11703",
+      "title": "ديوان القاسم ابن هتميل",
+      "author": "القاسم ابن هتميل",
+      "source": "الجامع",
+      "relativePath": "ar/11703",
+      "sourceUrl": "https://aljam3.com/ar/11703",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 188,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11792",
+      "title": "ديوان اللصوص في العصرين الجاهلي والإسلامي",
+      "author": "محمد نبيل طريفي",
+      "source": "الجامع",
+      "relativePath": "ar/11792",
+      "sourceUrl": "https://aljam3.com/ar/11792",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 2,
+      "pages": 800,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11784",
+      "title": "ديوان المتنبي",
+      "author": "أحمد بن حسين الجعفي المتنبي أبو الطيب",
+      "source": "الجامع",
+      "relativePath": "ar/11784",
+      "sourceUrl": "https://aljam3.com/ar/11784",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 583,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11786",
+      "title": "ديوان المعاني",
+      "author": "أبو هلال العسكري",
+      "source": "الجامع",
+      "relativePath": "ar/11786",
+      "sourceUrl": "https://aljam3.com/ar/11786",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 2,
+      "pages": 599,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11714",
+      "title": "ديوان الملاحم العربية",
+      "author": "محمود شوقي الأيوبي",
+      "source": "الجامع",
+      "relativePath": "ar/11714",
+      "sourceUrl": "https://aljam3.com/ar/11714",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 216,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11674",
+      "title": "ديوان النابغة الذبياني (ت_ البستاني)",
+      "author": "النابغة الذبياني",
+      "source": "الجامع",
+      "relativePath": "ar/11674",
+      "sourceUrl": "https://aljam3.com/ar/11674",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 135,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11742",
+      "title": "ديوان النابغة الذبياني (ط دار المعارف)",
+      "author": "النابغة الذبياني",
+      "source": "الجامع",
+      "relativePath": "ar/11742",
+      "sourceUrl": "https://aljam3.com/ar/11742",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 291,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11689",
+      "title": "ديوان النابغة الذبياني (ط. العلمية)",
+      "author": "النابغة الذبياني",
+      "source": "الجامع",
+      "relativePath": "ar/11689",
+      "sourceUrl": "https://aljam3.com/ar/11689",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 168,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11721",
+      "title": "ديوان النابغة الذبياني (ط. الكتاب العربي)",
+      "author": "النابغة الذبياني",
+      "source": "الجامع",
+      "relativePath": "ar/11721",
+      "sourceUrl": "https://aljam3.com/ar/11721",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 236,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11696",
+      "title": "ديوان امرئ القيس (ط. العلمية)",
+      "author": "امرئ القيس",
+      "source": "الجامع",
+      "relativePath": "ar/11696",
+      "sourceUrl": "https://aljam3.com/ar/11696",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 176,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11796",
+      "title": "ديوان امرئ القيس وملحقاته بشرح أبي سعيد السكري",
+      "author": "امرئ القيس - أبو سعيد السكري",
+      "source": "الجامع",
+      "relativePath": "ar/11796",
+      "sourceUrl": "https://aljam3.com/ar/11796",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 3,
+      "pages": 1240,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11682",
+      "title": "ديوان بديع الزمان الهمذاني",
+      "author": "بديع الزمان الهمذاني",
+      "source": "الجامع",
+      "relativePath": "ar/11682",
+      "sourceUrl": "https://aljam3.com/ar/11682",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 156,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11690",
+      "title": "ديوان بشر بن أبي خازم الأسدي",
+      "author": "بشر بن أبي خازم الأسدي",
+      "source": "الجامع",
+      "relativePath": "ar/11690",
+      "sourceUrl": "https://aljam3.com/ar/11690",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 168,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11762",
+      "title": "ديوان بهاء الدين زهير",
+      "author": "بهاء الدين زهير",
+      "source": "الجامع",
+      "relativePath": "ar/11762",
+      "sourceUrl": "https://aljam3.com/ar/11762",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 415,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11767",
+      "title": "ديوان تأبط شرا وأخباره",
+      "author": "ثابت بن جابر بن سفيان بن عميثل",
+      "source": "الجامع",
+      "relativePath": "ar/11767",
+      "sourceUrl": "https://aljam3.com/ar/11767",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 424,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11691",
+      "title": "ديوان تذكرة الغافل عن استحضار المآكل الموسوم بالمعارضات الزينية على المنظومات الهلالية",
+      "author": "محمد الخالد الجلبي الحمصي",
+      "source": "الجامع",
+      "relativePath": "ar/11691",
+      "sourceUrl": "https://aljam3.com/ar/11691",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 168,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11678",
+      "title": "ديوان ترانيم الرمال",
+      "author": "عبد العزيز بن محمد النقيدان",
+      "source": "الجامع",
+      "relativePath": "ar/11678",
+      "sourceUrl": "https://aljam3.com/ar/11678",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 146,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11775",
+      "title": "ديوان جرير",
+      "author": "جرير بن عطية الخطفي",
+      "source": "الجامع",
+      "relativePath": "ar/11775",
+      "sourceUrl": "https://aljam3.com/ar/11775",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 511,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11675",
+      "title": "ديوان جميل بثينة (ط. بيروت)",
+      "author": "جميل بن معمر",
+      "source": "الجامع",
+      "relativePath": "ar/11675",
+      "sourceUrl": "https://aljam3.com/ar/11675",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 143,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11680",
+      "title": "ديوان جميل بثينة (ط. صادر)",
+      "author": "جميل بن معمر",
+      "source": "الجامع",
+      "relativePath": "ar/11680",
+      "sourceUrl": "https://aljam3.com/ar/11680",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 147,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11649",
+      "title": "ديوان حاتم الطائي (ط. العلمية)",
+      "author": "حاتم الطائي",
+      "source": "الجامع",
+      "relativePath": "ar/11649",
+      "sourceUrl": "https://aljam3.com/ar/11649",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 56,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11656",
+      "title": "ديوان حاتم الطائي (ط. صادر)",
+      "author": "حاتم الطائي",
+      "source": "الجامع",
+      "relativePath": "ar/11656",
+      "sourceUrl": "https://aljam3.com/ar/11656",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 95,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11700",
+      "title": "ديوان حاتم الطائي شرح أبي صالح يحي بن مدرك الطائي (ط. الكتاب العربي)",
+      "author": "حاتم الطائي - يحي بن مدرك الطائي",
+      "source": "الجامع",
+      "relativePath": "ar/11700",
+      "sourceUrl": "https://aljam3.com/ar/11700",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 182,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11741",
+      "title": "ديوان حرقة ألم وإشراقة أمل",
+      "author": "عدنان علي رضا محمد النحوي",
+      "source": "الجامع",
+      "relativePath": "ar/11741",
+      "sourceUrl": "https://aljam3.com/ar/11741",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 288,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11733",
+      "title": "ديوان حسان بن ثابت (ط. العلمية)",
+      "author": "حسان بن ثابت",
+      "source": "الجامع",
+      "relativePath": "ar/11733",
+      "sourceUrl": "https://aljam3.com/ar/11733",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 260,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11698",
+      "title": "ديوان حميدان الشويعر",
+      "author": "حميدان الشويعر",
+      "source": "الجامع",
+      "relativePath": "ar/11698",
+      "sourceUrl": "https://aljam3.com/ar/11698",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 177,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11735",
+      "title": "ديوان خليفة محمد التليسي",
+      "author": "خليفة محمد التليسي",
+      "source": "الجامع",
+      "relativePath": "ar/11735",
+      "sourceUrl": "https://aljam3.com/ar/11735",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 270,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11744",
+      "title": "ديوان ذي الرمة",
+      "author": "غيلان بن عقبة بن مسعود",
+      "source": "الجامع",
+      "relativePath": "ar/11744",
+      "sourceUrl": "https://aljam3.com/ar/11744",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 304,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11800",
+      "title": "ديوان ذي الرمة شرح أبي نصر الباهلي رواية ثعلب",
+      "author": "أبو نصر أحمد بن حاتم الباهلي",
+      "source": "الجامع",
+      "relativePath": "ar/11800",
+      "sourceUrl": "https://aljam3.com/ar/11800",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 3,
+      "pages": 2439,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-1755",
+      "title": "ديوان ذي الرمة شرح أبي نصر الباهلي رواية ثعلب - ت أبو صالح",
+      "author": "أحمد بن حاتم الباهلي",
+      "source": "الجامع",
+      "relativePath": "ar/1755",
+      "sourceUrl": "https://aljam3.com/ar/1755",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 2439,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11788",
+      "title": "ديوان ذي الرمة شرح الخطيب التبريزي (ط. الكتاب العربي)",
+      "author": "غيلان بن عقبة بن مسعود - الخطيب التبريزي",
+      "source": "الجامع",
+      "relativePath": "ar/11788",
+      "sourceUrl": "https://aljam3.com/ar/11788",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 724,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11676",
+      "title": "ديوان زهير بن أبي سلمى",
+      "author": "زهير بن أبي سلمى",
+      "source": "الجامع",
+      "relativePath": "ar/11676",
+      "sourceUrl": "https://aljam3.com/ar/11676",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 143,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11655",
+      "title": "ديوان سفير الأدباء وأديب السفراء",
+      "author": "أحمد بن علي آل مبارك",
+      "source": "الجامع",
+      "relativePath": "ar/11655",
+      "sourceUrl": "https://aljam3.com/ar/11655",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 94,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11750",
+      "title": "ديوان سلامة بن جندل (ط. العلمية)",
+      "author": "محمد بن الحسن الأحول",
+      "source": "الجامع",
+      "relativePath": "ar/11750",
+      "sourceUrl": "https://aljam3.com/ar/11750",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 336,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11652",
+      "title": "ديوان سلامة بن جندل (ط. الكتاب العربي)",
+      "author": "محمد بن الحسن الأحول",
+      "source": "الجامع",
+      "relativePath": "ar/11652",
+      "sourceUrl": "https://aljam3.com/ar/11652",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 81,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11687",
+      "title": "ديوان شاعر فاس عبد الرحمن بن جعفر الكتاني",
+      "author": "عبد الرحمن بن جعفر الكتاني",
+      "source": "الجامع",
+      "relativePath": "ar/11687",
+      "sourceUrl": "https://aljam3.com/ar/11687",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 167,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11764",
+      "title": "ديوان شعر حاتم بن عبد الله الطائي وأخباره",
+      "author": "يحي بن مدرك الطائي",
+      "source": "الجامع",
+      "relativePath": "ar/11764",
+      "sourceUrl": "https://aljam3.com/ar/11764",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 417,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11791",
+      "title": "ديوان صفي الدين الحلي",
+      "author": "صفي الدين الحلي",
+      "source": "الجامع",
+      "relativePath": "ar/11791",
+      "sourceUrl": "https://aljam3.com/ar/11791",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 782,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11769",
+      "title": "ديوان ضياء الدين رجب",
+      "author": "ضياء الدين رجب",
+      "source": "الجامع",
+      "relativePath": "ar/11769",
+      "sourceUrl": "https://aljam3.com/ar/11769",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 456,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11653",
+      "title": "ديوان طرفة بن العبد (ط. العلمية)",
+      "author": "طرفة بن العبد",
+      "source": "الجامع",
+      "relativePath": "ar/11653",
+      "sourceUrl": "https://aljam3.com/ar/11653",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 85,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11761",
+      "title": "ديوان طرفة بن العبد شرح الأعلم الشنتمري",
+      "author": "طرفة بن العبد - الأعلم الشنتمري",
+      "source": "الجامع",
+      "relativePath": "ar/11761",
+      "sourceUrl": "https://aljam3.com/ar/11761",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 397,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11679",
+      "title": "ديوان عامر بن الطفيل",
+      "author": "عامر بن الطفيل",
+      "source": "الجامع",
+      "relativePath": "ar/11679",
+      "sourceUrl": "https://aljam3.com/ar/11679",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 146,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11722",
+      "title": "ديوان عبد الرحمن محمد القاسم العنقري",
+      "author": "عبد الرحمن محمد القاسم العنقري",
+      "source": "الجامع",
+      "relativePath": "ar/11722",
+      "sourceUrl": "https://aljam3.com/ar/11722",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 239,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11713",
+      "title": "ديوان عبد الله بن رواحة ودراسة في سيرته وشعره",
+      "author": "عبد الله بن رواحة",
+      "source": "الجامع",
+      "relativePath": "ar/11713",
+      "sourceUrl": "https://aljam3.com/ar/11713",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 215,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11677",
+      "title": "ديوان عبيد بن الأبرص",
+      "author": "عبيد بن الأبرص",
+      "source": "الجامع",
+      "relativePath": "ar/11677",
+      "sourceUrl": "https://aljam3.com/ar/11677",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 143,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11685",
+      "title": "ديوان عدى بن الرقاع العاملي شاعر أهل الشام",
+      "author": "عدى بن الرقاع",
+      "source": "الجامع",
+      "relativePath": "ar/11685",
+      "sourceUrl": "https://aljam3.com/ar/11685",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 163,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11660",
+      "title": "ديوان عروة بن الورد أمير الصعاليك",
+      "author": "عروة بن الورد",
+      "source": "الجامع",
+      "relativePath": "ar/11660",
+      "sourceUrl": "https://aljam3.com/ar/11660",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 103,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11779",
+      "title": "ديوان عقود الجواهر المنضدة الحسان",
+      "author": "سليمان بن سحمان",
+      "source": "الجامع",
+      "relativePath": "ar/11779",
+      "sourceUrl": "https://aljam3.com/ar/11779",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 540,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11717",
+      "title": "ديوان علي بن أبي طالب (ت_ الكرم)",
+      "author": "علي بن أبي طالب",
+      "source": "الجامع",
+      "relativePath": "ar/11717",
+      "sourceUrl": "https://aljam3.com/ar/11717",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 230,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11718",
+      "title": "ديوان علي بن أبي طالب (ت_ زروزر)",
+      "author": "علي بن أبي طالب",
+      "source": "الجامع",
+      "relativePath": "ar/11718",
+      "sourceUrl": "https://aljam3.com/ar/11718",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 230,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11747",
+      "title": "ديوان علي بن الجهم",
+      "author": "علي بن الجهم",
+      "source": "الجامع",
+      "relativePath": "ar/11747",
+      "sourceUrl": "https://aljam3.com/ar/11747",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 312,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11720",
+      "title": "ديوان عمر بن أبي ربيعة (ط. القلم)",
+      "author": "عمر بن أبي ربيعة",
+      "source": "الجامع",
+      "relativePath": "ar/11720",
+      "sourceUrl": "https://aljam3.com/ar/11720",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 235,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11776",
+      "title": "ديوان عمر بن أبي ربيعة (ط. الكتاب العربي)",
+      "author": "عمر بن أبي ربيعة",
+      "source": "الجامع",
+      "relativePath": "ar/11776",
+      "sourceUrl": "https://aljam3.com/ar/11776",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 514,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11731",
+      "title": "ديوان عمر بن إبراهيم البري",
+      "author": "عمر بن إبراهيم البري",
+      "source": "الجامع",
+      "relativePath": "ar/11731",
+      "sourceUrl": "https://aljam3.com/ar/11731",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 257,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11681",
+      "title": "ديوان عمرو بن كلثوم",
+      "author": "عمرو بن كلثوم",
+      "source": "الجامع",
+      "relativePath": "ar/11681",
+      "sourceUrl": "https://aljam3.com/ar/11681",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 149,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11765",
+      "title": "ديوان عنترة تحقيق ودراسة",
+      "author": "عنترة بن شداد",
+      "source": "الجامع",
+      "relativePath": "ar/11765",
+      "sourceUrl": "https://aljam3.com/ar/11765",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 422,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11706",
+      "title": "ديوان قصائد حرب الخليج",
+      "author": "سامي عبيد العتيبي",
+      "source": "الجامع",
+      "relativePath": "ar/11706",
+      "sourceUrl": "https://aljam3.com/ar/11706",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 192,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11673",
+      "title": "ديوان قيس بن الملوح مجنون ليلى",
+      "author": "قيس بن الملوح",
+      "source": "الجامع",
+      "relativePath": "ar/11673",
+      "sourceUrl": "https://aljam3.com/ar/11673",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 134,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11785",
+      "title": "ديوان كشاجم",
+      "author": "محمود بن الحسين كشاجم",
+      "source": "الجامع",
+      "relativePath": "ar/11785",
+      "sourceUrl": "https://aljam3.com/ar/11785",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 592,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11712",
+      "title": "ديوان كعب بن زهير (ط الشواف)",
+      "author": "كعب بن زهير - أبو سعيد السكري",
+      "source": "الجامع",
+      "relativePath": "ar/11712",
+      "sourceUrl": "https://aljam3.com/ar/11712",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 211,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11697",
+      "title": "ديوان كعب بن زهير (ط الكتاب العربي)",
+      "author": "كعب بن زهير - الحسن بن الحسين العسكري",
+      "source": "الجامع",
+      "relativePath": "ar/11697",
+      "sourceUrl": "https://aljam3.com/ar/11697",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 176,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11663",
+      "title": "ديوان كعب بن زهير (ط. العلمية)",
+      "author": "كعب بن زهير",
+      "source": "الجامع",
+      "relativePath": "ar/11663",
+      "sourceUrl": "https://aljam3.com/ar/11663",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 109,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11729",
+      "title": "ديوان كوكبة السعودية من شعر زين العابدين الكويتي",
+      "author": "زين العابدين الكويتي",
+      "source": "الجامع",
+      "relativePath": "ar/11729",
+      "sourceUrl": "https://aljam3.com/ar/11729",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 250,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11727",
+      "title": "ديوان لبيد بن ربيعة (ط. صادر)",
+      "author": "لبيد بن ربيعة العامري",
+      "source": "الجامع",
+      "relativePath": "ar/11727",
+      "sourceUrl": "https://aljam3.com/ar/11727",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 247,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11728",
+      "title": "ديوان لبيد بن ربيعة العامري",
+      "author": "لبيد بن ربيعة العامري",
+      "source": "الجامع",
+      "relativePath": "ar/11728",
+      "sourceUrl": "https://aljam3.com/ar/11728",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 247,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11748",
+      "title": "ديوان لبيد بن ربيعة شرح الطوسي (ط الكتاب العربي)",
+      "author": "لبيد بن ربيعة العامري - الطوسي",
+      "source": "الجامع",
+      "relativePath": "ar/11748",
+      "sourceUrl": "https://aljam3.com/ar/11748",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 326,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11707",
+      "title": "ديوان محمد أمين الزللي",
+      "author": "محمد أمين الزللي",
+      "source": "الجامع",
+      "relativePath": "ar/11707",
+      "sourceUrl": "https://aljam3.com/ar/11707",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 195,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11795",
+      "title": "ديوان محمد إقبال",
+      "author": "محمد إقبال",
+      "source": "الجامع",
+      "relativePath": "ar/11795",
+      "sourceUrl": "https://aljam3.com/ar/11795",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 2,
+      "pages": 1113,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-1756",
+      "title": "ديوان محمد العيد آل خليفة",
+      "author": "محمد العيد آل خليفة",
+      "source": "الجامع",
+      "relativePath": "ar/1756",
+      "sourceUrl": "https://aljam3.com/ar/1756",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 544,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11725",
+      "title": "ديوان محمد بن أحمد السديري",
+      "author": "محمد بن أحمد السديري",
+      "source": "الجامع",
+      "relativePath": "ar/11725",
+      "sourceUrl": "https://aljam3.com/ar/11725",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 243,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11783",
+      "title": "ديوان محمد بن الطلبة اليعقوبي الشنقيطي المورتاني",
+      "author": "محمد بن الطلبة اليعقوبي الشنقيطي المورتاني",
+      "source": "الجامع",
+      "relativePath": "ar/11783",
+      "sourceUrl": "https://aljam3.com/ar/11783",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 576,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11771",
+      "title": "ديوان محمد بن راشد المكتوم",
+      "author": "محمد بن راشد المكتوم",
+      "source": "الجامع",
+      "relativePath": "ar/11771",
+      "sourceUrl": "https://aljam3.com/ar/11771",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 475,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11780",
+      "title": "ديوان محمد بن سليمان السحيم",
+      "author": "محمد بن سليمان السحيم",
+      "source": "الجامع",
+      "relativePath": "ar/11780",
+      "sourceUrl": "https://aljam3.com/ar/11780",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 550,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11745",
+      "title": "ديوان محمود الوراق شاعر الحكمة والموعظة",
+      "author": "محمود الوراق",
+      "source": "الجامع",
+      "relativePath": "ar/11745",
+      "sourceUrl": "https://aljam3.com/ar/11745",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 309,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11719",
+      "title": "ديوان من الشعر الشعبي لشاعر سدير إبراهيم بن جعيثن",
+      "author": "إبراهيم بن جعيثن",
+      "source": "الجامع",
+      "relativePath": "ar/11719",
+      "sourceUrl": "https://aljam3.com/ar/11719",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 232,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11736",
+      "title": "ديوان مهرجان القصيد",
+      "author": "عدنان علي رضا النحوي",
+      "source": "الجامع",
+      "relativePath": "ar/11736",
+      "sourceUrl": "https://aljam3.com/ar/11736",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 270,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11668",
+      "title": "ديوان مهلهل بن ربيعة",
+      "author": "مهلهل بن ربيعة",
+      "source": "الجامع",
+      "relativePath": "ar/11668",
+      "sourceUrl": "https://aljam3.com/ar/11668",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 127,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11716",
+      "title": "ديوان موكب النور",
+      "author": "عدنان علي رضا النحوي",
+      "source": "الجامع",
+      "relativePath": "ar/11716",
+      "sourceUrl": "https://aljam3.com/ar/11716",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 226,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11757",
+      "title": "ديوان نداء الإسلام",
+      "author": "عارف الشيخ عبد الله الحسن",
+      "source": "الجامع",
+      "relativePath": "ar/11757",
+      "sourceUrl": "https://aljam3.com/ar/11757",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 382,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11782",
+      "title": "ديوان هاشم الرفاعي المجموعة الكاملة",
+      "author": "هاشم الرفاعي",
+      "source": "الجامع",
+      "relativePath": "ar/11782",
+      "sourceUrl": "https://aljam3.com/ar/11782",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 569,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11695",
+      "title": "ديوان وضاح اليمن وبذيله مأساة الشاعر وضاح",
+      "author": "عبد الرحمن بن إسماعيل بن عبد كلال - محمد بهجت الأثري - أحمد حسن الزيات",
+      "source": "الجامع",
+      "relativePath": "ar/11695",
+      "sourceUrl": "https://aljam3.com/ar/11695",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 174,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11654",
+      "title": "ديوان يحيى بن حكم الغزال",
+      "author": "يحيى بن حكم الغزال",
+      "source": "الجامع",
+      "relativePath": "ar/11654",
+      "sourceUrl": "https://aljam3.com/ar/11654",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 88,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11743",
+      "title": "ديوان يزيد بن مفرغ الحميري",
+      "author": "يزيد بن مفرغ الحميري",
+      "source": "الجامع",
+      "relativePath": "ar/11743",
+      "sourceUrl": "https://aljam3.com/ar/11743",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 301,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11664",
+      "title": "ديوانا عروة بن الورد والسموأل",
+      "author": "عروة بن الورد - السموأل",
+      "source": "الجامع",
+      "relativePath": "ar/11664",
+      "sourceUrl": "https://aljam3.com/ar/11664",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 109,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11672",
+      "title": "روائع إقبال",
+      "author": "أبو الحسن علي الحسني الندوي",
+      "source": "الجامع",
+      "relativePath": "ar/11672",
+      "sourceUrl": "https://aljam3.com/ar/11672",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 128,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11751",
+      "title": "شرح القصائد العشر (ط. المنيرية)",
+      "author": "يحي بن علي التبريزي أبو زكريا",
+      "source": "الجامع",
+      "relativePath": "ar/11751",
+      "sourceUrl": "https://aljam3.com/ar/11751",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 336,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11688",
+      "title": "شرح المعلقات السبع",
+      "author": "الحسين بن أحمد الزوزني أبو عبد الله",
+      "source": "الجامع",
+      "relativePath": "ar/11688",
+      "sourceUrl": "https://aljam3.com/ar/11688",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 167,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11752",
+      "title": "شرح المعلقات العشر",
+      "author": "الحسين بن أحمد بن الحسين الزوزني",
+      "source": "الجامع",
+      "relativePath": "ar/11752",
+      "sourceUrl": "https://aljam3.com/ar/11752",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 336,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11794",
+      "title": "شرح ديوان أبي تمام",
+      "author": "الخطيب التبريزي",
+      "source": "الجامع",
+      "relativePath": "ar/11794",
+      "sourceUrl": "https://aljam3.com/ar/11794",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 2,
+      "pages": 1023,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11797",
+      "title": "شرح ديوان الحماسة لأبي تمام (ط. العلمية)",
+      "author": "أحمد بن محمد بن الحسن المرزوقي أبو علي",
+      "source": "الجامع",
+      "relativePath": "ar/11797",
+      "sourceUrl": "https://aljam3.com/ar/11797",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 4,
+      "pages": 1498,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11772",
+      "title": "شرح ديوان امرئ القيس، ويليه أخبار المراقسة وأشعارهم وأخبار النوابغ وآثارهم في الجاهلية وصدر الإسلام",
+      "author": "حسن السندوبي - أسامة صلاح الدين منيمنه",
+      "source": "الجامع",
+      "relativePath": "ar/11772",
+      "sourceUrl": "https://aljam3.com/ar/11772",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 478,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11723",
+      "title": "شرح ديوان عنترة",
+      "author": "عنترة بن شداد - الخطيب التبريزي",
+      "source": "الجامع",
+      "relativePath": "ar/11723",
+      "sourceUrl": "https://aljam3.com/ar/11723",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 242,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11738",
+      "title": "شعر عمرو بن معدي كرب الزبيدي",
+      "author": "عمرو بن معدي كرب الزبيدي",
+      "source": "الجامع",
+      "relativePath": "ar/11738",
+      "sourceUrl": "https://aljam3.com/ar/11738",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 274,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11799",
+      "title": "موسوعة روائع الشعر العربي",
+      "author": "سراج الدين محمد",
+      "source": "الجامع",
+      "relativePath": "ar/11799",
+      "sourceUrl": "https://aljam3.com/ar/11799",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 10,
+      "pages": 1961,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11662",
+      "title": "نزهة الجلساء في أشعار النساء",
+      "author": "عبد الرحمن السيوطي جلال الدين",
+      "source": "الجامع",
+      "relativePath": "ar/11662",
+      "sourceUrl": "https://aljam3.com/ar/11662",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 104,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "aljam3-11650",
+      "title": "نشيد دار الأرقم",
+      "author": "مجموعة من الشعراء",
+      "source": "الجامع",
+      "relativePath": "ar/11650",
+      "sourceUrl": "https://aljam3.com/ar/11650",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "volumes": 1,
+      "pages": 68,
+      "matchEvidence": {
+        "strongSignals": [
+          "مصنف في قسم الدواوين الشعرية"
+        ],
+        "supportingSignals": [],
+        "explicitLanguageSource": true
+      }
+    }
+  ]
+}

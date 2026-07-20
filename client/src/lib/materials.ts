@@ -1,8 +1,10 @@
 /*
  * فلسفة التصميم لهذا الملف: محرك بيانات صغير وشفاف لمكنز اللغة العربية وعلومها.
- * يعرض الفهرس المستورد كما هو، مع تطبيع بحث عربي محافظ وروابط أصلية؛ لا يولّد مواد أو أعداداً افتراضية.
+ * يعرض فهرس بحوث كما هو، ويضيف كتالوج الدواوين العربي الموثق بروابط المصدر المباشرة.
+ * لا يُحسب ديوان إلا إذا مرّ بمرحلة التحقق الوصفية وإزالة التكرار؛ لا يكفي وجود كلمة «ديوان» في العنوان.
  */
 import corpusJson from "@/data/arabic-materials.json";
+import diwansJson from "@/data/diwans.json";
 
 export type MaterialCategory = "all" | "references" | "dictionaries" | "diwans";
 
@@ -54,18 +56,47 @@ interface CorpusPayload {
   materials: Material[];
 }
 
-const corpus = corpusJson as CorpusPayload;
+interface DiwanCatalogPayload {
+  metadata: {
+    sourceName: string;
+    sourceIndexUrl: string;
+    selectionMethod: string;
+  };
+  materials: Array<Omit<Material, "relativePath">>;
+}
 
-export const MATERIALS = corpus.materials;
+const corpus = corpusJson as CorpusPayload;
+const diwanCatalog = diwansJson as DiwanCatalogPayload;
+const CURATED_DIWAN_SIGNAL = "سجل ديوان موثّق";
+
+const DYNAMIC_DIWANS: Material[] = diwanCatalog.materials.map((material) => ({
+  ...material,
+  relativePath: material.sourceUrl,
+  matchEvidence: {
+    ...material.matchEvidence,
+    strongSignals: Array.from(
+      new Set([...material.matchEvidence.strongSignals, CURATED_DIWAN_SIGNAL]),
+    ),
+  },
+}));
+
+export const MATERIALS: Material[] = [...corpus.materials, ...DYNAMIC_DIWANS];
 export const CORPUS_METADATA = corpus.metadata;
 export const JOURNAL_SOURCES = corpus.metadata.journalSources;
+export const DIWAN_SOURCE_LINKS = [
+  {
+    name: "الأرشيف العالمي — الدواوين",
+    url: diwanCatalog.metadata.sourceIndexUrl,
+  },
+  {
+    name: "الجامع — الدواوين",
+    url: "https://aljam3.com/ar/categories/31",
+  },
+] as const;
 
 const ARABIC_DIACRITICS = /[\u0610-\u061A\u064B-\u065F\u0670\u06D6-\u06ED]/g;
 const SEARCH_PUNCTUATION = /[^\u0621-\u063A\u0641-\u064A0-9\s]/g;
 const SEARCH_SPACES = /\s+/g;
-const DIWAN_TITLE_PREFIX = /^ديوان\s+/;
-const DIWAN_STUDY_SIGNALS =
-  /[:؛،]|(دراسة|شرح|تحقيق|فهرس|مجموع|مختارات|رسالة|اثر|قضية|نقد|شعر|شعرية|ديوانين|دواوين|رؤية|تشكيل|تحليل|قراءة)/;
 
 /** تطبيعٌ محدود للحروف يجعل البحث متسامحاً مع الهمزات والتشكيل والفواصل. */
 export function normalizeArabic(value: string): string {
@@ -84,23 +115,17 @@ export function normalizeArabic(value: string): string {
 }
 
 /**
- * يقتصر الديوان الشعري على عنوان «ديوان ...» المستقل، ويستبعد الدراسات
- * والشروح والفهارس والمجاميع؛ فلا تحسب دراسة عن ديوان ضمن إحصاء الدواوين.
+ * لا يمرّ الديوان إلى المربع الديناميكي إلا بوسم تحقّق صريح أضيف بعد فحص
+ * بيانات المصدر ودمج المكرر؛ وبذلك تقبل عناوين مثل «زهور الربيع» متى أثبت
+ * السجل أنها ديوان، وتستبعد الدراسات التي تذكر الديوان عرضاً.
  */
 export function isStandalonePoetryDiwan(
-  material: Pick<Material, "title" | "tags">,
+  material: Pick<Material, "primaryCategory" | "matchEvidence">,
 ): boolean {
-  if (!material.tags.includes("ديوان شعري")) return false;
-
-  const title = String(material.title ?? "")
-    .normalize("NFKC")
-    .replace(/[أإآ]/g, "ا")
-    .replace(/ى/g, "ي")
-    .replace(/ـ/g, "")
-    .replace(/\s+/g, " ")
-    .trim();
-
-  return DIWAN_TITLE_PREFIX.test(title) && !DIWAN_STUDY_SIGNALS.test(title);
+  return (
+    material.primaryCategory === "diwans" &&
+    material.matchEvidence.strongSignals.includes(CURATED_DIWAN_SIGNAL)
+  );
 }
 
 function includesEveryToken(haystack: string, normalizedQuery: string): boolean {
@@ -118,7 +143,12 @@ export function filterMaterials(
   const normalizedQuery = normalizeArabic(query);
 
   return materials.filter((material) => {
-    const matchesCategory = category === "all" || material.primaryCategory === category;
+    const matchesCategory =
+      category === "all"
+        ? true
+        : category === "diwans"
+          ? isStandalonePoetryDiwan(material)
+          : material.primaryCategory === category;
     const matchesSource = source === "all" || material.source === source;
     const searchHaystack = normalizeArabic(
       [material.title, material.author, material.source, material.tags.join(" ")]

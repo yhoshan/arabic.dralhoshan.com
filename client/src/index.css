@@ -436,6 +436,9 @@ img {
 }
 
 .source-panel {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
   margin-top: 2px;
   padding: 11px 13px;
   border-top: 1px solid var(--line);
@@ -1411,8 +1414,14 @@ img {
 }
 
 .footer-sources__empty a {
+  display: block;
+  width: fit-content;
   color: #99c2df;
   text-decoration: none;
+}
+
+.footer-sources__empty a + a {
+  margin-top: 7px;
 }
 
 .footer-sources__empty a:hover {
