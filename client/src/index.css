@@ -1,6 +1,6 @@
 /*
  * فلسفة التصميم لهذا الملف: مكنز عربي مرجعي بتركواز مائي عميق وملمس فهرسي هادئ.
- * تتجاور سلطة خط المهند في العنوان مع أميري للنصوص، وتعمل النقط والتشكيل كعلامة بصرية دقيقة.
+ * تعمل أميري في العناوين والنصوص بتشكيل عربي طبيعي، وتعمل النقط والتشكيل كعلامة بصرية دقيقة.
  * يحافظ الغلاف على «مكنز» الصغيرة فوق الاسم وعلى تباين عالٍ فوق الخلفية المائية الداكنة.
  */
 @import "tailwindcss";
@@ -97,7 +97,7 @@ a[href] {
 button:focus-visible,
 a:focus-visible,
 input:focus-visible {
-  outline: 3px solid rgba(142, 209, 252, 0.95);
+  outline: 3px solid rgba(157, 246, 235, 0.95);
   outline-offset: 3px;
 }
 
@@ -270,7 +270,7 @@ img {
   gap: 1px;
   margin: 0;
   color: var(--pure-white);
-  font-family: "Al Mohanad", "Amiri", serif;
+  font-family: "Amiri", serif;
   font-weight: 700;
   text-shadow: 0 3px 20px rgba(1, 43, 42, 0.42);
 }
@@ -279,9 +279,9 @@ img {
   display: block;
   margin: 0;
   color: var(--pure-white);
-  font-size: clamp(2.6rem, 6.1vw, 5.75rem);
-  line-height: 0.91;
-  letter-spacing: -0.02em;
+  font-size: clamp(2.45rem, 5.2vw, 4.85rem);
+  line-height: 0.98;
+  letter-spacing: normal;
 }
 
 .hero-title__name {
@@ -289,9 +289,9 @@ img {
   max-width: 100%;
   margin: 0;
   color: var(--pure-white);
-  font-size: clamp(3.3rem, 9.8vw, 9rem);
-  line-height: 1.08;
-  letter-spacing: -0.046em;
+  font-size: clamp(3.05rem, 8.55vw, 7.75rem);
+  line-height: 1.02;
+  letter-spacing: normal;
   white-space: nowrap;
 }
 
@@ -310,10 +310,32 @@ img {
 }
 
 .hero__stats {
+  position: relative;
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 9px;
-  width: min(100%, 420px);
+  width: min(100%, 440px);
+  padding-block: 13px;
+}
+
+.hero__stats::before,
+.hero__stats::after {
+  position: absolute;
+  top: 3px;
+  width: 3px;
+  height: 3px;
+  content: "";
+  border-radius: 50%;
+  background: rgba(191, 255, 248, 0.82);
+  box-shadow: 9px 4px 0 rgba(79, 225, 213, 0.68), 18px 0 0 rgba(191, 255, 248, 0.48);
+}
+
+.hero__stats::before {
+  right: 5px;
+}
+
+.hero__stats::after {
+  left: 23px;
 }
 
 .hero-stat {
@@ -419,7 +441,7 @@ img {
   gap: 5px;
   min-height: 32px;
   padding: 3px 13px 4px;
-  border: 1px solid #63b6f4;
+  border: 1px solid #66c9c0;
   border-radius: 7px;
   background: transparent;
   color: var(--sky-ink);
@@ -431,7 +453,7 @@ img {
 
 .filter-button:hover {
   border-color: var(--sky-deep);
-  background: #eef8ff;
+  background: #edf9f6;
 }
 
 .filter-button--active,
@@ -475,7 +497,7 @@ img {
   justify-content: space-between;
   gap: 15px;
   padding-top: 9px;
-  border-top: 1px solid rgba(16, 97, 151, 0.11);
+  border-top: 1px solid rgba(8, 122, 120, 0.14);
   color: var(--ink-muted);
   font-size: 16px;
 }
@@ -635,7 +657,7 @@ img {
   padding: 8px 26px 9px;
   border: 0;
   border-radius: 9px;
-  background: linear-gradient(135deg, #168fe8, #45aef5);
+  background: linear-gradient(135deg, #087a78, #10b6b0);
   box-shadow: 0 7px 16px rgba(4, 48, 84, 0.25);
   color: var(--pure-white);
   font-size: 16px;
@@ -688,7 +710,7 @@ img {
   min-height: 41px;
   padding: 6px 17px 7px;
   border-radius: 8px;
-  background: linear-gradient(135deg, #168fe8, #45aef5);
+  background: linear-gradient(135deg, #087a78, #10b6b0);
   color: var(--pure-white);
   font-size: 15px;
   font-weight: 700;
@@ -711,8 +733,8 @@ img {
 
 .share-section h2 {
   margin: 0 0 1px;
-  color: #d9f0ff;
-  font-family: "Al Mohanad", "Amiri", serif;
+  color: #d8fffa;
+  font-family: "Amiri", serif;
   font-size: 27px;
   font-weight: 700;
   line-height: 1.3;
@@ -720,7 +742,7 @@ img {
 
 .share-section > p {
   margin: 0 0 17px;
-  color: #afd8f4;
+  color: #b8e2dc;
   font-size: 16px;
 }
 
@@ -901,45 +923,29 @@ img {
   text-align: right;
 }
 
-.makanez-link {
+.footer-index-mark {
   grid-column: 2;
+  display: inline-grid;
+  grid-template-columns: repeat(3, 5px);
+  gap: 5px;
+  align-items: end;
+  min-height: 26px;
+  padding: 6px 8px;
+  border: 1px solid rgba(159, 229, 220, 0.34);
+  border-radius: 999px;
+}
+
+.footer-index-mark span {
   display: block;
-  transition: transform 180ms var(--ease-out), opacity 180ms var(--ease-out);
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #c7fff8;
+  box-shadow: 0 0 0 3px rgba(79, 225, 213, 0.12);
 }
 
-.makanez-link:hover {
-  opacity: 0.82;
-  transform: scale(1.04);
-}
-
-.makanez-link img {
-  width: auto;
-  height: 37px;
-  object-fit: contain;
-}
-
-.footer-signature {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  display: block;
-  line-height: 0;
-  transition: opacity 180ms var(--ease-out), transform 180ms var(--ease-out);
-}
-
-.footer-signature:hover {
-  opacity: 0.82;
-  transform: translateY(-2px);
-}
-
-.footer-signature img {
-  display: block;
-  width: auto;
-  max-width: min(176px, 34vw);
-  height: 35px;
-  object-fit: contain;
-  filter: brightness(0) invert(1);
-  opacity: 0.94;
+.footer-index-mark span:nth-child(2) {
+  transform: translateY(-4px);
 }
 
 .floating-whatsapp {
@@ -1143,19 +1149,9 @@ img {
     text-align: center;
   }
 
-  .makanez-link {
+  .footer-index-mark {
     grid-column: 1;
     order: 1;
-  }
-
-  .footer-signature {
-    bottom: 0;
-    left: 0;
-  }
-
-  .footer-signature img {
-    max-width: min(146px, 43vw);
-    height: 29px;
   }
 
   .floating-whatsapp {
@@ -1197,7 +1193,8 @@ img {
 
 .hero-stat--button:hover,
 .hero-stat--button:focus-visible {
-  background: rgba(9, 104, 186, 0.42);
+  border-color: rgba(201, 255, 248, 0.9);
+  background: rgba(2, 89, 86, 0.54);
 }
 
 .hero-stat--button:active {
@@ -1322,10 +1319,20 @@ img {
 }
 
 .material-card__category {
+  gap: 5px;
   padding: 2px 8px;
   background: #eaf6f2;
   color: var(--sky-deep);
   font-weight: 700;
+}
+
+.material-card__category::before {
+  width: 4px;
+  height: 4px;
+  content: "";
+  border-radius: 50%;
+  background: var(--sky-main);
+  box-shadow: 6px 2px 0 rgba(16, 182, 176, 0.42);
 }
 
 .material-card__source {
@@ -1419,7 +1426,7 @@ img {
   gap: 5px;
   min-height: 34px;
   padding: 4px 11px;
-  border: 1px solid #63b6f4;
+  border: 1px solid #66c9c0;
   border-radius: 7px;
   background: transparent;
   color: var(--sky-ink);
@@ -1431,7 +1438,7 @@ img {
 .pagination button:hover:not(:disabled),
 .empty-reset:hover {
   border-color: var(--sky-deep);
-  background: #eef8ff;
+  background: #edf9f6;
 }
 
 .pagination button:disabled {

@@ -1,6 +1,6 @@
 /*
  * فلسفة التصميم: مكنز عربي بتركواز مائي عميق، وعلامات نقطية مستلهمة من التشكيل والفهرسة.
- * بطاقات الغلاف تعرض الأعداد الحية المستمدة من الكتالوج، بما فيها عدّاد الدواوين، وبترتيب واضح فوق اسم القسم.
+ * بطاقات الغلاف بوابات أقسام بلا عدّادات، بينما تبقى الأرقام الحية ضمن سياق النتائج والترقيم فقط.
  */
 import { useEffect, useMemo, useState } from "react";
 import {
@@ -33,9 +33,6 @@ import {
   type MaterialCategory,
 } from "@/lib/materials";
 
-const SIGNATURE_URL = "/manus-storage/user-signature-white-source_7d795c68.png";
-const MAKANEZ_ICON =
-  "https://zadwarod.dralhoshan.com/manus-storage/makanez-icon_85f25650.png";
 const PAGE_SIZE = 12;
 
 const WHATSAPP_ICON_PATH =
@@ -46,13 +43,12 @@ type StatFilter = "all" | "linguistics" | "lexicon-literature-rhetoric" | "diwan
 type StatCard = {
   id: StatFilter;
   label: string;
-  count: number;
 };
 
 const STAT_FILTER_LABELS: Record<StatFilter, string> = {
-  all: "إجمالي المواد",
-  linguistics: "النحو والدراسات اللغوية",
-  "lexicon-literature-rhetoric": "المعاجم والأدب والبلاغة",
+  all: "المواد العلمية",
+  linguistics: "علوم اللغة",
+  "lexicon-literature-rhetoric": "المعاجم والأدب",
   diwans: "الدواوين الشعرية",
 };
 
@@ -72,22 +68,10 @@ function matchesStatFilter(material: (typeof MATERIALS)[number], filter: StatFil
 }
 
 const STAT_CARDS: StatCard[] = [
-  { id: "all", label: STAT_FILTER_LABELS.all, count: MATERIALS.length },
-  {
-    id: "linguistics",
-    label: STAT_FILTER_LABELS.linguistics,
-    count: MATERIALS.filter((material) => matchesStatFilter(material, "linguistics")).length,
-  },
-  {
-    id: "lexicon-literature-rhetoric",
-    label: STAT_FILTER_LABELS["lexicon-literature-rhetoric"],
-    count: MATERIALS.filter((material) => matchesStatFilter(material, "lexicon-literature-rhetoric")).length,
-  },
-  {
-    id: "diwans",
-    label: STAT_FILTER_LABELS.diwans,
-    count: DIWAN_COUNT,
-  },
+  { id: "all", label: STAT_FILTER_LABELS.all },
+  { id: "linguistics", label: STAT_FILTER_LABELS.linguistics },
+  { id: "lexicon-literature-rhetoric", label: STAT_FILTER_LABELS["lexicon-literature-rhetoric"] },
+  { id: "diwans", label: STAT_FILTER_LABELS.diwans },
 ];
 
 function DisclaimerModal({ onClose }: { onClose: () => void }) {
@@ -147,26 +131,6 @@ function WhatsappGlyph() {
     <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
       <path d={WHATSAPP_ICON_PATH} />
     </svg>
-  );
-}
-
-function SignatureLink() {
-  return (
-    <a
-      href="https://dralhoshan.com/"
-      target="_blank"
-      rel="noreferrer"
-      title="الموقع الرسمي للدكتور يوسف بن حمود الحوشان"
-      className="footer-signature"
-    >
-      <img
-        src={SIGNATURE_URL}
-        alt="د. يوسف بن حمود الحوشان"
-        onError={(event) => {
-          event.currentTarget.style.display = "none";
-        }}
-      />
-    </a>
   );
 }
 
@@ -360,7 +324,7 @@ export default function Home() {
             <span>في اللغة العربية وعلومها</span>
           </p>
 
-          <div className="hero__stats" role="list" aria-label="إحصاءات المكنز">
+          <div className="hero__stats" role="list" aria-label="أقسام المكنز">
             {STAT_CARDS.map((item) => (
               <button
                 type="button"
@@ -368,10 +332,9 @@ export default function Home() {
                 role="listitem"
                 key={item.id}
                 onClick={() => chooseStat(item)}
-                aria-label={`${item.label}: ${displayCount(item.count)}`}
+                aria-label={`الانتقال إلى قسم ${item.label}`}
               >
                 <span className="hero-stat__label">{item.label}</span>
-                <span className="hero-stat__number">{displayCount(item.count)}</span>
               </button>
             ))}
           </div>
@@ -614,22 +577,11 @@ export default function Home() {
 
             <div className="footer-bottom">
               <p>جميع الحقوق محفوظة © 2026 — مكنز اللغة العربية وعلومها.</p>
-              <a
-                href="https://dralhoshan.com/"
-                target="_blank"
-                rel="noreferrer"
-                className="makanez-link"
-                title="منصة المكانز العلمية"
-              >
-                <img
-                  src={MAKANEZ_ICON}
-                  alt="المكانز"
-                  onError={(event) => {
-                    event.currentTarget.style.display = "none";
-                  }}
-                />
-              </a>
-              <SignatureLink />
+              <div className="footer-index-mark" aria-hidden="true">
+                <span />
+                <span />
+                <span />
+              </div>
             </div>
           </div>
         </section>
