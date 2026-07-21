@@ -172,6 +172,9 @@ function SignatureLink() {
 function MaterialCard({ material }: { material: (typeof MATERIALS)[number] }) {
   const [copied, setCopied] = useState(false);
   const isDiwan = isStandalonePoetryDiwan(material);
+  const isTelegramThesis =
+    material.primaryCategory === "academic_theses" &&
+    /^https:\/\/t\.me\/Arsail2020\/\d+$/.test(material.sourceUrl);
 
   const copyMaterialLink = async () => {
     try {
@@ -214,7 +217,18 @@ function MaterialCard({ material }: { material: (typeof MATERIALS)[number] }) {
           </div>
         </dl>
       </div>
-      {isDiwan ? (
+      {isTelegramThesis ? (
+        <a
+          className="material-card__link"
+          href={material.sourceUrl}
+          target="_blank"
+          rel="noreferrer"
+          title="فتح منشور الرسالة في قناة تيليجرام"
+        >
+          <Send size={16} aria-hidden="true" />
+          <span>فتح في قناة تيليجرام</span>
+        </a>
+      ) : isDiwan ? (
         <a
           className="material-card__link"
           href={material.sourceUrl}

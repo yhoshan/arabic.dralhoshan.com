@@ -6,7 +6,12 @@
 import corpusJson from "@/data/arabic-materials.json";
 import diwansJson from "@/data/diwans.json";
 
-export type MaterialCategory = "all" | "references" | "dictionaries" | "diwans";
+export type MaterialCategory =
+  | "all"
+  | "academic_theses"
+  | "references"
+  | "dictionaries"
+  | "diwans";
 
 export type MaterialTag =
   | "معجم لغوي"
@@ -15,7 +20,10 @@ export type MaterialTag =
   | "صرف"
   | "بلاغة"
   | "شعر وأدب"
-  | "دراسات لغوية";
+  | "دراسات لغوية"
+  | "رسالة دكتوراه"
+  | "رسالة ماجستير"
+  | "رسالة علمية";
 
 export interface Material {
   id: string;
@@ -46,9 +54,16 @@ export interface CorpusMetadata {
     linguisticDictionaries: number;
     poetryDiwans: number;
     academicJournals: number;
+    academicTheses?: number;
     totalMaterials: number;
   };
   journalSources: string[];
+  academicThesesSource?: {
+    name: string;
+    channelUrl: string;
+    importedCount: number;
+    selectionMethod: string;
+  };
 }
 
 interface CorpusPayload {
@@ -167,6 +182,7 @@ export function displayCount(value: number): string {
 
 export const MATERIAL_CATEGORY_LABELS: Record<MaterialCategory, string> = {
   all: "جميع المواد",
+  academic_theses: "الرسائل العلمية",
   references: "المصادر والمراجع",
   dictionaries: "المعاجم اللغوية",
   diwans: "الدواوين الشعرية",
