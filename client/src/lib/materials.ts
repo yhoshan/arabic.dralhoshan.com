@@ -96,6 +96,8 @@ const DYNAMIC_DIWANS: Material[] = diwanCatalog.materials.map((material) => ({
 }));
 
 export const MATERIALS: Material[] = [...corpus.materials, ...DYNAMIC_DIWANS];
+/** عدد الدواوين الحيّ: يُعاد احتسابه من كتالوج الدواوين كلما أُعيد بناء البيانات. */
+export const DIWAN_COUNT = DYNAMIC_DIWANS.length;
 export const CORPUS_METADATA = corpus.metadata;
 export const JOURNAL_SOURCES = corpus.metadata.journalSources;
 export const DIWAN_SOURCE_LINKS = [

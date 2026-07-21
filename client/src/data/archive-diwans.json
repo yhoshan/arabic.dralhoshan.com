@@ -2,14 +2,19 @@
   "metadata": {
     "sourceName": "Internet Archive",
     "sourceIndexUrl": "https://archive.org/search?tab=all&query=%D8%AF%D9%8A%D9%88%D8%A7%D9%86&and%5B%5D=mediatype%3A%22texts%22",
-    "generatedAt": "2026-07-21T09:26:42.473Z",
-    "selectionMethod": "اتحاد دفعة الأرشيف السابقة مع دفعة موسعة جُمعت عبر واجهة Internet Archive البرمجية، ثم نُقّحت العناوين واستُبعدت الدراسات والسجلات غير الشعرية. يحفظ الاتحاد كل السجلات السابقة ويستبدل التكرار المعرّفي بالسجل المنقح الأحدث.",
+    "generatedAt": "2026-07-21T11:12:02.195Z",
+    "selectionMethod": "دواوين عربية فقط من موقع أرشيف؛ لا يُقبل السجل إلا إذا أثبتت بيانات أرشيف العربية صراحةً بوسم اللغة أو بسياق وصفي عربي واضح، مع ثبوت كونه ديواناً مستقلاً واستبعاد غير العربي وغير الديواني والمكرر.",
     "collectionScope": "العناوين والموضوعات والأوصاف المرتبطة بالدواوين العربية، مع إبقاء بطاقات المصدر المباشرة ومنع التكرار لاحقاً في الكتالوج الموحد.",
     "batches": {
       "previousMaterials": 2222,
       "expandedRefinedMaterials": 2075,
       "overlappingIds": 1792,
-      "uniqueArchiveRecords": 2505
+      "uniqueArchiveRecords": 2508,
+      "uploadedRecords": 6009,
+      "uploadedUniqueIdentifiers": 5032,
+      "uploadedAcceptedMaterials": 3,
+      "uploadedExcludedAsExisting": 1670,
+      "uploadedRemovedForArabicOnly": 7
     }
   },
   "materials": [
@@ -19232,6 +19237,28 @@
       }
     },
     {
+      "id": "archive-20251125_20251125_0504",
+      "title": "ديوان السيد محمد سعيد الحبوبي النجفي # المطبعة الأهلية",
+      "author": "لم يُثبت اسم الشاعر في السجل",
+      "source": "Internet Archive",
+      "relativePath": "20251125_20251125_0504",
+      "sourceUrl": "https://archive.org/details/20251125_20251125_0504",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "ديوان شعري",
+          "دليل البيانات الوصفية: العنوان يصرح بأن السجل ديوان"
+        ],
+        "supportingSignals": [
+          "الأدب والشعر العربي"
+        ],
+        "explicitLanguageSource": false
+      }
+    },
+    {
       "id": "archive-20250708_20250708_2354",
       "title": "ديوان السيد محمد سعيد حبوبي النجفي أشعر شعراء الشرق أمس وأكبر علمائه اليوم",
       "author": "لم يُثبت اسم الشاعر في السجل",
@@ -31034,6 +31061,28 @@
       }
     },
     {
+      "id": "archive-03_20260627",
+      "title": "ديوان حيص بيص # 3 أجزاء # مكي السيد جاسم و شاكر هادي شكر",
+      "author": "هادي العاملي",
+      "source": "Internet Archive",
+      "relativePath": "03_20260627",
+      "sourceUrl": "https://archive.org/details/03_20260627",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "ديوان شعري",
+          "دليل البيانات الوصفية: العنوان يصرح بأن السجل ديوان"
+        ],
+        "supportingSignals": [
+          "الأدب والشعر العربي"
+        ],
+        "explicitLanguageSource": false
+      }
+    },
+    {
       "id": "archive-2_20260122_20260122_1414",
       "title": "ديوان حيص بيص 2",
       "author": "حيص بيص 2",
@@ -31689,6 +31738,28 @@
           "Arabic Books · Arabic Literature · Arabic Poetry · Ancient Arabic Poetry · ديوان دعبل بن علي الخزاعي · دعبل بن علي الخزاعي"
         ],
         "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "archive-20251126_20251126_0245",
+      "title": "ديوان دعبل بن علي الخزاعي # عبد الصاحب الدجيلي",
+      "author": "لم يُثبت اسم الشاعر في السجل",
+      "source": "Internet Archive",
+      "relativePath": "20251126_20251126_0245",
+      "sourceUrl": "https://archive.org/details/20251126_20251126_0245",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "ديوان شعري",
+          "دليل البيانات الوصفية: العنوان يصرح بأن السجل ديوان"
+        ],
+        "supportingSignals": [
+          "الأدب والشعر العربي"
+        ],
+        "explicitLanguageSource": false
       }
     },
     {

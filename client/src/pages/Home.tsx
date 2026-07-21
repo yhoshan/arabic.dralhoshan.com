@@ -23,6 +23,7 @@ import {
 } from "lucide-react";
 import {
   CORPUS_METADATA,
+  DIWAN_COUNT,
   DIWAN_SOURCE_LINKS,
   displayCount,
   filterMaterials,
@@ -85,7 +86,7 @@ const STAT_CARDS: StatCard[] = [
   {
     id: "diwans",
     label: STAT_FILTER_LABELS.diwans,
-    count: MATERIALS.filter((material) => matchesStatFilter(material, "diwans")).length,
+    count: DIWAN_COUNT,
   },
 ];
 

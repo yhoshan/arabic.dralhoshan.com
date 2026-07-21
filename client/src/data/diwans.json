@@ -1,12 +1,12 @@
 {
   "metadata": {
-    "generatedAt": "2026-07-21T09:26:43.065Z",
+    "generatedAt": "2026-07-21T11:12:02.429Z",
     "sourceName": "الأرشيف العالمي والجامع",
     "sourceIndexUrl": "https://archive.org/search?tab=all&query=%D8%AF%D9%8A%D9%88%D8%A7%D9%86&and%5B%5D=mediatype%3A%22texts%22",
     "selectionMethod": "دواوين عربية موثقة ببيانات المصدر، بعد استبعاد المواد غير الديوانية واللغات غير العربية وتوحيد المكرر بالعنوان والشاعر عند التحقق.",
     "collectionScope": "دفعة الدواوين الديناميكية الحالية؛ كل بطاقة تحيل إلى صفحة الديوان في مصدره.",
     "inputs": {
-      "archive": 2505,
+      "archive": 2508,
       "aljam3": 157
     }
   },
@@ -23683,6 +23683,36 @@
       "sourceCount": 2
     },
     {
+      "id": "archive-20251125_20251125_0504",
+      "title": "ديوان السيد محمد سعيد الحبوبي النجفي # المطبعة الأهلية",
+      "author": "لم يُثبت اسم الشاعر في السجل",
+      "source": "Internet Archive",
+      "sourceUrl": "https://archive.org/details/20251125_20251125_0504",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "ديوان شعري",
+          "دليل البيانات الوصفية: العنوان يصرح بأن السجل ديوان"
+        ],
+        "supportingSignals": [
+          "الأدب والشعر العربي"
+        ],
+        "explicitLanguageSource": false
+      },
+      "volumes": null,
+      "pages": null,
+      "sourceRefs": [
+        {
+          "source": "Internet Archive",
+          "url": "https://archive.org/details/20251125_20251125_0504"
+        }
+      ],
+      "sourceCount": 1
+    },
+    {
       "id": "archive-20250708_20250708_2354",
       "title": "ديوان السيد محمد سعيد حبوبي النجفي أشعر شعراء الشرق أمس وأكبر علمائه اليوم",
       "author": "لم يُثبت اسم الشاعر في السجل",
@@ -38978,6 +39008,36 @@
       "sourceCount": 1
     },
     {
+      "id": "archive-03_20260627",
+      "title": "ديوان حيص بيص # 3 أجزاء # مكي السيد جاسم و شاكر هادي شكر",
+      "author": "هادي العاملي",
+      "source": "Internet Archive",
+      "sourceUrl": "https://archive.org/details/03_20260627",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "ديوان شعري",
+          "دليل البيانات الوصفية: العنوان يصرح بأن السجل ديوان"
+        ],
+        "supportingSignals": [
+          "الأدب والشعر العربي"
+        ],
+        "explicitLanguageSource": false
+      },
+      "volumes": null,
+      "pages": null,
+      "sourceRefs": [
+        {
+          "source": "Internet Archive",
+          "url": "https://archive.org/details/03_20260627"
+        }
+      ],
+      "sourceCount": 1
+    },
+    {
       "id": "archive-2_20260122_20260122_1414",
       "title": "ديوان حيص بيص 2",
       "author": "حيص بيص 2",
@@ -39850,6 +39910,36 @@
         {
           "source": "Internet Archive",
           "url": "https://archive.org/details/d.da3bal_202208"
+        }
+      ],
+      "sourceCount": 1
+    },
+    {
+      "id": "archive-20251126_20251126_0245",
+      "title": "ديوان دعبل بن علي الخزاعي # عبد الصاحب الدجيلي",
+      "author": "لم يُثبت اسم الشاعر في السجل",
+      "source": "Internet Archive",
+      "sourceUrl": "https://archive.org/details/20251126_20251126_0245",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "ديوان شعري",
+          "دليل البيانات الوصفية: العنوان يصرح بأن السجل ديوان"
+        ],
+        "supportingSignals": [
+          "الأدب والشعر العربي"
+        ],
+        "explicitLanguageSource": false
+      },
+      "volumes": null,
+      "pages": null,
+      "sourceRefs": [
+        {
+          "source": "Internet Archive",
+          "url": "https://archive.org/details/20251126_20251126_0245"
         }
       ],
       "sourceCount": 1
