@@ -1,6 +1,6 @@
 /*
  * فلسفة التصميم: مكنز عربي بتركواز مائي عميق، وعلامات نقطية مستلهمة من التشكيل والفهرسة.
- * بطاقات الغلاف بوابات أقسام بلا عدّادات، بينما تبقى الأرقام الحية ضمن سياق النتائج والترقيم فقط.
+ * بطاقات الغلاف بوابات أقسام بعدّادات حية محسوبة من الكتالوج نفسه، لتبقى كل قيمة قابلة للتدقيق عند كل إعادة بناء.
  */
 import { useEffect, useMemo, useState } from "react";
 import {
@@ -13,7 +13,6 @@ import {
   ExternalLink,
   FileText,
   Library,
-  Mail,
   Moon,
   Search,
   Send,
@@ -43,6 +42,7 @@ type StatFilter = "all" | "linguistics" | "lexicon-literature-rhetoric" | "diwan
 type StatCard = {
   id: StatFilter;
   label: string;
+  count: number;
 };
 
 const STAT_FILTER_LABELS: Record<StatFilter, string> = {
@@ -68,10 +68,18 @@ function matchesStatFilter(material: (typeof MATERIALS)[number], filter: StatFil
 }
 
 const STAT_CARDS: StatCard[] = [
-  { id: "all", label: STAT_FILTER_LABELS.all },
-  { id: "linguistics", label: STAT_FILTER_LABELS.linguistics },
-  { id: "lexicon-literature-rhetoric", label: STAT_FILTER_LABELS["lexicon-literature-rhetoric"] },
-  { id: "diwans", label: STAT_FILTER_LABELS.diwans },
+  { id: "all", label: STAT_FILTER_LABELS.all, count: MATERIALS.length },
+  {
+    id: "linguistics",
+    label: STAT_FILTER_LABELS.linguistics,
+    count: MATERIALS.filter((material) => matchesStatFilter(material, "linguistics")).length,
+  },
+  {
+    id: "lexicon-literature-rhetoric",
+    label: STAT_FILTER_LABELS["lexicon-literature-rhetoric"],
+    count: MATERIALS.filter((material) => matchesStatFilter(material, "lexicon-literature-rhetoric")).length,
+  },
+  { id: "diwans", label: STAT_FILTER_LABELS.diwans, count: DIWAN_COUNT },
 ];
 
 function DisclaimerModal({ onClose }: { onClose: () => void }) {
@@ -112,8 +120,8 @@ function DisclaimerModal({ onClose }: { onClose: () => void }) {
             منشورة في مصادر خارجية، أُعدّ لتيسير الوصول وخدمة الباحثين في اللغة
             العربية وعلومها. لا يدّعي ملكية المواد ولا يضمن محتواها أو دقتها أو
             بقاء روابطها. تبقى الحقوق لأصحابها، ويتحمّل المستخدم مسؤولية التحقق
-            من المادة وحقوق استخدامها، ومن له حق أو ملاحظة فليتواصل عبر البريد
-            الإلكتروني.
+            من المادة وحقوق استخدامها. تُراجع الإحالات وروابطها ضمن دورات
+            التحديث الدورية للمكنز.
           </p>
         </div>
         <div className="disclaimer-modal__actions">
@@ -313,7 +321,27 @@ export default function Home() {
           </button>
         </div>
 
+        <nav className="hero__nav-control" aria-label="تنقل المكنز">
+          <button
+            type="button"
+            className="hero-nav-trigger"
+            onClick={() =>
+              document
+                .getElementById("materials-title")
+                ?.scrollIntoView({ behavior: "smooth", block: "start" })
+            }
+          >
+            <Library size={16} aria-hidden="true" />
+            <span>فهرس المواد</span>
+          </button>
+        </nav>
+
         <div className="hero__content reference-shell">
+          <div className="hero-index-mark" aria-hidden="true">
+            <span />
+            <span />
+            <span />
+          </div>
           <h1 className="hero-title" aria-label="مكنز اللغة العربية وعلومها">
             <span className="hero-title__kicker">مكنز</span>
             <span className="hero-title__name">اللغة العربية وعلومها</span>
@@ -332,8 +360,9 @@ export default function Home() {
                 role="listitem"
                 key={item.id}
                 onClick={() => chooseStat(item)}
-                aria-label={`الانتقال إلى قسم ${item.label}`}
+                aria-label={`عرض ${displayCount(item.count)} مادة في قسم ${item.label}`}
               >
+                <span className="hero-stat__number">{displayCount(item.count)}</span>
                 <span className="hero-stat__label">{item.label}</span>
               </button>
             ))}
@@ -464,13 +493,14 @@ export default function Home() {
               إذا تعذّر فتح إحالةٍ ما، فاكتب اسم المادة أو رابطها؛ تُراجع الإحالة
               وتُصحّح في أقرب تحديث للفهرس.
             </p>
-            <a
-              href="mailto:yhoshan@gmail.com?subject=إبلاغ عن رابط معطل في مكنز اللغة العربية وعلومها"
+            <button
+              type="button"
               className="report-link"
+              onClick={() => setShowDisclaimer(true)}
             >
-              <Mail size={16} aria-hidden="true" />
-              <span>إرسال البلاغ للمشرف</span>
-            </a>
+              <ShieldAlert size={16} aria-hidden="true" />
+              <span>سياسة مراجعة الإحالات</span>
+            </button>
           </div>
         </section>
 
@@ -521,17 +551,11 @@ export default function Home() {
             <div className="footer-notes">
               <p>هذا المكنز دليل إحالات؛ وتبقى حقوق المواد ونشرها لأصحابها وناشريها.</p>
               <p>
-                لتصحيح إحالة أو طلب إزالة مادة، تُستقبل المراسلات على: {" "}
-                <a href="mailto:yhoshan@gmail.com">yhoshan@gmail.com</a>
+                تُراجع الإحالات وروابطها ضمن دورات تحديث دورية، ويُراعى في كل
+                تحديث وضوح المصدر وملاءمة التصنيف.
               </p>
               <p>
                 يوسّع البحث العام نطاق الاستكشاف عند غياب المادة عن القسم المتوقع.
-              </p>
-              <p>
-                وللبحوث في السلاسل التراثية: {" "}
-                <a href="https://nsooos.com/" target="_blank" rel="noreferrer">
-                  منصة نصوص تراثية للباحثين
-                </a>
               </p>
             </div>
 

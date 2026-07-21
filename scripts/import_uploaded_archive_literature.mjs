@@ -22,11 +22,17 @@ const ARABIC_LETTERS = /[\u0621-\u063A\u0641-\u064A]/g;
 const LATIN_LETTERS = /[A-Za-z]/g;
 const HTML_TAGS = /<[^>]*>/g;
 
-const RHETORIC_PATTERN = /بلاغ(?:ة|ي|يه)|بيان|بديع|معان[يى]|فصاح(?:ة|ه)|مجاز|تشبيه|استعار(?:ة|ه)|كناي(?:ة|ه)|إعجاز|ايجاز|إطناب|اطناب|اسلوب(?:ية|ي)?|خطاب|نظم|تلخيص المفتاح|مختصر السعد|المطول|ايضاح|إيضاح|أسرار البلاغة|دلائل الإعجاز|جواهر البلاغة|البلاغة الواضحة|عروس الأفراح|عقود الجمان|مفتاح العلوم|المثل السائر|الطراز/i;
+const RHETORIC_PATTERN = /بلاغ(?:ة|ي|يه)|بيان|بديع|معان[يى]|فصاح(?:ة|ه)|مجاز|تشبيه|استعار(?:ة|ه)|كناي(?:ة|ه)|إعجاز|ايجاز|إطناب|اطناب|اسلوب(?:ية|ي)?|خطاب|تلخيص المفتاح|مختصر السعد|المطول|ايضاح|إيضاح|أسرار البلاغة|دلائل الإعجاز|جواهر البلاغة|البلاغة الواضحة|عروس الأفراح|عقود الجمان|مفتاح العلوم|المثل السائر|الطراز/i;
 const GRAMMAR_PATTERN = /نحو|إعراب|اعراب|نحوي|النحو العربي/i;
 const NAHW_IRAB_PATTERN = /نحو|إعراب|اعراب|نحوي|النحو العربي|الآجرومية|الاجرومية|ألفية ابن مالك|الألفية|ابن هشام|المفصل|الجمل في النحو|الكافية في النحو|عوامل النحو|قواعد النحو|منصوبات|مرفوعات|مجرورات|تيسير النحو|النحو التطبيقي|معاني النحو|شرح قطر الندى|شذور الذهب/i;
-const MORPHOLOGY_PATTERN = /صرف|صر(?:في|فية)|بنية الكلمة|اشتقاق/i;
-const DICTIONARY_PATTERN = /معجم|قاموس|مصطلحات/i;
+const MORPHOLOGY_PATTERN = /(?:ال)?صرف|صرف(?:ي|ية)?|تصريف|تصاريف|بنية الكلمة|اشتقاق/i;
+// فلسفة الانتقاء: لا يكفي وجود كلمة «معجم»؛ يجب أن يثبت أنه معجم لغة أو مصطلحات من علوم العربية.
+const DICTIONARY_CUE_PATTERN = /(?:معجم|قاموس|معاجم|قواميس|مصطلحات)/i;
+const LEXICAL_DICTIONARY_CONTEXT_PATTERN = /لغة|لغوي|العربية|عربي|ألفاظ|الالفاظ|كلمات|مفردات|معاني|دلالة|جذور|تراكيب|تعبيرات|أمثال|امثال|أضداد|اضداد|مترادفات|لهجات|عامية|فصحى|غريب|نحو|صرف|تصريف|بلاغة|عروض|قافية|شعر|أدب|ادب|نقد|لسانيات|أصوات|اصوات|صوتيات|أوزان|اوزان|استشهادات|مسائل/i;
+const LEXICAL_DICTIONARY_PATTERN = /(?:لسان العرب|تاج العروس|القاموس المحيط|الصحاح|العين|مقاييس اللغة|أساس البلاغة|تهذيب اللغة|جمهرة اللغة|المحكم والمحيط الأعظم|المعجم الوسيط|المعجم الوجيز|المعجم الكبير|المعجم العربي الأساسي)/i;
+const NON_LANGUAGE_DICTIONARY_PATTERN = /(?:معجم|قاموس)\s+(?:شيوخ|رجال|الصحابة|الرواة|البلدان|الأنساب|القبائل|الفتاوى|الفقه|الفقهاء|القراءات|المؤلفين|المخطوطات|الطرق الصوفية|تراجم|أعلام|اعلام|مدن|قرى|جغرافية|مترولوجيا|مصطلحات تاريخية|سياسية|قانونية|طبية|طب|هندسة|اقتصاد)/i;
+const LITERARY_BIOGRAPHY_PATTERN = /(?:شعراء|أدباء|ادباء|شعر|أدب|ادب|نقد|ديوان|قصائد|قافية|عروض)/i;
+const NON_CORE_REFERENCE_PATTERN = /(?:المترولوجيا|معالم جغرافية|المعالم الجغرافية|مصطلحات تاريخية|التعريفات الفقهية|لغة الفقهاء|تاريخ مصر الحديث)/i;
 const LINGUISTICS_PATTERN = /لسان(?:ي|يات)|لغوي|لغة عربية|اللغة العربية|دلالة|صوتيات|أصوات|صوتي|تداولي|نص(?:ي|ية)|لسانيات/i;
 const LITERATURE_PATTERN = /أدب|ادب|شعر|عروض|قافية|نقد أدبي|النقد الأدبي|ديوان|رواية|قصة|مسرح|مسرحية|مقامة|مقامات|سيرة|ترجمة أدبية|تاريخ الأدب|مختارات/i;
 const THESIS_PATTERN = /رسالة (?:ماجستير|دكتوراه)|أطروحة|اطروحة|دراسة ماجستير|دراسة دكتوراه|master thesis|doctoral dissertation/i;
@@ -35,7 +41,7 @@ const ARABIC_TOPIC_PATTERN = new RegExp(
     RHETORIC_PATTERN.source,
     GRAMMAR_PATTERN.source,
     MORPHOLOGY_PATTERN.source,
-    DICTIONARY_PATTERN.source,
+    DICTIONARY_CUE_PATTERN.source,
     LINGUISTICS_PATTERN.source,
     LITERATURE_PATTERN.source,
   ].join("|"),
@@ -94,8 +100,11 @@ function cleanedDisplayTitle(value) {
     .replace(/^\s*\d{3,8}(?:\s*[_\-.:/]|\s+u200f)\s*/iu, "")
     .replace(/^\s*[A-Za-z]{1,12}-\d{3,8}\s*/u, "")
     .replace(/^\s*www\.[^\s]+\s*/iu, "")
+    .replace(/^\s*\d{1,6}\s*(?:pdf|htm|html|word|bok|book)\s+(?:كتاب\s+)?/iu, "")
     .replace(/^\s*\d{1,5}\s+كتاب\s+(?:اقرا|اقرأ)\s+اونلاين\s+(?:pdf|htm|html|word)\s*/iu, "")
     .replace(/^\s*كتاب\s+(?:اقرا|اقرأ)\s+اونلاين\s+(?:pdf|htm|html|word)\s*/iu, "")
+    .replace(/^\s*كتاب\s+(?:pdf|htm|html|word)\s+(?:اقرا|اقرأ)\s+اونلاين\s*/iu, "")
+    .replace(/^\s*كتاب\s+صيغة\s+(?:ويب\s+اتش\s+تي\s+ام\s*)?(?:pdf|htm|html|word|وورد|ورد|بي\s*دي\s*اف)\s*/iu, "")
     .replace(/^\s*\d+\s*(?=[\u0621-\u063A\u0641-\u064A])/u, "")
     .replace(/\s*\(\s*upscaled\s*\)\s*$/iu, "")
     .replace(/^\s*\[\s*(.*?)\s*\]\s*$/u, "$1")
@@ -192,16 +201,21 @@ function safeTitleForPath(title) {
     .trim();
 }
 
+function isLexicalDictionary(text) {
+  return (
+    LEXICAL_DICTIONARY_PATTERN.test(text) ||
+    (DICTIONARY_CUE_PATTERN.test(text) && LEXICAL_DICTIONARY_CONTEXT_PATTERN.test(text) && !NON_LANGUAGE_DICTIONARY_PATTERN.test(text))
+  );
+}
+
 function classifyTags(text) {
   const tags = [];
-  if (DICTIONARY_PATTERN.test(text)) tags.push("معجم لغوي");
+  if (isLexicalDictionary(text)) tags.push("معجم لغوي");
   if (RHETORIC_PATTERN.test(text)) tags.push("بلاغة");
   if (GRAMMAR_PATTERN.test(text)) tags.push("نحو");
   if (MORPHOLOGY_PATTERN.test(text)) tags.push("صرف");
   if (LINGUISTICS_PATTERN.test(text) && !tags.includes("بلاغة")) tags.push("دراسات لغوية");
-  if (LITERATURE_PATTERN.test(text) && !tags.some((tag) => ["بلاغة", "نحو", "صرف", "معجم لغوي"].includes(tag))) {
-    tags.push("شعر وأدب");
-  }
+  if (LITERATURE_PATTERN.test(text)) tags.push("شعر وأدب");
   if (THESIS_PATTERN.test(text)) tags.push("رسالة علمية");
   return [...new Set(tags)];
 }
@@ -335,11 +349,13 @@ for (const { book, metadata } of snapshot) {
   const subjectText = textify(metadata.subject);
   const descriptionText = textify(metadata.description);
   const creatorText = textify(metadata.creator);
-  const classificationText = [title, rawTitle, archiveTitle, descriptionText].join(" ");
+  // نبني التصنيف من العنوان والموضوع المفهرس فقط؛ وصف أرشيف الحر قد يحوي كلمات بحث عامة لا تصف المادة نفسها.
+  const titleSubjectText = [title, rawTitle, archiveTitle, subjectText].join(" ");
+  const classificationText = titleSubjectText;
   const subjectClassification = classifyTags(subjectText);
   const tags = classifyTags(classificationText);
   if (tags.length === 0) tags.push(...subjectClassification);
-  const catalogText = [title, rawTitle, archiveTitle, subjectText, descriptionText, creatorText].join(" ");
+  const catalogText = [titleSubjectText, descriptionText, creatorText].join(" ");
   const titleNormalized = normalized(title);
   const author = creatorText || null;
   const titleAuthor = author ? `${titleNormalized}::${normalized(author)}` : "";
@@ -360,6 +376,13 @@ for (const { book, metadata } of snapshot) {
     rejected.push(details(book, "المادة تتصل بلغة غير عربية ولا تدخل ضمن نطاق المكنز", metadata));
     continue;
   }
+  if (
+    (NON_LANGUAGE_DICTIONARY_PATTERN.test(titleSubjectText) || NON_CORE_REFERENCE_PATTERN.test(titleSubjectText)) &&
+    !LITERARY_BIOGRAPHY_PATTERN.test(titleSubjectText)
+  ) {
+    rejected.push(details(book, "معجم أو مرجع متخصص خارج علوم العربية ولا يمثل قسماً من أقسام المكنز", metadata));
+    continue;
+  }
   if (NON_PROSODY_AROOD_PATTERN.test(catalogText.replace(/_/g, " "))) {
     rejected.push(details(book, "تستعمل كلمة العروض في سياق مسرحي أو تجاري أو فقهي لا يتصل بعروض الشعر", metadata));
     continue;
@@ -373,7 +396,7 @@ for (const { book, metadata } of snapshot) {
     rejected.push(details(book, "لا تثبت بيانات أرشيف أن المادة عربية", metadata));
     continue;
   }
-  if (tags.length === 0 || !ARABIC_TOPIC_PATTERN.test([title, subjectText, descriptionText].join(" ")) || EXCLUDED_TOPIC_PATTERN.test(catalogText)) {
+  if (tags.length === 0 || !ARABIC_TOPIC_PATTERN.test(titleSubjectText) || EXCLUDED_TOPIC_PATTERN.test(catalogText)) {
     rejected.push(details(book, "لا يثبت العنوان والبيانات صلة المادة بأحد أقسام علوم العربية في المكنز", metadata));
     continue;
   }

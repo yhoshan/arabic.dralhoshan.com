@@ -7,6 +7,7 @@ const cachePath = process.env.CACHE_PATH || "/home/ubuntu/archive_literature_met
 const corpus = JSON.parse(fs.readFileSync(corpusPath, "utf8"));
 const audit = JSON.parse(fs.readFileSync(auditPath, "utf8"));
 const cache = JSON.parse(fs.readFileSync(cachePath, "utf8"));
+const allowLaterImports = process.env.ALLOW_LATER_IMPORTS === "1";
 
 const imported = corpus.materials.filter((material) => audit.acceptedRecords.some((record) => record.id === material.id));
 const archiveImported = imported.filter((material) => material.source === "Internet Archive");
@@ -33,6 +34,10 @@ const byTag = Object.fromEntries(
   ]),
 );
 
+const corpusSizeValid = allowLaterImports
+  ? corpus.materials.length >= audit.catalogMaterialsAfterImport
+  : corpus.materials.length === audit.catalogMaterialsAfterImport;
+
 const result = {
   auditMode: audit.mode,
   inputRecords: audit.input.records,
@@ -40,6 +45,8 @@ const result = {
   importedRecordsFoundInCatalog: archiveImported.length,
   corpusMaterials: corpus.materials.length,
   auditCatalogMaterialsAfterImport: audit.catalogMaterialsAfterImport,
+  allowLaterImports,
+  corpusSizeValid,
   duplicateImportedIds: duplicateIds,
   duplicateImportedUrls: duplicateUrls,
   importedWithExplicitNonArabicLanguage: acceptedWithNonArabicLanguage.length,
@@ -48,7 +55,7 @@ const result = {
   checksPassed:
     audit.mode === "applied" &&
     archiveImported.length === audit.accepted &&
-    corpus.materials.length === audit.catalogMaterialsAfterImport &&
+    corpusSizeValid &&
     duplicateIds === 0 &&
     duplicateUrls === 0 &&
     acceptedWithNonArabicLanguage.length === 0,
