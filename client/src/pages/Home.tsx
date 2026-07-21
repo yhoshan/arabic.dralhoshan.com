@@ -419,7 +419,7 @@ export default function Home() {
           .hero.hero--blue .hero-title {
             gap: 3px;
             color: #f8fbff;
-            font-family: "Aref Ruqaa", "Amiri", serif;
+            font-family: "Al Mohanad", "Amiri", serif;
             font-weight: 700;
             line-height: 1.1;
             text-shadow: none;
