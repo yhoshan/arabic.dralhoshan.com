@@ -358,8 +358,8 @@ export default function Home() {
                 onClick={() => chooseStat(item)}
                 aria-label={`${item.label}: ${displayCount(item.count)}`}
               >
-                <span className="hero-stat__number">{displayCount(item.count)}</span>
                 <span className="hero-stat__label">{item.label}</span>
+                <span className="hero-stat__number">{displayCount(item.count)}</span>
               </button>
             ))}
           </div>
