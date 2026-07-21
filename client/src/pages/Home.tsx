@@ -171,10 +171,20 @@ function SignatureLink() {
 
 function MaterialCard({ material }: { material: (typeof MATERIALS)[number] }) {
   const [copied, setCopied] = useState(false);
-  const isDiwan = isStandalonePoetryDiwan(material);
-  const isTelegramThesis =
-    material.primaryCategory === "academic_theses" &&
-    /^https:\/\/t\.me\/Arsail2020\/\d+$/.test(material.sourceUrl);
+  const isBuhoothMaterial = /^https?:\/\/(?:www\.)?buhooth\.link(?::\d+)?\//i.test(material.sourceUrl);
+  const isTelegramSource = /^https?:\/\/t\.me\//i.test(material.sourceUrl);
+  const isInternetArchiveSource = /^https?:\/\/(?:www\.)?archive\.org\//i.test(material.sourceUrl);
+  const ExternalSourceIcon = isTelegramSource ? Send : ExternalLink;
+  const externalActionLabel = isTelegramSource
+    ? "فتح في قناة تيليجرام"
+    : isInternetArchiveSource
+      ? "فتح في أرشيف"
+      : "فتح الرابط";
+  const externalActionTitle = isTelegramSource
+    ? "فتح منشور المادة في قناة تيليجرام"
+    : isInternetArchiveSource
+      ? "فتح المادة في موقع أرشيف"
+      : `فتح رابط المادة في ${material.source}`;
 
   const copyMaterialLink = async () => {
     try {
@@ -217,29 +227,7 @@ function MaterialCard({ material }: { material: (typeof MATERIALS)[number] }) {
           </div>
         </dl>
       </div>
-      {isTelegramThesis ? (
-        <a
-          className="material-card__link"
-          href={material.sourceUrl}
-          target="_blank"
-          rel="noreferrer"
-          title="فتح منشور الرسالة في قناة تيليجرام"
-        >
-          <Send size={16} aria-hidden="true" />
-          <span>فتح في قناة تيليجرام</span>
-        </a>
-      ) : isDiwan ? (
-        <a
-          className="material-card__link"
-          href={material.sourceUrl}
-          target="_blank"
-          rel="noreferrer"
-          title={`فتح صفحة الديوان في ${material.source}`}
-        >
-          <ExternalLink size={16} aria-hidden="true" />
-          <span>فتح صفحة الديوان</span>
-        </a>
-      ) : (
+      {isBuhoothMaterial ? (
         <button
           type="button"
           className="material-card__link"
@@ -249,6 +237,17 @@ function MaterialCard({ material }: { material: (typeof MATERIALS)[number] }) {
           {copied ? <Check size={16} aria-hidden="true" /> : <Copy size={16} aria-hidden="true" />}
           <span>{copied ? "تم النسخ" : "نسخ الرابط"}</span>
         </button>
+      ) : (
+        <a
+          className="material-card__link"
+          href={material.sourceUrl}
+          target="_blank"
+          rel="noreferrer"
+          title={externalActionTitle}
+        >
+          <ExternalSourceIcon size={16} aria-hidden="true" />
+          <span>{externalActionLabel}</span>
+        </a>
       )}
     </article>
   );
