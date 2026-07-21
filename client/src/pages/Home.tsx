@@ -397,6 +397,56 @@ export default function Home() {
             background: linear-gradient(135deg, #075bc8, #3f8fe6);
           }
 
+          .thesaurus-page .share-section {
+            background:
+              radial-gradient(circle at 20% 0%, rgba(161, 211, 255, 0.18), transparent 36%),
+              linear-gradient(135deg, #063a8c 0%, #0866d6 54%, #07489f 100%);
+          }
+
+          .thesaurus-page .share-section h2 {
+            color: #e7f2ff;
+          }
+
+          .thesaurus-page .share-section > p {
+            color: #c9e0ff;
+          }
+
+          .thesaurus-page .share-divider {
+            background: rgba(220, 237, 255, 0.45);
+          }
+
+          .thesaurus-page .copy-link {
+            background: #075bc8;
+            color: #ffffff;
+          }
+
+          .thesaurus-page .footer-main {
+            background: linear-gradient(160deg, #063a8c 0%, #042e72 100%);
+          }
+
+          .thesaurus-page .footer-notes,
+          .thesaurus-page .footer-sources__empty {
+            color: #c9e0ff;
+          }
+
+          .thesaurus-page .footer-notes a,
+          .thesaurus-page .footer-sources__empty a {
+            color: #e7f2ff;
+          }
+
+          .thesaurus-page .footer-sources {
+            border-color: rgba(203, 227, 255, 0.3);
+          }
+
+          .thesaurus-page .footer-sources__trigger {
+            color: #f8fbff;
+          }
+
+          .thesaurus-page .footer-index-mark span {
+            background: #d8eaff;
+            box-shadow: 0 0 0 3px rgba(161, 211, 255, 0.14);
+          }
+
           .hero.hero--blue,
           .hero.hero--blue *,
           .hero.hero--blue::before,
@@ -857,14 +907,6 @@ export default function Home() {
               إذا تعذّر فتح إحالةٍ ما، فاكتب اسم المادة أو رابطها؛ تُراجع الإحالة
               وتُصحّح في أقرب تحديث للفهرس.
             </p>
-            <button
-              type="button"
-              className="report-link"
-              onClick={() => setShowDisclaimer(true)}
-            >
-              <ShieldAlert size={16} aria-hidden="true" />
-              <span>سياسة مراجعة الإحالات</span>
-            </button>
           </div>
         </section>
 
