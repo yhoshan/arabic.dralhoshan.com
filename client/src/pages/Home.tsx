@@ -348,30 +348,35 @@ export default function Home() {
 
           .hero.hero--blue + .reference-search {
             border-top: 0;
-            border-bottom-color: rgba(7, 91, 200, 0.18);
-            background: linear-gradient(180deg, #fbfdff 0%, #f5f8ff 100%);
-            box-shadow: 0 1px 12px rgba(7, 91, 200, 0.07);
+            border-bottom-color: rgba(218, 233, 255, 0.38);
+            background: linear-gradient(135deg, #063a8c 0%, #0866d6 54%, #07489f 100%);
+            box-shadow: 0 1px 12px rgba(3, 58, 140, 0.16);
           }
 
           .hero.hero--blue + .reference-search::before {
             display: none;
           }
 
+          .hero.hero--blue + .reference-search .search-status {
+            color: rgba(248, 251, 255, 0.92);
+          }
+
           .hero.hero--blue + .reference-search .filter-button {
-            border-color: rgba(7, 91, 200, 0.42);
-            background: #ffffff;
-            color: #075bc8;
+            border-color: rgba(235, 245, 255, 0.64);
+            background: rgba(255, 255, 255, 0.08);
+            color: #f8fbff;
           }
 
           .hero.hero--blue + .reference-search .filter-button:hover {
-            border-color: #075bc8;
-            background: #edf4ff;
+            border-color: rgba(255, 255, 255, 0.92);
+            background: rgba(255, 255, 255, 0.17);
+            color: #ffffff;
           }
 
           .hero.hero--blue + .reference-search .filter-button--active {
-            border-color: #075bc8;
-            background: #075bc8;
-            color: #ffffff;
+            border-color: #ffffff;
+            background: #ffffff;
+            color: #075bc8;
           }
 
           .disclaimer-modal {
