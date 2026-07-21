@@ -348,10 +348,48 @@ export default function Home() {
 
           .hero.hero--blue + .reference-search {
             border-top: 0;
+            border-bottom-color: rgba(7, 91, 200, 0.18);
+            background: linear-gradient(180deg, #fbfdff 0%, #f5f8ff 100%);
+            box-shadow: 0 1px 12px rgba(7, 91, 200, 0.07);
           }
 
           .hero.hero--blue + .reference-search::before {
             display: none;
+          }
+
+          .hero.hero--blue + .reference-search .filter-button {
+            border-color: rgba(7, 91, 200, 0.42);
+            background: #ffffff;
+            color: #075bc8;
+          }
+
+          .hero.hero--blue + .reference-search .filter-button:hover {
+            border-color: #075bc8;
+            background: #edf4ff;
+          }
+
+          .hero.hero--blue + .reference-search .filter-button--active {
+            border-color: #075bc8;
+            background: #075bc8;
+            color: #ffffff;
+          }
+
+          .disclaimer-modal {
+            border-color: rgba(185, 216, 255, 0.58);
+            background: linear-gradient(160deg, #07489f 0%, #063a8c 100%);
+            box-shadow: 0 22px 60px rgba(3, 58, 140, 0.42);
+          }
+
+          .disclaimer-modal__accent {
+            background: linear-gradient(90deg, #075bc8, #c7ddff, #075bc8);
+          }
+
+          .disclaimer-modal__header > svg {
+            color: #d9eaff;
+          }
+
+          .modal-confirm {
+            background: linear-gradient(135deg, #075bc8, #3f8fe6);
           }
 
           .hero.hero--blue,
