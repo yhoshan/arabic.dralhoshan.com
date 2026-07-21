@@ -147,17 +147,22 @@ function MaterialCard({ material }: { material: (typeof MATERIALS)[number] }) {
   const isBuhoothMaterial = /^https?:\/\/(?:www\.)?buhooth\.link(?::\d+)?\//i.test(material.sourceUrl);
   const isTelegramSource = /^https?:\/\/t\.me\//i.test(material.sourceUrl);
   const isInternetArchiveSource = /^https?:\/\/(?:www\.)?archive\.org\//i.test(material.sourceUrl);
+  const isDdlTitleSearch = material.source === "مركز المعرفة الرقمي (بحث)";
   const ExternalSourceIcon = isTelegramSource ? Send : ExternalLink;
-  const externalActionLabel = isTelegramSource
-    ? "فتح في قناة تيليجرام"
-    : isInternetArchiveSource
-      ? "فتح في أرشيف"
-      : "فتح الرابط";
-  const externalActionTitle = isTelegramSource
-    ? "فتح منشور المادة في قناة تيليجرام"
-    : isInternetArchiveSource
-      ? "فتح المادة في موقع أرشيف"
-      : `فتح رابط المادة في ${material.source}`;
+  const externalActionLabel = isDdlTitleSearch
+    ? "فتح إحالة البحث"
+    : isTelegramSource
+      ? "فتح في قناة تيليجرام"
+      : isInternetArchiveSource
+        ? "فتح في أرشيف"
+        : "فتح الرابط";
+  const externalActionTitle = isDdlTitleSearch
+    ? `فتح نتائج البحث بعنوان «${material.title}» في مركز المعرفة الرقمي`
+    : isTelegramSource
+      ? "فتح منشور المادة في قناة تيليجرام"
+      : isInternetArchiveSource
+        ? "فتح المادة في موقع أرشيف"
+        : `فتح رابط المادة في ${material.source}`;
 
   const copyMaterialLink = async () => {
     try {
@@ -172,6 +177,11 @@ function MaterialCard({ material }: { material: (typeof MATERIALS)[number] }) {
 
   return (
     <article className="material-card">
+      <div className="material-card__mark" aria-hidden="true">
+        <span />
+        <span />
+        <span />
+      </div>
       <div className="material-card__icon" aria-hidden="true">
         <FileText size={20} />
       </div>
@@ -305,7 +315,7 @@ export default function Home() {
             aria-haspopup="dialog"
           >
             <ShieldAlert size={20} aria-hidden="true" />
-            <span>حول المكنز</span>
+            <span>سياسة المكنز</span>
           </button>
         </div>
 
@@ -332,9 +342,18 @@ export default function Home() {
             }
           >
             <Library size={16} aria-hidden="true" />
-            <span>فهرس المواد</span>
+            <span>دليل المواد</span>
           </button>
         </nav>
+
+        <div className="hero__identity-seal" aria-hidden="true">
+          <div className="hero__identity-dots">
+            <span />
+            <span />
+            <span />
+          </div>
+          <span>فهرس إحالات</span>
+        </div>
 
         <div className="hero__content reference-shell">
           <div className="hero-index-mark" aria-hidden="true">
@@ -362,8 +381,14 @@ export default function Home() {
                 onClick={() => chooseStat(item)}
                 aria-label={`عرض ${displayCount(item.count)} مادة في قسم ${item.label}`}
               >
-                <span className="hero-stat__number">{displayCount(item.count)}</span>
+                <span className="hero-stat__index" aria-hidden="true">
+                  <i />
+                  <i />
+                  <i />
+                </span>
                 <span className="hero-stat__label">{item.label}</span>
+                <span className="hero-stat__hint">استكشف القسم</span>
+                <span className="hero-stat__number">{displayCount(item.count)} مادة</span>
               </button>
             ))}
           </div>
@@ -430,13 +455,20 @@ export default function Home() {
 
       <section className="materials-section reference-shell" aria-labelledby="materials-title">
         <div className="materials-section__heading">
-          <h2 id="materials-title">
+          <div className="materials-section__title-group">
+            <span className="section-index-mark" aria-hidden="true">
+              <i />
+              <i />
+              <i />
+            </span>
+            <h2 id="materials-title">
             {statFilter !== "all"
               ? STAT_FILTER_LABELS[statFilter]
               : category === "all"
                 ? "المواد العلمية"
                 : MATERIAL_CATEGORY_LABELS[category]}
-          </h2>
+            </h2>
+          </div>
           {filteredMaterials.length > 0 && (
             <p className="materials-section__page-note">
               الصفحة {displayCount(safePage)} من {displayCount(pageCount)}
@@ -505,8 +537,8 @@ export default function Home() {
         </section>
 
         <section className="share-section">
-          <h2>أعن على تداول المكنز</h2>
-          <p>إحالات علمية مُنظّمة لخدمة الباحث في اللغة العربية وعلومها.</p>
+          <h2>إحالة إلى المكنز</h2>
+          <p>شارك رابط الفهرس مع الباحثين عند الحاجة إلى إحالات مرتبة في علوم العربية.</p>
           <div className="share-actions" aria-label="مشاركة المكنز">
             <a
               href={`https://wa.me/?text=${shareUrl}`}
@@ -584,6 +616,9 @@ export default function Home() {
                     rel="noreferrer"
                   >
                     موقع بحوث
+                  </a>
+                  <a href="https://ddl.ae/" target="_blank" rel="noreferrer">
+                    مركز المعرفة الرقمي
                   </a>
                   {DIWAN_SOURCE_LINKS.map((source) => (
                     <a
