@@ -1,6 +1,6 @@
 /*
- * الهوية البصرية: النسخة 7716cf8 (الواجهة الزرقاء المرجعية).
- * المحتوى الوظيفي: مواد وإحصاءات وبحث النسخة 47971066 فقط.
+ * فلسفة التصميم: مكنز عربي بتركواز مائي عميق، وعلامات نقطية مستلهمة من التشكيل والفهرسة.
+ * الغلاف بوابة أقسام بلا أرقام؛ أما الأرقام الحية فتظهر فقط في سياق نتائج البحث والصفحات.
  */
 import { useEffect, useMemo, useState } from "react";
 import {
@@ -45,7 +45,6 @@ type StatFilter = "all" | "linguistics" | "lexicon-literature-rhetoric" | "diwan
 type StatCard = {
   id: StatFilter;
   label: string;
-  count: number;
 };
 
 const STAT_FILTER_LABELS: Record<StatFilter, string> = {
@@ -71,26 +70,10 @@ function matchesStatFilter(material: (typeof MATERIALS)[number], filter: StatFil
 }
 
 const STAT_CARDS: StatCard[] = [
-  {
-    id: "all",
-    label: STAT_FILTER_LABELS.all,
-    count: MATERIALS.length,
-  },
-  {
-    id: "linguistics",
-    label: STAT_FILTER_LABELS.linguistics,
-    count: MATERIALS.filter((material) => matchesStatFilter(material, "linguistics")).length,
-  },
-  {
-    id: "lexicon-literature-rhetoric",
-    label: STAT_FILTER_LABELS["lexicon-literature-rhetoric"],
-    count: MATERIALS.filter((material) => matchesStatFilter(material, "lexicon-literature-rhetoric")).length,
-  },
-  {
-    id: "diwans",
-    label: STAT_FILTER_LABELS.diwans,
-    count: MATERIALS.filter((material) => matchesStatFilter(material, "diwans")).length,
-  },
+  { id: "all", label: STAT_FILTER_LABELS.all },
+  { id: "linguistics", label: STAT_FILTER_LABELS.linguistics },
+  { id: "lexicon-literature-rhetoric", label: STAT_FILTER_LABELS["lexicon-literature-rhetoric"] },
+  { id: "diwans", label: STAT_FILTER_LABELS.diwans },
 ];
 
 function DisclaimerModal({ onClose }: { onClose: () => void }) {
@@ -360,10 +343,9 @@ export default function Home() {
                 role="listitem"
                 key={item.id}
                 onClick={() => chooseStat(item)}
-                aria-label={`${item.label}: ${item.count}`}
+                aria-label={item.label}
               >
                 <span className="hero-stat__label">{item.label}</span>
-                <span className="hero-stat__number">{displayCount(item.count)}</span>
               </button>
             ))}
           </div>
@@ -530,8 +512,8 @@ export default function Home() {
           <div className="broken-link-card">
             <h2>الإبلاغ عن رابط لا يعمل</h2>
             <p>
-              أخي الباحث، إذا واجهتك مشكلة في تحميل أي كتاب أو مادة، يرجى كتابة
-              اسم المادة أو الرابط المعطل وسنقوم بمراجعته.
+              إذا تعذّر فتح إحالةٍ ما، فاكتب اسم المادة أو رابطها؛ تُراجع الإحالة
+              وتُصحّح في أقرب تحديث للفهرس.
             </p>
             <a
               href="mailto:yhoshan@gmail.com?subject=إبلاغ عن رابط معطل في مكنز اللغة العربية وعلومها"
@@ -544,8 +526,8 @@ export default function Home() {
         </section>
 
         <section className="share-section">
-          <h2>ساهم في نشر المكنز</h2>
-          <p>الدال على الخير كفاعله</p>
+          <h2>أعن على تداول المكنز</h2>
+          <p>إحالات علمية مُنظّمة لخدمة الباحث في اللغة العربية وعلومها.</p>
           <div className="share-actions" aria-label="مشاركة المكنز">
             <a
               href={`https://wa.me/?text=${shareUrl}`}
@@ -588,18 +570,18 @@ export default function Home() {
         <section className="footer-main">
           <div className="reference-shell footer-main__inner">
             <div className="footer-notes">
-              <p>حقوق المواد محفوظة لمؤلفيها وناشريها.</p>
+              <p>هذا المكنز دليل إحالات؛ وتبقى حقوق المواد ونشرها لأصحابها وناشريها.</p>
               <p>
-                في حال عدم رغبتكم بنشر ما يخصكم، آمل المراسلة على: {" "}
+                لتصحيح إحالة أو طلب إزالة مادة، تُستقبل المراسلات على: {" "}
                 <a href="mailto:yhoshan@gmail.com">yhoshan@gmail.com</a>
               </p>
               <p>
-                إذا لم تجد مادة في قسمها المتوقع، يرجى استخدام شريط البحث العام.
+                يوسّع البحث العام نطاق الاستكشاف عند غياب المادة عن القسم المتوقع.
               </p>
               <p>
-                هل تبحث في السلاسل التراثية الأخرى؟ {" "}
+                وللبحوث في السلاسل التراثية: {" "}
                 <a href="https://nsooos.com/" target="_blank" rel="noreferrer">
-                  انتقل لمنصة نصوص تراثية للباحثين
+                  منصة نصوص تراثية للباحثين
                 </a>
               </p>
             </div>

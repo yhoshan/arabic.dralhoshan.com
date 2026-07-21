@@ -1,7 +1,7 @@
 /*
- * فلسفة التصميم لهذا الملف: بنية مكنز أصول الفقه المرجعية بهوية سماوية ثابتة.
- * خط المهند للعناوين الرئيسة، وخط أميري لكل النصوص؛ لا تتغير الهوية أو الخط هنا.
- * عنوان الغلاف يتبع نموذج المستخدم: «مكنز» أصغر فوق الاسم، وتباعد عمودي مضغوط وواضح.
+ * فلسفة التصميم لهذا الملف: مكنز عربي مرجعي بتركواز مائي عميق وملمس فهرسي هادئ.
+ * تتجاور سلطة خط المهند في العنوان مع أميري للنصوص، وتعمل النقط والتشكيل كعلامة بصرية دقيقة.
+ * يحافظ الغلاف على «مكنز» الصغيرة فوق الاسم وعلى تباين عالٍ فوق الخلفية المائية الداكنة.
  */
 @import "tailwindcss";
 @import "tw-animate-css";
@@ -32,26 +32,26 @@
 }
 
 :root {
-  --background: #f7fbff;
-  --foreground: #103a60;
-  --card: #ffffff;
-  --card-foreground: #103a60;
-  --primary: #45aef5;
-  --primary-foreground: #ffffff;
-  --border: #d6e8f7;
-  --ring: #45aef5;
-  --sky-light: #8ed1fc;
-  --sky-main: #45aef5;
-  --sky-deep: #168fe8;
-  --sky-ink: #0b5c9a;
-  --pure-white: #ffffff;
-  --paper: #f7fbff;
-  --paper-muted: #eaf5fd;
-  --ink: #103a60;
-  --ink-muted: #5f7d96;
-  --footer: #0b3e6b;
-  --footer-deep: #082f52;
-  --line: rgba(16, 97, 151, 0.15);
+  --background: #f7f8f3;
+  --foreground: #123f3d;
+  --card: #fffef9;
+  --card-foreground: #123f3d;
+  --primary: #10b6b0;
+  --primary-foreground: #f7ffff;
+  --border: #c6e4de;
+  --ring: #10b6b0;
+  --sky-light: #4fe1d5;
+  --sky-main: #10b6b0;
+  --sky-deep: #087a78;
+  --sky-ink: #064a4a;
+  --pure-white: #f7ffff;
+  --paper: #f7f8f3;
+  --paper-muted: #eaf6f2;
+  --ink: #123f3d;
+  --ink-muted: #54736f;
+  --footer: #087a78;
+  --footer-deep: #064a4a;
+  --line: rgba(4, 92, 86, 0.16);
   --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
   --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
 }
@@ -123,13 +123,16 @@ img {
   margin-inline: auto;
 }
 
-/* الغلاف المرجعي: عنوان هرمي فقط، دون شعار أو زخارف إضافية. */
+/* غلاف المكنز: ماء تركوازي عميق مع نقط فهرسية مستلهمة من التشكيل العربي. */
 .hero {
   position: relative;
   overflow: hidden;
   min-height: 482px;
   color: var(--pure-white);
-  background: linear-gradient(135deg, #8ed1fc 0%, #45aef5 48%, #168fe8 100%);
+  background:
+    radial-gradient(ellipse 70% 95% at 72% -25%, rgba(79, 225, 213, 0.26), transparent 62%),
+    radial-gradient(ellipse 65% 85% at 7% 100%, rgba(16, 182, 176, 0.2), transparent 65%),
+    linear-gradient(132deg, #064a4a 0%, #087a78 52%, #065e5e 100%);
 }
 
 .hero::before {
@@ -139,8 +142,24 @@ img {
   content: "";
   pointer-events: none;
   background:
-    radial-gradient(circle at 14% 86%, rgba(255, 255, 255, 0.12), transparent 28%),
-    radial-gradient(circle at 88% 12%, rgba(255, 255, 255, 0.12), transparent 25%);
+    repeating-linear-gradient(110deg, rgba(247, 255, 255, 0.025) 0 1px, transparent 1px 8px),
+    radial-gradient(circle at 14% 86%, rgba(79, 225, 213, 0.16), transparent 28%),
+    radial-gradient(circle at 88% 12%, rgba(247, 255, 255, 0.1), transparent 25%);
+}
+
+.hero::after {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  content: "";
+  pointer-events: none;
+  opacity: 0.44;
+  background:
+    radial-gradient(circle at 12% 24%, rgba(247, 255, 255, 0.66) 0 2px, transparent 2.8px),
+    radial-gradient(circle at 16% 31%, rgba(79, 225, 213, 0.62) 0 3px, transparent 3.8px),
+    radial-gradient(circle at 82% 73%, rgba(247, 255, 255, 0.52) 0 2px, transparent 2.8px),
+    radial-gradient(circle at 86% 67%, rgba(79, 225, 213, 0.54) 0 3px, transparent 3.8px),
+    radial-gradient(circle at 90% 79%, rgba(247, 255, 255, 0.3) 0 1px, transparent 1.8px);
 }
 
 .hero__top-line,
@@ -150,7 +169,7 @@ img {
   right: 0;
   left: 0;
   height: 6px;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(79, 225, 213, 0.82);
 }
 
 .hero__top-line {
@@ -199,7 +218,7 @@ img {
 
 .about-trigger:hover {
   border-color: rgba(255, 255, 255, 0.7);
-  background: rgba(22, 143, 232, 0.3);
+  background: rgba(16, 182, 176, 0.34);
 }
 
 .about-trigger:active,
@@ -253,7 +272,7 @@ img {
   color: var(--pure-white);
   font-family: "Al Mohanad", "Amiri", serif;
   font-weight: 700;
-  text-shadow: 0 2px 14px rgba(7, 83, 145, 0.27);
+  text-shadow: 0 3px 20px rgba(1, 43, 42, 0.42);
 }
 
 .hero-title__kicker {
@@ -299,18 +318,18 @@ img {
 
 .hero-stat {
   min-height: 58px;
-  border: 1px solid rgba(255, 255, 255, 0.44);
-  border-radius: 11px;
-  background: rgba(9, 104, 186, 0.22);
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.14);
-  backdrop-filter: blur(6px);
+  border: 1px solid rgba(79, 225, 213, 0.52);
+  border-radius: 7px;
+  background: linear-gradient(145deg, rgba(5, 90, 88, 0.44), rgba(2, 61, 60, 0.28));
+  box-shadow: inset 0 1px rgba(247, 255, 255, 0.12), 0 12px 28px rgba(1, 52, 51, 0.14);
+  backdrop-filter: blur(9px);
 }
 
 /* الهيدر السفلي المرجعي: بحث، تصنيف، مصادر، ثم سطر إجمالي فقط. */
 .reference-search {
   border-bottom: 1px solid var(--line);
-  background: var(--card);
-  box-shadow: 0 1px 10px rgba(18, 93, 148, 0.06);
+  background: linear-gradient(180deg, #fffefb 0%, #f7faf6 100%);
+  box-shadow: 0 1px 12px rgba(3, 82, 78, 0.06);
 }
 
 .reference-search__inner {
@@ -324,11 +343,11 @@ img {
   min-height: 51px;
   margin-bottom: 13px;
   overflow: hidden;
-  border: 1px solid #cfe4f5;
-  border-radius: 9px;
-  background: #fff;
+  border: 1px solid #b9ded7;
+  border-radius: 7px;
+  background: #fffef9;
   color: var(--sky-ink);
-  box-shadow: 0 1px 2px rgba(16, 97, 151, 0.04);
+  box-shadow: 0 8px 20px rgba(3, 82, 78, 0.05);
 }
 
 .search-field > svg {
@@ -683,7 +702,9 @@ img {
 
 .share-section {
   padding: 29px 16px 31px;
-  background: var(--footer);
+  background:
+    radial-gradient(circle at 20% 0%, rgba(79, 225, 213, 0.16), transparent 36%),
+    var(--footer);
   color: var(--pure-white);
   text-align: center;
 }
@@ -798,7 +819,7 @@ img {
 
 .footer-notes {
   margin-bottom: 20px;
-  color: #a7cce7;
+  color: #b8ddd7;
   font-size: 15px;
   line-height: 1.7;
 }
@@ -808,7 +829,7 @@ img {
 }
 
 .footer-notes a {
-  color: #d8f1ff;
+  color: #dcfffa;
   text-decoration: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: 3px;
@@ -819,8 +840,8 @@ img {
 }
 
 .footer-sources {
-  border-top: 1px solid rgba(169, 213, 244, 0.23);
-  border-bottom: 1px solid rgba(169, 213, 244, 0.23);
+  border-top: 1px solid rgba(159, 229, 220, 0.23);
+  border-bottom: 1px solid rgba(159, 229, 220, 0.23);
 }
 
 .footer-sources__trigger {
@@ -832,7 +853,7 @@ img {
   padding: 8px 0;
   border: 0;
   background: transparent;
-  color: #d8f1ff;
+  color: #dcfffa;
   font-size: 16px;
   font-weight: 700;
 }
@@ -1256,11 +1277,14 @@ img {
   grid-template-columns: auto minmax(0, 1fr) auto;
   gap: 14px;
   align-items: start;
-  padding: 17px;
-  border: 1px solid var(--line);
-  border-radius: 10px;
-  background: var(--card);
-  box-shadow: 0 2px 8px rgba(18, 93, 148, 0.05);
+  padding: 18px;
+  border: 1px solid rgba(8, 122, 120, 0.18);
+  border-radius: 7px;
+  background:
+    linear-gradient(90deg, rgba(16, 182, 176, 0.06) 0 3px, transparent 3px),
+    linear-gradient(145deg, #fffef9 0%, #fafbf7 100%);
+  box-shadow: 0 8px 22px rgba(3, 82, 78, 0.055);
+  transition: transform 180ms var(--ease-out), box-shadow 180ms var(--ease-out), border-color 180ms var(--ease-out);
 }
 
 .material-card__icon {
@@ -1269,10 +1293,10 @@ img {
   justify-content: center;
   width: 38px;
   height: 38px;
-  border: 1px solid #cfe4f5;
-  border-radius: 8px;
-  background: #eef8ff;
-  color: var(--sky-main);
+  border: 1px solid #b9ded7;
+  border-radius: 6px;
+  background: #eaf6f2;
+  color: var(--sky-deep);
 }
 
 .material-card__body {
@@ -1299,7 +1323,7 @@ img {
 
 .material-card__category {
   padding: 2px 8px;
-  background: #eef8ff;
+  background: #eaf6f2;
   color: var(--sky-deep);
   font-weight: 700;
 }
@@ -1356,8 +1380,8 @@ img {
   gap: 6px;
   min-height: 35px;
   padding: 5px 10px;
-  border: 1px solid #63b6f4;
-  border-radius: 7px;
+  border: 1px solid rgba(8, 122, 120, 0.46);
+  border-radius: 6px;
   color: var(--sky-ink);
   font-size: 14px;
   font-weight: 700;
@@ -1366,9 +1390,15 @@ img {
   transition: background-color 180ms var(--ease-out), color 180ms var(--ease-out), border-color 180ms var(--ease-out);
 }
 
+.material-card:hover {
+  border-color: rgba(8, 122, 120, 0.45);
+  box-shadow: 0 13px 30px rgba(3, 82, 78, 0.11);
+  transform: translateY(-2px);
+}
+
 .material-card__link:hover {
   border-color: var(--sky-deep);
-  background: #eef8ff;
+  background: #eaf6f2;
 }
 
 .pagination {
