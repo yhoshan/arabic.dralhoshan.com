@@ -11,7 +11,6 @@ import {
   ChevronRight,
   Copy,
   ExternalLink,
-  FileText,
   Library,
   Moon,
   Search,
@@ -26,6 +25,7 @@ import {
   DIWAN_SOURCE_LINKS,
   displayCount,
   filterMaterials,
+  isClassicalArabicLanguageBook,
   isStandalonePoetryDiwan,
   MATERIAL_CATEGORY_LABELS,
   MATERIALS,
@@ -38,6 +38,7 @@ const WHATSAPP_ICON_PATH =
   "M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z";
 
 type StatFilter = "all" | "linguistics" | "lexicon-literature-rhetoric" | "diwans";
+type DiscoveryMode = "classical" | "all";
 
 type StatCard = {
   id: StatFilter;
@@ -50,6 +51,12 @@ const STAT_FILTER_LABELS: Record<StatFilter, string> = {
   linguistics: "علوم اللغة",
   "lexicon-literature-rhetoric": "المعاجم والأدب",
   diwans: "الدواوين الشعرية",
+};
+
+const CLASSICAL_LANGUAGE_BOOKS = MATERIALS.filter(isClassicalArabicLanguageBook);
+const DISCOVERY_MODE_LABELS: Record<DiscoveryMode, string> = {
+  classical: "كتب اللغة من الأرشيف",
+  all: "جميع مواد المكنز",
 };
 
 function hasAnyTag(material: (typeof MATERIALS)[number], tags: string[]) {
@@ -142,12 +149,27 @@ function WhatsappGlyph() {
   );
 }
 
+function getCatalogIdentifier(title: string) {
+  const match = title.match(/^(\d{4,})(?:[_\s-]+|$)/);
+  return match?.[1] ?? null;
+}
+
+function formatCatalogTitle(title: string) {
+  const withoutIdentifier = title
+    .replace(/^\d{4,}[_\s-]+/, "")
+    .replace(/^0{2,}(?=[\u0600-\u06FF])/, "");
+
+  return withoutIdentifier.replace(/_/g, " ").replace(/\s+/g, " ").trim() || title;
+}
+
 function MaterialCard({ material }: { material: (typeof MATERIALS)[number] }) {
   const [copied, setCopied] = useState(false);
   const isBuhoothMaterial = /^https?:\/\/(?:www\.)?buhooth\.link(?::\d+)?\//i.test(material.sourceUrl);
   const isTelegramSource = /^https?:\/\/t\.me\//i.test(material.sourceUrl);
   const isInternetArchiveSource = /^https?:\/\/(?:www\.)?archive\.org\//i.test(material.sourceUrl);
   const isDdlTitleSearch = material.source === "مركز المعرفة الرقمي (بحث)";
+  const catalogIdentifier = getCatalogIdentifier(material.title);
+  const displayTitle = formatCatalogTitle(material.title);
   const ExternalSourceIcon = isTelegramSource ? Send : ExternalLink;
   const externalActionLabel = isDdlTitleSearch
     ? "فتح إحالة البحث"
@@ -157,7 +179,7 @@ function MaterialCard({ material }: { material: (typeof MATERIALS)[number] }) {
         ? "فتح في أرشيف"
         : "فتح الرابط";
   const externalActionTitle = isDdlTitleSearch
-    ? `فتح نتائج البحث بعنوان «${material.title}» في مركز المعرفة الرقمي`
+    ? `فتح نتائج البحث بعنوان «${displayTitle}» في مركز المعرفة الرقمي`
     : isTelegramSource
       ? "فتح منشور المادة في قناة تيليجرام"
       : isInternetArchiveSource
@@ -182,17 +204,19 @@ function MaterialCard({ material }: { material: (typeof MATERIALS)[number] }) {
         <span />
         <span />
       </div>
-      <div className="material-card__icon" aria-hidden="true">
-        <FileText size={20} />
-      </div>
       <div className="material-card__body">
-        <div className="material-card__topline">
-          <span className="material-card__category">
-            {MATERIAL_CATEGORY_LABELS[material.primaryCategory]}
-          </span>
-          <span className="material-card__source">{material.source}</span>
-        </div>
-        <h3>{material.title}</h3>
+        <header className="material-card__record-head">
+          <div className="material-card__topline">
+            <span className="material-card__category">
+              {MATERIAL_CATEGORY_LABELS[material.primaryCategory]}
+            </span>
+            <span className="material-card__source">{material.source}</span>
+          </div>
+          {catalogIdentifier && (
+            <span className="material-card__identifier">سجل {catalogIdentifier}</span>
+          )}
+        </header>
+        <h3 title={material.title}>{displayTitle}</h3>
         <dl className="material-card__metadata">
           <div>
             <dt>المؤلف</dt>
@@ -243,6 +267,7 @@ export default function Home() {
   const [query, setQuery] = useState("");
   const [category, setCategory] = useState<MaterialCategory>("all");
   const [statFilter, setStatFilter] = useState<StatFilter>("all");
+  const [discoveryMode, setDiscoveryMode] = useState<DiscoveryMode>("classical");
   const [page, setPage] = useState(1);
   const [copied, setCopied] = useState(false);
 
@@ -255,10 +280,13 @@ export default function Home() {
 
   const filteredMaterials = useMemo(
     () =>
-      filterMaterials(MATERIALS, query, category, "all").filter((material) =>
-        matchesStatFilter(material, statFilter),
-      ),
-    [query, category, statFilter],
+      filterMaterials(
+        discoveryMode === "classical" ? CLASSICAL_LANGUAGE_BOOKS : MATERIALS,
+        query,
+        category,
+        "all",
+      ).filter((material) => matchesStatFilter(material, statFilter)),
+    [query, category, discoveryMode, statFilter],
   );
   const pageCount = Math.max(1, Math.ceil(filteredMaterials.length / PAGE_SIZE));
   const safePage = Math.min(page, pageCount);
@@ -269,15 +297,17 @@ export default function Home() {
 
   useEffect(() => {
     setPage(1);
-  }, [query, category, statFilter]);
+  }, [query, category, discoveryMode, statFilter]);
 
   const clearFilters = () => {
     setQuery("");
     setCategory("all");
     setStatFilter("all");
+    setDiscoveryMode("classical");
   };
 
   const chooseStat = (stat: StatCard) => {
+    setDiscoveryMode("all");
     setCategory("all");
     setStatFilter(stat.id);
     document
@@ -335,14 +365,15 @@ export default function Home() {
           <button
             type="button"
             className="hero-nav-trigger"
-            onClick={() =>
+            onClick={() => {
+              clearFilters();
               document
                 .getElementById("materials-title")
-                ?.scrollIntoView({ behavior: "smooth", block: "start" })
-            }
+                ?.scrollIntoView({ behavior: "smooth", block: "start" });
+            }}
           >
             <Library size={16} aria-hidden="true" />
-            <span>دليل المواد</span>
+            <span>كتب اللغة من الأرشيف</span>
           </button>
         </nav>
 
@@ -367,7 +398,7 @@ export default function Home() {
           </h1>
 
           <p className="hero__description">
-            <span>فهرس تجميعي للروابط والإحالات العلمية</span>
+            <span>ابدأ بكتب اللغة من الأرشيف، ثم وسّع بحثك في سائر الإحالات العلمية</span>
             <span>في اللغة العربية وعلومها</span>
           </p>
 
@@ -428,6 +459,7 @@ export default function Home() {
                   key={filter}
                   className={`filter-button ${category === filter ? "filter-button--active" : ""}`}
                   onClick={() => {
+                    setDiscoveryMode("all");
                     setCategory(filter);
                     setStatFilter("all");
                   }}
@@ -439,11 +471,40 @@ export default function Home() {
             </div>
           </div>
 
+          <section className="entry-collection" aria-label="نقطة البداية في المكنز">
+            <div className="entry-collection__context">
+              <span className="entry-collection__mark" aria-hidden="true"><i /><i /><i /></span>
+              <div>
+                <strong>نقطة البداية للباحث الجديد</strong>
+                <span>مداخل كتب لغوية موثقة من الأرشيف العالمي، مع انتقال مباشر إلى الفهرس الكامل.</span>
+              </div>
+            </div>
+            <div className="entry-collection__switch" role="group" aria-label="نطاق العرض">
+              {(["classical", "all"] as DiscoveryMode[]).map((mode) => (
+                <button
+                  type="button"
+                  key={mode}
+                  className={discoveryMode === mode ? "entry-collection__choice entry-collection__choice--active" : "entry-collection__choice"}
+                  aria-pressed={discoveryMode === mode}
+                  onClick={() => {
+                    setDiscoveryMode(mode);
+                    setCategory("all");
+                    setStatFilter("all");
+                  }}
+                >
+                  <span>{DISCOVERY_MODE_LABELS[mode]}</span>
+                  <small>{displayCount(mode === "classical" ? CLASSICAL_LANGUAGE_BOOKS.length : MATERIALS.length)}</small>
+                </button>
+              ))}
+            </div>
+          </section>
+
           <div className="results-strip" aria-live="polite">
             <span>
-              النتائج: <strong>{displayCount(filteredMaterials.length)}</strong> من {displayCount(MATERIALS.length)} مادة مفهرسة
+              {discoveryMode === "classical" ? "كتب اللغة من الأرشيف: " : "النتائج: "}
+              <strong>{displayCount(filteredMaterials.length)}</strong> من {displayCount(discoveryMode === "classical" ? CLASSICAL_LANGUAGE_BOOKS.length : MATERIALS.length)} مادة مفهرسة
             </span>
-            {(query || category !== "all" || statFilter !== "all") && (
+            {(query || category !== "all" || statFilter !== "all" || discoveryMode !== "classical") && (
               <button type="button" onClick={clearFilters}>
                 <X size={13} aria-hidden="true" />
                 مسح الفلاتر
@@ -465,7 +526,9 @@ export default function Home() {
             {statFilter !== "all"
               ? STAT_FILTER_LABELS[statFilter]
               : category === "all"
-                ? "المواد العلمية"
+                ? discoveryMode === "classical"
+                  ? "كتب اللغة من الأرشيف"
+                  : "المواد العلمية"
                 : MATERIAL_CATEGORY_LABELS[category]}
             </h2>
           </div>
@@ -511,7 +574,7 @@ export default function Home() {
             <h3>لا توجد نتائج</h3>
             <p>جرّب تغيير كلمات البحث أو الفلاتر المحددة</p>
             <button type="button" className="empty-reset" onClick={clearFilters}>
-              عرض جميع المواد
+              العودة إلى كتب اللغة من الأرشيف
             </button>
           </div>
         )}

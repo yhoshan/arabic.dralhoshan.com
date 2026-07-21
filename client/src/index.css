@@ -1969,3 +1969,370 @@ img {
     transition: none;
   }
 }
+
+/*
+ * بوابة البداية التراثية: تُقدَّم كتب الأرشيف العالمي كبداية للباحث الجديد،
+ * ويظل الانتقال إلى الفهرس الشامل اختياراً ظاهراً لا نتيجةً خفية لمرشح.
+ */
+.entry-collection {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  margin: 11px 0 10px;
+  padding: 11px 0 12px;
+  border-top: 1px solid rgba(8, 122, 120, 0.16);
+  border-bottom: 1px solid rgba(8, 122, 120, 0.16);
+}
+
+.entry-collection__context {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+  color: var(--ink);
+}
+
+.entry-collection__context > div {
+  display: grid;
+  gap: 2px;
+}
+
+.entry-collection__context strong {
+  font-family: "Al Mohanad", "Amiri", serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.entry-collection__context span:not(.entry-collection__mark) {
+  overflow: hidden;
+  color: var(--ink-muted);
+  font-size: 12px;
+  line-height: 1.35;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.entry-collection__mark {
+  display: inline-grid;
+  grid-template-columns: repeat(3, 4px);
+  gap: 4px;
+  align-items: end;
+  min-width: 21px;
+  height: 12px;
+  color: var(--sky-main);
+}
+
+.entry-collection__mark i {
+  display: block;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.entry-collection__mark i:nth-child(2) {
+  transform: translateY(-4px);
+}
+
+.entry-collection__mark i:nth-child(3) {
+  opacity: 0.58;
+}
+
+.entry-collection__switch {
+  display: inline-grid;
+  grid-template-columns: repeat(2, minmax(0, auto));
+  flex: 0 0 auto;
+  border: 1px solid rgba(8, 122, 120, 0.28);
+  border-radius: 4px;
+  background: #f9fcfa;
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.84);
+  overflow: hidden;
+}
+
+.entry-collection__choice {
+  display: inline-flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 7px;
+  min-height: 36px;
+  padding: 5px 10px;
+  border: 0;
+  border-inline-start: 1px solid rgba(8, 122, 120, 0.18);
+  background: transparent;
+  color: var(--ink-muted);
+  cursor: pointer;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.1;
+  transition: background-color 180ms var(--ease-out), color 180ms var(--ease-out), box-shadow 180ms var(--ease-out);
+}
+
+.entry-collection__choice:first-child {
+  border-inline-start: 0;
+}
+
+.entry-collection__choice small {
+  color: inherit;
+  font-family: "Amiri", serif;
+  font-size: 12px;
+  font-weight: 700;
+  opacity: 0.75;
+}
+
+.entry-collection__choice:hover,
+.entry-collection__choice:focus-visible {
+  background: #edf9f6;
+  color: var(--sky-deep);
+  outline: 0;
+}
+
+.entry-collection__choice:focus-visible {
+  box-shadow: inset 0 0 0 2px var(--sky-main);
+}
+
+.entry-collection__choice:active {
+  transform: scale(0.98);
+}
+
+.entry-collection__choice--active {
+  background: var(--sky-main);
+  color: #fff;
+}
+
+.entry-collection__choice--active:hover,
+.entry-collection__choice--active:focus-visible {
+  background: var(--sky-deep);
+  color: #fff;
+}
+
+.thesaurus-page--dark .entry-collection {
+  border-color: rgba(152, 232, 222, 0.2);
+}
+
+.thesaurus-page--dark .entry-collection__context {
+  color: #e4fcf7;
+}
+
+.thesaurus-page--dark .entry-collection__context span:not(.entry-collection__mark) {
+  color: #a8c8c5;
+}
+
+.thesaurus-page--dark .entry-collection__switch {
+  border-color: rgba(152, 232, 222, 0.28);
+  background: #0e3435;
+  box-shadow: none;
+}
+
+.thesaurus-page--dark .entry-collection__choice:hover,
+.thesaurus-page--dark .entry-collection__choice:focus-visible {
+  background: #155455;
+  color: #f2fffc;
+}
+
+@media (max-width: 760px) {
+  .entry-collection {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .entry-collection__switch {
+    width: 100%;
+  }
+
+  .entry-collection__choice {
+    min-width: 0;
+    padding-inline: 8px;
+    font-size: 12px;
+  }
+
+  .entry-collection__context span:not(.entry-collection__mark) {
+    white-space: normal;
+  }
+}
+
+@media (max-width: 420px) {
+  .entry-collection__choice {
+    gap: 4px;
+    font-size: 11px;
+  }
+}
+
+/*
+ * صقل السجل بعد المراجعة: العنوان العربي هو مدخل الفهرس الأول،
+ * والختم ثلاثي النقط بديل مقصود للأيقونات العامة داخل منطقة النتائج.
+ */
+.hero__identity-seal {
+  min-height: 37px;
+  padding: 7px 12px 7px 13px;
+  border: 1px solid rgba(191, 255, 248, 0.2);
+  border-inline-start: 2px solid rgba(191, 255, 248, 0.7);
+  background: linear-gradient(90deg, rgba(2, 67, 65, 0.12), rgba(247, 255, 255, 0.05));
+  box-shadow: inset 0 1px rgba(247, 255, 255, 0.1);
+}
+
+.about-trigger,
+.hero-nav-trigger {
+  position: relative;
+  gap: 7px;
+  border-color: rgba(191, 255, 248, 0.3);
+  background: rgba(2, 67, 65, 0.22);
+  color: rgba(234, 255, 251, 0.96);
+  letter-spacing: 0.01em;
+}
+
+.about-trigger {
+  flex-direction: row;
+  min-width: auto;
+  min-height: 42px;
+  padding: 7px 12px;
+}
+
+.about-trigger svg,
+.hero-nav-trigger svg {
+  display: none;
+}
+
+.about-trigger::before,
+.hero-nav-trigger::before {
+  display: inline-grid;
+  grid-template-columns: repeat(3, 3px);
+  gap: 3px;
+  align-items: end;
+  width: 15px;
+  height: 9px;
+  content: "";
+  background:
+    radial-gradient(circle, #c7fff8 0 1.5px, transparent 1.9px) 0 4px / 6px 6px no-repeat,
+    radial-gradient(circle, #c7fff8 0 1.5px, transparent 1.9px) 6px 0 / 6px 6px no-repeat,
+    radial-gradient(circle, rgba(199, 255, 248, 0.64) 0 1.5px, transparent 1.9px) 12px 4px / 6px 6px no-repeat;
+}
+
+.material-card {
+  grid-template-columns: 15px minmax(0, 1fr) auto;
+  gap: 14px;
+  min-height: 180px;
+  padding: 20px 20px 17px;
+  border-color: rgba(6, 74, 74, 0.16);
+  background:
+    linear-gradient(90deg, rgba(16, 182, 176, 0.13) 0 2px, transparent 2px),
+    repeating-linear-gradient(0deg, transparent 0 35px, rgba(6, 74, 74, 0.022) 35px 36px),
+    linear-gradient(145deg, #fffef9 0%, #fbfbf5 100%);
+}
+
+.material-card__record-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.material-card__topline {
+  flex: 1;
+  margin-bottom: 10px;
+}
+
+.material-card__category {
+  padding: 3px 8px;
+  background: rgba(234, 246, 242, 0.72);
+  color: var(--sky-ink);
+}
+
+.material-card__category::before {
+  width: 3px;
+  height: 3px;
+  box-shadow: 5px 2px 0 rgba(16, 182, 176, 0.44), 10px 0 0 rgba(16, 182, 176, 0.22);
+}
+
+.material-card__source {
+  color: #6d817d;
+  font-size: 12px;
+}
+
+.material-card__identifier {
+  flex: 0 0 auto;
+  padding-top: 2px;
+  color: #80928e;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.35;
+  white-space: nowrap;
+}
+
+.material-card h3 {
+  max-width: 34ch;
+  margin-inline-start: 0;
+  color: #103d3a;
+  font-size: clamp(1.22rem, 1.75vw, 1.5rem);
+  font-weight: 700;
+  line-height: 1.45;
+  text-wrap: balance;
+}
+
+.material-card__metadata {
+  gap: 7px 16px;
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top-color: rgba(6, 74, 74, 0.08);
+  color: #647b76;
+  font-size: 13px;
+}
+
+.material-card__metadata dt {
+  color: #47635f;
+}
+
+.material-card__tags > span {
+  border-color: rgba(6, 74, 74, 0.12);
+  background: transparent;
+  color: #5d7671;
+}
+
+.material-card__link {
+  align-self: end;
+  min-height: 30px;
+  padding: 4px 8px;
+  border-color: rgba(6, 74, 74, 0.16);
+  background: rgba(255, 254, 249, 0.76);
+  color: #617773;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.material-card__link svg {
+  width: 13px;
+  height: 13px;
+  color: var(--sky-deep);
+}
+
+.material-card__link:hover {
+  border-color: var(--sky-main);
+  background: rgba(234, 246, 242, 0.9);
+  color: var(--sky-ink);
+}
+
+@media (max-width: 760px) {
+  .material-card {
+    grid-template-columns: 12px minmax(0, 1fr);
+    gap: 10px;
+    min-height: 0;
+    padding: 16px 15px 14px;
+  }
+
+  .material-card__record-head {
+    align-items: flex-start;
+  }
+
+  .material-card h3 {
+    max-width: none;
+    font-size: 1.2rem;
+  }
+
+  .material-card__link {
+    grid-column: 1 / -1;
+    width: 100%;
+  }
+}

@@ -83,6 +83,7 @@ interface DiwanCatalogPayload {
 const corpus = corpusJson as CorpusPayload;
 const diwanCatalog = diwansJson as DiwanCatalogPayload;
 const CURATED_DIWAN_SIGNAL = "سجل ديوان موثّق";
+const CLASSICAL_LANGUAGE_BOOK_SOURCE = "Internet Archive";
 
 const DYNAMIC_DIWANS: Material[] = diwanCatalog.materials.map((material) => ({
   ...material,
@@ -142,6 +143,20 @@ export function isStandalonePoetryDiwan(
   return (
     material.primaryCategory === "diwans" &&
     material.matchEvidence.strongSignals.includes(CURATED_DIWAN_SIGNAL)
+  );
+}
+
+/**
+ * بداية الباحث الجديد: كتب اللغة ذات الرابط المباشر في الأرشيف العالمي،
+ * والمصنّفة مصدراً/مرجعاً أو معجماً. لا نخلط بها الرسائل والدراسات الحديثة؛
+ * تبقى هذه المواد متاحة من «جميع المواد» والبحث العام.
+ */
+export function isClassicalArabicLanguageBook(
+  material: Pick<Material, "source" | "primaryCategory">,
+): boolean {
+  return (
+    material.source === CLASSICAL_LANGUAGE_BOOK_SOURCE &&
+    (material.primaryCategory === "references" || material.primaryCategory === "dictionaries")
   );
 }
 
