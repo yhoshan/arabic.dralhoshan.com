@@ -243,7 +243,6 @@ function MaterialCard({ material }: { material: (typeof MATERIALS)[number] }) {
 export default function Home() {
   const [isDark, setIsDark] = useState(false);
   const [showDisclaimer, setShowDisclaimer] = useState(false);
-  const [showSources, setShowSources] = useState(false);
   const [footerSourcesOpen, setFooterSourcesOpen] = useState(false);
   const [query, setQuery] = useState("");
   const [category, setCategory] = useState<MaterialCategory>("all");
@@ -285,7 +284,6 @@ export default function Home() {
   const chooseStat = (stat: StatCard) => {
     setCategory("all");
     setStatFilter(stat.id);
-    setShowSources(false);
     document
       .getElementById("materials-title")
       ?.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -408,47 +406,7 @@ export default function Home() {
                 </button>
               ))}
             </div>
-
-            <div className="source-filter-wrap">
-              <button
-                type="button"
-                className={`filter-button source-filter ${showSources ? "source-filter--open" : ""}`}
-                onClick={() => setShowSources((value) => !value)}
-                aria-expanded={showSources}
-                aria-controls="source-panel"
-              >
-                <Library size={15} aria-hidden="true" />
-                <span>المصادر</span>
-                <ChevronDown size={15} aria-hidden="true" />
-              </button>
-            </div>
           </div>
-
-          {showSources && (
-            <div className="source-panel" id="source-panel">
-              <a
-                className="source-index-link"
-                href={CORPUS_METADATA.sourceIndexUrl}
-                target="_blank"
-                rel="noreferrer"
-              >
-                موقع بحوث
-                <ExternalLink size={14} aria-hidden="true" />
-              </a>
-              {DIWAN_SOURCE_LINKS.map((source) => (
-                <a
-                  className="source-index-link"
-                  href={source.url}
-                  target="_blank"
-                  rel="noreferrer"
-                  key={source.url}
-                >
-                  {source.name}
-                  <ExternalLink size={14} aria-hidden="true" />
-                </a>
-              ))}
-            </div>
-          )}
 
           <div className="results-strip" aria-live="polite">
             <span>
