@@ -38,7 +38,6 @@ const WHATSAPP_ICON_PATH =
   "M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z";
 
 type StatFilter = "all" | "linguistics" | "lexicon-literature-rhetoric" | "diwans";
-type DiscoveryMode = "classical" | "all";
 
 type StatCard = {
   id: StatFilter;
@@ -53,11 +52,8 @@ const STAT_FILTER_LABELS: Record<StatFilter, string> = {
   diwans: "الدواوين الشعرية",
 };
 
+// تعرض الصفحة الأولى سجلات اللغة التراثية فقط؛ ولا تغيّر هذه المجموعة أي بيانات في الكتالوج.
 const CLASSICAL_LANGUAGE_BOOKS = MATERIALS.filter(isClassicalArabicLanguageBook);
-const DISCOVERY_MODE_LABELS: Record<DiscoveryMode, string> = {
-  classical: "كتب اللغة من الأرشيف",
-  all: "جميع مواد المكنز",
-};
 
 function hasAnyTag(material: (typeof MATERIALS)[number], tags: string[]) {
   return tags.some((tag) => material.tags.includes(tag as (typeof material.tags)[number]));
@@ -267,7 +263,6 @@ export default function Home() {
   const [query, setQuery] = useState("");
   const [category, setCategory] = useState<MaterialCategory>("all");
   const [statFilter, setStatFilter] = useState<StatFilter>("all");
-  const [discoveryMode, setDiscoveryMode] = useState<DiscoveryMode>("classical");
   const [page, setPage] = useState(1);
   const [copied, setCopied] = useState(false);
 
@@ -280,13 +275,10 @@ export default function Home() {
 
   const filteredMaterials = useMemo(
     () =>
-      filterMaterials(
-        discoveryMode === "classical" ? CLASSICAL_LANGUAGE_BOOKS : MATERIALS,
-        query,
-        category,
-        "all",
-      ).filter((material) => matchesStatFilter(material, statFilter)),
-    [query, category, discoveryMode, statFilter],
+      filterMaterials(CLASSICAL_LANGUAGE_BOOKS, query, category, "all").filter((material) =>
+        matchesStatFilter(material, statFilter),
+      ),
+    [query, category, statFilter],
   );
   const pageCount = Math.max(1, Math.ceil(filteredMaterials.length / PAGE_SIZE));
   const safePage = Math.min(page, pageCount);
@@ -297,17 +289,15 @@ export default function Home() {
 
   useEffect(() => {
     setPage(1);
-  }, [query, category, discoveryMode, statFilter]);
+  }, [query, category, statFilter]);
 
   const clearFilters = () => {
     setQuery("");
     setCategory("all");
     setStatFilter("all");
-    setDiscoveryMode("classical");
   };
 
   const chooseStat = (stat: StatCard) => {
-    setDiscoveryMode("all");
     setCategory("all");
     setStatFilter(stat.id);
     document
@@ -337,18 +327,6 @@ export default function Home() {
       <header className="hero" id="top">
         <div className="hero__top-line" aria-hidden="true" />
 
-        <div className="hero__about-control">
-          <button
-            type="button"
-            className="about-trigger"
-            onClick={() => setShowDisclaimer(true)}
-            aria-haspopup="dialog"
-          >
-            <ShieldAlert size={20} aria-hidden="true" />
-            <span>سياسة المكنز</span>
-          </button>
-        </div>
-
         <div className="hero__theme-control">
           <button
             type="button"
@@ -361,46 +339,10 @@ export default function Home() {
           </button>
         </div>
 
-        <nav className="hero__nav-control" aria-label="تنقل المكنز">
-          <button
-            type="button"
-            className="hero-nav-trigger"
-            onClick={() => {
-              clearFilters();
-              document
-                .getElementById("materials-title")
-                ?.scrollIntoView({ behavior: "smooth", block: "start" });
-            }}
-          >
-            <Library size={16} aria-hidden="true" />
-            <span>كتب اللغة من الأرشيف</span>
-          </button>
-        </nav>
-
-        <div className="hero__identity-seal" aria-hidden="true">
-          <div className="hero__identity-dots">
-            <span />
-            <span />
-            <span />
-          </div>
-          <span>فهرس إحالات</span>
-        </div>
-
-        <div className="hero__content reference-shell">
-          <div className="hero-index-mark" aria-hidden="true">
-            <span />
-            <span />
-            <span />
-          </div>
-          <h1 className="hero-title" aria-label="مكنز اللغة العربية وعلومها">
+        <div className="hero__content reference-shell">          <h1 className="hero-title" aria-label="مكنز اللغة العربية وعلومها">
             <span className="hero-title__kicker">مكنز</span>
             <span className="hero-title__name">اللغة العربية وعلومها</span>
           </h1>
-
-          <p className="hero__description">
-            <span>ابدأ بكتب اللغة من الأرشيف، ثم وسّع بحثك في سائر الإحالات العلمية</span>
-            <span>في اللغة العربية وعلومها</span>
-          </p>
 
           <div className="hero__stats" role="list" aria-label="أقسام المكنز">
             {STAT_CARDS.map((item) => (
@@ -459,7 +401,6 @@ export default function Home() {
                   key={filter}
                   className={`filter-button ${category === filter ? "filter-button--active" : ""}`}
                   onClick={() => {
-                    setDiscoveryMode("all");
                     setCategory(filter);
                     setStatFilter("all");
                   }}
@@ -469,47 +410,6 @@ export default function Home() {
                 </button>
               ))}
             </div>
-          </div>
-
-          <section className="entry-collection" aria-label="نقطة البداية في المكنز">
-            <div className="entry-collection__context">
-              <span className="entry-collection__mark" aria-hidden="true"><i /><i /><i /></span>
-              <div>
-                <strong>نقطة البداية للباحث الجديد</strong>
-                <span>مداخل كتب لغوية موثقة من الأرشيف العالمي، مع انتقال مباشر إلى الفهرس الكامل.</span>
-              </div>
-            </div>
-            <div className="entry-collection__switch" role="group" aria-label="نطاق العرض">
-              {(["classical", "all"] as DiscoveryMode[]).map((mode) => (
-                <button
-                  type="button"
-                  key={mode}
-                  className={discoveryMode === mode ? "entry-collection__choice entry-collection__choice--active" : "entry-collection__choice"}
-                  aria-pressed={discoveryMode === mode}
-                  onClick={() => {
-                    setDiscoveryMode(mode);
-                    setCategory("all");
-                    setStatFilter("all");
-                  }}
-                >
-                  <span>{DISCOVERY_MODE_LABELS[mode]}</span>
-                  <small>{displayCount(mode === "classical" ? CLASSICAL_LANGUAGE_BOOKS.length : MATERIALS.length)}</small>
-                </button>
-              ))}
-            </div>
-          </section>
-
-          <div className="results-strip" aria-live="polite">
-            <span>
-              {discoveryMode === "classical" ? "كتب اللغة من الأرشيف: " : "النتائج: "}
-              <strong>{displayCount(filteredMaterials.length)}</strong> من {displayCount(discoveryMode === "classical" ? CLASSICAL_LANGUAGE_BOOKS.length : MATERIALS.length)} مادة مفهرسة
-            </span>
-            {(query || category !== "all" || statFilter !== "all" || discoveryMode !== "classical") && (
-              <button type="button" onClick={clearFilters}>
-                <X size={13} aria-hidden="true" />
-                مسح الفلاتر
-              </button>
-            )}
           </div>
         </div>
       </section>
@@ -526,9 +426,7 @@ export default function Home() {
             {statFilter !== "all"
               ? STAT_FILTER_LABELS[statFilter]
               : category === "all"
-                ? discoveryMode === "classical"
-                  ? "كتب اللغة من الأرشيف"
-                  : "المواد العلمية"
+                ? "كتب اللغة التراثية"
                 : MATERIAL_CATEGORY_LABELS[category]}
             </h2>
           </div>
