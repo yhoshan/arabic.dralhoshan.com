@@ -1,6 +1,6 @@
 /*
  * فلسفة التصميم: مكنز عربي بتركواز مائي عميق، وعلامات نقطية مستلهمة من التشكيل والفهرسة.
- * الغلاف بوابة أقسام بلا أرقام؛ أما الأرقام الحية فتظهر فقط في سياق نتائج البحث والصفحات.
+ * بطاقات الغلاف تعرض الأعداد الحية المستمدة من الكتالوج، بما فيها عدّاد الدواوين، وبترتيب واضح فوق اسم القسم.
  */
 import { useEffect, useMemo, useState } from "react";
 import {
@@ -45,6 +45,7 @@ type StatFilter = "all" | "linguistics" | "lexicon-literature-rhetoric" | "diwan
 type StatCard = {
   id: StatFilter;
   label: string;
+  count: number;
 };
 
 const STAT_FILTER_LABELS: Record<StatFilter, string> = {
@@ -70,10 +71,22 @@ function matchesStatFilter(material: (typeof MATERIALS)[number], filter: StatFil
 }
 
 const STAT_CARDS: StatCard[] = [
-  { id: "all", label: STAT_FILTER_LABELS.all },
-  { id: "linguistics", label: STAT_FILTER_LABELS.linguistics },
-  { id: "lexicon-literature-rhetoric", label: STAT_FILTER_LABELS["lexicon-literature-rhetoric"] },
-  { id: "diwans", label: STAT_FILTER_LABELS.diwans },
+  { id: "all", label: STAT_FILTER_LABELS.all, count: MATERIALS.length },
+  {
+    id: "linguistics",
+    label: STAT_FILTER_LABELS.linguistics,
+    count: MATERIALS.filter((material) => matchesStatFilter(material, "linguistics")).length,
+  },
+  {
+    id: "lexicon-literature-rhetoric",
+    label: STAT_FILTER_LABELS["lexicon-literature-rhetoric"],
+    count: MATERIALS.filter((material) => matchesStatFilter(material, "lexicon-literature-rhetoric")).length,
+  },
+  {
+    id: "diwans",
+    label: STAT_FILTER_LABELS.diwans,
+    count: MATERIALS.filter((material) => matchesStatFilter(material, "diwans")).length,
+  },
 ];
 
 function DisclaimerModal({ onClose }: { onClose: () => void }) {
@@ -343,8 +356,9 @@ export default function Home() {
                 role="listitem"
                 key={item.id}
                 onClick={() => chooseStat(item)}
-                aria-label={item.label}
+                aria-label={`${item.label}: ${displayCount(item.count)}`}
               >
+                <span className="hero-stat__number">{displayCount(item.count)}</span>
                 <span className="hero-stat__label">{item.label}</span>
               </button>
             ))}
