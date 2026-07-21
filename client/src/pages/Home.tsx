@@ -25,7 +25,6 @@ import {
   DIWAN_SOURCE_LINKS,
   displayCount,
   filterMaterials,
-  isClassicalArabicLanguageBook,
   isStandalonePoetryDiwan,
   MATERIAL_CATEGORY_LABELS,
   MATERIALS,
@@ -52,8 +51,10 @@ const STAT_FILTER_LABELS: Record<StatFilter, string> = {
   diwans: "الدواوين الشعرية",
 };
 
-// تعرض الصفحة الأولى سجلات اللغة التراثية فقط؛ ولا تغيّر هذه المجموعة أي بيانات في الكتالوج.
-const CLASSICAL_LANGUAGE_BOOKS = MATERIALS.filter(isClassicalArabicLanguageBook);
+// تعرض الصفحة الأولى شروح ألفية ابن مالك فقط؛ ولا تغيّر هذه المجموعة أي بيانات في الكتالوج.
+const ALFIYYA_IBN_MALIK_EXPLANATIONS = MATERIALS.filter((material) =>
+  /شرح\s+ألفية\s+ابن\s+مالك/.test(material.title),
+);
 
 function hasAnyTag(material: (typeof MATERIALS)[number], tags: string[]) {
   return tags.some((tag) => material.tags.includes(tag as (typeof material.tags)[number]));
@@ -273,13 +274,13 @@ export default function Home() {
   const shareText = "مكنز اللغة العربية وعلومها — فهرس للمصادر العلمية للباحثين";
   const shareUrl = encodeURIComponent(`${shareText}\n${currentUrl}`);
 
-  const filteredMaterials = useMemo(
-    () =>
-      filterMaterials(CLASSICAL_LANGUAGE_BOOKS, query, category, "all").filter((material) =>
-        matchesStatFilter(material, statFilter),
-      ),
-    [query, category, statFilter],
-  );
+  // تبدأ القائمة بشروح ألفية ابن مالك، بينما يمتد البحث النصي إلى كل مواد المكنز.
+  const filteredMaterials = useMemo(() => {
+    const searchableMaterials = query.trim() ? MATERIALS : ALFIYYA_IBN_MALIK_EXPLANATIONS;
+    return filterMaterials(searchableMaterials, query, category, "all").filter((material) =>
+      matchesStatFilter(material, statFilter),
+    );
+  }, [query, category, statFilter]);
   const pageCount = Math.max(1, Math.ceil(filteredMaterials.length / PAGE_SIZE));
   const safePage = Math.min(page, pageCount);
   const pageMaterials = filteredMaterials.slice(
@@ -378,8 +379,16 @@ export default function Home() {
               type="search"
               value={query}
               onChange={(event) => setQuery(event.target.value)}
-              placeholder="ابحث في عناوين الكتب والمؤلفين..."
-              aria-label="البحث في مواد المكنز"
+              onKeyDown={(event) => {
+                if (event.key === "Enter") {
+                  document
+                    .getElementById("materials-title")
+                    ?.scrollIntoView({ behavior: "smooth", block: "start" });
+                }
+              }}
+              placeholder="ابحث في جميع عناوين الكتب والمؤلفين..."
+              aria-label="البحث في جميع مواد المكنز"
+              aria-describedby="search-status"
             />
             {query && (
               <button
@@ -392,6 +401,14 @@ export default function Home() {
               </button>
             )}
           </div>
+
+          {query.trim() && (
+            <p id="search-status" className="search-status" aria-live="polite">
+              {filteredMaterials.length
+                ? `تم العثور على ${displayCount(filteredMaterials.length)} نتيجة في جميع مواد المكنز.`
+                : "لا توجد نتائج مطابقة في جميع مواد المكنز."}
+            </p>
+          )}
 
           <div className="reference-search__filters">
             <div className="category-filter" aria-label="فلاتر التصنيف">
@@ -423,16 +440,20 @@ export default function Home() {
               <i />
             </span>
             <h2 id="materials-title">
-            {statFilter !== "all"
-              ? STAT_FILTER_LABELS[statFilter]
-              : category === "all"
-                ? "كتب اللغة التراثية"
-                : MATERIAL_CATEGORY_LABELS[category]}
+            {query.trim()
+              ? "نتائج البحث في جميع مواد المكنز"
+              : statFilter !== "all"
+                ? STAT_FILTER_LABELS[statFilter]
+                : category === "all"
+                  ? "كتب اللغة التراثية"
+                  : MATERIAL_CATEGORY_LABELS[category]}
             </h2>
           </div>
           {filteredMaterials.length > 0 && (
             <p className="materials-section__page-note">
-              الصفحة {displayCount(safePage)} من {displayCount(pageCount)}
+              {query.trim()
+                ? `${displayCount(filteredMaterials.length)} نتيجة لعبارة «${query.trim()}»`
+                : `الصفحة ${displayCount(safePage)} من ${displayCount(pageCount)}`}
             </p>
           )}
         </div>
@@ -472,7 +493,7 @@ export default function Home() {
             <h3>لا توجد نتائج</h3>
             <p>جرّب تغيير كلمات البحث أو الفلاتر المحددة</p>
             <button type="button" className="empty-reset" onClick={clearFilters}>
-              العودة إلى كتب اللغة من الأرشيف
+              العودة إلى كتب اللغة التراثية
             </button>
           </div>
         )}
