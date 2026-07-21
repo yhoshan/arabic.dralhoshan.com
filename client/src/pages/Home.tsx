@@ -325,7 +325,292 @@ export default function Home() {
         <DisclaimerModal onClose={() => setShowDisclaimer(false)} />
       )}
 
-      <header className="hero" id="top">
+      <header className="hero hero--blue" id="top">
+        <style>{`
+          /* نطاق الهيدر فقط: مرجع أزرق هادئ، خط عربي تقليدي للعنوان وخط حديث للواجهة. */
+          .hero.hero--blue,
+          .thesaurus-page--dark .hero.hero--blue {
+            min-height: 0;
+            color: #f8fbff;
+            background: linear-gradient(135deg, #063a8c 0%, #0866d6 54%, #07489f 100%);
+          }
+
+          .hero.hero--blue::before {
+            background:
+              radial-gradient(ellipse 52% 65% at 77% 18%, rgba(154, 208, 255, 0.2), transparent 70%),
+              radial-gradient(ellipse 48% 62% at 18% 100%, rgba(112, 183, 255, 0.14), transparent 70%),
+              repeating-linear-gradient(118deg, rgba(255, 255, 255, 0.022) 0 1px, transparent 1px 9px);
+          }
+
+          .hero.hero--blue::after {
+            display: none;
+          }
+
+          .hero.hero--blue + .reference-search {
+            border-top: 0;
+          }
+
+          .hero.hero--blue + .reference-search::before {
+            display: none;
+          }
+
+          .hero.hero--blue,
+          .hero.hero--blue *,
+          .hero.hero--blue::before,
+          .hero.hero--blue::after {
+            animation: none !important;
+            transition: none !important;
+          }
+
+          .hero.hero--blue .hero__top-line,
+          .hero.hero--blue .hero__bottom-line,
+          .hero.hero--blue .hero__stats::before,
+          .hero.hero--blue .hero__stats::after,
+          .hero.hero--blue .hero-stat__index,
+          .hero.hero--blue .hero-stat__hint,
+          .hero.hero--blue .hero-stat--button::after {
+            display: none;
+          }
+
+          .hero.hero--blue .hero__theme-control,
+          .hero.hero--blue .hero__about-control {
+            z-index: 3;
+            top: 20px;
+          }
+
+          .hero.hero--blue .theme-toggle,
+          .hero.hero--blue .about-trigger {
+            border: 1px solid rgba(232, 243, 255, 0.5);
+            background: rgba(255, 255, 255, 0.045);
+            color: #f8fbff;
+            box-shadow: none;
+            backdrop-filter: none;
+          }
+
+          .hero.hero--blue .theme-toggle:hover,
+          .hero.hero--blue .about-trigger:hover {
+            border-color: rgba(248, 251, 255, 0.84);
+            background: rgba(255, 255, 255, 0.1);
+          }
+
+          .hero.hero--blue .about-trigger {
+            min-width: auto;
+            min-height: 38px;
+            padding: 7px 16px;
+            border-radius: 10px;
+            font-family: "Tajawal", "Noto Kufi Arabic", sans-serif;
+            font-size: 13px;
+            font-weight: 500;
+            line-height: 1;
+          }
+
+          .hero.hero--blue .about-trigger::before,
+          .hero.hero--blue .about-trigger::after {
+            display: none;
+            content: none;
+          }
+
+          .hero.hero--blue .hero__content {
+            z-index: 1;
+            padding: 92px 20px 43px;
+            text-align: center;
+          }
+
+          .hero.hero--blue .hero-title {
+            gap: 3px;
+            color: #f8fbff;
+            font-family: "Aref Ruqaa", "Amiri", serif;
+            font-weight: 700;
+            line-height: 1.1;
+            text-shadow: none;
+          }
+
+          .hero.hero--blue .hero-title__kicker {
+            color: #f8fbff;
+            font-size: 38px;
+            line-height: 1.1;
+          }
+
+          .hero.hero--blue .hero-title__name {
+            color: #f8fbff;
+            font-size: clamp(52px, 5.6vw, 76px);
+            line-height: 1.12;
+            white-space: normal;
+          }
+
+          .hero.hero--blue .hero__description {
+            gap: 0;
+            max-width: 660px;
+            margin: 14px auto 25px;
+            color: #e4eeff;
+            font-family: "Tajawal", "Noto Kufi Arabic", sans-serif;
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 1.8;
+          }
+
+          .hero.hero--blue .hero__stats {
+            width: min(100%, 650px);
+            gap: 10px;
+            padding: 0;
+          }
+
+          .hero.hero--blue .hero-stat {
+            min-height: 116px;
+            border: 1px solid rgba(232, 243, 255, 0.48);
+            border-radius: 14px;
+            background: rgba(255, 255, 255, 0.045);
+            box-shadow: none;
+            backdrop-filter: none;
+          }
+
+          .hero.hero--blue .hero-stat--button {
+            align-items: center;
+            justify-content: center;
+            padding: 15px 12px 13px;
+            color: #f8fbff;
+            text-align: center;
+          }
+
+          .hero.hero--blue .hero-stat--button:hover,
+          .hero.hero--blue .hero-stat--button:focus-visible {
+            border-color: rgba(248, 251, 255, 0.76);
+            background: rgba(255, 255, 255, 0.09);
+          }
+
+          .hero.hero--blue .hero-stat--button:focus-visible {
+            outline-color: #f8fbff;
+          }
+
+          .hero.hero--blue .hero-stat__label {
+            color: #e7f0ff;
+            font-family: "Tajawal", "Noto Kufi Arabic", sans-serif;
+            font-size: 15px;
+            font-weight: 500;
+            line-height: 1.45;
+          }
+
+          .hero.hero--blue .hero-stat__number {
+            margin-top: 9px;
+            color: #ffffff;
+            font-family: "Tajawal", "Noto Kufi Arabic", sans-serif;
+            font-size: 40px;
+            font-variant-numeric: tabular-nums;
+            font-weight: 400;
+            letter-spacing: 0;
+            line-height: 1;
+            text-shadow: none;
+          }
+
+          .hero.hero--blue .hero__search {
+            width: min(100%, 560px);
+            margin-top: 25px;
+          }
+
+          .hero.hero--blue .search-field {
+            min-height: 50px;
+            height: 50px;
+            margin: 0;
+            overflow: visible;
+            border: 0;
+            border-radius: 999px;
+            background: #ffffff;
+            box-shadow: none;
+            color: #1c2b43;
+            direction: ltr;
+          }
+
+          .hero.hero--blue .search-field > svg {
+            flex: 0 0 auto;
+            margin: 0 14px;
+            color: #075bc8;
+          }
+
+          .hero.hero--blue .search-field input {
+            flex: 1;
+            width: auto;
+            height: 50px;
+            padding: 0 16px 0 8px;
+            color: #1c2b43;
+            direction: rtl;
+            font-family: "Tajawal", "Noto Kufi Arabic", sans-serif;
+            font-size: 14px;
+            text-align: right;
+          }
+
+          .hero.hero--blue .search-field input::placeholder {
+            color: #6c7280;
+            opacity: 1;
+          }
+
+          .hero.hero--blue .search-field__clear {
+            top: 10px;
+            right: 9px;
+            left: auto;
+            color: #075bc8;
+          }
+
+          .hero.hero--blue .search-field__clear:hover {
+            background: rgba(7, 91, 200, 0.1);
+            color: #075bc8;
+          }
+
+          @media (max-width: 639px) {
+            .hero.hero--blue .hero__theme-control,
+            .hero.hero--blue .hero__about-control {
+              top: 14px;
+            }
+
+            .hero.hero--blue .hero__theme-control {
+              left: 14px;
+            }
+
+            .hero.hero--blue .hero__about-control {
+              right: 14px;
+            }
+
+            .hero.hero--blue .hero__content {
+              padding: 78px 20px 32px;
+            }
+
+            .hero.hero--blue .hero-title__kicker {
+              font-size: 30px;
+            }
+
+            .hero.hero--blue .hero-title__name {
+              font-size: 40px;
+              line-height: 1.2;
+            }
+
+            .hero.hero--blue .hero__description {
+              margin-top: 12px;
+              margin-bottom: 22px;
+              font-size: 16px;
+              line-height: 1.7;
+            }
+
+            .hero.hero--blue .hero__stats {
+              grid-template-columns: repeat(2, minmax(0, 1fr));
+              gap: 10px;
+            }
+
+            .hero.hero--blue .hero-stat {
+              min-height: 106px;
+            }
+
+            .hero.hero--blue .hero-stat__label {
+              font-size: 13px;
+            }
+
+            .hero.hero--blue .hero-stat__number {
+              font-size: 34px;
+            }
+
+            .hero.hero--blue .hero__search {
+              margin-top: 20px;
+            }
+          }
+        `}</style>
         <div className="hero__top-line" aria-hidden="true" />
 
         <div className="hero__theme-control">
@@ -340,10 +625,22 @@ export default function Home() {
           </button>
         </div>
 
-        <div className="hero__content reference-shell">          <h1 className="hero-title" aria-label="مكنز اللغة العربية وعلومها">
+        <div className="hero__about-control">
+          <button type="button" className="about-trigger" onClick={() => setShowDisclaimer(true)}>
+            حول المكنز
+          </button>
+        </div>
+
+        <div className="hero__content reference-shell">
+          <h1 className="hero-title" aria-label="مكنز اللغة العربية وعلومها">
             <span className="hero-title__kicker">مكنز</span>
             <span className="hero-title__name">اللغة العربية وعلومها</span>
           </h1>
+
+          <p className="hero__description">
+            <span>فهرس علمي منظم للغة العربية وعلومها</span>
+            <span>ومعاجمها ودواوينها الشعرية ومراجعها.</span>
+          </p>
 
           <div className="hero__stats" role="list" aria-label="أقسام المكنز">
             {STAT_CARDS.map((item) => (
@@ -360,11 +657,50 @@ export default function Home() {
                   <i />
                   <i />
                 </span>
-                <span className="hero-stat__label">{item.label}</span>
+                <span className="hero-stat__label">
+                  {item.id === "all"
+                    ? "إجمالي المواد"
+                    : item.id === "linguistics"
+                      ? "النحو والدراسات اللغوية"
+                      : item.id === "lexicon-literature-rhetoric"
+                        ? "المعاجم والأدب والبلاغة"
+                        : "الدواوين الشعرية"}
+                </span>
                 <span className="hero-stat__hint">استكشف القسم</span>
-                <span className="hero-stat__number">{displayCount(item.count)} مادة</span>
+                <span className="hero-stat__number">{displayCount(item.count)}</span>
               </button>
             ))}
+          </div>
+
+          <div className="hero__search">
+            <div className="search-field">
+              <Search size={20} aria-hidden="true" />
+              <input
+                type="search"
+                value={query}
+                onChange={(event) => setQuery(event.target.value)}
+                onKeyDown={(event) => {
+                  if (event.key === "Enter") {
+                    document
+                      .getElementById("materials-title")
+                      ?.scrollIntoView({ behavior: "smooth", block: "start" });
+                  }
+                }}
+                placeholder="ابحث في جميع عناوين الكتب والمؤلفين..."
+                aria-label="البحث في جميع مواد المكنز"
+                aria-describedby="search-status"
+              />
+              {query && (
+                <button
+                  type="button"
+                  className="search-field__clear"
+                  onClick={() => setQuery("")}
+                  aria-label="مسح البحث"
+                >
+                  <X size={17} aria-hidden="true" />
+                </button>
+              )}
+            </div>
           </div>
         </div>
 
@@ -373,35 +709,6 @@ export default function Home() {
 
       <section className="reference-search" aria-label="البحث والتصفية">
         <div className="reference-shell reference-search__inner">
-          <div className="search-field">
-            <Search size={20} aria-hidden="true" />
-            <input
-              type="search"
-              value={query}
-              onChange={(event) => setQuery(event.target.value)}
-              onKeyDown={(event) => {
-                if (event.key === "Enter") {
-                  document
-                    .getElementById("materials-title")
-                    ?.scrollIntoView({ behavior: "smooth", block: "start" });
-                }
-              }}
-              placeholder="ابحث في جميع عناوين الكتب والمؤلفين..."
-              aria-label="البحث في جميع مواد المكنز"
-              aria-describedby="search-status"
-            />
-            {query && (
-              <button
-                type="button"
-                className="search-field__clear"
-                onClick={() => setQuery("")}
-                aria-label="مسح البحث"
-              >
-                <X size={17} aria-hidden="true" />
-              </button>
-            )}
-          </div>
-
           {query.trim() && (
             <p id="search-status" className="search-status" aria-live="polite">
               {filteredMaterials.length
