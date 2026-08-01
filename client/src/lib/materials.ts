@@ -104,12 +104,60 @@ interface CurriculumCatalogPayload {
   records: CurriculumRecord[];
 }
 
+export type CurriculumFilterKey = "country" | "materialType" | "organization";
+
+export interface CurriculumFilters {
+  country: string;
+  materialType: string;
+  organization: string;
+}
+
+export interface CurriculumFilterOption {
+  value: string;
+  count: number;
+}
+
+export interface CurriculumFilterOptions {
+  country: CurriculumFilterOption[];
+  materialType: CurriculumFilterOption[];
+  organization: CurriculumFilterOption[];
+}
+
 const corpus = corpusJson as CorpusPayload;
 const curriculaCatalog = curriculaJson as CurriculumCatalogPayload;
 const diwanCatalog = diwansJson as DiwanCatalogPayload;
 const CURATED_DIWAN_SIGNAL = "سجل ديوان موثّق";
 const CURATED_CURRICULUM_SIGNAL = "سجل منهج ومقرر منقّى";
 const CLASSICAL_LANGUAGE_BOOK_SOURCE = "Internet Archive";
+const CURRICULUM_UNSPECIFIED_VALUE = "غير محدد";
+
+export const CURRICULUM_FILTER_DEFAULTS: CurriculumFilters = {
+  country: "all",
+  materialType: "all",
+  organization: "all",
+};
+
+type CurriculumFacet = Record<CurriculumFilterKey, string>;
+
+function curriculumFieldValue(value: string | null | undefined): string {
+  const trimmedValue = typeof value === "string" ? value.trim() : "";
+  return trimmedValue || CURRICULUM_UNSPECIFIED_VALUE;
+}
+
+function curriculumFacetFromRecord(record: CurriculumRecord): CurriculumFacet {
+  return {
+    country: curriculumFieldValue(record["الدولة"]),
+    materialType: curriculumFieldValue(record["النوع"]),
+    organization: curriculumFieldValue(record["الجهة"]),
+  };
+}
+
+const CURRICULUM_FACETS_BY_ID = new Map<string, CurriculumFacet>(
+  curriculaCatalog.records.map((record) => [
+    `curricula-${record["الرقم"]}`,
+    curriculumFacetFromRecord(record),
+  ]),
+);
 
 /**
  * معرّفات القواميس الثنائية العربية الموثقة في تحليل الكتالوج الحالي.
@@ -432,6 +480,73 @@ function includesEveryToken(haystack: string, normalizedQuery: string): boolean 
   if (!normalizedQuery) return true;
   const tokens = normalizedQuery.split(" ").filter(Boolean);
   return tokens.every((token) => haystack.includes(token));
+}
+
+function matchesCurriculumFilters(
+  facet: CurriculumFacet,
+  filters: CurriculumFilters,
+  ignoredFilter?: CurriculumFilterKey,
+): boolean {
+  return (
+    (ignoredFilter === "country" || filters.country === "all" || facet.country === filters.country) &&
+    (ignoredFilter === "materialType" ||
+      filters.materialType === "all" ||
+      facet.materialType === filters.materialType) &&
+    (ignoredFilter === "organization" ||
+      filters.organization === "all" ||
+      facet.organization === filters.organization)
+  );
+}
+
+/** تفصل مواد المناهج وفق حقولها الأصلية فقط، مع إبقاء القيم الفارغة تحت «غير محدد». */
+export function filterCurriculumMaterials(
+  materials: Material[],
+  filters: CurriculumFilters,
+): Material[] {
+  return materials.filter((material) => {
+    if (material.primaryCategory !== "curricula") return false;
+    const facet = CURRICULUM_FACETS_BY_ID.get(material.id);
+    return Boolean(facet && matchesCurriculumFilters(facet, filters));
+  });
+}
+
+function curriculumOptionsFor(
+  materials: Material[],
+  filters: CurriculumFilters,
+  key: CurriculumFilterKey,
+): CurriculumFilterOption[] {
+  const counts = new Map<string, number>();
+
+  for (const material of materials) {
+    if (material.primaryCategory !== "curricula") continue;
+    const facet = CURRICULUM_FACETS_BY_ID.get(material.id);
+    if (!facet || !matchesCurriculumFilters(facet, filters, key)) continue;
+    counts.set(facet[key], (counts.get(facet[key]) ?? 0) + 1);
+  }
+
+  const selectedValue = filters[key];
+  if (selectedValue !== "all" && !counts.has(selectedValue)) {
+    counts.set(selectedValue, 0);
+  }
+
+  return Array.from(counts, ([value, count]) => ({ value, count }))
+    .filter((option) => option.count > 0 || option.value === selectedValue)
+    .sort((left, right) => left.value.localeCompare(right.value, "ar"));
+}
+
+/**
+ * خيارات الفلاتر تُشتق من سجلات المناهج نفسها، وتتغير أعدادها بحسب الفلترين الآخرين.
+ * لا تُنشأ نسخة بيانات ولا تُقرأ قيمة من عنوان السجل أو وصفه.
+ */
+export function getCurriculumFilterOptions(
+  materials: Material[],
+  filters: CurriculumFilters,
+): CurriculumFilterOptions {
+  return {
+    country: curriculumOptionsFor(materials, filters, "country"),
+    materialType: curriculumOptionsFor(materials, filters, "materialType"),
+    organization: curriculumOptionsFor(materials, filters, "organization"),
+  };
 }
 
 export function filterMaterials(

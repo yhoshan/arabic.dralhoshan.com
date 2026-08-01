@@ -1,6 +1,7 @@
 /*
  * فلسفة التصميم: مكنز عربي بتركواز مائي عميق، وعلامات نقطية مستلهمة من التشكيل والفهرسة.
  * بطاقات الغلاف بوابات أقسام بعدّادات حية محسوبة من الكتالوج نفسه، لتبقى كل قيمة قابلة للتدقيق عند كل إعادة بناء.
+ * شريط فلاتر المناهج يستعير الهوية المرجعية نفسها ويظهر داخل نتائج «المناهج والمقررات» وحدها.
  */
 import { useEffect, useMemo, useState } from "react";
 import {
@@ -21,13 +22,18 @@ import {
 } from "lucide-react";
 import {
   CORPUS_METADATA,
+  CURRICULUM_FILTER_DEFAULTS,
   DIWAN_COUNT,
   DIWAN_SOURCE_LINKS,
   displayCount,
+  filterCurriculumMaterials,
   filterMaterials,
+  getCurriculumFilterOptions,
   isStandalonePoetryDiwan,
   MATERIAL_CATEGORY_LABELS,
   MATERIALS,
+  type CurriculumFilterKey,
+  type CurriculumFilters,
   type MaterialCategory,
 } from "@/lib/materials";
 
@@ -85,6 +91,19 @@ const STAT_CARDS: StatCard[] = [
   },
   { id: "diwans", label: STAT_FILTER_LABELS.diwans, count: DIWAN_COUNT },
 ];
+
+const CURRICULUM_FILTER_LABELS: Record<
+  CurriculumFilterKey,
+  { label: string; allLabel: string }
+> = {
+  country: { label: "الدولة", allLabel: "جميع الدول" },
+  materialType: { label: "نوع المادة", allLabel: "جميع الأنواع" },
+  organization: { label: "الجهة", allLabel: "جميع الجهات" },
+};
+
+const CURRICULUM_FILTER_KEYS = Object.keys(
+  CURRICULUM_FILTER_LABELS,
+) as CurriculumFilterKey[];
 
 function DisclaimerModal({ onClose }: { onClose: () => void }) {
   useEffect(() => {
@@ -264,6 +283,9 @@ export default function Home() {
   const [query, setQuery] = useState("");
   const [category, setCategory] = useState<MaterialCategory>("all");
   const [statFilter, setStatFilter] = useState<StatFilter>("all");
+  const [curriculumFilters, setCurriculumFilters] = useState<CurriculumFilters>(
+    CURRICULUM_FILTER_DEFAULTS,
+  );
   const [page, setPage] = useState(1);
   const [copied, setCopied] = useState(false);
 
@@ -274,14 +296,27 @@ export default function Home() {
   const shareText = "مكنز اللغة العربية وعلومها — فهرس للمصادر العلمية للباحثين";
   const shareUrl = encodeURIComponent(`${shareText}\n${currentUrl}`);
 
+  const isCurriculaCategory = category === "curricula";
+  const curriculumFilterOptions = useMemo(
+    () => getCurriculumFilterOptions(MATERIALS, curriculumFilters),
+    [curriculumFilters],
+  );
+
   // تبدأ القائمة بشروح ألفية ابن مالك فقط في الحالة الافتراضية؛ أما البحث أو اختيار قسم فيمتد إلى كل مواد المكنز.
   const filteredMaterials = useMemo(() => {
     const hasActiveFilter = Boolean(query.trim()) || category !== "all" || statFilter !== "all";
     const searchableMaterials = hasActiveFilter ? MATERIALS : ALFIYYA_IBN_MALIK_EXPLANATIONS;
-    return filterMaterials(searchableMaterials, query, category, "all").filter((material) =>
-      matchesStatFilter(material, statFilter),
-    );
-  }, [query, category, statFilter]);
+    const categoryMatches =
+      category === "curricula"
+        ? filterCurriculumMaterials(MATERIALS, curriculumFilters)
+        : filterMaterials(searchableMaterials, query, category, "all");
+    const searchMatches =
+      category === "curricula"
+        ? filterMaterials(categoryMatches, query, "all", "all")
+        : categoryMatches;
+
+    return searchMatches.filter((material) => matchesStatFilter(material, statFilter));
+  }, [query, category, statFilter, curriculumFilters]);
   const pageCount = Math.max(1, Math.ceil(filteredMaterials.length / PAGE_SIZE));
   const safePage = Math.min(page, pageCount);
   const pageMaterials = filteredMaterials.slice(
@@ -291,12 +326,29 @@ export default function Home() {
 
   useEffect(() => {
     setPage(1);
-  }, [query, category, statFilter]);
+  }, [query, category, statFilter, curriculumFilters]);
+
+  useEffect(() => {
+    if (category !== "curricula") {
+      setCurriculumFilters((filters) =>
+        filters.country === "all" &&
+        filters.materialType === "all" &&
+        filters.organization === "all"
+          ? filters
+          : CURRICULUM_FILTER_DEFAULTS,
+      );
+    }
+  }, [category]);
+
+  const updateCurriculumFilter = (key: CurriculumFilterKey, value: string) => {
+    setCurriculumFilters((filters) => ({ ...filters, [key]: value }));
+  };
 
   const clearFilters = () => {
     setQuery("");
     setCategory("all");
     setStatFilter("all");
+    setCurriculumFilters(CURRICULUM_FILTER_DEFAULTS);
   };
 
   const chooseStat = (stat: StatCard) => {
@@ -833,6 +885,31 @@ export default function Home() {
       </section>
 
       <section className="materials-section reference-shell" aria-labelledby="materials-title">
+        {isCurriculaCategory && (
+          <div className="curriculum-filter-bar" aria-label="فلاتر المناهج والمقررات">
+            {CURRICULUM_FILTER_KEYS.map((key) => {
+              const metadata = CURRICULUM_FILTER_LABELS[key];
+              const options = curriculumFilterOptions[key];
+              return (
+                <label className="curriculum-filter-control" key={key}>
+                  <span>{metadata.label}</span>
+                  <select
+                    value={curriculumFilters[key]}
+                    onChange={(event) => updateCurriculumFilter(key, event.target.value)}
+                    aria-label={`تصفية المناهج حسب ${metadata.label}`}
+                  >
+                    <option value="all">{metadata.allLabel}</option>
+                    {options.map((option) => (
+                      <option key={option.value} value={option.value}>
+                        {option.value} ({displayCount(option.count)})
+                      </option>
+                    ))}
+                  </select>
+                </label>
+              );
+            })}
+          </div>
+        )}
         <div className="materials-section__heading">
           <div className="materials-section__title-group">
             <span className="section-index-mark" aria-hidden="true">
