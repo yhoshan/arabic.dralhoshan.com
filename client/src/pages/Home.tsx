@@ -917,15 +917,24 @@ export default function Home() {
               <i />
               <i />
             </span>
-            <h2 id="materials-title">
-            {query.trim()
-              ? "نتائج البحث في جميع مواد المكنز"
-              : statFilter !== "all"
-                ? STAT_FILTER_LABELS[statFilter]
-                : category === "all"
-                  ? "كتب اللغة التراثية"
-                  : MATERIAL_CATEGORY_LABELS[category]}
-            </h2>
+            {isCurriculaCategory && !query.trim() ? (
+              <div>
+                <h2 id="materials-title">المناهج والمقررات حول العالم</h2>
+                <p className="materials-section__page-note">
+                  فهرس علمي لمناهج ومقررات اللغة العربية من جامعات ومؤسسات العالم.
+                </p>
+              </div>
+            ) : (
+              <h2 id="materials-title">
+                {query.trim()
+                  ? "نتائج البحث في جميع مواد المكنز"
+                  : statFilter !== "all"
+                    ? STAT_FILTER_LABELS[statFilter]
+                    : category === "all"
+                      ? "كتب اللغة التراثية"
+                      : MATERIAL_CATEGORY_LABELS[category]}
+              </h2>
+            )}
           </div>
           {filteredMaterials.length > 0 && (
             <p className="materials-section__page-note">
