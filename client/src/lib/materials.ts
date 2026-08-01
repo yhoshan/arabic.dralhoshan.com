@@ -1,9 +1,10 @@
 /*
  * فلسفة التصميم لهذا الملف: محرك بيانات صغير وشفاف لمكنز اللغة العربية وعلومها.
- * يعرض فهرس بحوث كما هو، ويضيف كتالوج الدواوين العربي الموثق بروابط المصدر المباشرة.
- * لا يُحسب ديوان إلا إذا مرّ بمرحلة التحقق الوصفية وإزالة التكرار؛ لا يكفي وجود كلمة «ديوان» في العنوان.
+ * يعرض فهرس بحوث كما هو، ويضيف كتالوج الدواوين وكتالوج المناهج المنقّى بروابط المصدر المباشرة.
+ * لا يُحسب ديوان إلا إذا مرّ بمرحلة التحقق الوصفية وإزالة التكرار؛ ولا تُستورد مادة منهجية إلا إذا اكتملت حقول العرض والبحث الأساسية.
  */
 import corpusJson from "@/data/arabic-materials.json";
+import curriculaJson from "@/data/curricula-materials.json";
 import diwansJson from "@/data/diwans.json";
 
 export type MaterialCategory =
@@ -11,7 +12,8 @@ export type MaterialCategory =
   | "academic_theses"
   | "references"
   | "dictionaries"
-  | "diwans";
+  | "diwans"
+  | "curricula";
 
 export type MaterialTag =
   | "معجم لغوي"
@@ -80,9 +82,32 @@ interface DiwanCatalogPayload {
   materials: Array<Omit<Material, "relativePath">>;
 }
 
+interface CurriculumRecord {
+  "الرقم": number;
+  "العنوان": string;
+  "النوع": string;
+  "الجهة": string;
+  "الدولة": string;
+  "المرحلة": string;
+  "الفئة المستهدفة": string;
+  "التصنيفات": string[];
+  "حالة التحقق": string;
+  "الرابط": string;
+}
+
+interface CurriculumCatalogPayload {
+  meta: {
+    "اسم_المجموعة": string;
+    "عدد_السجلات_المستوردة": number;
+  };
+  records: CurriculumRecord[];
+}
+
 const corpus = corpusJson as CorpusPayload;
+const curriculaCatalog = curriculaJson as CurriculumCatalogPayload;
 const diwanCatalog = diwansJson as DiwanCatalogPayload;
 const CURATED_DIWAN_SIGNAL = "سجل ديوان موثّق";
+const CURATED_CURRICULUM_SIGNAL = "سجل منهج ومقرر منقّى";
 const CLASSICAL_LANGUAGE_BOOK_SOURCE = "Internet Archive";
 
 const DYNAMIC_DIWANS: Material[] = diwanCatalog.materials.map((material) => ({
@@ -96,9 +121,47 @@ const DYNAMIC_DIWANS: Material[] = diwanCatalog.materials.map((material) => ({
   },
 }));
 
-export const MATERIALS: Material[] = [...corpus.materials, ...DYNAMIC_DIWANS];
+const DYNAMIC_CURRICULA: Material[] = curriculaCatalog.records.map((record) => {
+  const tags = [
+    "المناهج والمقررات",
+    record["النوع"],
+    record["المرحلة"],
+    record["الفئة المستهدفة"],
+    record["الدولة"],
+    record["حالة التحقق"],
+    ...record["التصنيفات"],
+  ].filter(Boolean);
+  const source =
+    record["الجهة"].trim() ||
+    record["الدولة"].trim() ||
+    curriculaCatalog.meta["اسم_المجموعة"];
+
+  return {
+    id: `curricula-${record["الرقم"]}`,
+    title: record["العنوان"].trim(),
+    author: record["الجهة"].trim() || null,
+    source,
+    relativePath: record["الرابط"].trim(),
+    sourceUrl: record["الرابط"].trim(),
+    primaryCategory: "curricula",
+    tags: Array.from(new Set(tags)) as MaterialTag[],
+    matchEvidence: {
+      strongSignals: [CURATED_CURRICULUM_SIGNAL, record["النوع"]],
+      supportingSignals: tags,
+      explicitLanguageSource: true,
+    },
+  };
+});
+
+export const MATERIALS: Material[] = [
+  ...corpus.materials,
+  ...DYNAMIC_DIWANS,
+  ...DYNAMIC_CURRICULA,
+];
 /** عدد الدواوين الحيّ: يُعاد احتسابه من كتالوج الدواوين كلما أُعيد بناء البيانات. */
 export const DIWAN_COUNT = DYNAMIC_DIWANS.length;
+/** عدد المناهج والمقررات الحيّ: مصدره السجلات المنقاة القابلة للبحث والعرض. */
+export const CURRICULA_COUNT = DYNAMIC_CURRICULA.length;
 export const CORPUS_METADATA = corpus.metadata;
 export const JOURNAL_SOURCES = corpus.metadata.journalSources;
 export const DIWAN_SOURCE_LINKS = [
@@ -203,4 +266,5 @@ export const MATERIAL_CATEGORY_LABELS: Record<MaterialCategory, string> = {
   references: "المصادر والمراجع",
   dictionaries: "المعاجم اللغوية",
   diwans: "الدواوين الشعرية",
+  curricula: "المناهج والمقررات",
 };

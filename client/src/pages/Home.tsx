@@ -274,9 +274,10 @@ export default function Home() {
   const shareText = "مكنز اللغة العربية وعلومها — فهرس للمصادر العلمية للباحثين";
   const shareUrl = encodeURIComponent(`${shareText}\n${currentUrl}`);
 
-  // تبدأ القائمة بشروح ألفية ابن مالك، بينما يمتد البحث النصي إلى كل مواد المكنز.
+  // تبدأ القائمة بشروح ألفية ابن مالك فقط في الحالة الافتراضية؛ أما البحث أو اختيار قسم فيمتد إلى كل مواد المكنز.
   const filteredMaterials = useMemo(() => {
-    const searchableMaterials = query.trim() ? MATERIALS : ALFIYYA_IBN_MALIK_EXPLANATIONS;
+    const hasActiveFilter = Boolean(query.trim()) || category !== "all" || statFilter !== "all";
+    const searchableMaterials = hasActiveFilter ? MATERIALS : ALFIYYA_IBN_MALIK_EXPLANATIONS;
     return filterMaterials(searchableMaterials, query, category, "all").filter((material) =>
       matchesStatFilter(material, statFilter),
     );
