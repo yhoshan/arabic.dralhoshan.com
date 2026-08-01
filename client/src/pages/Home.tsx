@@ -2,6 +2,7 @@
  * فلسفة التصميم: مكنز عربي بتركواز مائي عميق، وعلامات نقطية مستلهمة من التشكيل والفهرسة.
  * بطاقات الغلاف بوابات أقسام بعدّادات حية محسوبة من الكتالوج نفسه، لتبقى كل قيمة قابلة للتدقيق عند كل إعادة بناء.
  * شريط فلاتر المناهج يستعير الهوية المرجعية نفسها ويظهر داخل نتائج «المناهج والمقررات» وحدها.
+ * الهيدر السفلي يقتصر على المشاركة والتنبيهات والتوقيع؛ ويُبقي قسم «مصادر المكنز» وروابطه الحالية بلا تعديل.
  */
 import { useEffect, useMemo, useState } from "react";
 import {
@@ -12,7 +13,10 @@ import {
   ChevronRight,
   Copy,
   ExternalLink,
+  Globe2,
+  Info,
   Library,
+  Mail,
   Moon,
   Search,
   Send,
@@ -1000,8 +1004,8 @@ export default function Home() {
         </section>
 
         <section className="share-section">
-          <h2>إحالة إلى المكنز</h2>
-          <p>شارك رابط الفهرس مع الباحثين عند الحاجة إلى إحالات مرتبة في علوم العربية.</p>
+          <h2>ساهم في نشر المكنز</h2>
+          <p>(الدال على الخير كفاعله)</p>
           <div className="share-actions" aria-label="مشاركة المكنز">
             <a
               href={`https://wa.me/?text=${shareUrl}`}
@@ -1044,13 +1048,29 @@ export default function Home() {
         <section className="footer-main">
           <div className="reference-shell footer-main__inner">
             <div className="footer-notes">
-              <p>هذا المكنز دليل إحالات؛ وتبقى حقوق المواد ونشرها لأصحابها وناشريها.</p>
-              <p>
-                تُراجع الإحالات وروابطها ضمن دورات تحديث دورية، ويُراعى في كل
-                تحديث وضوح المصدر وملاءمة التصنيف.
+              <p className="footer-note">
+                <Mail className="footer-note__icon" size={16} aria-hidden="true" />
+                <span>
+                  في حال عدم رغبتكم في نشر ما يخصكم أمل المراسلة على: {" "}
+                  <a href="mailto:yhoshan@gmail.com">yhoshan@gmail.com</a>
+                </span>
               </p>
-              <p>
-                يوسّع البحث العام نطاق الاستكشاف عند غياب المادة عن القسم المتوقع.
+              <p className="footer-note">
+                <Info className="footer-note__icon" size={16} aria-hidden="true" />
+                <span>
+                  تم تصنيف هذا الفهرس آليًا وتصحيحه يدويًا بناءً على أسماء الملفات
+                  والأوصاف؛ يرجى الاستفادة من شريط البحث العام.
+                </span>
+              </p>
+              <p className="footer-note">
+                <Globe2 className="footer-note__icon" size={16} aria-hidden="true" />
+                <span>
+                  هل تبحث في السلاسل التراثية الأخرى؟ انتقل إلى {" "}
+                  <a href="https://nsooos.com/" target="_blank" rel="noreferrer">
+                    منصة نصوص تراثية للباحثين
+                  </a>
+                  .
+                </span>
               </p>
             </div>
 
@@ -1099,10 +1119,28 @@ export default function Home() {
 
             <div className="footer-bottom">
               <p>جميع الحقوق محفوظة © 2026 — مكنز اللغة العربية وعلومها.</p>
-              <div className="footer-index-mark" aria-hidden="true">
-                <span />
-                <span />
-                <span />
+              <div className="footer-identity">
+                <a
+                  className="footer-signature"
+                  href="https://dralhoshan.com/"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="د. يوسف بن حمود الحوشان"
+                >
+                  <img
+                    src="/manus-storage/dralhoshan-signature-white_18a5beb6.png"
+                    alt="د. يوسف بن حمود الحوشان"
+                  />
+                </a>
+                <a
+                  className="footer-makanezz"
+                  href="https://dralhoshan.com/"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="المكانز"
+                >
+                  <img src="/manus-storage/makanezz-logo_a19df83c.png" alt="المكانز" />
+                </a>
               </div>
             </div>
           </div>

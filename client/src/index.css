@@ -2,6 +2,7 @@
  * فلسفة التصميم لهذا الملف: مكنز عربي مرجعي بتركواز مائي عميق وملمس فهرسي هادئ.
  * تعمل أميري في العناوين والنصوص بتشكيل عربي طبيعي، وتعمل النقط والتشكيل كعلامة بصرية دقيقة.
  * يحافظ الغلاف على «مكنز» الصغيرة فوق الاسم وعلى تباين عالٍ فوق الخلفية المائية الداكنة.
+ * يحصر التذييل التحديث في التشارك والتنبيهات والتوقيع، مع صون قسم المصادر وروابطه كما هي.
  */
 @import "tailwindcss";
 @import "tw-animate-css";
@@ -987,7 +988,19 @@ img {
 }
 
 .footer-notes p {
-  margin: 0 0 3px;
+  margin: 0 0 8px;
+}
+
+.footer-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+}
+
+.footer-note__icon {
+  flex: 0 0 auto;
+  margin-top: 5px;
+  color: #9fe5dc;
 }
 
 .footer-notes a {
@@ -1063,29 +1076,55 @@ img {
   text-align: right;
 }
 
-.footer-index-mark {
+.footer-identity {
   grid-column: 2;
-  display: inline-grid;
-  grid-template-columns: repeat(3, 5px);
-  gap: 5px;
-  align-items: end;
-  min-height: 26px;
-  padding: 6px 8px;
-  border: 1px solid rgba(159, 229, 220, 0.34);
-  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
 }
 
-.footer-index-mark span {
+.footer-signature {
+  display: inline-flex;
+  width: clamp(155px, 19vw, 270px);
+  color: var(--pure-white);
+  text-decoration: none;
+  transition: transform 180ms var(--ease-out), opacity 180ms var(--ease-out);
+}
+
+.footer-signature img {
   display: block;
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  background: #c7fff8;
-  box-shadow: 0 0 0 3px rgba(79, 225, 213, 0.12);
+  width: 100%;
+  height: auto;
 }
 
-.footer-index-mark span:nth-child(2) {
-  transform: translateY(-4px);
+.footer-signature:hover,
+.footer-makanezz:hover {
+  opacity: 0.86;
+  transform: translateY(-1px);
+}
+
+.footer-signature:focus-visible,
+.footer-makanezz:focus-visible {
+  outline: 2px solid #d3ffff;
+  outline-offset: 5px;
+}
+
+.footer-makanezz {
+  display: inline-flex;
+  flex: 0 0 auto;
+  width: clamp(66px, 7.4vw, 104px);
+  overflow: hidden;
+  border-radius: 3px;
+  box-shadow: 0 3px 10px rgba(1, 47, 76, 0.24);
+  text-decoration: none;
+  transition: transform 180ms var(--ease-out), opacity 180ms var(--ease-out);
+}
+
+.footer-makanezz img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .floating-whatsapp {
@@ -1300,9 +1339,18 @@ img {
     text-align: center;
   }
 
-  .footer-index-mark {
+  .footer-identity {
     grid-column: 1;
     order: 1;
+    flex-wrap: wrap;
+  }
+
+  .footer-signature {
+    width: min(66vw, 245px);
+  }
+
+  .footer-makanezz {
+    width: min(25vw, 94px);
   }
 
   .floating-whatsapp {
@@ -1984,10 +2032,8 @@ img {
   box-shadow: 0 15px 32px rgba(3, 82, 78, 0.11);
 }
 
-.footer-index-mark {
-  min-width: 46px;
+.footer-makanezz {
   border-radius: 2px;
-  box-shadow: inset 0 1px rgba(247, 255, 255, 0.1);
 }
 
 @media (max-width: 760px) {
