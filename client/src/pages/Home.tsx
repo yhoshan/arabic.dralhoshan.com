@@ -876,7 +876,9 @@ export default function Home() {
                   }}
                   aria-pressed={category === filter}
                 >
-                  {MATERIAL_CATEGORY_LABELS[filter]}
+                  {filter === "curricula"
+                    ? "المناهج والمقررات حول العالم"
+                    : MATERIAL_CATEGORY_LABELS[filter]}
                 </button>
               ))}
             </div>
