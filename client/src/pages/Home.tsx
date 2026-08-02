@@ -30,12 +30,15 @@ import {
   CURRICULUM_FILTER_DEFAULTS,
   DIWAN_COUNT,
   DIWAN_SOURCE_LINKS,
+  LITERARY_CLUB_FILTER_DEFAULTS,
   displayCount,
   filterAcademyMaterials,
   filterCurriculumMaterials,
+  filterLiteraryClubMaterials,
   filterMaterials,
   getAcademyFilterOptions,
   getCurriculumFilterOptions,
+  getLiteraryClubFilterOptions,
   isStandalonePoetryDiwan,
   MATERIAL_CATEGORY_LABELS,
   MATERIALS,
@@ -43,6 +46,8 @@ import {
   type AcademyFilters,
   type CurriculumFilterKey,
   type CurriculumFilters,
+  type LiteraryClubFilterKey,
+  type LiteraryClubFilters,
   type MaterialCategory,
 } from "@/lib/materials";
 
@@ -127,6 +132,22 @@ const ACADEMY_FILTER_LABELS: Record<
 
 const ACADEMY_FILTER_KEYS = Object.keys(ACADEMY_FILTER_LABELS) as AcademyFilterKey[];
 
+const LITERARY_CLUB_FILTER_LABELS: Record<
+  LiteraryClubFilterKey,
+  { label: string; allLabel: string }
+> = {
+  club: { label: "النادي", allLabel: "جميع الأندية" },
+  country: { label: "الدولة", allLabel: "جميع الدول" },
+  city: { label: "المدينة", allLabel: "جميع المدن" },
+  materialType: { label: "نوع المادة", allLabel: "جميع الأنواع" },
+  year: { label: "السنة", allLabel: "جميع السنوات" },
+  linkStatus: { label: "حالة الرابط", allLabel: "جميع الحالات" },
+};
+
+const LITERARY_CLUB_FILTER_KEYS = Object.keys(
+  LITERARY_CLUB_FILTER_LABELS,
+) as LiteraryClubFilterKey[];
+
 function DisclaimerModal({ onClose }: { onClose: () => void }) {
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
@@ -203,6 +224,8 @@ function formatCatalogTitle(title: string) {
 function MaterialCard({ material }: { material: (typeof MATERIALS)[number] }) {
   const [copied, setCopied] = useState(false);
   const isAcademyMaterial = material.primaryCategory === "academies";
+  const isLiteraryClubMaterial = material.primaryCategory === "literary_clubs";
+  const hasSourceLink = Boolean(material.sourceUrl);
   const isBuhoothMaterial = /^https?:\/\/(?:www\.)?buhooth\.link(?::\d+)?\//i.test(material.sourceUrl);
   const isTelegramSource = /^https?:\/\/t\.me\//i.test(material.sourceUrl);
   const isInternetArchiveSource = /^https?:\/\/(?:www\.)?archive\.org\//i.test(material.sourceUrl);
@@ -258,7 +281,7 @@ function MaterialCard({ material }: { material: (typeof MATERIALS)[number] }) {
         <h3 title={material.title}>{displayTitle}</h3>
         <dl className="material-card__metadata">
           <div>
-            <dt>{isAcademyMaterial ? "الدولة" : "المؤلف"}</dt>
+            <dt>{isAcademyMaterial || isLiteraryClubMaterial ? "الدولة" : "المؤلف"}</dt>
             <dd>{material.author || "لم يرد في الفهرس"}</dd>
           </div>
           <div>
@@ -283,7 +306,7 @@ function MaterialCard({ material }: { material: (typeof MATERIALS)[number] }) {
           {copied ? <Check size={16} aria-hidden="true" /> : <Copy size={16} aria-hidden="true" />}
           <span>{copied ? "تم النسخ" : "نسخ الرابط"}</span>
         </button>
-      ) : (
+      ) : hasSourceLink ? (
         <a
           className="material-card__link"
           href={material.sourceUrl}
@@ -294,6 +317,11 @@ function MaterialCard({ material }: { material: (typeof MATERIALS)[number] }) {
           <ExternalSourceIcon size={16} aria-hidden="true" />
           <span>{externalActionLabel}</span>
         </a>
+      ) : (
+        <span className="material-card__link" aria-disabled="true" title="لا يتوفر رابط في السجل المصدر">
+          <ExternalLink size={16} aria-hidden="true" />
+          <span>لا يتوفر رابط</span>
+        </span>
       )}
     </article>
   );
@@ -312,6 +340,9 @@ export default function Home() {
   const [academyFilters, setAcademyFilters] = useState<AcademyFilters>(
     ACADEMY_FILTER_DEFAULTS,
   );
+  const [literaryClubFilters, setLiteraryClubFilters] = useState<LiteraryClubFilters>(
+    LITERARY_CLUB_FILTER_DEFAULTS,
+  );
   const [page, setPage] = useState(1);
   const [copied, setCopied] = useState(false);
 
@@ -324,6 +355,7 @@ export default function Home() {
 
   const isCurriculaCategory = category === "curricula";
   const isAcademiesCategory = category === "academies";
+  const isLiteraryClubsCategory = category === "literary_clubs";
   const curriculumFilterOptions = useMemo(
     () => getCurriculumFilterOptions(MATERIALS, curriculumFilters),
     [curriculumFilters],
@@ -331,6 +363,10 @@ export default function Home() {
   const academyFilterOptions = useMemo(
     () => getAcademyFilterOptions(MATERIALS, academyFilters),
     [academyFilters],
+  );
+  const literaryClubFilterOptions = useMemo(
+    () => getLiteraryClubFilterOptions(MATERIALS, literaryClubFilters),
+    [literaryClubFilters],
   );
 
   // تبدأ القائمة بشروح ألفية ابن مالك فقط في الحالة الافتراضية؛ أما البحث أو اختيار قسم فيمتد إلى كل مواد المكنز.
@@ -342,14 +378,16 @@ export default function Home() {
         ? filterCurriculumMaterials(MATERIALS, curriculumFilters)
         : category === "academies"
           ? filterAcademyMaterials(MATERIALS, academyFilters)
-          : filterMaterials(searchableMaterials, query, category, "all");
+          : category === "literary_clubs"
+            ? filterLiteraryClubMaterials(MATERIALS, literaryClubFilters)
+            : filterMaterials(searchableMaterials, query, category, "all");
     const searchMatches =
-      category === "curricula" || category === "academies"
+      category === "curricula" || category === "academies" || category === "literary_clubs"
         ? filterMaterials(categoryMatches, query, "all", "all")
         : categoryMatches;
 
     return searchMatches.filter((material) => matchesStatFilter(material, statFilter));
-  }, [query, category, statFilter, curriculumFilters, academyFilters]);
+  }, [query, category, statFilter, curriculumFilters, academyFilters, literaryClubFilters]);
   const pageCount = Math.max(1, Math.ceil(filteredMaterials.length / PAGE_SIZE));
   const safePage = Math.min(page, pageCount);
   const pageMaterials = filteredMaterials.slice(
@@ -387,6 +425,21 @@ export default function Home() {
     }
   }, [category]);
 
+  useEffect(() => {
+    if (category !== "literary_clubs") {
+      setLiteraryClubFilters((filters) =>
+        filters.club === "all" &&
+        filters.country === "all" &&
+        filters.city === "all" &&
+        filters.materialType === "all" &&
+        filters.year === "all" &&
+        filters.linkStatus === "all"
+          ? filters
+          : LITERARY_CLUB_FILTER_DEFAULTS,
+      );
+    }
+  }, [category]);
+
   const updateCurriculumFilter = (key: CurriculumFilterKey, value: string) => {
     setCurriculumFilters((filters) => ({ ...filters, [key]: value }));
   };
@@ -395,12 +448,17 @@ export default function Home() {
     setAcademyFilters((filters) => ({ ...filters, [key]: value }));
   };
 
+  const updateLiteraryClubFilter = (key: LiteraryClubFilterKey, value: string) => {
+    setLiteraryClubFilters((filters) => ({ ...filters, [key]: value }));
+  };
+
   const clearFilters = () => {
     setQuery("");
     setCategory("all");
     setStatFilter("all");
     setCurriculumFilters(CURRICULUM_FILTER_DEFAULTS);
     setAcademyFilters(ACADEMY_FILTER_DEFAULTS);
+    setLiteraryClubFilters(LITERARY_CLUB_FILTER_DEFAULTS);
   };
 
   const chooseStat = (stat: StatCard) => {
@@ -989,6 +1047,31 @@ export default function Home() {
             })}
           </div>
         )}
+        {isLiteraryClubsCategory && (
+          <div className="curriculum-filter-bar" aria-label="فلاتر الأندية الأدبية">
+            {LITERARY_CLUB_FILTER_KEYS.map((key) => {
+              const metadata = LITERARY_CLUB_FILTER_LABELS[key];
+              const options = literaryClubFilterOptions[key];
+              return (
+                <label className="curriculum-filter-control" key={key}>
+                  <span>{metadata.label}</span>
+                  <select
+                    value={literaryClubFilters[key]}
+                    onChange={(event) => updateLiteraryClubFilter(key, event.target.value)}
+                    aria-label={`تصفية الأندية الأدبية حسب ${metadata.label}`}
+                  >
+                    <option value="all">{metadata.allLabel}</option>
+                    {options.map((option) => (
+                      <option key={option.value} value={option.value}>
+                        {option.value} ({displayCount(option.count)})
+                      </option>
+                    ))}
+                  </select>
+                </label>
+              );
+            })}
+          </div>
+        )}
         <div className="materials-section__heading">
           <div className="materials-section__title-group">
             <span className="section-index-mark" aria-hidden="true">
@@ -1010,6 +1093,13 @@ export default function Home() {
                   {displayCount(filteredMaterials.length)} مادة موثقة قابلة للتصفية بحسب المجمع والدولة والنوع والسنة وحالة الرابط.
                 </p>
               </div>
+            ) : isLiteraryClubsCategory && !query.trim() ? (
+              <div>
+                <h2 id="materials-title">الأندية الأدبية</h2>
+                <p className="materials-section__page-note">
+                  {displayCount(filteredMaterials.length)} مادة موثقة قابلة للتصفية بحسب النادي والدولة والمدينة والنوع والسنة وحالة الرابط.
+                </p>
+              </div>
             ) : (
               <h2 id="materials-title">
                 {query.trim()
@@ -1026,7 +1116,7 @@ export default function Home() {
             <p className="materials-section__page-note">
               {query.trim()
                 ? `${displayCount(filteredMaterials.length)} نتيجة لعبارة «${query.trim()}»`
-                : isAcademiesCategory
+                : isAcademiesCategory || isLiteraryClubsCategory
                   ? `${displayCount(filteredMaterials.length)} مادة — الصفحة ${displayCount(safePage)} من ${displayCount(pageCount)}`
                   : `الصفحة ${displayCount(safePage)} من ${displayCount(pageCount)}`}
             </p>

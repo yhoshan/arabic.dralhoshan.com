@@ -7,6 +7,8 @@ import corpusJson from "@/data/arabic-materials.json";
 import curriculaJson from "@/data/curricula-materials.json";
 import diwansJson from "@/data/diwans.json";
 import academiesJson from "@/data/academies-materials.json";
+import rhetoricalInterpretationJson from "@/data/rhetorical-interpretation-materials.json";
+import literaryClubsJson from "@/data/literary-clubs-materials.json";
 
 export type MaterialCategory =
   | "all"
@@ -16,7 +18,8 @@ export type MaterialCategory =
   | "bilingual_dictionaries"
   | "diwans"
   | "curricula"
-  | "academies";
+  | "academies"
+  | "literary_clubs";
 
 export type MaterialTag =
   | "معجم لغوي"
@@ -130,8 +133,46 @@ interface AcademyCatalogPayload {
   records: AcademyRecord[];
 }
 
+interface LiteraryClubRecord {
+  id: string;
+  title: string;
+  club: string;
+  country: string;
+  city: string;
+  materialType: string;
+  year: string;
+  linkStatus: string;
+  url: string | null;
+  description: string | null;
+  sourceFile: string;
+}
+
+interface LiteraryClubCatalogPayload {
+  meta: {
+    name: string;
+    clubCount: number;
+    recordCount: number;
+    sourceFileCount: number;
+    validSourceFileCount: number;
+    skippedFiles: Array<{ fileName: string; reason: string }>;
+    selectionMethod: string;
+  };
+  records: LiteraryClubRecord[];
+}
+
+interface CuratedMaterialCatalogPayload {
+  materials: Material[];
+}
+
 export type CurriculumFilterKey = "country" | "materialType" | "organization";
 export type AcademyFilterKey = "academy" | "country" | "materialType" | "year" | "linkStatus";
+export type LiteraryClubFilterKey =
+  | "club"
+  | "country"
+  | "city"
+  | "materialType"
+  | "year"
+  | "linkStatus";
 
 export interface CurriculumFilters {
   country: string;
@@ -166,15 +207,43 @@ export interface AcademyFilterOptions {
   linkStatus: CurriculumFilterOption[];
 }
 
+export interface LiteraryClubFilters {
+  club: string;
+  country: string;
+  city: string;
+  materialType: string;
+  year: string;
+  linkStatus: string;
+}
+
+export interface LiteraryClubFilterOptions {
+  club: CurriculumFilterOption[];
+  country: CurriculumFilterOption[];
+  city: CurriculumFilterOption[];
+  materialType: CurriculumFilterOption[];
+  year: CurriculumFilterOption[];
+  linkStatus: CurriculumFilterOption[];
+}
+
 const corpus = corpusJson as CorpusPayload;
 const curriculaCatalog = curriculaJson as CurriculumCatalogPayload;
 const diwanCatalog = diwansJson as DiwanCatalogPayload;
 const academiesCatalog = academiesJson as AcademyCatalogPayload;
+const literaryClubsCatalog = literaryClubsJson as LiteraryClubCatalogPayload;
+const rhetoricalInterpretationCatalog =
+  rhetoricalInterpretationJson as unknown as CuratedMaterialCatalogPayload;
 const CURATED_DIWAN_SIGNAL = "سجل ديوان موثّق";
 const CURATED_CURRICULUM_SIGNAL = "سجل منهج ومقرر منقّى";
 const CURATED_ACADEMY_SIGNAL = "سجل مجمع لغوي موثّق";
+const CURATED_LITERARY_CLUB_SIGNAL = "سجل نادي أدبي موثّق";
 const CLASSICAL_LANGUAGE_BOOK_SOURCE = "Internet Archive";
 const CURRICULUM_UNSPECIFIED_VALUE = "غير محدد";
+const LITERARY_CLUB_PRIORITY_COUNTRY = "المملكة العربية السعودية";
+const SAUDI_LITERARY_CLUBS = new Set(
+  literaryClubsCatalog.records
+    .filter((record) => academyFieldValue(record.country) === LITERARY_CLUB_PRIORITY_COUNTRY)
+    .map((record) => academyFieldValue(record.club)),
+);
 
 export const CURRICULUM_FILTER_DEFAULTS: CurriculumFilters = {
   country: "all",
@@ -190,8 +259,18 @@ export const ACADEMY_FILTER_DEFAULTS: AcademyFilters = {
   linkStatus: "all",
 };
 
+export const LITERARY_CLUB_FILTER_DEFAULTS: LiteraryClubFilters = {
+  club: "all",
+  country: "all",
+  city: "all",
+  materialType: "all",
+  year: "all",
+  linkStatus: "all",
+};
+
 type CurriculumFacet = Record<CurriculumFilterKey, string>;
 type AcademyFacet = Record<AcademyFilterKey, string>;
+type LiteraryClubFacet = Record<LiteraryClubFilterKey, string>;
 
 function curriculumFieldValue(value: string | null | undefined): string {
   const trimmedValue = typeof value === "string" ? value.trim() : "";
@@ -228,10 +307,28 @@ function academyFacetFromRecord(record: AcademyRecord): AcademyFacet {
   };
 }
 
+function literaryClubFacetFromRecord(record: LiteraryClubRecord): LiteraryClubFacet {
+  return {
+    club: academyFieldValue(record.club),
+    country: academyFieldValue(record.country),
+    city: academyFieldValue(record.city),
+    materialType: academyFieldValue(record.materialType),
+    year: academyFieldValue(record.year),
+    linkStatus: academyFieldValue(record.linkStatus),
+  };
+}
+
 const ACADEMY_FACETS_BY_ID = new Map<string, AcademyFacet>(
   academiesCatalog.records.map((record) => [
     `academies-${record.id}`,
     academyFacetFromRecord(record),
+  ]),
+);
+
+const LITERARY_CLUB_FACETS_BY_ID = new Map<string, LiteraryClubFacet>(
+  literaryClubsCatalog.records.map((record) => [
+    `literary-clubs-${record.id}`,
+    literaryClubFacetFromRecord(record),
   ]),
 );
 
@@ -503,18 +600,71 @@ const DYNAMIC_ACADEMIES: Material[] = academiesCatalog.records.map((record) => {
   };
 });
 
-export const MATERIALS: Material[] = [
+const DYNAMIC_LITERARY_CLUBS: Material[] = literaryClubsCatalog.records.map((record) => {
+  const tags = [
+    "الأندية الأدبية",
+    record.materialType,
+    record.country,
+    record.city,
+    record.year === "غير محدد" ? record.year : `سنة ${record.year}`,
+    record.linkStatus,
+  ].filter(Boolean);
+
+  return {
+    id: `literary-clubs-${record.id}`,
+    title: record.title,
+    author: record.country === "غير محدد" ? null : record.country,
+    source: record.club,
+    relativePath: record.sourceFile,
+    sourceUrl: record.url ?? "",
+    primaryCategory: "literary_clubs",
+    tags: Array.from(new Set(tags)) as MaterialTag[],
+    matchEvidence: {
+      strongSignals: [CURATED_LITERARY_CLUB_SIGNAL, record.materialType],
+      supportingSignals: tags,
+      explicitLanguageSource: true,
+    },
+  };
+});
+
+const BASE_MATERIALS = [
   ...corpus.materials,
   ...DYNAMIC_DIWANS,
   ...DYNAMIC_CURRICULA,
   ...DYNAMIC_ACADEMIES,
 ];
+const PREEXISTING_MATERIAL_IDS = new Set(BASE_MATERIALS.map((material) => material.id));
+const PREEXISTING_MATERIAL_URLS = new Set(
+  BASE_MATERIALS.map((material) => material.sourceUrl).filter(Boolean),
+);
+/** مجلدات موثقة من المصدر الرسمي، مع استبعاد أي سجل يطابق معرّفًا أو رابطًا حاضرًا مسبقًا. */
+const RHETORICAL_INTERPRETATION_MATERIALS = rhetoricalInterpretationCatalog.materials.filter(
+  (material) =>
+    !PREEXISTING_MATERIAL_IDS.has(material.id) &&
+    !PREEXISTING_MATERIAL_URLS.has(material.sourceUrl),
+);
+const MATERIALS_BEFORE_LITERARY_CLUBS = [...BASE_MATERIALS, ...RHETORICAL_INTERPRETATION_MATERIALS];
+const MATERIAL_IDS_BEFORE_LITERARY_CLUBS = new Set(
+  MATERIALS_BEFORE_LITERARY_CLUBS.map((material) => material.id),
+);
+const MATERIAL_URLS_BEFORE_LITERARY_CLUBS = new Set(
+  MATERIALS_BEFORE_LITERARY_CLUBS.map((material) => material.sourceUrl).filter(Boolean),
+);
+const LITERARY_CLUB_MATERIALS = DYNAMIC_LITERARY_CLUBS.filter(
+  (material) =>
+    !MATERIAL_IDS_BEFORE_LITERARY_CLUBS.has(material.id) &&
+    (!material.sourceUrl || !MATERIAL_URLS_BEFORE_LITERARY_CLUBS.has(material.sourceUrl)),
+);
+
+export const MATERIALS: Material[] = [...MATERIALS_BEFORE_LITERARY_CLUBS, ...LITERARY_CLUB_MATERIALS];
 /** عدد الدواوين الحيّ: يُعاد احتسابه من كتالوج الدواوين كلما أُعيد بناء البيانات. */
 export const DIWAN_COUNT = DYNAMIC_DIWANS.length;
 /** عدد المناهج والمقررات الحيّ: مصدره السجلات المنقاة القابلة للبحث والعرض. */
 export const CURRICULA_COUNT = DYNAMIC_CURRICULA.length;
 /** عدد مواد المجامع الحيّ: يُعاد احتسابه من السجلات الموحّدة القابلة للبحث والتصفية. */
 export const ACADEMY_COUNT = DYNAMIC_ACADEMIES.length;
+/** عدد مواد الأندية الحيّ: يُعاد احتسابه من السجلات الموحدة القابلة للبحث والتصفية. */
+export const LITERARY_CLUB_COUNT = LITERARY_CLUB_MATERIALS.length;
 export const CORPUS_METADATA = corpus.metadata;
 export const JOURNAL_SOURCES = corpus.metadata.journalSources;
 export const DIWAN_SOURCE_LINKS = [
@@ -722,6 +872,90 @@ export function getAcademyFilterOptions(
   };
 }
 
+function matchesLiteraryClubFilters(
+  facet: LiteraryClubFacet,
+  filters: LiteraryClubFilters,
+  ignoredFilter?: LiteraryClubFilterKey,
+): boolean {
+  return (
+    (ignoredFilter === "club" || filters.club === "all" || facet.club === filters.club) &&
+    (ignoredFilter === "country" || filters.country === "all" || facet.country === filters.country) &&
+    (ignoredFilter === "city" || filters.city === "all" || facet.city === filters.city) &&
+    (ignoredFilter === "materialType" ||
+      filters.materialType === "all" ||
+      facet.materialType === filters.materialType) &&
+    (ignoredFilter === "year" || filters.year === "all" || facet.year === filters.year) &&
+    (ignoredFilter === "linkStatus" ||
+      filters.linkStatus === "all" ||
+      facet.linkStatus === filters.linkStatus)
+  );
+}
+
+/** تفصل مواد الأندية وفق الحقول الموحّدة في السجلات المستوردة فقط. */
+export function filterLiteraryClubMaterials(
+  materials: Material[],
+  filters: LiteraryClubFilters,
+): Material[] {
+  return materials.filter((material) => {
+    if (material.primaryCategory !== "literary_clubs") return false;
+    const facet = LITERARY_CLUB_FACETS_BY_ID.get(material.id);
+    return Boolean(facet && matchesLiteraryClubFilters(facet, filters));
+  });
+}
+
+function literaryClubOptionsFor(
+  materials: Material[],
+  filters: LiteraryClubFilters,
+  key: LiteraryClubFilterKey,
+): CurriculumFilterOption[] {
+  const counts = new Map<string, number>();
+
+  for (const material of materials) {
+    if (material.primaryCategory !== "literary_clubs") continue;
+    const facet = LITERARY_CLUB_FACETS_BY_ID.get(material.id);
+    if (!facet || !matchesLiteraryClubFilters(facet, filters, key)) continue;
+    counts.set(facet[key], (counts.get(facet[key]) ?? 0) + 1);
+  }
+
+  const selectedValue = filters[key];
+  if (selectedValue !== "all" && !counts.has(selectedValue)) {
+    counts.set(selectedValue, 0);
+  }
+
+  return Array.from(counts, ([value, count]) => ({ value, count }))
+    .filter((option) => option.count > 0 || option.value === selectedValue)
+    .sort((left, right) => {
+      if (key === "country") {
+        const leftIsSaudi = left.value === LITERARY_CLUB_PRIORITY_COUNTRY;
+        const rightIsSaudi = right.value === LITERARY_CLUB_PRIORITY_COUNTRY;
+        if (leftIsSaudi !== rightIsSaudi) return leftIsSaudi ? -1 : 1;
+      }
+
+      if (key === "club") {
+        const leftIsSaudiClub = SAUDI_LITERARY_CLUBS.has(left.value);
+        const rightIsSaudiClub = SAUDI_LITERARY_CLUBS.has(right.value);
+        if (leftIsSaudiClub !== rightIsSaudiClub) return leftIsSaudiClub ? -1 : 1;
+      }
+
+      return left.value.localeCompare(right.value, "ar");
+    });
+}
+
+/** خيارات مرشحات الأندية وأعدادها تُشتق مباشرةً من السجلات الفعلية الموحّدة. */
+export function getLiteraryClubFilterOptions(
+  materials: Material[],
+  filters: LiteraryClubFilters,
+): LiteraryClubFilterOptions {
+  return {
+    club: literaryClubOptionsFor(materials, filters, "club"),
+    country: literaryClubOptionsFor(materials, filters, "country"),
+    city: literaryClubOptionsFor(materials, filters, "city"),
+    materialType: literaryClubOptionsFor(materials, filters, "materialType"),
+    year: literaryClubOptionsFor(materials, filters, "year"),
+    linkStatus: literaryClubOptionsFor(materials, filters, "linkStatus"),
+  };
+}
+
 export function filterMaterials(
   materials: Material[],
   query: string,
@@ -764,4 +998,5 @@ export const MATERIAL_CATEGORY_LABELS: Record<MaterialCategory, string> = {
   diwans: "الدواوين الشعرية",
   curricula: "المناهج والمقررات",
   academies: "المجامع اللغوية",
+  literary_clubs: "الأندية الأدبية",
 };
