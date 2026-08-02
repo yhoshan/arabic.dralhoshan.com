@@ -8,6 +8,7 @@ import curriculaJson from "@/data/curricula-materials.json";
 import diwansJson from "@/data/diwans.json";
 import academiesJson from "@/data/academies-materials.json";
 import rhetoricalInterpretationJson from "@/data/rhetorical-interpretation-materials.json";
+import qiraatLinguisticJson from "@/data/qiraat-linguistic-materials.json";
 import literaryClubsJson from "@/data/literary-clubs-materials.json";
 
 export type MaterialCategory =
@@ -232,6 +233,8 @@ const academiesCatalog = academiesJson as AcademyCatalogPayload;
 const literaryClubsCatalog = literaryClubsJson as LiteraryClubCatalogPayload;
 const rhetoricalInterpretationCatalog =
   rhetoricalInterpretationJson as unknown as CuratedMaterialCatalogPayload;
+const qiraatLinguisticCatalog =
+  qiraatLinguisticJson as unknown as CuratedMaterialCatalogPayload;
 const CURATED_DIWAN_SIGNAL = "سجل ديوان موثّق";
 const CURATED_CURRICULUM_SIGNAL = "سجل منهج ومقرر منقّى";
 const CURATED_ACADEMY_SIGNAL = "سجل مجمع لغوي موثّق";
@@ -643,7 +646,18 @@ const RHETORICAL_INTERPRETATION_MATERIALS = rhetoricalInterpretationCatalog.mate
     !PREEXISTING_MATERIAL_IDS.has(material.id) &&
     !PREEXISTING_MATERIAL_URLS.has(material.sourceUrl),
 );
-const MATERIALS_BEFORE_LITERARY_CLUBS = [...BASE_MATERIALS, ...RHETORICAL_INTERPRETATION_MATERIALS];
+const MATERIALS_BEFORE_QIRAAT = [...BASE_MATERIALS, ...RHETORICAL_INTERPRETATION_MATERIALS];
+const MATERIAL_IDS_BEFORE_QIRAAT = new Set(MATERIALS_BEFORE_QIRAAT.map((material) => material.id));
+const MATERIAL_URLS_BEFORE_QIRAAT = new Set(
+  MATERIALS_BEFORE_QIRAAT.map((material) => material.sourceUrl).filter(Boolean),
+);
+/** مواد قراءات منتقاة ومصنفة في الأقسام القائمة، بعد تنقية تكرار العنوان في ملف المصدر. */
+const QIRAAT_LINGUISTIC_MATERIALS = qiraatLinguisticCatalog.materials.filter(
+  (material) =>
+    !MATERIAL_IDS_BEFORE_QIRAAT.has(material.id) &&
+    !MATERIAL_URLS_BEFORE_QIRAAT.has(material.sourceUrl),
+);
+const MATERIALS_BEFORE_LITERARY_CLUBS = [...MATERIALS_BEFORE_QIRAAT, ...QIRAAT_LINGUISTIC_MATERIALS];
 const MATERIAL_IDS_BEFORE_LITERARY_CLUBS = new Set(
   MATERIALS_BEFORE_LITERARY_CLUBS.map((material) => material.id),
 );
