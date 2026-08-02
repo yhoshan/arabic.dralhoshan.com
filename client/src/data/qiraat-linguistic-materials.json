@@ -8,7 +8,7 @@
     "selectionMethod": "انتقاء محافظ من عناوين القراءات المتصلة بعلوم العربية؛ يستبعد مخطوطات المصاحف والوصف الإخباري، ويزيل تكرار العنوان بعد التطبيع والعناوين المختصرة التابعة والتطابقات الحرفية مع كتالوج المكنز.",
     "audit": {
       "rawLinguisticTitleMatches": 888,
-      "excludedMushafAndManuscriptRecords": 442,
+      "excludedMushafAndManuscriptRecords": 445,
       "eligibleRecords": 443,
       "internalExactDuplicatesRemoved": 16,
       "currentCatalogExactDuplicatesRemoved": 48,
