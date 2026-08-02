@@ -10,7 +10,6 @@ import academiesJson from "@/data/academies-materials.json";
 import rhetoricalInterpretationJson from "@/data/rhetorical-interpretation-materials.json";
 import literaryClubsJson from "@/data/literary-clubs-materials.json";
 import osoolLinguisticJson from "@/data/osool-linguistic-materials.json";
-import uploadedBatch01Json from "@/data/uploaded-linguistic-lists-batch-01.json";
 
 export type MaterialCategory =
   | "all"
@@ -235,7 +234,6 @@ const literaryClubsCatalog = literaryClubsJson as LiteraryClubCatalogPayload;
 const rhetoricalInterpretationCatalog =
   rhetoricalInterpretationJson as unknown as CuratedMaterialCatalogPayload;
 const osoolLinguisticCatalog = osoolLinguisticJson as unknown as CuratedMaterialCatalogPayload;
-const uploadedBatch01Catalog = uploadedBatch01Json as unknown as CuratedMaterialCatalogPayload;
 const CURATED_DIWAN_SIGNAL = "سجل ديوان موثّق";
 const CURATED_CURRICULUM_SIGNAL = "سجل منهج ومقرر منقّى";
 const CURATED_ACADEMY_SIGNAL = "سجل مجمع لغوي موثّق";
@@ -671,21 +669,7 @@ const OSOOL_LINGUISTIC_MATERIALS = osoolLinguisticCatalog.materials.filter(
     (!material.sourceUrl || !MATERIAL_URLS_BEFORE_OSOOL.has(material.sourceUrl)),
 );
 
-const MATERIALS_BEFORE_UPLOADED_BATCH_01 = [...MATERIALS_BEFORE_OSOOL, ...OSOOL_LINGUISTIC_MATERIALS];
-const MATERIAL_IDS_BEFORE_UPLOADED_BATCH_01 = new Set(
-  MATERIALS_BEFORE_UPLOADED_BATCH_01.map((material) => material.id),
-);
-const MATERIAL_URLS_BEFORE_UPLOADED_BATCH_01 = new Set(
-  MATERIALS_BEFORE_UPLOADED_BATCH_01.map((material) => material.sourceUrl).filter(Boolean),
-);
-/** الدفعة الأولى من القوائم المرفقة، بعد تنقية العنوان في الكتالوج وفحص المعرّف والرابط وقت الدمج. */
-const UPLOADED_BATCH_01_MATERIALS = uploadedBatch01Catalog.materials.filter(
-  (material) =>
-    !MATERIAL_IDS_BEFORE_UPLOADED_BATCH_01.has(material.id) &&
-    (!material.sourceUrl || !MATERIAL_URLS_BEFORE_UPLOADED_BATCH_01.has(material.sourceUrl)),
-);
-
-export const MATERIALS: Material[] = [...MATERIALS_BEFORE_UPLOADED_BATCH_01, ...UPLOADED_BATCH_01_MATERIALS];
+export const MATERIALS: Material[] = [...MATERIALS_BEFORE_OSOOL, ...OSOOL_LINGUISTIC_MATERIALS];
 /** عدد الدواوين الحيّ: يُعاد احتسابه من كتالوج الدواوين كلما أُعيد بناء البيانات. */
 export const DIWAN_COUNT = DYNAMIC_DIWANS.length;
 /** عدد المناهج والمقررات الحيّ: مصدره السجلات المنقاة القابلة للبحث والعرض. */
