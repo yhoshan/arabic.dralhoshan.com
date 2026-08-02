@@ -9,6 +9,7 @@ import diwansJson from "@/data/diwans.json";
 import academiesJson from "@/data/academies-materials.json";
 import rhetoricalInterpretationJson from "@/data/rhetorical-interpretation-materials.json";
 import literaryClubsJson from "@/data/literary-clubs-materials.json";
+import osoolLinguisticJson from "@/data/osool-linguistic-materials.json";
 
 export type MaterialCategory =
   | "all"
@@ -232,6 +233,7 @@ const academiesCatalog = academiesJson as AcademyCatalogPayload;
 const literaryClubsCatalog = literaryClubsJson as LiteraryClubCatalogPayload;
 const rhetoricalInterpretationCatalog =
   rhetoricalInterpretationJson as unknown as CuratedMaterialCatalogPayload;
+const osoolLinguisticCatalog = osoolLinguisticJson as unknown as CuratedMaterialCatalogPayload;
 const CURATED_DIWAN_SIGNAL = "سجل ديوان موثّق";
 const CURATED_CURRICULUM_SIGNAL = "سجل منهج ومقرر منقّى";
 const CURATED_ACADEMY_SIGNAL = "سجل مجمع لغوي موثّق";
@@ -655,8 +657,19 @@ const LITERARY_CLUB_MATERIALS = DYNAMIC_LITERARY_CLUBS.filter(
     !MATERIAL_IDS_BEFORE_LITERARY_CLUBS.has(material.id) &&
     (!material.sourceUrl || !MATERIAL_URLS_BEFORE_LITERARY_CLUBS.has(material.sourceUrl)),
 );
+const MATERIALS_BEFORE_OSOOL = [...MATERIALS_BEFORE_LITERARY_CLUBS, ...LITERARY_CLUB_MATERIALS];
+const MATERIAL_IDS_BEFORE_OSOOL = new Set(MATERIALS_BEFORE_OSOOL.map((material) => material.id));
+const MATERIAL_URLS_BEFORE_OSOOL = new Set(
+  MATERIALS_BEFORE_OSOOL.map((material) => material.sourceUrl).filter(Boolean),
+);
+/** مواد لغوية منتقاة يدويًا من مكنز أصول، بعد فحص التكرار مع الكتالوجات الموحدة. */
+const OSOOL_LINGUISTIC_MATERIALS = osoolLinguisticCatalog.materials.filter(
+  (material) =>
+    !MATERIAL_IDS_BEFORE_OSOOL.has(material.id) &&
+    (!material.sourceUrl || !MATERIAL_URLS_BEFORE_OSOOL.has(material.sourceUrl)),
+);
 
-export const MATERIALS: Material[] = [...MATERIALS_BEFORE_LITERARY_CLUBS, ...LITERARY_CLUB_MATERIALS];
+export const MATERIALS: Material[] = [...MATERIALS_BEFORE_OSOOL, ...OSOOL_LINGUISTIC_MATERIALS];
 /** عدد الدواوين الحيّ: يُعاد احتسابه من كتالوج الدواوين كلما أُعيد بناء البيانات. */
 export const DIWAN_COUNT = DYNAMIC_DIWANS.length;
 /** عدد المناهج والمقررات الحيّ: مصدره السجلات المنقاة القابلة للبحث والعرض. */
