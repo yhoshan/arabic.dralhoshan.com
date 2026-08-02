@@ -71,9 +71,9 @@ const STAT_FILTER_LABELS: Record<StatFilter, string> = {
   diwans: "الدواوين الشعرية",
 };
 
-// تعرض الصفحة الأولى شروح ألفية ابن مالك فقط؛ ولا تغيّر هذه المجموعة أي بيانات في الكتالوج.
-const ALFIYYA_IBN_MALIK_EXPLANATIONS = MATERIALS.filter((material) =>
-  /شرح\s+ألفية\s+ابن\s+مالك/.test(material.title),
+// تعرض الصفحة الأولى المواد المرتبطة بالقرآن الكريم؛ ولا تغيّر هذه المجموعة أي بيانات في الكتالوج.
+const DEFAULT_QURAN_MATERIALS = MATERIALS.filter((material) =>
+  /قرآن|تجويد|قراءات قرآنية|علوم القرآن|تفسير القرآن|مصحف/.test(material.title),
 );
 
 function hasAnyTag(material: (typeof MATERIALS)[number], tags: string[]) {
@@ -369,10 +369,10 @@ export default function Home() {
     [literaryClubFilters],
   );
 
-  // تبدأ القائمة بشروح ألفية ابن مالك فقط في الحالة الافتراضية؛ أما البحث أو اختيار قسم فيمتد إلى كل مواد المكنز.
+  // تبدأ القائمة بالمواد المرتبطة بالقرآن الكريم في الحالة الافتراضية؛ أما البحث أو اختيار قسم فيمتد إلى كل مواد المكنز.
   const filteredMaterials = useMemo(() => {
     const hasActiveFilter = Boolean(query.trim()) || category !== "all" || statFilter !== "all";
-    const searchableMaterials = hasActiveFilter ? MATERIALS : ALFIYYA_IBN_MALIK_EXPLANATIONS;
+    const searchableMaterials = hasActiveFilter ? MATERIALS : DEFAULT_QURAN_MATERIALS;
     const categoryMatches =
       category === "curricula"
         ? filterCurriculumMaterials(MATERIALS, curriculumFilters)

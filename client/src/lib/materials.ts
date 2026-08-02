@@ -891,15 +891,25 @@ function matchesLiteraryClubFilters(
   );
 }
 
-/** تفصل مواد الأندية وفق الحقول الموحّدة في السجلات المستوردة فقط. */
+/** تفصل مواد الأندية وفق الحقول الموحّدة في السجلات المستوردة فقط، مع تقديم الأندية السعودية في النتائج. */
 export function filterLiteraryClubMaterials(
   materials: Material[],
   filters: LiteraryClubFilters,
 ): Material[] {
-  return materials.filter((material) => {
+  const matchingMaterials = materials.filter((material) => {
     if (material.primaryCategory !== "literary_clubs") return false;
     const facet = LITERARY_CLUB_FACETS_BY_ID.get(material.id);
     return Boolean(facet && matchesLiteraryClubFilters(facet, filters));
+  });
+
+  return matchingMaterials.sort((left, right) => {
+    const leftIsSaudi =
+      LITERARY_CLUB_FACETS_BY_ID.get(left.id)?.country === LITERARY_CLUB_PRIORITY_COUNTRY ? 0 : 1;
+    const rightIsSaudi =
+      LITERARY_CLUB_FACETS_BY_ID.get(right.id)?.country === LITERARY_CLUB_PRIORITY_COUNTRY
+        ? 0
+        : 1;
+    return leftIsSaudi - rightIsSaudi;
   });
 }
 
