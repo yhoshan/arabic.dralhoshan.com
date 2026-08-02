@@ -6,6 +6,7 @@
 import corpusJson from "@/data/arabic-materials.json";
 import curriculaJson from "@/data/curricula-materials.json";
 import diwansJson from "@/data/diwans.json";
+import academiesJson from "@/data/academies-materials.json";
 
 export type MaterialCategory =
   | "all"
@@ -14,7 +15,8 @@ export type MaterialCategory =
   | "dictionaries"
   | "bilingual_dictionaries"
   | "diwans"
-  | "curricula";
+  | "curricula"
+  | "academies";
 
 export type MaterialTag =
   | "معجم لغوي"
@@ -104,7 +106,32 @@ interface CurriculumCatalogPayload {
   records: CurriculumRecord[];
 }
 
+interface AcademyRecord {
+  id: string;
+  title: string;
+  academy: string;
+  country: string;
+  materialType: string;
+  year: string;
+  linkStatus: string;
+  url: string;
+  description: string | null;
+  sourceFile: string;
+}
+
+interface AcademyCatalogPayload {
+  meta: {
+    name: string;
+    academyCount: number;
+    recordCount: number;
+    sourceFileCount: number;
+    selectionMethod: string;
+  };
+  records: AcademyRecord[];
+}
+
 export type CurriculumFilterKey = "country" | "materialType" | "organization";
+export type AcademyFilterKey = "academy" | "country" | "materialType" | "year" | "linkStatus";
 
 export interface CurriculumFilters {
   country: string;
@@ -123,11 +150,29 @@ export interface CurriculumFilterOptions {
   organization: CurriculumFilterOption[];
 }
 
+export interface AcademyFilters {
+  academy: string;
+  country: string;
+  materialType: string;
+  year: string;
+  linkStatus: string;
+}
+
+export interface AcademyFilterOptions {
+  academy: CurriculumFilterOption[];
+  country: CurriculumFilterOption[];
+  materialType: CurriculumFilterOption[];
+  year: CurriculumFilterOption[];
+  linkStatus: CurriculumFilterOption[];
+}
+
 const corpus = corpusJson as CorpusPayload;
 const curriculaCatalog = curriculaJson as CurriculumCatalogPayload;
 const diwanCatalog = diwansJson as DiwanCatalogPayload;
+const academiesCatalog = academiesJson as AcademyCatalogPayload;
 const CURATED_DIWAN_SIGNAL = "سجل ديوان موثّق";
 const CURATED_CURRICULUM_SIGNAL = "سجل منهج ومقرر منقّى";
+const CURATED_ACADEMY_SIGNAL = "سجل مجمع لغوي موثّق";
 const CLASSICAL_LANGUAGE_BOOK_SOURCE = "Internet Archive";
 const CURRICULUM_UNSPECIFIED_VALUE = "غير محدد";
 
@@ -137,7 +182,16 @@ export const CURRICULUM_FILTER_DEFAULTS: CurriculumFilters = {
   organization: "all",
 };
 
+export const ACADEMY_FILTER_DEFAULTS: AcademyFilters = {
+  academy: "all",
+  country: "all",
+  materialType: "all",
+  year: "all",
+  linkStatus: "all",
+};
+
 type CurriculumFacet = Record<CurriculumFilterKey, string>;
+type AcademyFacet = Record<AcademyFilterKey, string>;
 
 function curriculumFieldValue(value: string | null | undefined): string {
   const trimmedValue = typeof value === "string" ? value.trim() : "";
@@ -156,6 +210,28 @@ const CURRICULUM_FACETS_BY_ID = new Map<string, CurriculumFacet>(
   curriculaCatalog.records.map((record) => [
     `curricula-${record["الرقم"]}`,
     curriculumFacetFromRecord(record),
+  ]),
+);
+
+function academyFieldValue(value: string | null | undefined): string {
+  const trimmedValue = typeof value === "string" ? value.trim() : "";
+  return trimmedValue || CURRICULUM_UNSPECIFIED_VALUE;
+}
+
+function academyFacetFromRecord(record: AcademyRecord): AcademyFacet {
+  return {
+    academy: academyFieldValue(record.academy),
+    country: academyFieldValue(record.country),
+    materialType: academyFieldValue(record.materialType),
+    year: academyFieldValue(record.year),
+    linkStatus: academyFieldValue(record.linkStatus),
+  };
+}
+
+const ACADEMY_FACETS_BY_ID = new Map<string, AcademyFacet>(
+  academiesCatalog.records.map((record) => [
+    `academies-${record.id}`,
+    academyFacetFromRecord(record),
   ]),
 );
 
@@ -401,15 +477,44 @@ const DYNAMIC_CURRICULA: Material[] = curriculaCatalog.records.map((record) => {
   };
 });
 
+const DYNAMIC_ACADEMIES: Material[] = academiesCatalog.records.map((record) => {
+  const tags = [
+    "المجامع اللغوية",
+    record.materialType,
+    record.country,
+    record.year === "غير محدد" ? record.year : `سنة ${record.year}`,
+    record.linkStatus,
+  ].filter(Boolean);
+
+  return {
+    id: `academies-${record.id}`,
+    title: record.title,
+    author: record.country === "غير محدد" ? null : record.country,
+    source: record.academy,
+    relativePath: record.sourceFile,
+    sourceUrl: record.url,
+    primaryCategory: "academies",
+    tags: Array.from(new Set(tags)) as MaterialTag[],
+    matchEvidence: {
+      strongSignals: [CURATED_ACADEMY_SIGNAL, record.materialType],
+      supportingSignals: tags,
+      explicitLanguageSource: true,
+    },
+  };
+});
+
 export const MATERIALS: Material[] = [
   ...corpus.materials,
   ...DYNAMIC_DIWANS,
   ...DYNAMIC_CURRICULA,
+  ...DYNAMIC_ACADEMIES,
 ];
 /** عدد الدواوين الحيّ: يُعاد احتسابه من كتالوج الدواوين كلما أُعيد بناء البيانات. */
 export const DIWAN_COUNT = DYNAMIC_DIWANS.length;
 /** عدد المناهج والمقررات الحيّ: مصدره السجلات المنقاة القابلة للبحث والعرض. */
 export const CURRICULA_COUNT = DYNAMIC_CURRICULA.length;
+/** عدد مواد المجامع الحيّ: يُعاد احتسابه من السجلات الموحّدة القابلة للبحث والتصفية. */
+export const ACADEMY_COUNT = DYNAMIC_ACADEMIES.length;
 export const CORPUS_METADATA = corpus.metadata;
 export const JOURNAL_SOURCES = corpus.metadata.journalSources;
 export const DIWAN_SOURCE_LINKS = [
@@ -549,6 +654,74 @@ export function getCurriculumFilterOptions(
   };
 }
 
+function matchesAcademyFilters(
+  facet: AcademyFacet,
+  filters: AcademyFilters,
+  ignoredFilter?: AcademyFilterKey,
+): boolean {
+  return (
+    (ignoredFilter === "academy" || filters.academy === "all" || facet.academy === filters.academy) &&
+    (ignoredFilter === "country" || filters.country === "all" || facet.country === filters.country) &&
+    (ignoredFilter === "materialType" ||
+      filters.materialType === "all" ||
+      facet.materialType === filters.materialType) &&
+    (ignoredFilter === "year" || filters.year === "all" || facet.year === filters.year) &&
+    (ignoredFilter === "linkStatus" ||
+      filters.linkStatus === "all" ||
+      facet.linkStatus === filters.linkStatus)
+  );
+}
+
+/** تفصل مواد المجامع وفق حقول السجل الموحّد فقط، ولا تستنتج أي قيمة من عنوان المادة أو وصفها. */
+export function filterAcademyMaterials(
+  materials: Material[],
+  filters: AcademyFilters,
+): Material[] {
+  return materials.filter((material) => {
+    if (material.primaryCategory !== "academies") return false;
+    const facet = ACADEMY_FACETS_BY_ID.get(material.id);
+    return Boolean(facet && matchesAcademyFilters(facet, filters));
+  });
+}
+
+function academyOptionsFor(
+  materials: Material[],
+  filters: AcademyFilters,
+  key: AcademyFilterKey,
+): CurriculumFilterOption[] {
+  const counts = new Map<string, number>();
+
+  for (const material of materials) {
+    if (material.primaryCategory !== "academies") continue;
+    const facet = ACADEMY_FACETS_BY_ID.get(material.id);
+    if (!facet || !matchesAcademyFilters(facet, filters, key)) continue;
+    counts.set(facet[key], (counts.get(facet[key]) ?? 0) + 1);
+  }
+
+  const selectedValue = filters[key];
+  if (selectedValue !== "all" && !counts.has(selectedValue)) {
+    counts.set(selectedValue, 0);
+  }
+
+  return Array.from(counts, ([value, count]) => ({ value, count }))
+    .filter((option) => option.count > 0 || option.value === selectedValue)
+    .sort((left, right) => left.value.localeCompare(right.value, "ar"));
+}
+
+/** تتغير خيارات مرشحات المجامع وأعدادها بحسب المرشحات الأخرى وبالاعتماد على السجلات الفعلية نفسها. */
+export function getAcademyFilterOptions(
+  materials: Material[],
+  filters: AcademyFilters,
+): AcademyFilterOptions {
+  return {
+    academy: academyOptionsFor(materials, filters, "academy"),
+    country: academyOptionsFor(materials, filters, "country"),
+    materialType: academyOptionsFor(materials, filters, "materialType"),
+    year: academyOptionsFor(materials, filters, "year"),
+    linkStatus: academyOptionsFor(materials, filters, "linkStatus"),
+  };
+}
+
 export function filterMaterials(
   materials: Material[],
   query: string,
@@ -590,4 +763,5 @@ export const MATERIAL_CATEGORY_LABELS: Record<MaterialCategory, string> = {
   bilingual_dictionaries: "القواميس الثنائية",
   diwans: "الدواوين الشعرية",
   curricula: "المناهج والمقررات",
+  academies: "المجامع اللغوية",
 };

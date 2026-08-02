@@ -25,17 +25,22 @@ import {
   X,
 } from "lucide-react";
 import {
+  ACADEMY_FILTER_DEFAULTS,
   CORPUS_METADATA,
   CURRICULUM_FILTER_DEFAULTS,
   DIWAN_COUNT,
   DIWAN_SOURCE_LINKS,
   displayCount,
+  filterAcademyMaterials,
   filterCurriculumMaterials,
   filterMaterials,
+  getAcademyFilterOptions,
   getCurriculumFilterOptions,
   isStandalonePoetryDiwan,
   MATERIAL_CATEGORY_LABELS,
   MATERIALS,
+  type AcademyFilterKey,
+  type AcademyFilters,
   type CurriculumFilterKey,
   type CurriculumFilters,
   type MaterialCategory,
@@ -108,6 +113,19 @@ const CURRICULUM_FILTER_LABELS: Record<
 const CURRICULUM_FILTER_KEYS = Object.keys(
   CURRICULUM_FILTER_LABELS,
 ) as CurriculumFilterKey[];
+
+const ACADEMY_FILTER_LABELS: Record<
+  AcademyFilterKey,
+  { label: string; allLabel: string }
+> = {
+  academy: { label: "المجمع", allLabel: "جميع المجامع" },
+  country: { label: "الدولة", allLabel: "جميع الدول" },
+  materialType: { label: "نوع المادة", allLabel: "جميع الأنواع" },
+  year: { label: "السنة", allLabel: "جميع السنوات" },
+  linkStatus: { label: "حالة الرابط", allLabel: "جميع الحالات" },
+};
+
+const ACADEMY_FILTER_KEYS = Object.keys(ACADEMY_FILTER_LABELS) as AcademyFilterKey[];
 
 function DisclaimerModal({ onClose }: { onClose: () => void }) {
   useEffect(() => {
@@ -184,6 +202,7 @@ function formatCatalogTitle(title: string) {
 
 function MaterialCard({ material }: { material: (typeof MATERIALS)[number] }) {
   const [copied, setCopied] = useState(false);
+  const isAcademyMaterial = material.primaryCategory === "academies";
   const isBuhoothMaterial = /^https?:\/\/(?:www\.)?buhooth\.link(?::\d+)?\//i.test(material.sourceUrl);
   const isTelegramSource = /^https?:\/\/t\.me\//i.test(material.sourceUrl);
   const isInternetArchiveSource = /^https?:\/\/(?:www\.)?archive\.org\//i.test(material.sourceUrl);
@@ -239,7 +258,7 @@ function MaterialCard({ material }: { material: (typeof MATERIALS)[number] }) {
         <h3 title={material.title}>{displayTitle}</h3>
         <dl className="material-card__metadata">
           <div>
-            <dt>المؤلف</dt>
+            <dt>{isAcademyMaterial ? "الدولة" : "المؤلف"}</dt>
             <dd>{material.author || "لم يرد في الفهرس"}</dd>
           </div>
           <div>
@@ -290,6 +309,9 @@ export default function Home() {
   const [curriculumFilters, setCurriculumFilters] = useState<CurriculumFilters>(
     CURRICULUM_FILTER_DEFAULTS,
   );
+  const [academyFilters, setAcademyFilters] = useState<AcademyFilters>(
+    ACADEMY_FILTER_DEFAULTS,
+  );
   const [page, setPage] = useState(1);
   const [copied, setCopied] = useState(false);
 
@@ -301,9 +323,14 @@ export default function Home() {
   const shareUrl = encodeURIComponent(`${shareText}\n${currentUrl}`);
 
   const isCurriculaCategory = category === "curricula";
+  const isAcademiesCategory = category === "academies";
   const curriculumFilterOptions = useMemo(
     () => getCurriculumFilterOptions(MATERIALS, curriculumFilters),
     [curriculumFilters],
+  );
+  const academyFilterOptions = useMemo(
+    () => getAcademyFilterOptions(MATERIALS, academyFilters),
+    [academyFilters],
   );
 
   // تبدأ القائمة بشروح ألفية ابن مالك فقط في الحالة الافتراضية؛ أما البحث أو اختيار قسم فيمتد إلى كل مواد المكنز.
@@ -313,14 +340,16 @@ export default function Home() {
     const categoryMatches =
       category === "curricula"
         ? filterCurriculumMaterials(MATERIALS, curriculumFilters)
-        : filterMaterials(searchableMaterials, query, category, "all");
+        : category === "academies"
+          ? filterAcademyMaterials(MATERIALS, academyFilters)
+          : filterMaterials(searchableMaterials, query, category, "all");
     const searchMatches =
-      category === "curricula"
+      category === "curricula" || category === "academies"
         ? filterMaterials(categoryMatches, query, "all", "all")
         : categoryMatches;
 
     return searchMatches.filter((material) => matchesStatFilter(material, statFilter));
-  }, [query, category, statFilter, curriculumFilters]);
+  }, [query, category, statFilter, curriculumFilters, academyFilters]);
   const pageCount = Math.max(1, Math.ceil(filteredMaterials.length / PAGE_SIZE));
   const safePage = Math.min(page, pageCount);
   const pageMaterials = filteredMaterials.slice(
@@ -330,7 +359,7 @@ export default function Home() {
 
   useEffect(() => {
     setPage(1);
-  }, [query, category, statFilter, curriculumFilters]);
+  }, [query, category, statFilter, curriculumFilters, academyFilters]);
 
   useEffect(() => {
     if (category !== "curricula") {
@@ -344,8 +373,26 @@ export default function Home() {
     }
   }, [category]);
 
+  useEffect(() => {
+    if (category !== "academies") {
+      setAcademyFilters((filters) =>
+        filters.academy === "all" &&
+        filters.country === "all" &&
+        filters.materialType === "all" &&
+        filters.year === "all" &&
+        filters.linkStatus === "all"
+          ? filters
+          : ACADEMY_FILTER_DEFAULTS,
+      );
+    }
+  }, [category]);
+
   const updateCurriculumFilter = (key: CurriculumFilterKey, value: string) => {
     setCurriculumFilters((filters) => ({ ...filters, [key]: value }));
+  };
+
+  const updateAcademyFilter = (key: AcademyFilterKey, value: string) => {
+    setAcademyFilters((filters) => ({ ...filters, [key]: value }));
   };
 
   const clearFilters = () => {
@@ -353,6 +400,7 @@ export default function Home() {
     setCategory("all");
     setStatFilter("all");
     setCurriculumFilters(CURRICULUM_FILTER_DEFAULTS);
+    setAcademyFilters(ACADEMY_FILTER_DEFAULTS);
   };
 
   const chooseStat = (stat: StatCard) => {
@@ -916,6 +964,31 @@ export default function Home() {
             })}
           </div>
         )}
+        {isAcademiesCategory && (
+          <div className="curriculum-filter-bar" aria-label="فلاتر المجامع اللغوية">
+            {ACADEMY_FILTER_KEYS.map((key) => {
+              const metadata = ACADEMY_FILTER_LABELS[key];
+              const options = academyFilterOptions[key];
+              return (
+                <label className="curriculum-filter-control" key={key}>
+                  <span>{metadata.label}</span>
+                  <select
+                    value={academyFilters[key]}
+                    onChange={(event) => updateAcademyFilter(key, event.target.value)}
+                    aria-label={`تصفية المجامع حسب ${metadata.label}`}
+                  >
+                    <option value="all">{metadata.allLabel}</option>
+                    {options.map((option) => (
+                      <option key={option.value} value={option.value}>
+                        {option.value} ({displayCount(option.count)})
+                      </option>
+                    ))}
+                  </select>
+                </label>
+              );
+            })}
+          </div>
+        )}
         <div className="materials-section__heading">
           <div className="materials-section__title-group">
             <span className="section-index-mark" aria-hidden="true">
@@ -928,6 +1001,13 @@ export default function Home() {
                 <h2 id="materials-title">المناهج والمقررات حول العالم</h2>
                 <p className="materials-section__page-note">
                   فهرس علمي لمناهج ومقررات اللغة العربية من جامعات ومؤسسات العالم.
+                </p>
+              </div>
+            ) : isAcademiesCategory && !query.trim() ? (
+              <div>
+                <h2 id="materials-title">المجامع اللغوية</h2>
+                <p className="materials-section__page-note">
+                  {displayCount(filteredMaterials.length)} مادة موثقة قابلة للتصفية بحسب المجمع والدولة والنوع والسنة وحالة الرابط.
                 </p>
               </div>
             ) : (
@@ -946,7 +1026,9 @@ export default function Home() {
             <p className="materials-section__page-note">
               {query.trim()
                 ? `${displayCount(filteredMaterials.length)} نتيجة لعبارة «${query.trim()}»`
-                : `الصفحة ${displayCount(safePage)} من ${displayCount(pageCount)}`}
+                : isAcademiesCategory
+                  ? `${displayCount(filteredMaterials.length)} مادة — الصفحة ${displayCount(safePage)} من ${displayCount(pageCount)}`
+                  : `الصفحة ${displayCount(safePage)} من ${displayCount(pageCount)}`}
             </p>
           )}
         </div>
