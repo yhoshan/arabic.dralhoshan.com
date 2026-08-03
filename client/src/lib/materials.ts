@@ -10,6 +10,7 @@ import academiesJson from "@/data/academies-materials.json";
 import rhetoricalInterpretationJson from "@/data/rhetorical-interpretation-materials.json";
 import qiraatLinguisticJson from "@/data/qiraat-linguistic-materials.json";
 import literaryClubsJson from "@/data/literary-clubs-materials.json";
+import gapResourcesJson from "@/data/gap-resources-materials.json";
 
 export type MaterialCategory =
   | "all"
@@ -235,6 +236,7 @@ const rhetoricalInterpretationCatalog =
   rhetoricalInterpretationJson as unknown as CuratedMaterialCatalogPayload;
 const qiraatLinguisticCatalog =
   qiraatLinguisticJson as unknown as CuratedMaterialCatalogPayload;
+const gapResourcesCatalog = gapResourcesJson as unknown as CuratedMaterialCatalogPayload;
 const CURATED_DIWAN_SIGNAL = "سجل ديوان موثّق";
 const CURATED_CURRICULUM_SIGNAL = "سجل منهج ومقرر منقّى";
 const CURATED_ACADEMY_SIGNAL = "سجل مجمع لغوي موثّق";
@@ -657,7 +659,36 @@ const QIRAAT_LINGUISTIC_MATERIALS = qiraatLinguisticCatalog.materials.filter(
     !MATERIAL_IDS_BEFORE_QIRAAT.has(material.id) &&
     !MATERIAL_URLS_BEFORE_QIRAAT.has(material.sourceUrl),
 );
-const MATERIALS_BEFORE_LITERARY_CLUBS = [...MATERIALS_BEFORE_QIRAAT, ...QIRAAT_LINGUISTIC_MATERIALS];
+const MATERIALS_BEFORE_GAP_RESOURCES = [...MATERIALS_BEFORE_QIRAAT, ...QIRAAT_LINGUISTIC_MATERIALS];
+const MATERIAL_IDS_BEFORE_GAP_RESOURCES = new Set(
+  MATERIALS_BEFORE_GAP_RESOURCES.map((material) => material.id),
+);
+const MATERIAL_URLS_BEFORE_GAP_RESOURCES = new Set(
+  MATERIALS_BEFORE_GAP_RESOURCES.map((material) => material.sourceUrl).filter(Boolean),
+);
+const normalizeCatalogTitle = (value: string) =>
+  value
+    .normalize("NFKC")
+    .replace(/[\u064B-\u065F\u0670\u06D6-\u06ED]/g, "")
+    .replace(/[إأآٱ]/g, "ا")
+    .replace(/ى/g, "ي")
+    .replace(/ؤ/g, "و")
+    .replace(/ئ/g, "ي")
+    .replace(/ـ/g, "")
+    .replace(/\s+/g, " ")
+    .trim()
+    .toLowerCase();
+const MATERIAL_TITLES_BEFORE_GAP_RESOURCES = new Set(
+  MATERIALS_BEFORE_GAP_RESOURCES.map((material) => normalizeCatalogTitle(material.title)).filter(Boolean),
+);
+/** مواد فجوات منتقاة: لا تمر إلا إذا لم تطابق معرفًا أو رابطًا أو عنوانًا حاضرًا في المكنز. */
+const GAP_RESOURCES_MATERIALS = gapResourcesCatalog.materials.filter(
+  (material) =>
+    !MATERIAL_IDS_BEFORE_GAP_RESOURCES.has(material.id) &&
+    !MATERIAL_URLS_BEFORE_GAP_RESOURCES.has(material.sourceUrl) &&
+    !MATERIAL_TITLES_BEFORE_GAP_RESOURCES.has(normalizeCatalogTitle(material.title)),
+);
+const MATERIALS_BEFORE_LITERARY_CLUBS = [...MATERIALS_BEFORE_GAP_RESOURCES, ...GAP_RESOURCES_MATERIALS];
 const MATERIAL_IDS_BEFORE_LITERARY_CLUBS = new Set(
   MATERIALS_BEFORE_LITERARY_CLUBS.map((material) => material.id),
 );

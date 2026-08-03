@@ -1,0 +1,169 @@
+{
+  "metadata": {
+    "sourceName": "حزمة سد فجوات علوم اللغة العربية — مراجعة منقحة",
+    "sourceIndexUrl": "user-uploaded://Pasted_content_31.txt",
+    "sourceFetchedAt": "2026-08-03",
+    "sourceRecordCount": 37,
+    "importedCount": 10,
+    "selectionMethod": "إدراج الروابط المحددة المتاحة فقط بعد استبعاد التكرارات وصفحات المواقع العامة والروابط المقيدة أو غير المتاحة.",
+    "audit": {
+      "acceptedCount": 10,
+      "excludedCount": 27,
+      "duplicateCount": 2,
+      "unavailableOrRestrictedCount": 12,
+      "genericOrNonSpecificCount": 13
+    }
+  },
+  "materials": [
+    {
+      "id": "gap-resources-arabic-morphology-model",
+      "title": "المعالجة الآلية للغة العربية: إنشاء نموذج لساني صرفي إعرابي للفعل العربي",
+      "author": null,
+      "source": "Internet Archive",
+      "relativePath": "https://ia601904.us.archive.org/23/items/lib04165/lib04165.pdf",
+      "sourceUrl": "https://ia601904.us.archive.org/23/items/lib04165/lib04165.pdf",
+      "primaryCategory": "references",
+      "tags": ["دراسات لغوية"],
+      "matchEvidence": {
+        "strongSignals": ["سجل فجوة موثق", "اللسانيات الحاسوبية"],
+        "supportingSignals": ["المعالجة الآلية", "الصرف", "الإعراب", "الفعل العربي"],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "gap-resources-machine-translation-albawab",
+      "title": "الترجمة الآلية - مروان البواب",
+      "author": "مروان البواب",
+      "source": "الأكاديمية العربية",
+      "relativePath": "https://arabacademy-sy.org/uploads/lectures2018/albawab2015.pdf",
+      "sourceUrl": "https://arabacademy-sy.org/uploads/lectures2018/albawab2015.pdf",
+      "primaryCategory": "references",
+      "tags": ["دراسات لغوية"],
+      "matchEvidence": {
+        "strongSignals": ["سجل فجوة موثق", "الترجمة الآلية"],
+        "supportingSignals": ["التعريب التقني", "اللغة العربية"],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "gap-resources-computing-terms-dictionary",
+      "title": "معجم مصطلحات الحاسبات - مجمع اللغة العربية بالقاهرة",
+      "author": "مجمع اللغة العربية بالقاهرة",
+      "source": "Internet Archive",
+      "relativePath": "https://archive.org/details/4_20240427_20240427_1422",
+      "sourceUrl": "https://archive.org/details/4_20240427_20240427_1422",
+      "primaryCategory": "dictionaries",
+      "tags": ["معجم لغوي", "دراسات لغوية"],
+      "matchEvidence": {
+        "strongSignals": ["سجل فجوة موثق", "معجم مصطلحات"],
+        "supportingSignals": ["الحاسبات", "المعاجم الحاسوبية", "مجمع اللغة العربية"],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "gap-resources-neurolinguistics-ahmad",
+      "title": "المعالجة العصبية للغة - د. عطية سليمان أحمد",
+      "author": "عطية سليمان أحمد",
+      "source": "Internet Archive",
+      "relativePath": "https://archive.org/details/amoalgah-alasabiah",
+      "sourceUrl": "https://archive.org/details/amoalgah-alasabiah",
+      "primaryCategory": "references",
+      "tags": ["دراسات لغوية"],
+      "matchEvidence": {
+        "strongSignals": ["سجل فجوة موثق", "اللسانيات العصبية"],
+        "supportingSignals": ["المعالجة العصبية", "اللغة"],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "gap-resources-cognitive-linguistics-mind-language-reality",
+      "title": "دراسات في اللسانيات العرفانية - الذهن واللغة والواقع",
+      "author": null,
+      "source": "Internet Archive",
+      "relativePath": "https://archive.org/download/hmmt06/ep173.pdf",
+      "sourceUrl": "https://archive.org/download/hmmt06/ep173.pdf",
+      "primaryCategory": "references",
+      "tags": ["دراسات لغوية"],
+      "matchEvidence": {
+        "strongSignals": ["سجل فجوة موثق", "اللسانيات العرفانية"],
+        "supportingSignals": ["الذهن", "اللغة", "الواقع"],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "gap-resources-language-policy-mali",
+      "title": "السياسة اللغوية والتخطيط اللغوي في جمهورية مالي",
+      "author": null,
+      "source": "Internet Archive",
+      "relativePath": "https://archive.org/details/20231120_20231120_1543",
+      "sourceUrl": "https://archive.org/details/20231120_20231120_1543",
+      "primaryCategory": "references",
+      "tags": ["دراسات لغوية"],
+      "matchEvidence": {
+        "strongSignals": ["سجل فجوة موثق", "السياسة اللغوية"],
+        "supportingSignals": ["التخطيط اللغوي", "جمهورية مالي"],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "gap-resources-conversation-analysis-hamrawi",
+      "title": "تحليل المحادثة: البنية ونظام أدوار الكلام - محمد حمراوي",
+      "author": "محمد حمراوي",
+      "source": "Aleph",
+      "relativePath": "https://aleph.edinum.org/8814",
+      "sourceUrl": "https://aleph.edinum.org/8814",
+      "primaryCategory": "references",
+      "tags": ["دراسات لغوية"],
+      "matchEvidence": {
+        "strongSignals": ["سجل فجوة موثق", "تحليل المحادثة"],
+        "supportingSignals": ["البنية", "أدوار الكلام", "لسانيات التفاعل"],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "gap-resources-uae-sign-language-dictionary",
+      "title": "قاموس لغة الإشارة الإماراتي",
+      "author": null,
+      "source": "هيئة زايد لأصحاب الهمم",
+      "relativePath": "https://www.za.gov.ae/ar-AE/Sign-Language-Dictionary",
+      "sourceUrl": "https://www.za.gov.ae/ar-AE/Sign-Language-Dictionary",
+      "primaryCategory": "dictionaries",
+      "tags": ["معجم لغوي", "دراسات لغوية"],
+      "matchEvidence": {
+        "strongSignals": ["سجل فجوة موثق", "لغة الإشارة"],
+        "supportingSignals": ["قاموس", "لسانيات الصم", "الإمارات"],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "gap-resources-psycholinguistics-alusaili",
+      "title": "علم اللغة النفسي - عبد العزيز العصيلي",
+      "author": "عبد العزيز العصيلي",
+      "source": "Internet Archive",
+      "relativePath": "https://archive.org/details/ilm_al-logha_al-nafsi",
+      "sourceUrl": "https://archive.org/details/ilm_al-logha_al-nafsi",
+      "primaryCategory": "references",
+      "tags": ["دراسات لغوية"],
+      "matchEvidence": {
+        "strongSignals": ["سجل فجوة موثق", "علم اللغة النفسي"],
+        "supportingSignals": ["الإدراك", "اكتساب اللغة"],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "gap-resources-arabic-editing-shamela",
+      "title": "فن التحرير العربي - المصدر الأصلي",
+      "author": "محمد صالح الشنطي",
+      "source": "المكتبة الشاملة",
+      "relativePath": "https://shamela.ws/book/2037",
+      "sourceUrl": "https://shamela.ws/book/2037",
+      "primaryCategory": "references",
+      "tags": ["دراسات لغوية"],
+      "matchEvidence": {
+        "strongSignals": ["سجل فجوة موثق", "التحرير العربي"],
+        "supportingSignals": ["الكتابة", "إنشاء الرسائل", "الأسلوب"],
+        "explicitLanguageSource": true
+      }
+    }
+  ]
+}
