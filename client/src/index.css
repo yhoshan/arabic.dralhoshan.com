@@ -1144,13 +1144,13 @@ img {
 }
 
 .thesaurus-page--dark {
-  --paper: #071f20;
-  --paper-muted: #0b3433;
-  --card: #0d2a2a;
-  --ink: #e5fffb;
-  --ink-muted: #add4ce;
-  --line: rgba(166, 238, 229, 0.18);
-  --border: #1a625e;
+  --paper: #071b2c;
+  --paper-muted: #0c2d47;
+  --card: #0c2a42;
+  --ink: #e3f4ff;
+  --ink-muted: #accde4;
+  --line: rgba(173, 218, 246, 0.18);
+  --border: #1a5275;
   background: var(--paper);
 }
 
@@ -1160,8 +1160,8 @@ img {
 }
 
 .thesaurus-page--dark .search-field {
-  border-color: #287d76;
-  background: #0a2727;
+  border-color: #23628a;
+  background: #0a2235;
 }
 
 .thesaurus-page--dark .search-field input {
@@ -1169,15 +1169,15 @@ img {
 }
 
 .thesaurus-page--dark .search-field input::placeholder {
-  color: #8bb8b1;
+  color: #7da6c2;
 }
 
 .thesaurus-page--dark .filter-button:hover {
-  background: #104641;
+  background: #123d59;
 }
 
 .thesaurus-page--dark .materials-empty h3 {
-  color: #bee7e0;
+  color: #b1d1e7;
 }
 
 .thesaurus-page--dark .report-link,
@@ -1373,8 +1373,8 @@ img {
 }
 
 /*
- * صقل الهوية: تحافظ هذه القواعد على مرجع ببليوغرافي واحد ضمن لوحة التركواز المائي العميق للمكنز.
- * تُستخدم الألوان المضيئة للعلامة والإجراءات فقط، بينما تقود الحقول الكبيرة درجات #064A4A و#087A78.
+ * دمج النسختين: هذه القواعد تعرض مواد 47971066 داخل هوية 7716cf8 فقط.
+ * لا تُعرّف لوحة ألوان جديدة؛ تعتمد على متغيرات الهوية الزرقاء المرجعية أعلاه.
  */
 .hero-stat--button {
   display: flex;
@@ -1664,7 +1664,7 @@ img {
 .footer-sources__empty a {
   display: block;
   width: fit-content;
-  color: #a9e8df;
+  color: #99c2df;
   text-decoration: none;
 }
 
