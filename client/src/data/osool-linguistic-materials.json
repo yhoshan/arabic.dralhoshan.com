@@ -1,0 +1,577 @@
+{
+  "metadata": {
+    "sourceName": "مكنز أصول",
+    "sourceIndexUrl": "https://github.com/yhoshan/osool",
+    "sourceFetchedAt": "2026-08-02",
+    "sourceRecordCount": 5968,
+    "importedCount": 19,
+    "selectionMethod": "انتقاء يدوي محافظ من أقسام العربية والنحو والصرف والأدب وعلوم القرآن ذات الصلة اللغوية؛ استُبعدت المواد الفقهية والعقدية والحديثية المحضة، واحتُفظ بطبعة واحدة من العناوين المتكررة. فُحص العنوان والرابط المطبعان مقابل كتالوجات المكنز قبل الإدراج.",
+    "audit": {
+      "manuallyReviewedPool": 36,
+      "approvedAfterManualReview": 19,
+      "excludedAfterManualReview": 17,
+      "duplicateFindings": 0,
+      "categories": {
+        "academic_theses": 0,
+        "dictionaries": 0,
+        "references": 19
+      },
+      "sourceSections": {
+        "01 القرآن": 1,
+        "05 العربية": 17,
+        "415.0 النحو والصرف": 1
+      }
+    }
+  },
+  "materials": [
+    {
+      "id": "osool-linguistics-1-fece659687dc4d10",
+      "title": "الأشباه والنظائر في القرآن الكريم بين الحقيقة والمجاز سورة الأنعام مثالا",
+      "author": "مريم عبد الحسين التميمي",
+      "source": "مكتبة الباحث العلمي",
+      "relativePath": "أصول / 01 القرآن / WORD / كتاب",
+      "sourceUrl": "https://t.me/bahith_word/21844",
+      "primaryCategory": "references",
+      "tags": [
+        "بلاغة"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "مصدر: مكنز أصول",
+          "مجاز القرآن",
+          "دراسة بلاغية قرآنية"
+        ],
+        "supportingSignals": [
+          "01 القرآن",
+          "WORD",
+          "كتاب",
+          "الأشباه والنظائر",
+          "دراسات إسلامية معاصرة / جامعة كربلاء",
+          "2011م 1432ھ"
+        ],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "osool-linguistics-275-b0e34100fa306b52",
+      "title": "التناص في كتاب الأشباه والنظائر للخالديين",
+      "author": "خالد بن عبدالكريم بن خيران الحربي",
+      "source": "مكتبة الباحث العلمي",
+      "relativePath": "أصول / 05 العربية / WORD / كتاب",
+      "sourceUrl": "https://t.me/bahith_word/15119",
+      "primaryCategory": "references",
+      "tags": [
+        "شعر وأدب"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "مصدر: مكنز أصول",
+          "التناص",
+          "دراسة أدبية"
+        ],
+        "supportingSignals": [
+          "05 العربية",
+          "WORD",
+          "كتاب",
+          "الأشباه والنظائر",
+          "الجامعة الأردنية"
+        ],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "osool-linguistics-3311-ca405f268cae7e85",
+      "title": "الأشباه والنظائر من أشعار المتقدمين والجاهلية والمخضرمين للخالديين",
+      "author": "أبو بكر محمد بن هاشم الخالدي / أبو عثمان سعيد بن هاشم الخالدي",
+      "source": "مكتبة الباحث العلمي",
+      "relativePath": "أصول / 05 العربية / PDF / كتاب",
+      "sourceUrl": "https://t.me/bahith_pdf/147862",
+      "primaryCategory": "references",
+      "tags": [
+        "شعر وأدب"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "مصدر: مكنز أصول",
+          "أشعار المتقدمين",
+          "مصدر أدبي"
+        ],
+        "supportingSignals": [
+          "05 العربية",
+          "PDF",
+          "كتاب",
+          "الأشباه والنظائر",
+          "لجنة التأليف والترجمة والنشر",
+          "720.0"
+        ],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "osool-linguistics-3314-c1324b9af255c5f5",
+      "title": "الإجماع في الدراسات النحوية",
+      "author": "حسين رفعت حسين",
+      "source": "مكتبة الباحث العلمي",
+      "relativePath": "أصول / 05 العربية / PDF / كتاب",
+      "sourceUrl": "https://t.me/bahith_pdf/157145",
+      "primaryCategory": "references",
+      "tags": [
+        "نحو"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "مصدر: مكنز أصول",
+          "الدراسات النحوية",
+          "الإجماع النحوي"
+        ],
+        "supportingSignals": [
+          "05 العربية",
+          "PDF",
+          "كتاب",
+          "أصول الفقه والقواعد",
+          "جامعة الفيوم مكتبة كلية دار العلوم",
+          "1421ه، 2001م",
+          "352.0"
+        ],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "osool-linguistics-3317-ade2c5e78d98a314",
+      "title": "ظاهرة التعارض والترجيح في أصول النحو العربي",
+      "author": "حبيبة نعمان جبر الرفاعى",
+      "source": "مكتبة الباحث العلمي",
+      "relativePath": "أصول / 05 العربية / PDF / كتاب",
+      "sourceUrl": "https://t.me/bahith_pdf/161226",
+      "primaryCategory": "references",
+      "tags": [
+        "نحو"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "مصدر: مكنز أصول",
+          "أصول النحو",
+          "التعارض والترجيح"
+        ],
+        "supportingSignals": [
+          "05 العربية",
+          "PDF",
+          "كتاب",
+          "أصول الفقه والقواعد",
+          "الجامعة الأردنية",
+          "1416ه، 1995م",
+          "181.0"
+        ],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "osool-linguistics-3318-dbf9f0afa23aa50f",
+      "title": "ألفاظ الأشباه والنظائر",
+      "author": "عبد الرحمن بن محمد بن سعيد الانباري",
+      "source": "مكتبة الباحث العلمي",
+      "relativePath": "أصول / 05 العربية / PDF / كتاب",
+      "sourceUrl": "https://t.me/bahith_pdf/163457",
+      "primaryCategory": "references",
+      "tags": [
+        "دراسات لغوية"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "مصدر: مكنز أصول",
+          "ألفاظ",
+          "الأشباه والنظائر"
+        ],
+        "supportingSignals": [
+          "05 العربية",
+          "PDF",
+          "كتاب",
+          "الأشباه والنظائر",
+          "135.0"
+        ],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "osool-linguistics-3321-4c48d88377059acd",
+      "title": "أثر القياس الفقهي في القياس النحوي دراسة نحوية تحليلية مقارنة",
+      "author": "آمنة الأمين عبد الله محمد",
+      "source": "مكتبة الباحث العلمي",
+      "relativePath": "أصول / 05 العربية / PDF / كتاب",
+      "sourceUrl": "https://t.me/bahith_pdf/156138",
+      "primaryCategory": "references",
+      "tags": [
+        "نحو"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "مصدر: مكنز أصول",
+          "القياس النحوي",
+          "دراسة نحوية تحليلية"
+        ],
+        "supportingSignals": [
+          "05 العربية",
+          "PDF",
+          "كتاب",
+          "أصول الفقه والقواعد",
+          "جامعة أم درمان الإسلامية",
+          "2005م",
+          "102.0"
+        ],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "osool-linguistics-3322-62282c3d7342f2fa",
+      "title": "أثر أصول الفقه في تقديم البلاغة العربية وتطويرها البحث الدلالي أنموذجا",
+      "author": "عبد الرحمن بن علي الحطاب",
+      "source": "مكتبة الباحث العلمي",
+      "relativePath": "أصول / 05 العربية / PDF / كتاب",
+      "sourceUrl": "https://t.me/bahith_pdf/146703",
+      "primaryCategory": "references",
+      "tags": [
+        "بلاغة",
+        "دراسات لغوية"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "مصدر: مكنز أصول",
+          "البلاغة العربية",
+          "البحث الدلالي"
+        ],
+        "supportingSignals": [
+          "05 العربية",
+          "PDF",
+          "كتاب",
+          "أصول الفقه",
+          "ندوة الدراسات البلاغية / الواقع والمأمول",
+          "1432 ھ",
+          "64.0"
+        ],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "osool-linguistics-3324-9c47b016d73b256c",
+      "title": "الاستصحاب ودوره في توجيه الشواهد النحوية والصرفية",
+      "author": "إبراهيم محمد أبو اليزيد خفاجة",
+      "source": "مكتبة الباحث العلمي",
+      "relativePath": "أصول / 05 العربية / PDF / كتاب",
+      "sourceUrl": "https://t.me/bahith_pdf/157229",
+      "primaryCategory": "references",
+      "tags": [
+        "نحو",
+        "صرف"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "مصدر: مكنز أصول",
+          "الشواهد النحوية",
+          "الشواهد الصرفية"
+        ],
+        "supportingSignals": [
+          "05 العربية",
+          "PDF",
+          "كتاب",
+          "أصول الفقه والقواعد",
+          "مجلة الدراسات اللغوية والأدبية",
+          "2011م",
+          "40.0"
+        ],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "osool-linguistics-3325-6be6974ab8bf2cc9",
+      "title": "ألفاظ الترجيح والاستحسان عند ابن هشام الأنصاري",
+      "author": "هدى ناجي عبيد البديري",
+      "source": "مكتبة الباحث العلمي",
+      "relativePath": "أصول / 05 العربية / PDF / كتاب",
+      "sourceUrl": "https://t.me/bahith_pdf/156405",
+      "primaryCategory": "references",
+      "tags": [
+        "نحو",
+        "دراسات لغوية"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "مصدر: مكنز أصول",
+          "ابن هشام",
+          "ألفاظ الترجيح"
+        ],
+        "supportingSignals": [
+          "05 العربية",
+          "PDF",
+          "كتاب",
+          "أصول الفقه والقواعد",
+          "مجلة التراث العلمي العربي",
+          "2018م",
+          "33.0"
+        ],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "osool-linguistics-3326-cd3b527db6b2bcfc",
+      "title": "الاستحسان بين أصول النحو وأصول الفقه",
+      "author": "جبار محمود شهاب / محمود محمد خورشيد",
+      "source": "مكتبة الباحث العلمي",
+      "relativePath": "أصول / 05 العربية / PDF / كتاب",
+      "sourceUrl": "https://t.me/bahith_pdf/157208",
+      "primaryCategory": "references",
+      "tags": [
+        "نحو"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "مصدر: مكنز أصول",
+          "أصول النحو",
+          "الاستحسان"
+        ],
+        "supportingSignals": [
+          "05 العربية",
+          "PDF",
+          "كتاب",
+          "أصول الفقه",
+          "مجلة جامعة تكريت للعلوم الإنسانية",
+          "2016م",
+          "30.0"
+        ],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "osool-linguistics-3327-40ca0a7107ab4b68",
+      "title": "مفعوم القصد بين التداوليات الأنغلوسكسونية وأصول الفقه مقاربة في محاورة الأصل للمأصول",
+      "author": "ثروت محمد مرسي",
+      "source": "مكتبة الباحث العلمي",
+      "relativePath": "أصول / 05 العربية / PDF / كتاب",
+      "sourceUrl": "https://t.me/bahith_pdf/162404",
+      "primaryCategory": "references",
+      "tags": [
+        "دراسات لغوية"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "مصدر: مكنز أصول",
+          "التداوليات",
+          "مفهوم القصد"
+        ],
+        "supportingSignals": [
+          "05 العربية",
+          "PDF",
+          "كتاب",
+          "أصول الفقه",
+          "مجلة كلية الشيخ الطوسي الجامعة",
+          "1438ه، 2017م",
+          "25.0"
+        ],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "osool-linguistics-3328-b9b5f8d81cf31955",
+      "title": "خرق الإجماع النحوي في الأسماء المنصوبة",
+      "author": "صباح عطيوي عبدو الزبيدي / علاء حسين خضير المنصوري",
+      "source": "مكتبة الباحث العلمي",
+      "relativePath": "أصول / 05 العربية / PDF / كتاب",
+      "sourceUrl": "https://t.me/bahith_pdf/160482",
+      "primaryCategory": "references",
+      "tags": [
+        "نحو"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "مصدر: مكنز أصول",
+          "الإجماع النحوي",
+          "الأسماء المنصوبة"
+        ],
+        "supportingSignals": [
+          "05 العربية",
+          "PDF",
+          "كتاب",
+          "أصول الفقه والقواعد",
+          "مجلة العلوم الإنسانية كلية التربية للعلوم الإنسانية جامعة بابل",
+          "2016م",
+          "24.0"
+        ],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "osool-linguistics-3330-2a7af78d7154ce17",
+      "title": "الإجماع في الدرس النحوي",
+      "author": "الحسن المثنى عمر الفاروق",
+      "source": "مكتبة الباحث العلمي",
+      "relativePath": "أصول / 05 العربية / PDF / كتاب",
+      "sourceUrl": "https://t.me/bahith_pdf/157041",
+      "primaryCategory": "references",
+      "tags": [
+        "نحو"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "مصدر: مكنز أصول",
+          "الدرس النحوي",
+          "الإجماع"
+        ],
+        "supportingSignals": [
+          "05 العربية",
+          "PDF",
+          "كتاب",
+          "أصول الفقه والقواعد",
+          "مجلة كلية اللغة العربية",
+          "1433ه، 2012م",
+          "23.0"
+        ],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "osool-linguistics-3332-f11d67cf2f2d8be8",
+      "title": "الاستحسان عند ابن جني",
+      "author": "محمود عبد الله جفال",
+      "source": "مكتبة الباحث العلمي",
+      "relativePath": "أصول / 05 العربية / PDF / كتاب",
+      "sourceUrl": "https://t.me/bahith_pdf/157209",
+      "primaryCategory": "references",
+      "tags": [
+        "نحو"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "مصدر: مكنز أصول",
+          "ابن جني",
+          "الاستحسان"
+        ],
+        "supportingSignals": [
+          "05 العربية",
+          "PDF",
+          "كتاب",
+          "أصول الفقه والقواعد",
+          "مجلة دراسات العلوم الانسانية",
+          "1995م",
+          "21.0"
+        ],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "osool-linguistics-3333-3f635a79c579598e",
+      "title": "الاشتغال والتنازع بين الواقع اللغوي والقواعد وتأثر النحاة بأصول الفقه",
+      "author": "حسين شمس آبادي",
+      "source": "مكتبة الباحث العلمي",
+      "relativePath": "أصول / 05 العربية / PDF / كتاب",
+      "sourceUrl": "https://t.me/bahith_pdf/162075",
+      "primaryCategory": "references",
+      "tags": [
+        "نحو",
+        "دراسات لغوية"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "مصدر: مكنز أصول",
+          "الواقع اللغوي",
+          "النحاة"
+        ],
+        "supportingSignals": [
+          "05 العربية",
+          "PDF",
+          "كتاب",
+          "القواعد الفقهية",
+          "مجلة اللغة العربية وآدابها",
+          "1426ه، 2005م",
+          "21.0"
+        ],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "osool-linguistics-3334-95d20f6d9c567d61",
+      "title": "مراجعة موضوع الاستصحاب",
+      "author": "إبراهيم الشمسان أبو أوس",
+      "source": "مكتبة الباحث العلمي",
+      "relativePath": "أصول / 05 العربية / PDF / كتاب",
+      "sourceUrl": "https://t.me/bahith_pdf/155435",
+      "primaryCategory": "references",
+      "tags": [
+        "دراسات لغوية"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "مصدر: مكنز أصول",
+          "مجلة الدراسات اللغوية",
+          "الاستصحاب"
+        ],
+        "supportingSignals": [
+          "05 العربية",
+          "PDF",
+          "كتاب",
+          "أصول الفقه والقواعد",
+          "مجلة الدراسات اللغوية / مركز الملك فيصل",
+          "2000م",
+          "20.0"
+        ],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "osool-linguistics-3335-4589b9f9d2e884e0",
+      "title": "القياس بين أصول النحو وأصول الفقه",
+      "author": "إيمان عمر محمد جادالله و فضل الله النور علي",
+      "source": "مكتبة الباحث العلمي",
+      "relativePath": "أصول / 05 العربية / PDF / كتاب",
+      "sourceUrl": "https://t.me/bahith_pdf/159127",
+      "primaryCategory": "references",
+      "tags": [
+        "نحو"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "مصدر: مكنز أصول",
+          "أصول النحو",
+          "القياس"
+        ],
+        "supportingSignals": [
+          "05 العربية",
+          "PDF",
+          "كتاب",
+          "أصول الفقه",
+          "مجلة العلوم الإنسانية",
+          "2015م",
+          "13.0"
+        ],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "osool-linguistics-2150-e4108f81a0405544",
+      "title": "الأشباه والنظائر في النحو (ط. مجمع اللغة بدمشق)",
+      "author": "عبد الرحمن السيوطي جلال الدين",
+      "source": "المكتبة الوقفية",
+      "relativePath": "أصول / 415.0 النحو والصرف / PDF / كتاب",
+      "sourceUrl": "https://t.me/waqfeya_pdf/30177",
+      "primaryCategory": "references",
+      "tags": [
+        "نحو"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "مصدر: مكنز أصول",
+          "النحو",
+          "مجمع اللغة العربية بدمشق"
+        ],
+        "supportingSignals": [
+          "415.0 النحو والصرف",
+          "PDF",
+          "كتاب",
+          "الأشباه والنظائر",
+          "مجمع اللغة العربية بدمشق",
+          "1407 - 1987",
+          "2876"
+        ],
+        "explicitLanguageSource": true
+      }
+    }
+  ]
+}

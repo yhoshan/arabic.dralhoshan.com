@@ -8,9 +8,10 @@ import curriculaJson from "@/data/curricula-materials.json";
 import diwansJson from "@/data/diwans.json";
 import academiesJson from "@/data/academies-materials.json";
 import rhetoricalInterpretationJson from "@/data/rhetorical-interpretation-materials.json";
-import qiraatLinguisticJson from "@/data/qiraat-linguistic-materials.json";
 import literaryClubsJson from "@/data/literary-clubs-materials.json";
+import qiraatLinguisticJson from "@/data/qiraat-linguistic-materials.json";
 import gapResourcesJson from "@/data/gap-resources-materials.json";
+import osoolLinguisticJson from "@/data/osool-linguistic-materials.json";
 
 export type MaterialCategory =
   | "all"
@@ -237,6 +238,7 @@ const rhetoricalInterpretationCatalog =
 const qiraatLinguisticCatalog =
   qiraatLinguisticJson as unknown as CuratedMaterialCatalogPayload;
 const gapResourcesCatalog = gapResourcesJson as unknown as CuratedMaterialCatalogPayload;
+const osoolLinguisticCatalog = osoolLinguisticJson as unknown as CuratedMaterialCatalogPayload;
 const CURATED_DIWAN_SIGNAL = "سجل ديوان موثّق";
 const CURATED_CURRICULUM_SIGNAL = "سجل منهج ومقرر منقّى";
 const CURATED_ACADEMY_SIGNAL = "سجل مجمع لغوي موثّق";
@@ -653,19 +655,6 @@ const MATERIAL_IDS_BEFORE_QIRAAT = new Set(MATERIALS_BEFORE_QIRAAT.map((material
 const MATERIAL_URLS_BEFORE_QIRAAT = new Set(
   MATERIALS_BEFORE_QIRAAT.map((material) => material.sourceUrl).filter(Boolean),
 );
-/** مواد قراءات منتقاة ومصنفة في الأقسام القائمة، بعد تنقية تكرار العنوان في ملف المصدر. */
-const QIRAAT_LINGUISTIC_MATERIALS = qiraatLinguisticCatalog.materials.filter(
-  (material) =>
-    !MATERIAL_IDS_BEFORE_QIRAAT.has(material.id) &&
-    !MATERIAL_URLS_BEFORE_QIRAAT.has(material.sourceUrl),
-);
-const MATERIALS_BEFORE_GAP_RESOURCES = [...MATERIALS_BEFORE_QIRAAT, ...QIRAAT_LINGUISTIC_MATERIALS];
-const MATERIAL_IDS_BEFORE_GAP_RESOURCES = new Set(
-  MATERIALS_BEFORE_GAP_RESOURCES.map((material) => material.id),
-);
-const MATERIAL_URLS_BEFORE_GAP_RESOURCES = new Set(
-  MATERIALS_BEFORE_GAP_RESOURCES.map((material) => material.sourceUrl).filter(Boolean),
-);
 const normalizeCatalogTitle = (value: string) =>
   value
     .normalize("NFKC")
@@ -678,6 +667,23 @@ const normalizeCatalogTitle = (value: string) =>
     .replace(/\s+/g, " ")
     .trim()
     .toLowerCase();
+const MATERIAL_TITLES_BEFORE_QIRAAT = new Set(
+  MATERIALS_BEFORE_QIRAAT.map((material) => normalizeCatalogTitle(material.title)).filter(Boolean),
+);
+/** مواد قراءات منتقاة: لا تمر إلا إذا لم تطابق معرّفًا أو رابطًا أو عنوانًا حاضرًا في المكنز. */
+const QIRAAT_LINGUISTIC_MATERIALS = qiraatLinguisticCatalog.materials.filter(
+  (material) =>
+    !MATERIAL_IDS_BEFORE_QIRAAT.has(material.id) &&
+    !MATERIAL_URLS_BEFORE_QIRAAT.has(material.sourceUrl) &&
+    !MATERIAL_TITLES_BEFORE_QIRAAT.has(normalizeCatalogTitle(material.title)),
+);
+const MATERIALS_BEFORE_GAP_RESOURCES = [...MATERIALS_BEFORE_QIRAAT, ...QIRAAT_LINGUISTIC_MATERIALS];
+const MATERIAL_IDS_BEFORE_GAP_RESOURCES = new Set(
+  MATERIALS_BEFORE_GAP_RESOURCES.map((material) => material.id),
+);
+const MATERIAL_URLS_BEFORE_GAP_RESOURCES = new Set(
+  MATERIALS_BEFORE_GAP_RESOURCES.map((material) => material.sourceUrl).filter(Boolean),
+);
 const MATERIAL_TITLES_BEFORE_GAP_RESOURCES = new Set(
   MATERIALS_BEFORE_GAP_RESOURCES.map((material) => normalizeCatalogTitle(material.title)).filter(Boolean),
 );
@@ -700,8 +706,19 @@ const LITERARY_CLUB_MATERIALS = DYNAMIC_LITERARY_CLUBS.filter(
     !MATERIAL_IDS_BEFORE_LITERARY_CLUBS.has(material.id) &&
     (!material.sourceUrl || !MATERIAL_URLS_BEFORE_LITERARY_CLUBS.has(material.sourceUrl)),
 );
+const MATERIALS_BEFORE_OSOOL = [...MATERIALS_BEFORE_LITERARY_CLUBS, ...LITERARY_CLUB_MATERIALS];
+const MATERIAL_IDS_BEFORE_OSOOL = new Set(MATERIALS_BEFORE_OSOOL.map((material) => material.id));
+const MATERIAL_URLS_BEFORE_OSOOL = new Set(
+  MATERIALS_BEFORE_OSOOL.map((material) => material.sourceUrl).filter(Boolean),
+);
+/** مواد لغوية منتقاة يدويًا من مكنز أصول، بعد فحص التكرار مع الكتالوجات الموحدة. */
+const OSOOL_LINGUISTIC_MATERIALS = osoolLinguisticCatalog.materials.filter(
+  (material) =>
+    !MATERIAL_IDS_BEFORE_OSOOL.has(material.id) &&
+    (!material.sourceUrl || !MATERIAL_URLS_BEFORE_OSOOL.has(material.sourceUrl)),
+);
 
-export const MATERIALS: Material[] = [...MATERIALS_BEFORE_LITERARY_CLUBS, ...LITERARY_CLUB_MATERIALS];
+export const MATERIALS: Material[] = [...MATERIALS_BEFORE_OSOOL, ...OSOOL_LINGUISTIC_MATERIALS];
 /** عدد الدواوين الحيّ: يُعاد احتسابه من كتالوج الدواوين كلما أُعيد بناء البيانات. */
 export const DIWAN_COUNT = DYNAMIC_DIWANS.length;
 /** عدد المناهج والمقررات الحيّ: مصدره السجلات المنقاة القابلة للبحث والعرض. */
