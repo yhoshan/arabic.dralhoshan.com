@@ -2,7 +2,7 @@
  * فلسفة التصميم: مكنز عربي بتركواز مائي عميق، وعلامات نقطية مستلهمة من التشكيل والفهرسة.
  * بطاقات الغلاف بوابات أقسام بعدّادات حية محسوبة من الكتالوج نفسه، لتبقى كل قيمة قابلة للتدقيق عند كل إعادة بناء.
  * شريط فلاتر المناهج يستعير الهوية المرجعية نفسها ويظهر داخل نتائج «المناهج والمقررات» وحدها.
- * الهيدر السفلي يقتصر على المشاركة والتنبيهات والتوقيع؛ ويُبقي قسم «مصادر المكنز» وروابطه الحالية بلا تعديل.
+ * الهيدر السفلي يحصر المكنز في المشاركة والتنبيهات والمصادر وهوية النقاط الثلاث، مع إزالة أي توقيع أو بريد شخصي موروث.
  */
 import { useEffect, useMemo, useState } from "react";
 import {
@@ -13,10 +13,8 @@ import {
   ChevronRight,
   Copy,
   ExternalLink,
-  Globe2,
   Info,
   Library,
-  Mail,
   Moon,
   Search,
   Send,
@@ -867,6 +865,285 @@ export default function Home() {
             }
           }
         `}</style>
+        <style>{`
+          /* تمريرة الهوية: تركواز مائي عميق، علامة نقاط ثلاثية، وبوابات أقسام علمية قبل العدادات. */
+          .hero.hero--blue,
+          .thesaurus-page--dark .hero.hero--blue {
+            color: #f7ffff;
+            background:
+              radial-gradient(ellipse 56% 70% at 76% 14%, rgba(79, 225, 213, 0.22), transparent 70%),
+              radial-gradient(ellipse 52% 72% at 14% 105%, rgba(16, 182, 176, 0.18), transparent 72%),
+              linear-gradient(135deg, #064a4a 0%, #087a78 54%, #065e5e 100%);
+          }
+
+          .hero.hero--blue::before {
+            background:
+              radial-gradient(ellipse 52% 65% at 77% 18%, rgba(177, 255, 246, 0.16), transparent 70%),
+              radial-gradient(ellipse 48% 62% at 18% 100%, rgba(79, 225, 213, 0.13), transparent 70%),
+              repeating-linear-gradient(118deg, rgba(255, 255, 255, 0.022) 0 1px, transparent 1px 9px);
+          }
+
+          .hero.hero--blue + .reference-search {
+            border-bottom-color: rgba(191, 255, 248, 0.32);
+            background: linear-gradient(135deg, #064a4a 0%, #087a78 54%, #065e5e 100%);
+            box-shadow: 0 1px 12px rgba(1, 63, 61, 0.2);
+          }
+
+          .hero.hero--blue + .reference-search .search-status {
+            color: rgba(232, 255, 251, 0.9);
+          }
+
+          .hero.hero--blue + .reference-search .filter-button {
+            border-color: rgba(213, 255, 249, 0.5);
+            background: rgba(255, 255, 255, 0.07);
+            color: #f7ffff;
+          }
+
+          .hero.hero--blue + .reference-search .filter-button:hover {
+            border-color: rgba(235, 255, 252, 0.92);
+            background: rgba(255, 255, 255, 0.15);
+            color: #ffffff;
+          }
+
+          .hero.hero--blue + .reference-search .filter-button--active {
+            border-color: #f7ffff;
+            background: #f7ffff;
+            color: #064a4a;
+          }
+
+          .disclaimer-modal {
+            border-color: rgba(155, 255, 244, 0.46);
+            background: linear-gradient(160deg, #087a78 0%, #064a4a 100%);
+            box-shadow: 0 22px 60px rgba(1, 63, 61, 0.42);
+          }
+
+          .disclaimer-modal__accent {
+            background: linear-gradient(90deg, #10b6b0, #d3fffa, #10b6b0);
+          }
+
+          .disclaimer-modal__header > svg {
+            color: #c7fff8;
+          }
+
+          .modal-confirm,
+          .thesaurus-page .copy-link {
+            background: linear-gradient(135deg, #087a78, #10b6b0);
+          }
+
+          .thesaurus-page .share-section {
+            background:
+              radial-gradient(circle at 20% 0%, rgba(79, 225, 213, 0.19), transparent 36%),
+              linear-gradient(135deg, #087a78 0%, #064a4a 100%);
+          }
+
+          .thesaurus-page .share-section h2,
+          .thesaurus-page .footer-sources__trigger {
+            color: #e7fffb;
+          }
+
+          .thesaurus-page .share-section > p,
+          .thesaurus-page .footer-notes,
+          .thesaurus-page .footer-sources__empty {
+            color: #b8e6df;
+          }
+
+          .thesaurus-page .share-divider,
+          .thesaurus-page .footer-sources {
+            border-color: rgba(184, 241, 233, 0.34);
+            background-color: rgba(184, 241, 233, 0.42);
+          }
+
+          .thesaurus-page .footer-main {
+            background: linear-gradient(160deg, #064a4a 0%, #043d3c 100%);
+          }
+
+          .thesaurus-page .footer-sources__empty a {
+            color: #bffef6;
+          }
+
+          .hero.hero--blue .theme-toggle,
+          .hero.hero--blue .about-trigger {
+            border-color: rgba(213, 255, 249, 0.48);
+            background: rgba(255, 255, 255, 0.055);
+            color: #f7ffff;
+          }
+
+          .hero.hero--blue .theme-toggle:hover,
+          .hero.hero--blue .about-trigger:hover {
+            border-color: rgba(235, 255, 252, 0.86);
+            background: rgba(16, 182, 176, 0.23);
+          }
+
+          .hero.hero--blue .hero-index-mark {
+            display: inline-grid;
+            color: #c7fff8;
+            border-inline-color: rgba(191, 255, 248, 0.48);
+          }
+
+          .hero.hero--blue .hero-index-mark span {
+            background: currentColor;
+            box-shadow: 0 0 0 3px rgba(79, 225, 213, 0.14);
+          }
+
+          .hero.hero--blue .hero-title,
+          .hero.hero--blue .hero-title__kicker,
+          .hero.hero--blue .hero-title__name {
+            color: #f7ffff;
+            text-shadow: 0 3px 20px rgba(1, 52, 51, 0.26);
+          }
+
+          .hero.hero--blue .hero__description {
+            color: #dcfffa;
+          }
+
+          .hero.hero--blue .hero__stats {
+            width: min(100%, 710px);
+            gap: 11px;
+          }
+
+          .hero.hero--blue .hero-stat {
+            border-color: rgba(155, 255, 244, 0.42);
+            background:
+              linear-gradient(145deg, rgba(19, 154, 149, 0.18), rgba(2, 61, 60, 0.45)),
+              rgba(2, 75, 73, 0.24);
+            box-shadow: inset 0 1px rgba(247, 255, 255, 0.13), 0 16px 34px rgba(1, 52, 51, 0.18);
+          }
+
+          .hero.hero--blue .hero-stat--button {
+            align-items: flex-start;
+            justify-content: flex-start;
+            padding: 15px 16px 13px;
+            text-align: right;
+          }
+
+          .hero.hero--blue .hero-stat--button:hover,
+          .hero.hero--blue .hero-stat--button:focus-visible {
+            border-color: rgba(201, 255, 248, 0.86);
+            background: rgba(2, 89, 86, 0.54);
+          }
+
+          .hero.hero--blue .hero-stat--button::after {
+            display: block;
+            background: rgba(191, 255, 248, 0.64);
+          }
+
+          .hero.hero--blue .hero-stat__index {
+            display: inline-grid;
+            color: #bffef6;
+          }
+
+          .hero.hero--blue .hero-stat__hint {
+            display: block;
+            color: rgba(220, 255, 250, 0.7);
+          }
+
+          .hero.hero--blue .hero-stat__label {
+            color: #f7ffff;
+            font-family: "Amiri", serif;
+            font-size: clamp(0.96rem, 1.6vw, 1.14rem);
+            font-weight: 700;
+          }
+
+          .hero.hero--blue .hero-stat__number {
+            margin-top: auto;
+            color: rgba(255, 255, 255, 0.82);
+            font-family: "Amiri", serif;
+            font-size: 15px;
+            font-weight: 700;
+          }
+
+          .hero.hero--blue .search-field > svg,
+          .hero.hero--blue .search-field__clear {
+            color: #087a78;
+          }
+
+          .hero.hero--blue .search-field input {
+            color: #123f3d;
+          }
+
+          .hero.hero--blue .search-field__clear:hover {
+            background: rgba(8, 122, 120, 0.1);
+            color: #064a4a;
+          }
+
+          .footer-bottom {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            min-height: 56px;
+            color: #a9dcd5;
+          }
+
+          .footer-bottom p {
+            margin: 0;
+            text-align: right;
+          }
+
+          .footer-identity {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            color: #f7ffff;
+            font-family: "Amiri", serif;
+            font-size: 18px;
+            font-weight: 700;
+            white-space: nowrap;
+          }
+
+          .footer-index-mark {
+            display: inline-grid;
+            grid-template-columns: repeat(3, 5px);
+            gap: 4px;
+            align-items: end;
+            color: #bffef6;
+          }
+
+          .footer-index-mark i {
+            display: block;
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background: currentColor;
+            box-shadow: 0 0 0 3px rgba(79, 225, 213, 0.12);
+          }
+
+          .footer-index-mark i:nth-child(2) {
+            transform: translateY(-4px);
+          }
+
+          .material-card__record-head {
+            display: grid;
+            gap: 3px;
+          }
+
+          .material-card__topline {
+            margin-bottom: 7px;
+          }
+
+          .material-card h3 {
+            letter-spacing: -0.01em;
+          }
+
+          .material-card__metadata {
+            margin-top: 11px;
+            padding-top: 7px;
+            border-top: 1px solid rgba(8, 122, 120, 0.1);
+          }
+
+          @media (max-width: 639px) {
+            .footer-bottom {
+              flex-direction: column;
+              justify-content: center;
+              padding-bottom: 28px;
+              text-align: center;
+            }
+
+            .footer-bottom p {
+              text-align: center;
+            }
+          }
+        `}</style>
         <div className="hero__top-line" aria-hidden="true" />
 
         <div className="hero__theme-control">
@@ -888,6 +1165,11 @@ export default function Home() {
         </div>
 
         <div className="hero__content reference-shell">
+          <span className="hero-index-mark" aria-hidden="true">
+            <span />
+            <span />
+            <span />
+          </span>
           <h1 className="hero-title" aria-label="مكنز اللغة العربية وعلومها">
             <span className="hero-title__kicker">مكنز</span>
             <span className="hero-title__name">اللغة العربية وعلومها</span>
@@ -1221,27 +1503,10 @@ export default function Home() {
           <div className="reference-shell footer-main__inner">
             <div className="footer-notes">
               <p className="footer-note">
-                <Mail className="footer-note__icon" size={16} aria-hidden="true" />
-                <span>
-                  في حال عدم رغبتكم في نشر ما يخصكم أمل المراسلة على: {" "}
-                  <a href="mailto:yhoshan@gmail.com">yhoshan@gmail.com</a>
-                </span>
-              </p>
-              <p className="footer-note">
                 <Info className="footer-note__icon" size={16} aria-hidden="true" />
                 <span>
-                  تم تصنيف هذا الفهرس آليًا وتصحيحه يدويًا بناءً على أسماء الملفات
-                  والأوصاف؛ يرجى الاستفادة من شريط البحث العام.
-                </span>
-              </p>
-              <p className="footer-note">
-                <Globe2 className="footer-note__icon" size={16} aria-hidden="true" />
-                <span>
-                  هل تبحث في السلاسل التراثية الأخرى؟ انتقل إلى {" "}
-                  <a href="https://nsooos.com/" target="_blank" rel="noreferrer">
-                    منصة نصوص تراثية للباحثين
-                  </a>
-                  .
+                  فهرس علمي للروابط والإحالات في اللغة العربية وعلومها؛ تُراجع بياناته
+                  وروابطه دوريًا لخدمة الباحثين.
                 </span>
               </p>
             </div>
@@ -1290,30 +1555,15 @@ export default function Home() {
             </div>
 
             <div className="footer-bottom">
-              <p>جميع الحقوق محفوظة © 2026 — مكنز اللغة العربية وعلومها.</p>
-              <div className="footer-identity">
-                <a
-                  className="footer-signature"
-                  href="https://dralhoshan.com/"
-                  target="_blank"
-                  rel="noreferrer"
-                  aria-label="د. يوسف بن حمود الحوشان"
-                >
-                  <img
-                    src="/manus-storage/dralhoshan-signature-white_18a5beb6.png"
-                    alt="د. يوسف بن حمود الحوشان"
-                  />
-                </a>
-                <a
-                  className="footer-makanezz"
-                  href="https://dralhoshan.com/"
-                  target="_blank"
-                  rel="noreferrer"
-                  aria-label="المكانز"
-                >
-                  <img src="/manus-storage/makanezz-logo_a19df83c.png" alt="المكانز" />
-                </a>
+              <div className="footer-identity" aria-label="هوية مكنز اللغة العربية وعلومها">
+                <span className="footer-index-mark" aria-hidden="true">
+                  <i />
+                  <i />
+                  <i />
+                </span>
+                <span>مكنز اللغة العربية وعلومها</span>
               </div>
+              <p>جميع الحقوق محفوظة © 2026 — فهرس علمي للإحالات والمصادر.</p>
             </div>
           </div>
         </section>
