@@ -68,7 +68,7 @@ const STAT_FILTER_LABELS: Record<StatFilter, string> = {
   all: "المواد العلمية",
   linguistics: "علوم اللغة",
   "lexicon-literature-rhetoric": "المعاجم والأدب",
-  diwans: "الدواوين الشعرية",
+  diwans: "الدواوين والمنظومات",
 };
 
 // تعرض الصفحة الأولى المواد المرتبطة بالقرآن الكريم؛ ولا تغيّر هذه المجموعة أي بيانات في الكتالوج.
@@ -934,7 +934,7 @@ export default function Home() {
                       ? "النحو والدراسات اللغوية"
                       : item.id === "lexicon-literature-rhetoric"
                         ? "المعاجم والأدب والبلاغة"
-                        : "الدواوين الشعرية"}
+                        : "الدواوين والمنظومات"}
                 </span>
                 <span className="hero-stat__hint">استكشف القسم</span>
                 <span className="hero-stat__number">{displayCount(item.count)}</span>

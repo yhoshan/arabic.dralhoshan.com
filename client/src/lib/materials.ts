@@ -1069,7 +1069,7 @@ export const MATERIAL_CATEGORY_LABELS: Record<MaterialCategory, string> = {
   references: "المصادر والمراجع",
   dictionaries: "المعاجم اللغوية",
   bilingual_dictionaries: "القواميس الثنائية",
-  diwans: "الدواوين الشعرية",
+  diwans: "الدواوين والمنظومات",
   curricula: "المناهج والمقررات",
   academies: "المجامع اللغوية",
   literary_clubs: "الأندية الأدبية",
