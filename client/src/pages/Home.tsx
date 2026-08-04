@@ -26,7 +26,7 @@ import {
 } from "lucide-react";
 import {
   ACADEMY_FILTER_DEFAULTS,
-  CHANNEL_SOURCE_LINKS,
+  VERIFIED_SOURCE_LINKS,
   CORPUS_METADATA,
   CURRICULUM_FILTER_DEFAULTS,
   DIWAN_COUNT,
@@ -1301,7 +1301,7 @@ export default function Home() {
                       {source.name}
                     </a>
                   ))}
-                  {CHANNEL_SOURCE_LINKS.map((source) => (
+                  {VERIFIED_SOURCE_LINKS.map((source) => (
                     <a
                       href={source.url}
                       target="_blank"

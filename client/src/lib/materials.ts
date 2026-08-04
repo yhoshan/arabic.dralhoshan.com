@@ -748,8 +748,8 @@ export const DIWAN_SOURCE_LINKS = [
   },
 ] as const;
 
-/** قنوات تيليغرام الموثقة في حقول sourceUrl لسجلات المواد؛ الروابط تشير إلى رسائل أصلية من القنوات. */
-export const CHANNEL_SOURCE_LINKS = [
+/** مصادر موثقة مرتبطة بالمواد؛ تشمل قنوات ومكتبات عامة وروابط رسائل أصلية عند توفرها. */
+export const VERIFIED_SOURCE_LINKS = [
   {
     name: "المنظومات العلمية",
     url: "https://t.me/c/1219051448/3607",
@@ -757,6 +757,34 @@ export const CHANNEL_SOURCE_LINKS = [
   {
     name: "مكتبة القراءات العشر والتجويد",
     url: "https://t.me/c/2602541235/5241",
+  },
+  {
+    name: "جامع الكتب المصورة",
+    url: "https://t.me/ktbktb",
+  },
+  {
+    name: "المكتبة الوقفية",
+    url: "https://waqfeya.net/",
+  },
+  {
+    name: "المكتبة الشاملة",
+    url: "https://shamela.ws/",
+  },
+  {
+    name: "كتب النحو والبلاغة",
+    url: "https://t.me/mahmoudelbahery",
+  },
+  {
+    name: "مكتبة النحو والصرف",
+    url: "https://t.me/elom77yu",
+  },
+  {
+    name: "الرسائل العلمية والبحوث المحكمة",
+    url: "https://t.me/+gkYORRKE0wxhMDQ0",
+  },
+  {
+    name: "المجامع اللغوية",
+    url: "https://www.alashj.ae/%d8%a7%d9%84%d9%85%d8%ac%d8%a7%d9%85%d8%b9-%d9%88%d8%a7%d9%84%d9%85%d8%b1%d8%a7%d9%83%d8%b2-%d8%a7%d9%84%d9%84%d8%ba%d9%88%d9%8a%d8%a9-%d9%88%d8%a7%d9%84%d8%b9%d9%84%d9%85%d9%8a%d8%a9/",
   },
 ] as const;
 
