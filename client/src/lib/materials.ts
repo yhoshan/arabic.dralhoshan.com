@@ -20,6 +20,7 @@ export type MaterialCategory =
   | "dictionaries"
   | "bilingual_dictionaries"
   | "diwans"
+  | "scientific_poems"
   | "curricula"
   | "academies"
   | "literary_clubs";
@@ -245,6 +246,8 @@ const CURATED_CURRICULUM_SIGNAL = "سجل منهج ومقرر منقّى";
 const CURATED_ACADEMY_SIGNAL = "سجل مجمع لغوي موثّق";
 const CURATED_LITERARY_CLUB_SIGNAL = "سجل نادي أدبي موثّق";
 const CLASSICAL_LANGUAGE_BOOK_SOURCE = "Internet Archive";
+/** مصدر السجلات المدمجة للمنظومات؛ يُستخدم لتقديم قسم مشتق دون تعديل السجلات الخام. */
+const SCIENTIFIC_POEMS_SOURCE = "المنظومات العلمية";
 const CURRICULUM_UNSPECIFIED_VALUE = "غير محدد";
 const LITERARY_CLUB_PRIORITY_COUNTRY = "المملكة العربية السعودية";
 const SAUDI_LITERARY_CLUBS = new Set(
@@ -720,8 +723,12 @@ const OSOOL_LINGUISTIC_MATERIALS = osoolLinguisticCatalog.materials.filter(
 );
 
 export const MATERIALS: Material[] = [...MATERIALS_BEFORE_OSOOL, ...OSOOL_LINGUISTIC_MATERIALS];
-/** عدد الدواوين الحيّ: يُحتسب من جميع الدواوين التي اجتازت تحقق المصدر، بما فيها الدفعات المستوردة المدققة. */
+/** العداد العام التاريخي للدواوين والمنظومات؛ يُبقي بطاقات الإحصاء الحالية دون تعديل. */
 export const DIWAN_COUNT = MATERIALS.filter(isStandalonePoetryDiwan).length;
+/** عداد الدواوين الشعرية بعد استبعاد سجلات مصدر المنظومات العلمية فقط. */
+export const POETRY_DIWAN_COUNT = MATERIALS.filter(isPoetryDiwan).length;
+/** عداد المنظومات العلمية المستمد من مصدرها الموثق دون تعديل أي سجل خام. */
+export const SCIENTIFIC_POEMS_COUNT = MATERIALS.filter(isScientificPoem).length;
 /** عدد المناهج والمقررات الحيّ: مصدره السجلات المنقاة القابلة للبحث والعرض. */
 export const CURRICULA_COUNT = DYNAMIC_CURRICULA.length;
 /** عدد مواد المجامع الحيّ: يُعاد احتسابه من السجلات الموحّدة القابلة للبحث والتصفية. */
@@ -774,6 +781,18 @@ export function isStandalonePoetryDiwan(
     (material.matchEvidence.strongSignals.includes(CURATED_DIWAN_SIGNAL) ||
       material.matchEvidence.strongSignals.includes(IMPORTED_DIWAN_SIGNAL))
   );
+}
+
+/** سجلات المنظومات العلمية تُستمد من المصدر الموثق نفسه، من غير أي تغيير في ملفها الخام. */
+export function isScientificPoem(material: Pick<Material, "primaryCategory" | "source">): boolean {
+  return material.primaryCategory === "diwans" && material.source === SCIENTIFIC_POEMS_SOURCE;
+}
+
+/** الدواوين الشعرية وحدها: السجلات الموثقة التي لا تنتمي إلى مصدر المنظومات العلمية. */
+export function isPoetryDiwan(
+  material: Pick<Material, "primaryCategory" | "matchEvidence" | "source">,
+): boolean {
+  return isStandalonePoetryDiwan(material) && !isScientificPoem(material);
 }
 
 /**
@@ -1043,10 +1062,12 @@ export function filterMaterials(
       category === "all"
         ? true
         : category === "diwans"
-          ? isStandalonePoetryDiwan(material)
-          : category === "bilingual_dictionaries"
-            ? isBilingualArabicDictionary(material)
-            : material.primaryCategory === category;
+          ? isPoetryDiwan(material)
+          : category === "scientific_poems"
+            ? isScientificPoem(material)
+            : category === "bilingual_dictionaries"
+              ? isBilingualArabicDictionary(material)
+              : material.primaryCategory === category;
     const matchesSource = source === "all" || material.source === source;
     const searchHaystack = normalizeArabic(
       [material.title, material.author, material.source, material.tags.join(" ")]
@@ -1069,8 +1090,18 @@ export const MATERIAL_CATEGORY_LABELS: Record<MaterialCategory, string> = {
   references: "المصادر والمراجع",
   dictionaries: "المعاجم اللغوية",
   bilingual_dictionaries: "القواميس الثنائية",
-  diwans: "الدواوين والمنظومات",
+  diwans: "الدواوين",
+  scientific_poems: "المنظومات العلمية",
   curricula: "المناهج والمقررات",
   academies: "المجامع اللغوية",
   literary_clubs: "الأندية الأدبية",
 };
+
+/** تسمية البطاقة تتبع القسم المشتق للمنظومات مع بقاء تصنيف السجل الأصلي كما هو. */
+export function getMaterialCategoryLabel(
+  material: Pick<Material, "primaryCategory" | "source">,
+): string {
+  return isScientificPoem(material)
+    ? MATERIAL_CATEGORY_LABELS.scientific_poems
+    : MATERIAL_CATEGORY_LABELS[material.primaryCategory];
+}

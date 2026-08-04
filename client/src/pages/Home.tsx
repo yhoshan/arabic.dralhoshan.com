@@ -39,6 +39,7 @@ import {
   getAcademyFilterOptions,
   getCurriculumFilterOptions,
   getLiteraryClubFilterOptions,
+  getMaterialCategoryLabel,
   isStandalonePoetryDiwan,
   MATERIAL_CATEGORY_LABELS,
   MATERIALS,
@@ -270,7 +271,7 @@ function MaterialCard({ material }: { material: (typeof MATERIALS)[number] }) {
         <header className="material-card__record-head">
           <div className="material-card__topline">
             <span className="material-card__category">
-              {MATERIAL_CATEGORY_LABELS[material.primaryCategory]}
+              {getMaterialCategoryLabel(material)}
             </span>
             <span className="material-card__source">{material.source}</span>
           </div>
