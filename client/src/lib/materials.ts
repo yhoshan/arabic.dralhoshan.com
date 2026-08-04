@@ -748,6 +748,18 @@ export const DIWAN_SOURCE_LINKS = [
   },
 ] as const;
 
+/** قنوات تيليغرام الموثقة في حقول sourceUrl لسجلات المواد؛ الروابط تشير إلى رسائل أصلية من القنوات. */
+export const CHANNEL_SOURCE_LINKS = [
+  {
+    name: "المنظومات العلمية",
+    url: "https://t.me/c/1219051448/3607",
+  },
+  {
+    name: "مكتبة القراءات العشر والتجويد",
+    url: "https://t.me/c/2602541235/5241",
+  },
+] as const;
+
 const ARABIC_DIACRITICS = /[\u0610-\u061A\u064B-\u065F\u0670\u06D6-\u06ED]/g;
 const SEARCH_PUNCTUATION = /[^\u0621-\u063A\u0641-\u064A0-9\s]/g;
 const SEARCH_SPACES = /\s+/g;

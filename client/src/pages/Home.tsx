@@ -2,7 +2,7 @@
  * فلسفة التصميم: مكنز عربي بتركواز مائي عميق، وعلامات نقطية مستلهمة من التشكيل والفهرسة.
  * بطاقات الغلاف بوابات أقسام بعدّادات حية محسوبة من الكتالوج نفسه، لتبقى كل قيمة قابلة للتدقيق عند كل إعادة بناء.
  * شريط فلاتر المناهج يستعير الهوية المرجعية نفسها ويظهر داخل نتائج «المناهج والمقررات» وحدها.
- * الهيدر السفلي يقتصر على المشاركة والتنبيهات والتوقيع؛ ويُبقي قسم «مصادر المكنز» وروابطه الحالية بلا تعديل.
+ * الهيدر السفلي يقتصر على المشاركة والتنبيهات والتوقيع؛ ويعرض مصادر المكنز الثابتة والقنوات الموثقة ضمن القائمة الحالية.
  */
 import { useEffect, useMemo, useState } from "react";
 import {
@@ -26,6 +26,7 @@ import {
 } from "lucide-react";
 import {
   ACADEMY_FILTER_DEFAULTS,
+  CHANNEL_SOURCE_LINKS,
   CORPUS_METADATA,
   CURRICULUM_FILTER_DEFAULTS,
   DIWAN_COUNT,
@@ -1291,6 +1292,16 @@ export default function Home() {
                     مركز المعرفة الرقمي
                   </a>
                   {DIWAN_SOURCE_LINKS.map((source) => (
+                    <a
+                      href={source.url}
+                      target="_blank"
+                      rel="noreferrer"
+                      key={source.url}
+                    >
+                      {source.name}
+                    </a>
+                  ))}
+                  {CHANNEL_SOURCE_LINKS.map((source) => (
                     <a
                       href={source.url}
                       target="_blank"
