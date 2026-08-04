@@ -681,6 +681,17 @@ export default function Home() {
             text-shadow: none;
           }
 
+          .hero.hero--blue .hero-title--art {
+            width: min(100%, 540px);
+            margin: 0 auto;
+          }
+
+          .hero.hero--blue .hero-title--art img {
+            display: block;
+            width: 100%;
+            height: auto;
+          }
+
           .hero.hero--blue .hero-title__kicker {
             color: #f8fbff;
             font-size: 38px;
@@ -888,9 +899,11 @@ export default function Home() {
         </div>
 
         <div className="hero__content reference-shell">
-          <h1 className="hero-title" aria-label="مكنز اللغة العربية وعلومها">
-            <span className="hero-title__kicker">مكنز</span>
-            <span className="hero-title__name">اللغة العربية وعلومها</span>
+          <h1 className="hero-title hero-title--art">
+            <img
+              src="/manus-storage/maknaz-arabic-language-title_26f7e698.png"
+              alt="مكنز اللغة العربية وعلومها"
+            />
           </h1>
 
           <p className="hero__description">
