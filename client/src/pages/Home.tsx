@@ -681,8 +681,9 @@ export default function Home() {
             text-shadow: none;
           }
 
+          /* الهوية المعتمدة: لوحة العنوان أكبر بنسبة 10% لإبراز اسم المكنز مع الحفاظ على المسافات المتجاوبة. */
           .hero.hero--blue .hero-title--art {
-            width: min(100%, clamp(300px, 50vw, 640px));
+            width: min(100%, clamp(330px, 55vw, 704px));
             margin: 0 auto;
           }
 
