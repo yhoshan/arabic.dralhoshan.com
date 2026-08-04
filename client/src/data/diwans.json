@@ -1270,36 +1270,6 @@
       "sourceCount": 1
     },
     {
-      "id": "archive-wafaaturat_ejibat",
-      "title": "الإجابات على أسئلة ديوان الخدمات",
-      "author": "الإجابات على أسئلة",
-      "source": "Internet Archive",
-      "sourceUrl": "https://archive.org/details/wafaaturat_ejibat",
-      "primaryCategory": "diwans",
-      "tags": [
-        "ديوان شعري"
-      ],
-      "matchEvidence": {
-        "strongSignals": [
-          "ديوان شعري",
-          "دليل البيانات الوصفية: العنوان يصرح بأن السجل ديوان"
-        ],
-        "supportingSignals": [
-          "مؤسسة التراث العلمي"
-        ],
-        "explicitLanguageSource": true
-      },
-      "volumes": null,
-      "pages": null,
-      "sourceRefs": [
-        {
-          "source": "Internet Archive",
-          "url": "https://archive.org/details/wafaaturat_ejibat"
-        }
-      ],
-      "sourceCount": 1
-    },
-    {
       "id": "archive-AAlexandrina-438492",
       "title": "الأرض بتتكلم - ديوان شعر",
       "author": "الأرض بتتكلم",
@@ -1353,36 +1323,6 @@
         {
           "source": "Internet Archive",
           "url": "https://archive.org/details/civ-3039"
-        }
-      ],
-      "sourceCount": 1
-    },
-    {
-      "id": "archive-Wazaef4youth",
-      "title": "الاسئلة المتوقعة في امتحانات ديوان عام وزارة العدل مدونة Wazaef 4youth",
-      "author": "الاسئلة المتوقعة في امتحانات",
-      "source": "Internet Archive",
-      "sourceUrl": "https://archive.org/details/Wazaef4youth",
-      "primaryCategory": "diwans",
-      "tags": [
-        "ديوان شعري"
-      ],
-      "matchEvidence": {
-        "strongSignals": [
-          "ديوان شعري",
-          "دليل البيانات الوصفية: العنوان يصرح بأن السجل ديوان"
-        ],
-        "supportingSignals": [
-          "الاسئلة المتوقعة في امتحانات ديوان عام وزارة العدل مدونة Wazaef 4youth"
-        ],
-        "explicitLanguageSource": true
-      },
-      "volumes": null,
-      "pages": null,
-      "sourceRefs": [
-        {
-          "source": "Internet Archive",
-          "url": "https://archive.org/details/Wazaef4youth"
         }
       ],
       "sourceCount": 1
@@ -2831,36 +2771,6 @@
       "sourceCount": 1
     },
     {
-      "id": "archive-20250216_20250216_2214",
-      "title": "المختصر الفقهي، مختصر خليل - طبعة ديوان الشناقطة",
-      "author": "المختصر الفقهي، مختصر خليل - طبعة",
-      "source": "Internet Archive",
-      "sourceUrl": "https://archive.org/details/20250216_20250216_2214",
-      "primaryCategory": "diwans",
-      "tags": [
-        "ديوان شعري"
-      ],
-      "matchEvidence": {
-        "strongSignals": [
-          "ديوان شعري",
-          "دليل البيانات الوصفية: العنوان يصرح بأن السجل ديوان"
-        ],
-        "supportingSignals": [
-          "مختصر خليل، الفقه المالكي"
-        ],
-        "explicitLanguageSource": true
-      },
-      "volumes": null,
-      "pages": null,
-      "sourceRefs": [
-        {
-          "source": "Internet Archive",
-          "url": "https://archive.org/details/20250216_20250216_2214"
-        }
-      ],
-      "sourceCount": 1
-    },
-    {
       "id": "archive-20231201_20231201_1426",
       "title": "المعتمد بن عباد ديوان المعتمد بن عباد ملك إشبيلية",
       "author": "عبدالرزاق",
@@ -2916,36 +2826,6 @@
         {
           "source": "Internet Archive",
           "url": "https://archive.org/details/20250313_20250313_1647"
-        }
-      ],
-      "sourceCount": 1
-    },
-    {
-      "id": "archive-manhejtaalim",
-      "title": "المناهج الدراسية للدولة الإسلامية | ديوان التربية والتعليم",
-      "author": "المناهج الدراسية للدولة الإسلامية |",
-      "source": "Internet Archive",
-      "sourceUrl": "https://archive.org/details/manhejtaalim",
-      "primaryCategory": "diwans",
-      "tags": [
-        "ديوان شعري"
-      ],
-      "matchEvidence": {
-        "strongSignals": [
-          "ديوان شعري",
-          "دليل البيانات الوصفية: العنوان يصرح بأن السجل ديوان"
-        ],
-        "supportingSignals": [
-          "sd"
-        ],
-        "explicitLanguageSource": true
-      },
-      "volumes": null,
-      "pages": null,
-      "sourceRefs": [
-        {
-          "source": "Internet Archive",
-          "url": "https://archive.org/details/manhejtaalim"
         }
       ],
       "sourceCount": 1
@@ -18541,36 +18421,6 @@
         {
           "source": "Internet Archive",
           "url": "https://archive.org/details/aljamr-a"
-        }
-      ],
-      "sourceCount": 1
-    },
-    {
-      "id": "archive-mohamed_rahman2007_hotmail_20170630_1434",
-      "title": "ديوان الجند في عصر الخليفة المتوكل على الله",
-      "author": "Mohamed Nasr",
-      "source": "Internet Archive",
-      "sourceUrl": "https://archive.org/details/mohamed_rahman2007_hotmail_20170630_1434",
-      "primaryCategory": "diwans",
-      "tags": [
-        "ديوان شعري"
-      ],
-      "matchEvidence": {
-        "strongSignals": [
-          "ديوان شعري",
-          "دليل البيانات الوصفية: العنوان يصرح بأن السجل ديوان"
-        ],
-        "supportingSignals": [
-          "التاريخ العباسي"
-        ],
-        "explicitLanguageSource": true
-      },
-      "volumes": null,
-      "pages": null,
-      "sourceRefs": [
-        {
-          "source": "Internet Archive",
-          "url": "https://archive.org/details/mohamed_rahman2007_hotmail_20170630_1434"
         }
       ],
       "sourceCount": 1
