@@ -240,6 +240,7 @@ const qiraatLinguisticCatalog =
 const gapResourcesCatalog = gapResourcesJson as unknown as CuratedMaterialCatalogPayload;
 const osoolLinguisticCatalog = osoolLinguisticJson as unknown as CuratedMaterialCatalogPayload;
 const CURATED_DIWAN_SIGNAL = "سجل ديوان موثّق";
+const IMPORTED_DIWAN_SIGNAL = "سجل ديوان مستورد ومُصنّف";
 const CURATED_CURRICULUM_SIGNAL = "سجل منهج ومقرر منقّى";
 const CURATED_ACADEMY_SIGNAL = "سجل مجمع لغوي موثّق";
 const CURATED_LITERARY_CLUB_SIGNAL = "سجل نادي أدبي موثّق";
@@ -719,8 +720,8 @@ const OSOOL_LINGUISTIC_MATERIALS = osoolLinguisticCatalog.materials.filter(
 );
 
 export const MATERIALS: Material[] = [...MATERIALS_BEFORE_OSOOL, ...OSOOL_LINGUISTIC_MATERIALS];
-/** عدد الدواوين الحيّ: يُعاد احتسابه من كتالوج الدواوين كلما أُعيد بناء البيانات. */
-export const DIWAN_COUNT = DYNAMIC_DIWANS.length;
+/** عدد الدواوين الحيّ: يُحتسب من جميع الدواوين التي اجتازت تحقق المصدر، بما فيها الدفعات المستوردة المدققة. */
+export const DIWAN_COUNT = MATERIALS.filter(isStandalonePoetryDiwan).length;
 /** عدد المناهج والمقررات الحيّ: مصدره السجلات المنقاة القابلة للبحث والعرض. */
 export const CURRICULA_COUNT = DYNAMIC_CURRICULA.length;
 /** عدد مواد المجامع الحيّ: يُعاد احتسابه من السجلات الموحّدة القابلة للبحث والتصفية. */
@@ -762,15 +763,16 @@ export function normalizeArabic(value: string): string {
 
 /**
  * لا يمرّ الديوان إلى المربع الديناميكي إلا بوسم تحقّق صريح أضيف بعد فحص
- * بيانات المصدر ودمج المكرر؛ وبذلك تقبل عناوين مثل «زهور الربيع» متى أثبت
- * السجل أنها ديوان، وتستبعد الدراسات التي تذكر الديوان عرضاً.
+ * بيانات المصدر ودمج المكرر؛ وبذلك تقبل الدواوين الموثقة والمستوردة المدققة
+ * فقط، وتستبعد الدراسات التي تذكر الديوان عرضاً.
  */
 export function isStandalonePoetryDiwan(
   material: Pick<Material, "primaryCategory" | "matchEvidence">,
 ): boolean {
   return (
     material.primaryCategory === "diwans" &&
-    material.matchEvidence.strongSignals.includes(CURATED_DIWAN_SIGNAL)
+    (material.matchEvidence.strongSignals.includes(CURATED_DIWAN_SIGNAL) ||
+      material.matchEvidence.strongSignals.includes(IMPORTED_DIWAN_SIGNAL))
   );
 }
 
