@@ -682,7 +682,7 @@ export default function Home() {
           }
 
           .hero.hero--blue .hero-title--art {
-            width: min(100%, 540px);
+            width: min(100%, clamp(300px, 50vw, 640px));
             margin: 0 auto;
           }
 
