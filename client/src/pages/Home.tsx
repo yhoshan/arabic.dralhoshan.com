@@ -901,7 +901,7 @@ export default function Home() {
         <div className="hero__content reference-shell">
           <h1 className="hero-title hero-title--art">
             <img
-              src="/manus-storage/maknaz-arabic-language-title_26f7e698.png"
+              src="/manus-storage/maknaz-arabic-language-title-transparent_8ef46a33.png"
               alt="مكنز اللغة العربية وعلومها"
             />
           </h1>
