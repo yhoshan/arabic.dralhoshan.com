@@ -1,0 +1,289 @@
+{
+  "materials": [
+    {
+      "id": "rhetoric-user-muttawwal-taftazani-272770",
+      "title": "المطوّل: شرح تلخيص المفتاح للخطيب القزويني",
+      "author": "سعد الدين مسعود بن عمر التفتازاني",
+      "source": "رابط تلغرام مضاف من المستخدم",
+      "relativePath": "https://t.me/c/1269314107/272770",
+      "sourceUrl": "https://t.me/c/1269314107/272770",
+      "primaryCategory": "references",
+      "tags": [
+        "بلاغة"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "المطوّل — شرح تلخيص المفتاح",
+          "مادة بلاغية مضافة من المستخدم"
+        ],
+        "supportingSignals": [
+          "تحقيق عبدالعزيز بن محمد السالم",
+          "علم المعاني",
+          "علما البيان والبديع"
+        ],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "rhetoric-user-taftazani-muttawwal-study-272777",
+      "title": "سعد الدين التفتازاني وكتابه «المطوّل»",
+      "author": "أ. د. أحمد بن صالح السديس",
+      "source": "رابط تلغرام مضاف من المستخدم",
+      "relativePath": "https://t.me/c/1269314107/272777",
+      "sourceUrl": "https://t.me/c/1269314107/272777",
+      "primaryCategory": "references",
+      "tags": [
+        "بلاغة",
+        "دراسات لغوية"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "دراسة في البلاغة",
+          "المطوّل للتفتازاني"
+        ],
+        "supportingSignals": [
+          "أ. د. أحمد بن صالح السديس"
+        ],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "rhetoric-user-abu-musa-bibliography-228520",
+      "title": "تعريف موفٍ بمؤلفات الدكتور محمد أبو موسى",
+      "author": "أ. د. أحمد بن صالح السديس",
+      "source": "رابط تلغرام مضاف من المستخدم",
+      "relativePath": "https://t.me/c/1269314107/228520",
+      "sourceUrl": "https://t.me/c/1269314107/228520",
+      "primaryCategory": "references",
+      "tags": [
+        "بلاغة",
+        "دراسات لغوية"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "دراسة مرتبطة بمؤلفات عالم في البلاغة",
+          "محمد أبو موسى"
+        ],
+        "supportingSignals": [
+          "أ. د. أحمد بن صالح السديس"
+        ],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "rhetoric-sudais-nafy-quran-54",
+      "title": "النفي في القرآن الكريم: دراسة بلاغية",
+      "author": "أ. د. أحمد بن صالح السديس",
+      "source": "قناة أ. د. أحمد بن صالح السديس",
+      "relativePath": "https://t.me/ProfAhmedSalehAlsudais/54",
+      "sourceUrl": "https://t.me/ProfAhmedSalehAlsudais/54",
+      "primaryCategory": "academic_theses",
+      "tags": [
+        "بلاغة",
+        "دراسات لغوية",
+        "رسالة ماجستير"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "دراسة بلاغية",
+          "رسالة ماجستير"
+        ],
+        "supportingSignals": [
+          "النفي في القرآن الكريم",
+          "منشور في قناة المؤلف"
+        ],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "rhetoric-sudais-thinking-ibn-al-athir-97",
+      "title": "منهج التفكير البلاغي عند ابن الأثير",
+      "author": "أ. د. أحمد بن صالح السديس",
+      "source": "قناة أ. د. أحمد بن صالح السديس",
+      "relativePath": "https://t.me/ProfAhmedSalehAlsudais/97",
+      "sourceUrl": "https://t.me/ProfAhmedSalehAlsudais/97",
+      "primaryCategory": "references",
+      "tags": [
+        "بلاغة",
+        "دراسات لغوية"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "بحث بلاغي",
+          "ابن الأثير"
+        ],
+        "supportingSignals": [
+          "1421/10/20",
+          "منشور في قناة المؤلف"
+        ],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "rhetoric-sudais-rhetorical-imagery-222",
+      "title": "التصوير البياني في حديث «الموعظة البليغة»",
+      "author": "أ. د. أحمد بن صالح السديس",
+      "source": "قناة أ. د. أحمد بن صالح السديس",
+      "relativePath": "https://t.me/ProfAhmedSalehAlsudais/222",
+      "sourceUrl": "https://t.me/ProfAhmedSalehAlsudais/222",
+      "primaryCategory": "references",
+      "tags": [
+        "بلاغة",
+        "دراسات لغوية"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "بحث في البيان",
+          "التصوير البياني"
+        ],
+        "supportingSignals": [
+          "حديث الموعظة البليغة",
+          "1426/12/2"
+        ],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "rhetoric-sudais-rhetorical-topics-229",
+      "title": "مباحث بلاغيّة",
+      "author": "أ. د. أحمد بن صالح السديس",
+      "source": "قناة أ. د. أحمد بن صالح السديس",
+      "relativePath": "https://t.me/ProfAhmedSalehAlsudais/229",
+      "sourceUrl": "https://t.me/ProfAhmedSalehAlsudais/229",
+      "primaryCategory": "references",
+      "tags": [
+        "بلاغة",
+        "دراسات لغوية"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "بحث بلاغي"
+        ],
+        "supportingSignals": [
+          "1427/9/26",
+          "منشور في قناة المؤلف"
+        ],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "rhetoric-sudais-tuhfat-al-ikhwan-239",
+      "title": "شرح تحفة الإخوان في علم البيان للدردير أحمد العدوي — تحقيق",
+      "author": "أحمد العدوي (الدردير)",
+      "source": "قناة أ. د. أحمد بن صالح السديس",
+      "relativePath": "https://t.me/ProfAhmedSalehAlsudais/239",
+      "sourceUrl": "https://t.me/ProfAhmedSalehAlsudais/239",
+      "primaryCategory": "references",
+      "tags": [
+        "بلاغة"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "تحقيق في علم البيان",
+          "شرح تحفة الإخوان"
+        ],
+        "supportingSignals": [
+          "تحقيق أ. د. أحمد بن صالح السديس",
+          "1429/6/1"
+        ],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "rhetoric-sudais-words-meanings-292",
+      "title": "تآلف الألفاظ والمعاني وخصائصهما في البيان النبوي",
+      "author": "أ. د. أحمد بن صالح السديس",
+      "source": "قناة أ. د. أحمد بن صالح السديس",
+      "relativePath": "https://t.me/ProfAhmedSalehAlsudais/292",
+      "sourceUrl": "https://t.me/ProfAhmedSalehAlsudais/292",
+      "primaryCategory": "references",
+      "tags": [
+        "بلاغة",
+        "دراسات لغوية"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "بحث في البيان النبوي",
+          "الألفاظ والمعاني"
+        ],
+        "supportingSignals": [
+          "1433/12/1",
+          "منشور في قناة المؤلف"
+        ],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "rhetoric-sudais-amthal-al-nadhir-370",
+      "title": "بلاغة أحاديث أمثال النذير في البيان النبويّ",
+      "author": "أ. د. أحمد بن صالح السديس",
+      "source": "قناة أ. د. أحمد بن صالح السديس",
+      "relativePath": "https://t.me/ProfAhmedSalehAlsudais/370",
+      "sourceUrl": "https://t.me/ProfAhmedSalehAlsudais/370",
+      "primaryCategory": "references",
+      "tags": [
+        "بلاغة",
+        "دراسات لغوية"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "بحث في البلاغة النبوية",
+          "البيان النبوي"
+        ],
+        "supportingSignals": [
+          "أمثال النذير",
+          "21 صفر 1437"
+        ],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "rhetoric-sudais-description-punishment-390",
+      "title": "بلاغة وصف العذاب في الكتاب العزيز",
+      "author": "أ. د. أحمد بن صالح السديس",
+      "source": "قناة أ. د. أحمد بن صالح السديس",
+      "relativePath": "https://t.me/ProfAhmedSalehAlsudais/390",
+      "sourceUrl": "https://t.me/ProfAhmedSalehAlsudais/390",
+      "primaryCategory": "references",
+      "tags": [
+        "بلاغة",
+        "دراسات لغوية"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "بحث بلاغي قرآني",
+          "الكتاب العزيز"
+        ],
+        "supportingSignals": [
+          "وصف العذاب",
+          "8 ربيع الثاني 1437"
+        ],
+        "explicitLanguageSource": true
+      }
+    },
+    {
+      "id": "grammar-al-tarjih-bil-quran-fi-irab-al-quran-23899",
+      "title": "الترجيح بالقرآن في إعراب القرآن",
+      "author": "خالد بن إبراهيم النملة",
+      "source": "قناة باحث",
+      "relativePath": "https://t.me/bahith_word/23899",
+      "sourceUrl": "https://t.me/bahith_word/23899",
+      "primaryCategory": "references",
+      "tags": [
+        "نحو",
+        "دراسات لغوية"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "إعراب القرآن",
+          "كتاب في النحو"
+        ],
+        "supportingSignals": [
+          "الترجيح بالقرآن",
+          "خالد بن إبراهيم النملة"
+        ],
+        "explicitLanguageSource": true
+      }
+    }
+  ]
+}

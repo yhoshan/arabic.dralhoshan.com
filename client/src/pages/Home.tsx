@@ -1,6 +1,6 @@
 /*
  * فلسفة التصميم: مكنز عربي بتركواز مائي عميق، وعلامات نقطية مستلهمة من التشكيل والفهرسة.
- * بطاقات الغلاف بوابات أقسام بعدّادات حية محسوبة من الكتالوج نفسه، لتبقى كل قيمة قابلة للتدقيق عند كل إعادة بناء.
+ * بطاقات الغلاف تحفظ العدادات المعلنة الحالية، بينما تظل السجلات المضافة متاحة للبحث والتصنيف من دون تعديل تلك الأرقام.
  * شريط فلاتر المناهج يستعير الهوية المرجعية نفسها ويظهر داخل نتائج «المناهج والمقررات» وحدها.
  * تبدأ واجهة المواد بعناوين تحوي «معلقة»؛ وتبقى مقدمتها خالية من الشارة والعبارة الزخرفيتين.
  * الهيدر السفلي يقتصر على المشاركة والتنبيهات والتوقيع؛ ويعرض مصادر المكنز الثابتة والقنوات الموثقة ضمن القائمة الحالية.
@@ -30,6 +30,7 @@ import {
   VERIFIED_SOURCE_LINKS,
   CORPUS_METADATA,
   CURRICULUM_FILTER_DEFAULTS,
+  DISPLAY_STAT_MATERIALS,
   DIWAN_COUNT,
   DIWAN_SOURCE_LINKS,
   LITERARY_CLUB_FILTER_DEFAULTS,
@@ -97,16 +98,18 @@ function matchesStatFilter(material: (typeof MATERIALS)[number], filter: StatFil
 }
 
 const STAT_CARDS: StatCard[] = [
-  { id: "all", label: STAT_FILTER_LABELS.all, count: MATERIALS.length },
+  { id: "all", label: STAT_FILTER_LABELS.all, count: DISPLAY_STAT_MATERIALS.length },
   {
     id: "linguistics",
     label: STAT_FILTER_LABELS.linguistics,
-    count: MATERIALS.filter((material) => matchesStatFilter(material, "linguistics")).length,
+    count: DISPLAY_STAT_MATERIALS.filter((material) => matchesStatFilter(material, "linguistics")).length,
   },
   {
     id: "lexicon-literature-rhetoric",
     label: STAT_FILTER_LABELS["lexicon-literature-rhetoric"],
-    count: MATERIALS.filter((material) => matchesStatFilter(material, "lexicon-literature-rhetoric")).length,
+    count: DISPLAY_STAT_MATERIALS.filter((material) =>
+      matchesStatFilter(material, "lexicon-literature-rhetoric"),
+    ).length,
   },
   { id: "diwans", label: STAT_FILTER_LABELS.diwans, count: DIWAN_COUNT },
 ];

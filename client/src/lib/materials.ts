@@ -12,6 +12,7 @@ import literaryClubsJson from "@/data/literary-clubs-materials.json";
 import qiraatLinguisticJson from "@/data/qiraat-linguistic-materials.json";
 import gapResourcesJson from "@/data/gap-resources-materials.json";
 import osoolLinguisticJson from "@/data/osool-linguistic-materials.json";
+import userCuratedJson from "@/data/user-curated-materials.json";
 
 export type MaterialCategory =
   | "all"
@@ -240,6 +241,7 @@ const qiraatLinguisticCatalog =
   qiraatLinguisticJson as unknown as CuratedMaterialCatalogPayload;
 const gapResourcesCatalog = gapResourcesJson as unknown as CuratedMaterialCatalogPayload;
 const osoolLinguisticCatalog = osoolLinguisticJson as unknown as CuratedMaterialCatalogPayload;
+const userCuratedCatalog = userCuratedJson as unknown as CuratedMaterialCatalogPayload;
 const CURATED_DIWAN_SIGNAL = "سجل ديوان موثّق";
 const IMPORTED_DIWAN_SIGNAL = "سجل ديوان مستورد ومُصنّف";
 const CURATED_CURRICULUM_SIGNAL = "سجل منهج ومقرر منقّى";
@@ -722,13 +724,32 @@ const OSOOL_LINGUISTIC_MATERIALS = osoolLinguisticCatalog.materials.filter(
     (!material.sourceUrl || !MATERIAL_URLS_BEFORE_OSOOL.has(material.sourceUrl)),
 );
 
-export const MATERIALS: Material[] = [...MATERIALS_BEFORE_OSOOL, ...OSOOL_LINGUISTIC_MATERIALS];
+/**
+ * مجموعة المكنز قبل الدفعة اليدوية الحالية؛ تُستعمل مرجعًا ثابتًا لبطاقات العدادات
+ * حتى لا يتبدل أي رقم ظاهر عند إضافة سجل جديد قابل للبحث.
+ */
+export const DISPLAY_STAT_MATERIALS: Material[] = [
+  ...MATERIALS_BEFORE_OSOOL,
+  ...OSOOL_LINGUISTIC_MATERIALS,
+];
+const DISPLAY_STAT_MATERIAL_IDS = new Set(DISPLAY_STAT_MATERIALS.map((material) => material.id));
+const DISPLAY_STAT_MATERIAL_URLS = new Set(
+  DISPLAY_STAT_MATERIALS.map((material) => material.sourceUrl).filter(Boolean),
+);
+/** سجلات المستخدم تضاف للبحث والتصنيف فقط، بعد منع تكرار المعرّف أو الرابط. */
+const USER_CURATED_MATERIALS = userCuratedCatalog.materials.filter(
+  (material) =>
+    !DISPLAY_STAT_MATERIAL_IDS.has(material.id) &&
+    (!material.sourceUrl || !DISPLAY_STAT_MATERIAL_URLS.has(material.sourceUrl)),
+);
+
+export const MATERIALS: Material[] = [...DISPLAY_STAT_MATERIALS, ...USER_CURATED_MATERIALS];
 /** العداد العام التاريخي للدواوين والمنظومات؛ يُبقي بطاقات الإحصاء الحالية دون تعديل. */
-export const DIWAN_COUNT = MATERIALS.filter(isStandalonePoetryDiwan).length;
+export const DIWAN_COUNT = DISPLAY_STAT_MATERIALS.filter(isStandalonePoetryDiwan).length;
 /** عداد الدواوين الشعرية بعد استبعاد سجلات مصدر المنظومات العلمية فقط. */
-export const POETRY_DIWAN_COUNT = MATERIALS.filter(isPoetryDiwan).length;
+export const POETRY_DIWAN_COUNT = DISPLAY_STAT_MATERIALS.filter(isPoetryDiwan).length;
 /** عداد المنظومات العلمية المستمد من مصدرها الموثق دون تعديل أي سجل خام. */
-export const SCIENTIFIC_POEMS_COUNT = MATERIALS.filter(isScientificPoem).length;
+export const SCIENTIFIC_POEMS_COUNT = DISPLAY_STAT_MATERIALS.filter(isScientificPoem).length;
 /** عدد المناهج والمقررات الحيّ: مصدره السجلات المنقاة القابلة للبحث والعرض. */
 export const CURRICULA_COUNT = DYNAMIC_CURRICULA.length;
 /** عدد مواد المجامع الحيّ: يُعاد احتسابه من السجلات الموحّدة القابلة للبحث والتصفية. */
