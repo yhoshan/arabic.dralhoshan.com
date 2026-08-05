@@ -13,6 +13,7 @@ import qiraatLinguisticJson from "@/data/qiraat-linguistic-materials.json";
 import gapResourcesJson from "@/data/gap-resources-materials.json";
 import osoolLinguisticJson from "@/data/osool-linguistic-materials.json";
 import userCuratedJson from "@/data/user-curated-materials.json";
+import curatedHeritageJson from "@/data/curated-heritage-materials.json";
 
 export type MaterialCategory =
   | "all"
@@ -242,6 +243,7 @@ const qiraatLinguisticCatalog =
 const gapResourcesCatalog = gapResourcesJson as unknown as CuratedMaterialCatalogPayload;
 const osoolLinguisticCatalog = osoolLinguisticJson as unknown as CuratedMaterialCatalogPayload;
 const userCuratedCatalog = userCuratedJson as unknown as CuratedMaterialCatalogPayload;
+const curatedHeritageCatalog = curatedHeritageJson as unknown as CuratedMaterialCatalogPayload;
 const CURATED_DIWAN_SIGNAL = "سجل ديوان موثّق";
 const IMPORTED_DIWAN_SIGNAL = "سجل ديوان مستورد ومُصنّف";
 const CURATED_CURRICULUM_SIGNAL = "سجل منهج ومقرر منقّى";
@@ -742,8 +744,28 @@ const USER_CURATED_MATERIALS = userCuratedCatalog.materials.filter(
     !DISPLAY_STAT_MATERIAL_IDS.has(material.id) &&
     (!material.sourceUrl || !DISPLAY_STAT_MATERIAL_URLS.has(material.sourceUrl)),
 );
+const MATERIALS_BEFORE_CURATED_HERITAGE = [...DISPLAY_STAT_MATERIALS, ...USER_CURATED_MATERIALS];
+const MATERIAL_IDS_BEFORE_CURATED_HERITAGE = new Set(
+  MATERIALS_BEFORE_CURATED_HERITAGE.map((material) => material.id),
+);
+const MATERIAL_URLS_BEFORE_CURATED_HERITAGE = new Set(
+  MATERIALS_BEFORE_CURATED_HERITAGE.map((material) => material.sourceUrl).filter(Boolean),
+);
+const MATERIAL_TITLES_BEFORE_CURATED_HERITAGE = new Set(
+  MATERIALS_BEFORE_CURATED_HERITAGE.map((material) => normalizeCatalogTitle(material.title)).filter(Boolean),
+);
+/** دفعة التراث المعتمدة: لا تمر إلا إذا لم تطابق معرّفًا أو رابطًا أو عنوانًا منطقيًا حاضرًا. */
+const CURATED_HERITAGE_MATERIALS = curatedHeritageCatalog.materials.filter(
+  (material) =>
+    !MATERIAL_IDS_BEFORE_CURATED_HERITAGE.has(material.id) &&
+    (!material.sourceUrl || !MATERIAL_URLS_BEFORE_CURATED_HERITAGE.has(material.sourceUrl)) &&
+    !MATERIAL_TITLES_BEFORE_CURATED_HERITAGE.has(normalizeCatalogTitle(material.title)),
+);
 
-export const MATERIALS: Material[] = [...DISPLAY_STAT_MATERIALS, ...USER_CURATED_MATERIALS];
+export const MATERIALS: Material[] = [
+  ...MATERIALS_BEFORE_CURATED_HERITAGE,
+  ...CURATED_HERITAGE_MATERIALS,
+];
 /** العداد العام التاريخي للدواوين والمنظومات؛ يُبقي بطاقات الإحصاء الحالية دون تعديل. */
 export const DIWAN_COUNT = DISPLAY_STAT_MATERIALS.filter(isStandalonePoetryDiwan).length;
 /** عداد الدواوين الشعرية بعد استبعاد سجلات مصدر المنظومات العلمية فقط. */
