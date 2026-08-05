@@ -789,12 +789,14 @@ export const MATERIALS: Material[] = [
   ...MATERIALS_BEFORE_MILLION_BOOKS,
   ...MILLION_BOOKS_MATERIALS,
 ];
-/** العداد العام التاريخي للدواوين والمنظومات؛ يُبقي بطاقات الإحصاء الحالية دون تعديل. */
-export const DIWAN_COUNT = DISPLAY_STAT_MATERIALS.filter(isStandalonePoetryDiwan).length;
-/** عداد الدواوين الشعرية بعد استبعاد سجلات مصدر المنظومات العلمية فقط. */
-export const POETRY_DIWAN_COUNT = DISPLAY_STAT_MATERIALS.filter(isPoetryDiwan).length;
-/** عداد المنظومات العلمية المستمد من مصدرها الموثق دون تعديل أي سجل خام. */
-export const SCIENTIFIC_POEMS_COUNT = DISPLAY_STAT_MATERIALS.filter(isScientificPoem).length;
+/** العدادات الحية للدواوين والمنظومات من كامل الكتالوج القابل للبحث. */
+export const DIWAN_COUNT = MATERIALS.filter(
+  (material) => isStandalonePoetryDiwan(material) || isScientificPoem(material),
+).length;
+/** عداد الدواوين الشعرية الحي بعد استبعاد المنظومات العلمية. */
+export const POETRY_DIWAN_COUNT = MATERIALS.filter(isPoetryDiwan).length;
+/** عداد المنظومات العلمية الحي من كامل الكتالوج. */
+export const SCIENTIFIC_POEMS_COUNT = MATERIALS.filter(isScientificPoem).length;
 /** عدد المناهج والمقررات الحيّ: مصدره السجلات المنقاة القابلة للبحث والعرض. */
 export const CURRICULA_COUNT = DYNAMIC_CURRICULA.length;
 /** عدد مواد المجامع الحيّ: يُعاد احتسابه من السجلات الموحّدة القابلة للبحث والتصفية. */

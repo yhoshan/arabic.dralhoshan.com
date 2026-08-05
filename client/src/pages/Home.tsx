@@ -1,6 +1,6 @@
 /*
  * فلسفة التصميم: مكنز عربي بتركواز مائي عميق، وعلامات نقطية مستلهمة من التشكيل والفهرسة.
- * بطاقات الغلاف تحفظ العدادات المعلنة الحالية، بينما تظل السجلات المضافة متاحة للبحث والتصنيف من دون تعديل تلك الأرقام.
+ * بطاقات الغلاف تستمد عداداتها من الكتالوج الحي لتطابق الأقسام ونتائج البحث بعد كل إضافة.
  * شريط فلاتر المناهج يستعير الهوية المرجعية نفسها ويظهر داخل نتائج «المناهج والمقررات» وحدها.
  * تبدأ واجهة المواد بعناوين تحوي «معلقة»؛ وتبقى مقدمتها خالية من الشارة والعبارة الزخرفيتين.
  * الهيدر السفلي يقتصر على المشاركة والتنبيهات والتوقيع؛ ويعرض مصادر المكنز الثابتة والقنوات الموثقة ضمن القائمة الحالية.
@@ -30,8 +30,6 @@ import {
   VERIFIED_SOURCE_LINKS,
   CORPUS_METADATA,
   CURRICULUM_FILTER_DEFAULTS,
-  DISPLAY_STAT_MATERIALS,
-  DIWAN_COUNT,
   DIWAN_SOURCE_LINKS,
   LITERARY_CLUB_FILTER_DEFAULTS,
   displayCount,
@@ -43,6 +41,7 @@ import {
   getCurriculumFilterOptions,
   getLiteraryClubFilterOptions,
   getMaterialCategoryLabel,
+  isScientificPoem,
   isStandalonePoetryDiwan,
   normalizeArabic,
   MATERIAL_CATEGORY_LABELS,
@@ -94,24 +93,28 @@ function matchesStatFilter(material: (typeof MATERIALS)[number], filter: StatFil
   if (filter === "lexicon-literature-rhetoric") {
     return hasAnyTag(material, ["معجم لغوي", "شعر وأدب", "بلاغة"]);
   }
-  return isStandalonePoetryDiwan(material);
+  return isStandalonePoetryDiwan(material) || isScientificPoem(material);
 }
 
 const STAT_CARDS: StatCard[] = [
-  { id: "all", label: STAT_FILTER_LABELS.all, count: DISPLAY_STAT_MATERIALS.length },
+  { id: "all", label: STAT_FILTER_LABELS.all, count: MATERIALS.length },
   {
     id: "linguistics",
     label: STAT_FILTER_LABELS.linguistics,
-    count: DISPLAY_STAT_MATERIALS.filter((material) => matchesStatFilter(material, "linguistics")).length,
+    count: MATERIALS.filter((material) => matchesStatFilter(material, "linguistics")).length,
   },
   {
     id: "lexicon-literature-rhetoric",
     label: STAT_FILTER_LABELS["lexicon-literature-rhetoric"],
-    count: DISPLAY_STAT_MATERIALS.filter((material) =>
+    count: MATERIALS.filter((material) =>
       matchesStatFilter(material, "lexicon-literature-rhetoric"),
     ).length,
   },
-  { id: "diwans", label: STAT_FILTER_LABELS.diwans, count: DIWAN_COUNT },
+  {
+    id: "diwans",
+    label: STAT_FILTER_LABELS.diwans,
+    count: MATERIALS.filter((material) => matchesStatFilter(material, "diwans")).length,
+  },
 ];
 
 const CURRICULUM_FILTER_LABELS: Record<
