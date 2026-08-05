@@ -23,10 +23,20 @@
       "relativePath": "https://ia601904.us.archive.org/23/items/lib04165/lib04165.pdf",
       "sourceUrl": "https://ia601904.us.archive.org/23/items/lib04165/lib04165.pdf",
       "primaryCategory": "references",
-      "tags": ["دراسات لغوية"],
+      "tags": [
+        "دراسات لغوية"
+      ],
       "matchEvidence": {
-        "strongSignals": ["سجل فجوة موثق", "اللسانيات الحاسوبية"],
-        "supportingSignals": ["المعالجة الآلية", "الصرف", "الإعراب", "الفعل العربي"],
+        "strongSignals": [
+          "سجل فجوة موثق",
+          "اللسانيات الحاسوبية"
+        ],
+        "supportingSignals": [
+          "المعالجة الآلية",
+          "الصرف",
+          "الإعراب",
+          "الفعل العربي"
+        ],
         "explicitLanguageSource": true
       }
     },
@@ -38,10 +48,18 @@
       "relativePath": "https://arabacademy-sy.org/uploads/lectures2018/albawab2015.pdf",
       "sourceUrl": "https://arabacademy-sy.org/uploads/lectures2018/albawab2015.pdf",
       "primaryCategory": "references",
-      "tags": ["دراسات لغوية"],
+      "tags": [
+        "دراسات لغوية"
+      ],
       "matchEvidence": {
-        "strongSignals": ["سجل فجوة موثق", "الترجمة الآلية"],
-        "supportingSignals": ["التعريب التقني", "اللغة العربية"],
+        "strongSignals": [
+          "سجل فجوة موثق",
+          "الترجمة الآلية"
+        ],
+        "supportingSignals": [
+          "التعريب التقني",
+          "اللغة العربية"
+        ],
         "explicitLanguageSource": true
       }
     },
@@ -53,10 +71,20 @@
       "relativePath": "https://archive.org/details/4_20240427_20240427_1422",
       "sourceUrl": "https://archive.org/details/4_20240427_20240427_1422",
       "primaryCategory": "dictionaries",
-      "tags": ["معجم لغوي", "دراسات لغوية"],
+      "tags": [
+        "معجم لغوي",
+        "دراسات لغوية"
+      ],
       "matchEvidence": {
-        "strongSignals": ["سجل فجوة موثق", "معجم مصطلحات"],
-        "supportingSignals": ["الحاسبات", "المعاجم الحاسوبية", "مجمع اللغة العربية"],
+        "strongSignals": [
+          "سجل فجوة موثق",
+          "معجم مصطلحات"
+        ],
+        "supportingSignals": [
+          "الحاسبات",
+          "المعاجم الحاسوبية",
+          "مجمع اللغة العربية"
+        ],
         "explicitLanguageSource": true
       }
     },
@@ -68,10 +96,18 @@
       "relativePath": "https://archive.org/details/amoalgah-alasabiah",
       "sourceUrl": "https://archive.org/details/amoalgah-alasabiah",
       "primaryCategory": "references",
-      "tags": ["دراسات لغوية"],
+      "tags": [
+        "دراسات لغوية"
+      ],
       "matchEvidence": {
-        "strongSignals": ["سجل فجوة موثق", "اللسانيات العصبية"],
-        "supportingSignals": ["المعالجة العصبية", "اللغة"],
+        "strongSignals": [
+          "سجل فجوة موثق",
+          "اللسانيات العصبية"
+        ],
+        "supportingSignals": [
+          "المعالجة العصبية",
+          "اللغة"
+        ],
         "explicitLanguageSource": true
       }
     },
@@ -83,10 +119,19 @@
       "relativePath": "https://archive.org/download/hmmt06/ep173.pdf",
       "sourceUrl": "https://archive.org/download/hmmt06/ep173.pdf",
       "primaryCategory": "references",
-      "tags": ["دراسات لغوية"],
+      "tags": [
+        "دراسات لغوية"
+      ],
       "matchEvidence": {
-        "strongSignals": ["سجل فجوة موثق", "اللسانيات العرفانية"],
-        "supportingSignals": ["الذهن", "اللغة", "الواقع"],
+        "strongSignals": [
+          "سجل فجوة موثق",
+          "اللسانيات العرفانية"
+        ],
+        "supportingSignals": [
+          "الذهن",
+          "اللغة",
+          "الواقع"
+        ],
         "explicitLanguageSource": true
       }
     },
@@ -98,10 +143,18 @@
       "relativePath": "https://archive.org/details/20231120_20231120_1543",
       "sourceUrl": "https://archive.org/details/20231120_20231120_1543",
       "primaryCategory": "references",
-      "tags": ["دراسات لغوية"],
+      "tags": [
+        "دراسات لغوية"
+      ],
       "matchEvidence": {
-        "strongSignals": ["سجل فجوة موثق", "السياسة اللغوية"],
-        "supportingSignals": ["التخطيط اللغوي", "جمهورية مالي"],
+        "strongSignals": [
+          "سجل فجوة موثق",
+          "السياسة اللغوية"
+        ],
+        "supportingSignals": [
+          "التخطيط اللغوي",
+          "جمهورية مالي"
+        ],
         "explicitLanguageSource": true
       }
     },
@@ -113,10 +166,19 @@
       "relativePath": "https://aleph.edinum.org/8814",
       "sourceUrl": "https://aleph.edinum.org/8814",
       "primaryCategory": "references",
-      "tags": ["دراسات لغوية"],
+      "tags": [
+        "دراسات لغوية"
+      ],
       "matchEvidence": {
-        "strongSignals": ["سجل فجوة موثق", "تحليل المحادثة"],
-        "supportingSignals": ["البنية", "أدوار الكلام", "لسانيات التفاعل"],
+        "strongSignals": [
+          "سجل فجوة موثق",
+          "تحليل المحادثة"
+        ],
+        "supportingSignals": [
+          "البنية",
+          "أدوار الكلام",
+          "لسانيات التفاعل"
+        ],
         "explicitLanguageSource": true
       }
     },
@@ -128,10 +190,20 @@
       "relativePath": "https://www.za.gov.ae/ar-AE/Sign-Language-Dictionary",
       "sourceUrl": "https://www.za.gov.ae/ar-AE/Sign-Language-Dictionary",
       "primaryCategory": "dictionaries",
-      "tags": ["معجم لغوي", "دراسات لغوية"],
+      "tags": [
+        "معجم لغوي",
+        "دراسات لغوية"
+      ],
       "matchEvidence": {
-        "strongSignals": ["سجل فجوة موثق", "لغة الإشارة"],
-        "supportingSignals": ["قاموس", "لسانيات الصم", "الإمارات"],
+        "strongSignals": [
+          "سجل فجوة موثق",
+          "لغة الإشارة"
+        ],
+        "supportingSignals": [
+          "قاموس",
+          "لسانيات الصم",
+          "الإمارات"
+        ],
         "explicitLanguageSource": true
       }
     },
@@ -143,10 +215,18 @@
       "relativePath": "https://archive.org/details/ilm_al-logha_al-nafsi",
       "sourceUrl": "https://archive.org/details/ilm_al-logha_al-nafsi",
       "primaryCategory": "references",
-      "tags": ["دراسات لغوية"],
+      "tags": [
+        "دراسات لغوية"
+      ],
       "matchEvidence": {
-        "strongSignals": ["سجل فجوة موثق", "علم اللغة النفسي"],
-        "supportingSignals": ["الإدراك", "اكتساب اللغة"],
+        "strongSignals": [
+          "سجل فجوة موثق",
+          "علم اللغة النفسي"
+        ],
+        "supportingSignals": [
+          "الإدراك",
+          "اكتساب اللغة"
+        ],
         "explicitLanguageSource": true
       }
     },
@@ -158,10 +238,19 @@
       "relativePath": "https://shamela.ws/book/2037",
       "sourceUrl": "https://shamela.ws/book/2037",
       "primaryCategory": "references",
-      "tags": ["دراسات لغوية"],
+      "tags": [
+        "دراسات لغوية"
+      ],
       "matchEvidence": {
-        "strongSignals": ["سجل فجوة موثق", "التحرير العربي"],
-        "supportingSignals": ["الكتابة", "إنشاء الرسائل", "الأسلوب"],
+        "strongSignals": [
+          "سجل فجوة موثق",
+          "التحرير العربي"
+        ],
+        "supportingSignals": [
+          "الكتابة",
+          "إنشاء الرسائل",
+          "الأسلوب"
+        ],
         "explicitLanguageSource": true
       }
     }
