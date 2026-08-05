@@ -2,6 +2,7 @@
  * فلسفة التصميم: مكنز عربي بتركواز مائي عميق، وعلامات نقطية مستلهمة من التشكيل والفهرسة.
  * بطاقات الغلاف بوابات أقسام بعدّادات حية محسوبة من الكتالوج نفسه، لتبقى كل قيمة قابلة للتدقيق عند كل إعادة بناء.
  * شريط فلاتر المناهج يستعير الهوية المرجعية نفسها ويظهر داخل نتائج «المناهج والمقررات» وحدها.
+ * تبدأ واجهة المواد بعناوين تحوي «معلقة»؛ وتبقى مقدمتها خالية من الشارة والعبارة الزخرفيتين.
  * الهيدر السفلي يقتصر على المشاركة والتنبيهات والتوقيع؛ ويعرض مصادر المكنز الثابتة والقنوات الموثقة ضمن القائمة الحالية.
  */
 import { useEffect, useMemo, useState } from "react";
@@ -42,6 +43,7 @@ import {
   getLiteraryClubFilterOptions,
   getMaterialCategoryLabel,
   isStandalonePoetryDiwan,
+  normalizeArabic,
   MATERIAL_CATEGORY_LABELS,
   MATERIALS,
   type AcademyFilterKey,
@@ -73,9 +75,10 @@ const STAT_FILTER_LABELS: Record<StatFilter, string> = {
   diwans: "الدواوين والمنظومات",
 };
 
-// تعرض الصفحة الأولى المواد المرتبطة بالقرآن الكريم؛ ولا تغيّر هذه المجموعة أي بيانات في الكتالوج.
-const DEFAULT_QURAN_MATERIALS = MATERIALS.filter((material) =>
-  /قرآن|تجويد|قراءات قرآنية|علوم القرآن|تفسير القرآن|مصحف/.test(material.title),
+// تعرض الصفحة الأولى المواد التي تحوي «معلقة» في العنوان؛ ولا تغيّر هذه المجموعة أي بيانات في الكتالوج.
+const DEFAULT_MUALLAQA_QUERY = normalizeArabic("معلقة");
+const DEFAULT_MUALLAQA_MATERIALS = MATERIALS.filter((material) =>
+  normalizeArabic(material.title).includes(DEFAULT_MUALLAQA_QUERY),
 );
 
 function hasAnyTag(material: (typeof MATERIALS)[number], tags: string[]) {
@@ -358,6 +361,7 @@ export default function Home() {
   const isCurriculaCategory = category === "curricula";
   const isAcademiesCategory = category === "academies";
   const isLiteraryClubsCategory = category === "literary_clubs";
+  const hasMaterialsTitle = Boolean(query.trim()) || category !== "all" || statFilter !== "all";
   const curriculumFilterOptions = useMemo(
     () => getCurriculumFilterOptions(MATERIALS, curriculumFilters),
     [curriculumFilters],
@@ -371,10 +375,10 @@ export default function Home() {
     [literaryClubFilters],
   );
 
-  // تبدأ القائمة بالمواد المرتبطة بالقرآن الكريم في الحالة الافتراضية؛ أما البحث أو اختيار قسم فيمتد إلى كل مواد المكنز.
+  // تبدأ القائمة بعناوين «معلقة» في الحالة الافتراضية؛ أما البحث أو اختيار قسم فيمتد إلى كل مواد المكنز.
   const filteredMaterials = useMemo(() => {
     const hasActiveFilter = Boolean(query.trim()) || category !== "all" || statFilter !== "all";
-    const searchableMaterials = hasActiveFilter ? MATERIALS : DEFAULT_QURAN_MATERIALS;
+    const searchableMaterials = hasActiveFilter ? MATERIALS : DEFAULT_MUALLAQA_MATERIALS;
     const categoryMatches =
       category === "curricula"
         ? filterCurriculumMaterials(MATERIALS, curriculumFilters)
@@ -1012,7 +1016,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="materials-section reference-shell" aria-labelledby="materials-title">
+      <section className="materials-section reference-shell" aria-label="مواد المكنز">
         {isCurriculaCategory && (
           <div className="curriculum-filter-bar" aria-label="فلاتر المناهج والمقررات">
             {CURRICULUM_FILTER_KEYS.map((key) => {
@@ -1089,45 +1093,40 @@ export default function Home() {
           </div>
         )}
         <div className="materials-section__heading">
-          <div className="materials-section__title-group">
-            <span className="section-index-mark" aria-hidden="true">
-              <i />
-              <i />
-              <i />
-            </span>
-            {isCurriculaCategory && !query.trim() ? (
-              <div>
-                <h2 id="materials-title">المناهج والمقررات حول العالم</h2>
-                <p className="materials-section__page-note">
-                  فهرس علمي لمناهج ومقررات اللغة العربية من جامعات ومؤسسات العالم.
-                </p>
-              </div>
-            ) : isAcademiesCategory && !query.trim() ? (
-              <div>
-                <h2 id="materials-title">المجامع اللغوية</h2>
-                <p className="materials-section__page-note">
-                  {displayCount(filteredMaterials.length)} مادة موثقة قابلة للتصفية بحسب المجمع والدولة والنوع والسنة وحالة الرابط.
-                </p>
-              </div>
-            ) : isLiteraryClubsCategory && !query.trim() ? (
-              <div>
-                <h2 id="materials-title">الأندية الأدبية</h2>
-                <p className="materials-section__page-note">
-                  {displayCount(filteredMaterials.length)} مادة موثقة قابلة للتصفية بحسب النادي والدولة والمدينة والنوع والسنة وحالة الرابط.
-                </p>
-              </div>
-            ) : (
-              <h2 id="materials-title">
-                {query.trim()
-                  ? "نتائج البحث في جميع مواد المكنز"
-                  : statFilter !== "all"
-                    ? STAT_FILTER_LABELS[statFilter]
-                    : category === "all"
-                      ? "كتب اللغة التراثية"
+          {hasMaterialsTitle && (
+            <div className="materials-section__title-group">
+              {isCurriculaCategory && !query.trim() ? (
+                <div>
+                  <h2 id="materials-title">المناهج والمقررات حول العالم</h2>
+                  <p className="materials-section__page-note">
+                    فهرس علمي لمناهج ومقررات اللغة العربية من جامعات ومؤسسات العالم.
+                  </p>
+                </div>
+              ) : isAcademiesCategory && !query.trim() ? (
+                <div>
+                  <h2 id="materials-title">المجامع اللغوية</h2>
+                  <p className="materials-section__page-note">
+                    {displayCount(filteredMaterials.length)} مادة موثقة قابلة للتصفية بحسب المجمع والدولة والنوع والسنة وحالة الرابط.
+                  </p>
+                </div>
+              ) : isLiteraryClubsCategory && !query.trim() ? (
+                <div>
+                  <h2 id="materials-title">الأندية الأدبية</h2>
+                  <p className="materials-section__page-note">
+                    {displayCount(filteredMaterials.length)} مادة موثقة قابلة للتصفية بحسب النادي والدولة والمدينة والنوع والسنة وحالة الرابط.
+                  </p>
+                </div>
+              ) : (
+                <h2 id="materials-title">
+                  {query.trim()
+                    ? "نتائج البحث في جميع مواد المكنز"
+                    : statFilter !== "all"
+                      ? STAT_FILTER_LABELS[statFilter]
                       : MATERIAL_CATEGORY_LABELS[category]}
-              </h2>
-            )}
-          </div>
+                </h2>
+              )}
+            </div>
+          )}
           {filteredMaterials.length > 0 && (
             <p className="materials-section__page-note">
               {query.trim()
@@ -1174,7 +1173,7 @@ export default function Home() {
             <h3>لا توجد نتائج</h3>
             <p>جرّب تغيير كلمات البحث أو الفلاتر المحددة</p>
             <button type="button" className="empty-reset" onClick={clearFilters}>
-              العودة إلى كتب اللغة التراثية
+              العودة إلى المواد المعروضة افتراضيًا
             </button>
           </div>
         )}
