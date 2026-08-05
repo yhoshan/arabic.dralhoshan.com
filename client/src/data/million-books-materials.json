@@ -1,0 +1,3702 @@
+{
+  "metadata": {
+    "sourceName": "📔 مليون كتــاب إسـلامي 📚",
+    "sourceId": 1010154913,
+    "selectionMethod": "دفعة تضم 173 سجلًا بعد التحقق العددي؛ جُمعت الأجزاء واستُبعدت الأعمال الموجودة بالمقارنة المنطقية مع الكتالوج الحالي.",
+    "inputRecordCount": 173,
+    "logicalWorkCount": 126,
+    "excludedDuplicateCount": 31,
+    "addedRecordCount": 95,
+    "addedByCategory": {
+      "references": 27,
+      "dictionaries": 27,
+      "diwans": 6,
+      "scientific_poems": 35
+    }
+  },
+  "materials": [
+    {
+      "id": "tg-million-f6ab7f6ceec57820",
+      "title": "أسماء الله الحسنى دراسة فس البنية والدلالة",
+      "author": null,
+      "source": "📔 مليون كتــاب إسـلامي 📚",
+      "relativePath": "https://t.me/c/1010154913/26481",
+      "sourceUrl": "https://t.me/c/1010154913/26481",
+      "primaryCategory": "references",
+      "tags": [
+        "دراسات لغوية"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "دفعة مليون كتاب إسلامي المنقحة",
+          "إدراج جديد بعد مقارنة منطقية مع المكنز الحالي",
+          "التصنيف المعتمد: references"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 26481,
+          "date": "2017-12-11T01:30:09",
+          "file_name": "أسماء الله الحسنى دراسة فس البنية والدلالة.pdf",
+          "file_size": 4348884,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-million-f6ab7f6ceec57820"
+      ],
+      "notes": "دفعة مليون كتاب إسلامي؛ أُبقي التصنيف كما ورد في الملف المرسل."
+    },
+    {
+      "id": "tg-million-337cd2aea297c939",
+      "title": "إعجاز القرآن و البلاغة النبويه",
+      "author": null,
+      "source": "📔 مليون كتــاب إسـلامي 📚",
+      "relativePath": "https://t.me/c/1010154913/17993",
+      "sourceUrl": "https://t.me/c/1010154913/17993",
+      "primaryCategory": "references",
+      "tags": [
+        "دراسات لغوية"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "دفعة مليون كتاب إسلامي المنقحة",
+          "إدراج جديد بعد مقارنة منطقية مع المكنز الحالي",
+          "التصنيف المعتمد: references"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 3",
+          "سجلات الدفعة المجمعة: 2"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 17993,
+          "date": "2017-06-07T20:05:41",
+          "file_name": "إعجاز القرآن و البلاغة النبويه.pdf",
+          "file_size": 6602653,
+          "mime_type": "application/pdf"
+        },
+        {
+          "telegram_message_id": 27931,
+          "date": "2018-01-01T01:15:30",
+          "file_name": "إعجاز القرآن والبلاغة النبوية.pdf",
+          "file_size": 5738106,
+          "mime_type": "application/pdf"
+        },
+        {
+          "telegram_message_id": 28152,
+          "date": "2018-01-01T01:31:49",
+          "file_name": "اعجاز القرآن والبلاغة النبوية.pdf",
+          "file_size": 6602653,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-million-337cd2aea297c939",
+        "tg-million-812902861b73e429"
+      ],
+      "notes": "دفعة مليون كتاب إسلامي؛ أُبقي التصنيف كما ورد في الملف المرسل."
+    },
+    {
+      "id": "tg-million-e0cb4030c579db61",
+      "title": "الاعتناء بتهذيب أدب الإملاء والاستملاء",
+      "author": null,
+      "source": "📔 مليون كتــاب إسـلامي 📚",
+      "relativePath": "https://t.me/c/1010154913/44120",
+      "sourceUrl": "https://t.me/c/1010154913/44120",
+      "primaryCategory": "references",
+      "tags": [
+        "دراسات لغوية"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "دفعة مليون كتاب إسلامي المنقحة",
+          "إدراج جديد بعد مقارنة منطقية مع المكنز الحالي",
+          "التصنيف المعتمد: references"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 44120,
+          "date": "2019-01-17T05:33:45",
+          "file_name": "الاعتناء_بتهذيب_أدب_الإملاء_والاستملاء.pdf",
+          "file_size": 4931901,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-million-e0cb4030c579db61"
+      ],
+      "notes": "دفعة مليون كتاب إسلامي؛ أُبقي التصنيف كما ورد في الملف المرسل."
+    },
+    {
+      "id": "tg-million-fe2d9cf2a0a0575c",
+      "title": "الإملاء-والترقيم",
+      "author": null,
+      "source": "📔 مليون كتــاب إسـلامي 📚",
+      "relativePath": "https://t.me/c/1010154913/11308",
+      "sourceUrl": "https://t.me/c/1010154913/11308",
+      "primaryCategory": "references",
+      "tags": [
+        "دراسات لغوية"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "دفعة مليون كتاب إسلامي المنقحة",
+          "إدراج جديد بعد مقارنة منطقية مع المكنز الحالي",
+          "التصنيف المعتمد: references"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 11308,
+          "date": "2016-12-20T02:48:24",
+          "file_name": "الإملاء-والترقيم.pdf",
+          "file_size": 6273874,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-million-fe2d9cf2a0a0575c"
+      ],
+      "notes": "دفعة مليون كتاب إسلامي؛ أُبقي التصنيف كما ورد في الملف المرسل."
+    },
+    {
+      "id": "tg-million-492544f8f3e179db",
+      "title": "البلاغة القرآنية في تفسير الزمخشري",
+      "author": null,
+      "source": "📔 مليون كتــاب إسـلامي 📚",
+      "relativePath": "https://t.me/c/1010154913/16301",
+      "sourceUrl": "https://t.me/c/1010154913/16301",
+      "primaryCategory": "references",
+      "tags": [
+        "دراسات لغوية"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "دفعة مليون كتاب إسلامي المنقحة",
+          "إدراج جديد بعد مقارنة منطقية مع المكنز الحالي",
+          "التصنيف المعتمد: references"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 16301,
+          "date": "2017-05-04T13:23:53",
+          "file_name": "البلاغة_القرآنية_في_تفسير_الزمخشري.pdf",
+          "file_size": 27417061,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-million-492544f8f3e179db"
+      ],
+      "notes": "دفعة مليون كتاب إسلامي؛ أُبقي التصنيف كما ورد في الملف المرسل."
+    },
+    {
+      "id": "tg-million-4a826d5db006eb0b",
+      "title": "التوجيه الصرفي والنحوي للقراءات",
+      "author": null,
+      "source": "📔 مليون كتــاب إسـلامي 📚",
+      "relativePath": "https://t.me/c/1010154913/49644",
+      "sourceUrl": "https://t.me/c/1010154913/49644",
+      "primaryCategory": "references",
+      "tags": [
+        "دراسات لغوية"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "دفعة مليون كتاب إسلامي المنقحة",
+          "إدراج جديد بعد مقارنة منطقية مع المكنز الحالي",
+          "التصنيف المعتمد: references"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 49644,
+          "date": "2019-06-30T06:39:14",
+          "file_name": "التوجيه_الصرفي_والنحوي_للقراءات.pdf",
+          "file_size": 3868941,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-million-4a826d5db006eb0b"
+      ],
+      "notes": "دفعة مليون كتاب إسلامي؛ أُبقي التصنيف كما ورد في الملف المرسل."
+    },
+    {
+      "id": "tg-million-2f89debfb216e0ba",
+      "title": "الدراسات اللغوية و النحوية في م",
+      "author": null,
+      "source": "📔 مليون كتــاب إسـلامي 📚",
+      "relativePath": "https://t.me/c/1010154913/30465",
+      "sourceUrl": "https://t.me/c/1010154913/30465",
+      "primaryCategory": "references",
+      "tags": [
+        "دراسات لغوية"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "دفعة مليون كتاب إسلامي المنقحة",
+          "إدراج جديد بعد مقارنة منطقية مع المكنز الحالي",
+          "التصنيف المعتمد: references"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 30465,
+          "date": "2018-02-05T19:53:59",
+          "file_name": "الدراسات_اللغوية_و_النحوية_في_م.pdf",
+          "file_size": 9066760,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-million-2f89debfb216e0ba"
+      ],
+      "notes": "دفعة مليون كتاب إسلامي؛ أُبقي التصنيف كما ورد في الملف المرسل."
+    },
+    {
+      "id": "tg-million-48d405fc11661e3c",
+      "title": "القواعد الذهبية في الإملاء والترقيم 📔 🖊 إعداد: أحمد محمد أبو بكر",
+      "author": null,
+      "source": "📔 مليون كتــاب إسـلامي 📚",
+      "relativePath": "https://t.me/c/1010154913/28673",
+      "sourceUrl": "https://t.me/c/1010154913/28673",
+      "primaryCategory": "references",
+      "tags": [
+        "دراسات لغوية"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "دفعة مليون كتاب إسلامي المنقحة",
+          "إدراج جديد بعد مقارنة منطقية مع المكنز الحالي",
+          "التصنيف المعتمد: references"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 28673,
+          "date": "2018-01-07T12:01:48",
+          "file_name": "147925.pdf",
+          "file_size": 802109,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-million-48d405fc11661e3c"
+      ],
+      "notes": "دفعة مليون كتاب إسلامي؛ أُبقي التصنيف كما ورد في الملف المرسل."
+    },
+    {
+      "id": "tg-million-227d9d9c39b3ad55",
+      "title": "اللغة العربية",
+      "author": null,
+      "source": "📔 مليون كتــاب إسـلامي 📚",
+      "relativePath": "https://t.me/c/1010154913/13038",
+      "sourceUrl": "https://t.me/c/1010154913/13038",
+      "primaryCategory": "references",
+      "tags": [
+        "دراسات لغوية"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "دفعة مليون كتاب إسلامي المنقحة",
+          "إدراج جديد بعد مقارنة منطقية مع المكنز الحالي",
+          "التصنيف المعتمد: references"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 13038,
+          "date": "2017-02-16T09:53:09",
+          "file_name": "٤- اللغة العربية.pdf",
+          "file_size": 11242119,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-million-227d9d9c39b3ad55"
+      ],
+      "notes": "دفعة مليون كتاب إسلامي؛ أُبقي التصنيف كما ورد في الملف المرسل."
+    },
+    {
+      "id": "tg-million-6d586c5cb4d42a39",
+      "title": "المبسّط في علوم البلاغة المعاني و البیان",
+      "author": null,
+      "source": "📔 مليون كتــاب إسـلامي 📚",
+      "relativePath": "https://t.me/c/1010154913/58351",
+      "sourceUrl": "https://t.me/c/1010154913/58351",
+      "primaryCategory": "references",
+      "tags": [
+        "دراسات لغوية"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "دفعة مليون كتاب إسلامي المنقحة",
+          "إدراج جديد بعد مقارنة منطقية مع المكنز الحالي",
+          "التصنيف المعتمد: references"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 58351,
+          "date": "2020-04-21T20:24:59",
+          "file_name": "المبسّط_في_علوم_البلاغة_المعاني_و_البیان_.pdf",
+          "file_size": 10420106,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-million-6d586c5cb4d42a39"
+      ],
+      "notes": "دفعة مليون كتاب إسلامي؛ أُبقي التصنيف كما ورد في الملف المرسل."
+    },
+    {
+      "id": "tg-million-003e6bcd6eb607c0",
+      "title": "المغني في النحو والصرف والإملاء",
+      "author": null,
+      "source": "📔 مليون كتــاب إسـلامي 📚",
+      "relativePath": "https://t.me/c/1010154913/16502",
+      "sourceUrl": "https://t.me/c/1010154913/16502",
+      "primaryCategory": "references",
+      "tags": [
+        "دراسات لغوية"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "دفعة مليون كتاب إسلامي المنقحة",
+          "إدراج جديد بعد مقارنة منطقية مع المكنز الحالي",
+          "التصنيف المعتمد: references"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 16502,
+          "date": "2017-05-08T09:13:48",
+          "file_name": "المغني في النحو والصرف والإملاء.pdf",
+          "file_size": 11556109,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-million-003e6bcd6eb607c0"
+      ],
+      "notes": "دفعة مليون كتاب إسلامي؛ أُبقي التصنيف كما ورد في الملف المرسل."
+    },
+    {
+      "id": "tg-million-7f1f7aacfa4594ec",
+      "title": "كتاب المهذب في علم الصرف",
+      "author": null,
+      "source": "📔 مليون كتــاب إسـلامي 📚",
+      "relativePath": "https://t.me/c/1010154913/66483",
+      "sourceUrl": "https://t.me/c/1010154913/66483",
+      "primaryCategory": "references",
+      "tags": [
+        "دراسات لغوية"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "دفعة مليون كتاب إسلامي المنقحة",
+          "إدراج جديد بعد مقارنة منطقية مع المكنز الحالي",
+          "التصنيف المعتمد: references"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 66483,
+          "date": "2020-10-07T20:06:41",
+          "file_name": "كتاب المهذب في علم الصرف.pdf",
+          "file_size": 6884557,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-million-7f1f7aacfa4594ec"
+      ],
+      "notes": "دفعة مليون كتاب إسلامي؛ أُبقي التصنيف كما ورد في الملف المرسل."
+    },
+    {
+      "id": "tg-million-a844ebde4b05bc17",
+      "title": "النحو التطبيقي - خالد العزيز",
+      "author": null,
+      "source": "📔 مليون كتــاب إسـلامي 📚",
+      "relativePath": "https://t.me/c/1010154913/47490",
+      "sourceUrl": "https://t.me/c/1010154913/47490",
+      "primaryCategory": "references",
+      "tags": [
+        "دراسات لغوية"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "دفعة مليون كتاب إسلامي المنقحة",
+          "إدراج جديد بعد مقارنة منطقية مع المكنز الحالي",
+          "التصنيف المعتمد: references"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 2",
+          "سجلات الدفعة المجمعة: 2"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 47490,
+          "date": "2019-04-13T22:52:11",
+          "file_name": "النحو التطبيقي - خالد العزيز.pdf",
+          "file_size": 14844293,
+          "mime_type": "application/pdf"
+        },
+        {
+          "telegram_message_id": 157191,
+          "date": "2023-10-07T15:36:35",
+          "file_name": "النحو التطبيقي - خالد عبد العزيز .pdf",
+          "file_size": 14844293,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-million-a844ebde4b05bc17",
+        "tg-million-2cd31f1fb6e44a81"
+      ],
+      "notes": "دفعة مليون كتاب إسلامي؛ أُبقي التصنيف كما ورد في الملف المرسل."
+    },
+    {
+      "id": "tg-million-143181159168244b",
+      "title": "أهمية اللغة العربية",
+      "author": null,
+      "source": "📔 مليون كتــاب إسـلامي 📚",
+      "relativePath": "https://t.me/c/1010154913/30595",
+      "sourceUrl": "https://t.me/c/1010154913/30595",
+      "primaryCategory": "references",
+      "tags": [
+        "دراسات لغوية"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "دفعة مليون كتاب إسلامي المنقحة",
+          "إدراج جديد بعد مقارنة منطقية مع المكنز الحالي",
+          "التصنيف المعتمد: references"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 30595,
+          "date": "2018-02-08T01:31:46",
+          "file_name": "أهمية اللغة العربية.pdf",
+          "file_size": 5687586,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-million-143181159168244b"
+      ],
+      "notes": "دفعة مليون كتاب إسلامي؛ أُبقي التصنيف كما ورد في الملف المرسل."
+    },
+    {
+      "id": "tg-million-9a881c9476e0bc32",
+      "title": "شرح متن الصرف الصغير للشيخ سليمان",
+      "author": null,
+      "source": "📔 مليون كتــاب إسـلامي 📚",
+      "relativePath": "https://t.me/c/1010154913/27506",
+      "sourceUrl": "https://t.me/c/1010154913/27506",
+      "primaryCategory": "references",
+      "tags": [
+        "دراسات لغوية"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "دفعة مليون كتاب إسلامي المنقحة",
+          "إدراج جديد بعد مقارنة منطقية مع المكنز الحالي",
+          "التصنيف المعتمد: references"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 27506,
+          "date": "2017-12-30T14:02:47",
+          "file_name": "شرح_متن_الصرف_الصغير_للشيخ_سليمان.pdf",
+          "file_size": 1533612,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-million-9a881c9476e0bc32"
+      ],
+      "notes": "دفعة مليون كتاب إسلامي؛ أُبقي التصنيف كما ورد في الملف المرسل."
+    },
+    {
+      "id": "tg-million-86b3a84dc2738da8",
+      "title": "علوم البلاغة [01]",
+      "author": null,
+      "source": "📔 مليون كتــاب إسـلامي 📚",
+      "relativePath": "https://t.me/c/1010154913/33268",
+      "sourceUrl": "https://t.me/c/1010154913/33268",
+      "primaryCategory": "references",
+      "tags": [
+        "دراسات لغوية"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "دفعة مليون كتاب إسلامي المنقحة",
+          "إدراج جديد بعد مقارنة منطقية مع المكنز الحالي",
+          "التصنيف المعتمد: references"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 33268,
+          "date": "2018-03-28T07:13:18",
+          "file_name": "علوم البلاغة [01].pdf",
+          "file_size": 405831,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-million-86b3a84dc2738da8"
+      ],
+      "notes": "دفعة مليون كتاب إسلامي؛ أُبقي التصنيف كما ورد في الملف المرسل."
+    },
+    {
+      "id": "tg-million-89450aad559c36f7",
+      "title": "عنوان الكتاب : دروس البلاغة شرح ابن عثيمين",
+      "author": null,
+      "source": "📔 مليون كتــاب إسـلامي 📚",
+      "relativePath": "https://t.me/c/1010154913/62000",
+      "sourceUrl": "https://t.me/c/1010154913/62000",
+      "primaryCategory": "references",
+      "tags": [
+        "دراسات لغوية"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "دفعة مليون كتاب إسلامي المنقحة",
+          "إدراج جديد بعد مقارنة منطقية مع المكنز الحالي",
+          "التصنيف المعتمد: references"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 62000,
+          "date": "2020-07-05T21:31:52",
+          "file_name": "87010.pdf",
+          "file_size": 2806130,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-million-89450aad559c36f7"
+      ],
+      "notes": "دفعة مليون كتاب إسلامي؛ أُبقي التصنيف كما ورد في الملف المرسل."
+    },
+    {
+      "id": "tg-million-2a0bba7668ec2c68",
+      "title": "عنوان الكتاب: دروس البلاغة شرح ابن عثيمين المؤلف: حفني ناصف - محمد دياب - سلطان محمد - مصطفى طموم - ابن عثيمين المحقق: محمد بن فلاح المطيري",
+      "author": null,
+      "source": "📔 مليون كتــاب إسـلامي 📚",
+      "relativePath": "https://t.me/c/1010154913/24065",
+      "sourceUrl": "https://t.me/c/1010154913/24065",
+      "primaryCategory": "references",
+      "tags": [
+        "دراسات لغوية"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "دفعة مليون كتاب إسلامي المنقحة",
+          "إدراج جديد بعد مقارنة منطقية مع المكنز الحالي",
+          "التصنيف المعتمد: references"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 24065,
+          "date": "2017-10-20T16:14:02",
+          "file_name": "87010.pdf",
+          "file_size": 2806130,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-million-2a0bba7668ec2c68"
+      ],
+      "notes": "دفعة مليون كتاب إسلامي؛ أُبقي التصنيف كما ورد في الملف المرسل."
+    },
+    {
+      "id": "tg-million-ffa13d6fafc81160",
+      "title": "فضل القرآن الكريم وأثره في حفظ اللغة العربية وإثرائها",
+      "author": null,
+      "source": "📔 مليون كتــاب إسـلامي 📚",
+      "relativePath": "https://t.me/c/1010154913/18428",
+      "sourceUrl": "https://t.me/c/1010154913/18428",
+      "primaryCategory": "references",
+      "tags": [
+        "دراسات لغوية"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "دفعة مليون كتاب إسلامي المنقحة",
+          "إدراج جديد بعد مقارنة منطقية مع المكنز الحالي",
+          "التصنيف المعتمد: references"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 18428,
+          "date": "2017-06-25T11:30:40",
+          "file_name": "____.pdf",
+          "file_size": 728534,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-million-ffa13d6fafc81160"
+      ],
+      "notes": "دفعة مليون كتاب إسلامي؛ أُبقي التصنيف كما ورد في الملف المرسل."
+    },
+    {
+      "id": "tg-million-11ccf929ffb5d70f",
+      "title": "فقه اللغة محمد بن إبراهيم الحمد",
+      "author": null,
+      "source": "📔 مليون كتــاب إسـلامي 📚",
+      "relativePath": "https://t.me/c/1010154913/46467",
+      "sourceUrl": "https://t.me/c/1010154913/46467",
+      "primaryCategory": "references",
+      "tags": [
+        "دراسات لغوية"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "دفعة مليون كتاب إسلامي المنقحة",
+          "إدراج جديد بعد مقارنة منطقية مع المكنز الحالي",
+          "التصنيف المعتمد: references"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 46467,
+          "date": "2019-03-12T20:21:39",
+          "file_name": "فقه اللغة   محمد بن إبراهيم الحمد.pdf",
+          "file_size": 2035020,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-million-11ccf929ffb5d70f"
+      ],
+      "notes": "دفعة مليون كتاب إسلامي؛ أُبقي التصنيف كما ورد في الملف المرسل."
+    },
+    {
+      "id": "tg-million-f91b43f705678bd3",
+      "title": "قواعد الإملاء د. يحيى مير علم",
+      "author": null,
+      "source": "📔 مليون كتــاب إسـلامي 📚",
+      "relativePath": "https://t.me/c/1010154913/16797",
+      "sourceUrl": "https://t.me/c/1010154913/16797",
+      "primaryCategory": "references",
+      "tags": [
+        "دراسات لغوية"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "دفعة مليون كتاب إسلامي المنقحة",
+          "إدراج جديد بعد مقارنة منطقية مع المكنز الحالي",
+          "التصنيف المعتمد: references"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 16797,
+          "date": "2017-05-13T18:45:59",
+          "file_name": "4_5784894225531273465.pdf",
+          "file_size": 527625,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-million-f91b43f705678bd3"
+      ],
+      "notes": "دفعة مليون كتاب إسلامي؛ أُبقي التصنيف كما ورد في الملف المرسل."
+    },
+    {
+      "id": "tg-million-25676bd97cf82204",
+      "title": "قواعد اللغة العربية مصورة وميسرة",
+      "author": null,
+      "source": "📔 مليون كتــاب إسـلامي 📚",
+      "relativePath": "https://t.me/c/1010154913/42172",
+      "sourceUrl": "https://t.me/c/1010154913/42172",
+      "primaryCategory": "references",
+      "tags": [
+        "دراسات لغوية"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "دفعة مليون كتاب إسلامي المنقحة",
+          "إدراج جديد بعد مقارنة منطقية مع المكنز الحالي",
+          "التصنيف المعتمد: references"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 42172,
+          "date": "2018-12-12T18:55:02",
+          "file_name": "قواعد اللغة العربية مصورة وميسرة.pdf",
+          "file_size": 9445505,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-million-25676bd97cf82204"
+      ],
+      "notes": "دفعة مليون كتاب إسلامي؛ أُبقي التصنيف كما ورد في الملف المرسل."
+    },
+    {
+      "id": "tg-million-0b4a1c480c1c0d26",
+      "title": "قواعد النحو والإملاء للمبتدئين",
+      "author": null,
+      "source": "📔 مليون كتــاب إسـلامي 📚",
+      "relativePath": "https://t.me/c/1010154913/50835",
+      "sourceUrl": "https://t.me/c/1010154913/50835",
+      "primaryCategory": "references",
+      "tags": [
+        "دراسات لغوية"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "دفعة مليون كتاب إسلامي المنقحة",
+          "إدراج جديد بعد مقارنة منطقية مع المكنز الحالي",
+          "التصنيف المعتمد: references"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 50835,
+          "date": "2019-07-21T17:19:21",
+          "file_name": "قواعد النحو والإملاء للمبتدئين.pdf",
+          "file_size": 4542640,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-million-0b4a1c480c1c0d26"
+      ],
+      "notes": "دفعة مليون كتاب إسلامي؛ أُبقي التصنيف كما ورد في الملف المرسل."
+    },
+    {
+      "id": "tg-million-37c96a14f28ba5eb",
+      "title": "كراسة قواعد الإملاء",
+      "author": null,
+      "source": "📔 مليون كتــاب إسـلامي 📚",
+      "relativePath": "https://t.me/c/1010154913/40398",
+      "sourceUrl": "https://t.me/c/1010154913/40398",
+      "primaryCategory": "references",
+      "tags": [
+        "دراسات لغوية"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "دفعة مليون كتاب إسلامي المنقحة",
+          "إدراج جديد بعد مقارنة منطقية مع المكنز الحالي",
+          "التصنيف المعتمد: references"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 40398,
+          "date": "2018-11-09T15:17:26",
+          "file_name": "كراسة قواعد الإملاء.pdf",
+          "file_size": 221532,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-million-37c96a14f28ba5eb"
+      ],
+      "notes": "دفعة مليون كتاب إسلامي؛ أُبقي التصنيف كما ورد في الملف المرسل."
+    },
+    {
+      "id": "tg-million-60afa7da05b5f01a",
+      "title": "لنفسي أولاً ،،، ولكل من يجد صعوبة في الإملاء والكتابة تعالوا نتصفح أوراق هذا الكتاب الثمين",
+      "author": null,
+      "source": "📔 مليون كتــاب إسـلامي 📚",
+      "relativePath": "https://t.me/c/1010154913/29081",
+      "sourceUrl": "https://t.me/c/1010154913/29081",
+      "primaryCategory": "references",
+      "tags": [
+        "دراسات لغوية"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "دفعة مليون كتاب إسلامي المنقحة",
+          "إدراج جديد بعد مقارنة منطقية مع المكنز الحالي",
+          "التصنيف المعتمد: references"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 29081,
+          "date": "2018-01-13T23:22:26",
+          "file_name": "الكافي في الاملاء.pdf",
+          "file_size": 999015,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-million-60afa7da05b5f01a"
+      ],
+      "notes": "دفعة مليون كتاب إسلامي؛ أُبقي التصنيف كما ورد في الملف المرسل."
+    },
+    {
+      "id": "tg-million-a413f3d95dde8d65",
+      "title": "طبعة - مجمع اللغة العربية - دمشق",
+      "author": null,
+      "source": "📔 مليون كتــاب إسـلامي 📚",
+      "relativePath": "https://t.me/c/1010154913/37684",
+      "sourceUrl": "https://t.me/c/1010154913/37684",
+      "primaryCategory": "references",
+      "tags": [
+        "دراسات لغوية"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "دفعة مليون كتاب إسلامي المنقحة",
+          "إدراج جديد بعد مقارنة منطقية مع المكنز الحالي",
+          "التصنيف المعتمد: references"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 37684,
+          "date": "2018-09-08T07:37:18",
+          "file_name": "رصف المباني - أحمد المالقي .pdf",
+          "file_size": 11783711,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-million-a413f3d95dde8d65"
+      ],
+      "notes": "دفعة مليون كتاب إسلامي؛ أُبقي التصنيف كما ورد في الملف المرسل."
+    },
+    {
+      "id": "tg-million-5307efb0c7cea531",
+      "title": "موجز البلاغة لابن عاشور",
+      "author": null,
+      "source": "📔 مليون كتــاب إسـلامي 📚",
+      "relativePath": "https://t.me/c/1010154913/38826",
+      "sourceUrl": "https://t.me/c/1010154913/38826",
+      "primaryCategory": "references",
+      "tags": [
+        "دراسات لغوية"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "دفعة مليون كتاب إسلامي المنقحة",
+          "إدراج جديد بعد مقارنة منطقية مع المكنز الحالي",
+          "التصنيف المعتمد: references"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 38826,
+          "date": "2018-10-08T17:13:59",
+          "file_name": "موجز البلاغة لابن عاشور.pdf",
+          "file_size": 256268,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-million-5307efb0c7cea531"
+      ],
+      "notes": "دفعة مليون كتاب إسلامي؛ أُبقي التصنيف كما ورد في الملف المرسل."
+    },
+    {
+      "id": "tg-million-4e9e63674dd9cebd",
+      "title": "أطلس الحديث النبوي من الكتب الصحاح الستة",
+      "author": null,
+      "source": "📔 مليون كتــاب إسـلامي 📚",
+      "relativePath": "https://t.me/c/1010154913/26490",
+      "sourceUrl": "https://t.me/c/1010154913/26490",
+      "primaryCategory": "dictionaries",
+      "tags": [
+        "معجم لغوي"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "دفعة مليون كتاب إسلامي المنقحة",
+          "إدراج جديد بعد مقارنة منطقية مع المكنز الحالي",
+          "التصنيف المعتمد: dictionaries"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 26490,
+          "date": "2017-12-11T01:30:09",
+          "file_name": "أطلس الحديث النبوي من الكتب الصحاح الستة.pdf",
+          "file_size": 49233125,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-million-4e9e63674dd9cebd"
+      ],
+      "notes": "دفعة مليون كتاب إسلامي؛ أُبقي التصنيف كما ورد في الملف المرسل."
+    },
+    {
+      "id": "tg-million-65096f97adbb7d41",
+      "title": "الروض الداني إلى المعجم الصغير 1",
+      "author": null,
+      "source": "📔 مليون كتــاب إسـلامي 📚",
+      "relativePath": "https://t.me/c/1010154913/9878",
+      "sourceUrl": "https://t.me/c/1010154913/9878",
+      "primaryCategory": "dictionaries",
+      "tags": [
+        "معجم لغوي"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "دفعة مليون كتاب إسلامي المنقحة",
+          "إدراج جديد بعد مقارنة منطقية مع المكنز الحالي",
+          "التصنيف المعتمد: dictionaries"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 2",
+          "سجلات الدفعة المجمعة: 2"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 9878,
+          "date": "2016-11-21T23:15:00",
+          "file_name": "الروض الداني إلى المعجم الصغير 1.pdf",
+          "file_size": 6317745,
+          "mime_type": "application/pdf"
+        },
+        {
+          "telegram_message_id": 9879,
+          "date": "2016-11-21T23:15:00",
+          "file_name": "الروض الداني إلى المعجم الصغير 2.pdf",
+          "file_size": 5715069,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-million-65096f97adbb7d41",
+        "tg-million-d1eb8e33c72712c4"
+      ],
+      "notes": "دفعة مليون كتاب إسلامي؛ أُبقي التصنيف كما ورد في الملف المرسل."
+    },
+    {
+      "id": "tg-million-6fa5772d468738c4",
+      "title": "المعجم الموضوعي للقرآن",
+      "author": null,
+      "source": "📔 مليون كتــاب إسـلامي 📚",
+      "relativePath": "https://t.me/c/1010154913/45693",
+      "sourceUrl": "https://t.me/c/1010154913/45693",
+      "primaryCategory": "dictionaries",
+      "tags": [
+        "معجم لغوي"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "دفعة مليون كتاب إسلامي المنقحة",
+          "إدراج جديد بعد مقارنة منطقية مع المكنز الحالي",
+          "التصنيف المعتمد: dictionaries"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 45693,
+          "date": "2019-02-20T22:04:44",
+          "file_name": "المعجم الموضوعي للقرآن.pdf",
+          "file_size": 3946256,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-million-6fa5772d468738c4"
+      ],
+      "notes": "دفعة مليون كتاب إسلامي؛ أُبقي التصنيف كما ورد في الملف المرسل."
+    },
+    {
+      "id": "tg-million-cd3b32f761e3e9e0",
+      "title": "عنوان الكتاب: مختار الصحاح المؤلف: محمد بن أبي بكر بن عبد القادر الرازي",
+      "author": null,
+      "source": "📔 مليون كتــاب إسـلامي 📚",
+      "relativePath": "https://t.me/c/1010154913/28955",
+      "sourceUrl": "https://t.me/c/1010154913/28955",
+      "primaryCategory": "dictionaries",
+      "tags": [
+        "معجم لغوي"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "دفعة مليون كتاب إسلامي المنقحة",
+          "إدراج جديد بعد مقارنة منطقية مع المكنز الحالي",
+          "التصنيف المعتمد: dictionaries"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 28955,
+          "date": "2018-01-12T10:35:33",
+          "file_name": "8477p.pdf",
+          "file_size": 300693,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-million-cd3b32f761e3e9e0"
+      ],
+      "notes": "دفعة مليون كتاب إسلامي؛ أُبقي التصنيف كما ورد في الملف المرسل."
+    },
+    {
+      "id": "tg-million-eb1ef5882655627c",
+      "title": "قاموس الادوات النحو",
+      "author": null,
+      "source": "📔 مليون كتــاب إسـلامي 📚",
+      "relativePath": "https://t.me/c/1010154913/66741",
+      "sourceUrl": "https://t.me/c/1010154913/66741",
+      "primaryCategory": "dictionaries",
+      "tags": [
+        "معجم لغوي"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "دفعة مليون كتاب إسلامي المنقحة",
+          "إدراج جديد بعد مقارنة منطقية مع المكنز الحالي",
+          "التصنيف المعتمد: dictionaries"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 66741,
+          "date": "2020-10-12T20:33:55",
+          "file_name": "قاموس الادوات النحو.pdf",
+          "file_size": 3559206,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-million-eb1ef5882655627c"
+      ],
+      "notes": "دفعة مليون كتاب إسلامي؛ أُبقي التصنيف كما ورد في الملف المرسل."
+    },
+    {
+      "id": "tg-million-f802529a1b346b57",
+      "title": "قاموس الإعراب إعراب الكلمة وإعراب",
+      "author": null,
+      "source": "📔 مليون كتــاب إسـلامي 📚",
+      "relativePath": "https://t.me/c/1010154913/27959",
+      "sourceUrl": "https://t.me/c/1010154913/27959",
+      "primaryCategory": "dictionaries",
+      "tags": [
+        "معجم لغوي"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "دفعة مليون كتاب إسلامي المنقحة",
+          "إدراج جديد بعد مقارنة منطقية مع المكنز الحالي",
+          "التصنيف المعتمد: dictionaries"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 27959,
+          "date": "2018-01-01T01:15:32",
+          "file_name": "قاموس_الإعراب_إعراب_الكلمة_وإعراب.pdf",
+          "file_size": 11092337,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-million-f802529a1b346b57"
+      ],
+      "notes": "دفعة مليون كتاب إسلامي؛ أُبقي التصنيف كما ورد في الملف المرسل."
+    },
+    {
+      "id": "tg-million-5ed8176a757ea9b9",
+      "title": "قاموس البدع مستخرج من كتب الإمام",
+      "author": null,
+      "source": "📔 مليون كتــاب إسـلامي 📚",
+      "relativePath": "https://t.me/c/1010154913/50861",
+      "sourceUrl": "https://t.me/c/1010154913/50861",
+      "primaryCategory": "dictionaries",
+      "tags": [
+        "معجم لغوي"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "دفعة مليون كتاب إسلامي المنقحة",
+          "إدراج جديد بعد مقارنة منطقية مع المكنز الحالي",
+          "التصنيف المعتمد: dictionaries"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 50861,
+          "date": "2019-07-21T17:19:23",
+          "file_name": "قاموس_البدع_مستخرج_من_كتب_الإمام.pdf",
+          "file_size": 15036679,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-million-5ed8176a757ea9b9"
+      ],
+      "notes": "دفعة مليون كتاب إسلامي؛ أُبقي التصنيف كما ورد في الملف المرسل."
+    },
+    {
+      "id": "tg-million-457f432fe0695def",
+      "title": "قاموس مصطلحات إسلامية",
+      "author": null,
+      "source": "📔 مليون كتــاب إسـلامي 📚",
+      "relativePath": "https://t.me/c/1010154913/23385",
+      "sourceUrl": "https://t.me/c/1010154913/23385",
+      "primaryCategory": "dictionaries",
+      "tags": [
+        "معجم لغوي"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "دفعة مليون كتاب إسلامي المنقحة",
+          "إدراج جديد بعد مقارنة منطقية مع المكنز الحالي",
+          "التصنيف المعتمد: dictionaries"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 23385,
+          "date": "2017-10-13T01:14:27",
+          "file_name": "قاموس مصطلحات إسلامية.pdf",
+          "file_size": 31005941,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-million-457f432fe0695def"
+      ],
+      "notes": "دفعة مليون كتاب إسلامي؛ أُبقي التصنيف كما ورد في الملف المرسل."
+    },
+    {
+      "id": "tg-million-95f83fd97798df25",
+      "title": "قاموس مصطلحات دينية 1",
+      "author": null,
+      "source": "📔 مليون كتــاب إسـلامي 📚",
+      "relativePath": "https://t.me/c/1010154913/23383",
+      "sourceUrl": "https://t.me/c/1010154913/23383",
+      "primaryCategory": "dictionaries",
+      "tags": [
+        "معجم لغوي"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "دفعة مليون كتاب إسلامي المنقحة",
+          "إدراج جديد بعد مقارنة منطقية مع المكنز الحالي",
+          "التصنيف المعتمد: dictionaries"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 23383,
+          "date": "2017-10-13T01:14:26",
+          "file_name": "قاموس مصطلحات دينية 1.pdf",
+          "file_size": 2882810,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-million-95f83fd97798df25"
+      ],
+      "notes": "دفعة مليون كتاب إسلامي؛ أُبقي التصنيف كما ورد في الملف المرسل."
+    },
+    {
+      "id": "tg-million-251a04ffba99810f",
+      "title": "لسان العرب ملجد6",
+      "author": null,
+      "source": "📔 مليون كتــاب إسـلامي 📚",
+      "relativePath": "https://t.me/c/1010154913/26545",
+      "sourceUrl": "https://t.me/c/1010154913/26545",
+      "primaryCategory": "dictionaries",
+      "tags": [
+        "معجم لغوي"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "دفعة مليون كتاب إسلامي المنقحة",
+          "إدراج جديد بعد مقارنة منطقية مع المكنز الحالي",
+          "التصنيف المعتمد: dictionaries"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 26545,
+          "date": "2017-12-11T19:11:59",
+          "file_name": "لسان العرب ملجد6.pdf",
+          "file_size": 12107884,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-million-251a04ffba99810f"
+      ],
+      "notes": "دفعة مليون كتاب إسلامي؛ أُبقي التصنيف كما ورد في الملف المرسل."
+    },
+    {
+      "id": "tg-million-63f00a523ea92ff2",
+      "title": "مختار الصحاح (1)",
+      "author": null,
+      "source": "📔 مليون كتــاب إسـلامي 📚",
+      "relativePath": "https://t.me/c/1010154913/122171",
+      "sourceUrl": "https://t.me/c/1010154913/122171",
+      "primaryCategory": "dictionaries",
+      "tags": [
+        "معجم لغوي"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "دفعة مليون كتاب إسلامي المنقحة",
+          "إدراج جديد بعد مقارنة منطقية مع المكنز الحالي",
+          "التصنيف المعتمد: dictionaries"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 122171,
+          "date": "2022-09-05T16:09:58",
+          "file_name": "مختار الصحاح  (1).pdf",
+          "file_size": 10632665,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-million-63f00a523ea92ff2"
+      ],
+      "notes": "دفعة مليون كتاب إسلامي؛ أُبقي التصنيف كما ورد في الملف المرسل."
+    },
+    {
+      "id": "tg-million-0b03d65a2e58cbb6",
+      "title": "مختار الصحاح للرازي",
+      "author": null,
+      "source": "📔 مليون كتــاب إسـلامي 📚",
+      "relativePath": "https://t.me/c/1010154913/45691",
+      "sourceUrl": "https://t.me/c/1010154913/45691",
+      "primaryCategory": "dictionaries",
+      "tags": [
+        "معجم لغوي"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "دفعة مليون كتاب إسلامي المنقحة",
+          "إدراج جديد بعد مقارنة منطقية مع المكنز الحالي",
+          "التصنيف المعتمد: dictionaries"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 45691,
+          "date": "2019-02-20T22:04:44",
+          "file_name": "مختار الصحاح للرازي.pdf",
+          "file_size": 2776422,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-million-0b03d65a2e58cbb6"
+      ],
+      "notes": "دفعة مليون كتاب إسلامي؛ أُبقي التصنيف كما ورد في الملف المرسل."
+    },
+    {
+      "id": "tg-million-3e9d640c0db2f9d9",
+      "title": "مختار الصحاح.م",
+      "author": null,
+      "source": "📔 مليون كتــاب إسـلامي 📚",
+      "relativePath": "https://t.me/c/1010154913/122169",
+      "sourceUrl": "https://t.me/c/1010154913/122169",
+      "primaryCategory": "dictionaries",
+      "tags": [
+        "معجم لغوي"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "دفعة مليون كتاب إسلامي المنقحة",
+          "إدراج جديد بعد مقارنة منطقية مع المكنز الحالي",
+          "التصنيف المعتمد: dictionaries"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 122169,
+          "date": "2022-09-05T16:07:32",
+          "file_name": "مختار الصحاح.م .pdf",
+          "file_size": 300693,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-million-3e9d640c0db2f9d9"
+      ],
+      "notes": "دفعة مليون كتاب إسلامي؛ أُبقي التصنيف كما ورد في الملف المرسل."
+    },
+    {
+      "id": "tg-million-ab557a41984c2d40",
+      "title": "مختار الصحاح محمد بن أبي بكر بن",
+      "author": null,
+      "source": "📔 مليون كتــاب إسـلامي 📚",
+      "relativePath": "https://t.me/c/1010154913/45692",
+      "sourceUrl": "https://t.me/c/1010154913/45692",
+      "primaryCategory": "dictionaries",
+      "tags": [
+        "معجم لغوي"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "دفعة مليون كتاب إسلامي المنقحة",
+          "إدراج جديد بعد مقارنة منطقية مع المكنز الحالي",
+          "التصنيف المعتمد: dictionaries"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 45692,
+          "date": "2019-02-20T22:04:44",
+          "file_name": "مختار_الصحاح_محمد_بن_أبي_بكر_بن.pdf",
+          "file_size": 62075483,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-million-ab557a41984c2d40"
+      ],
+      "notes": "دفعة مليون كتاب إسلامي؛ أُبقي التصنيف كما ورد في الملف المرسل."
+    },
+    {
+      "id": "tg-million-80f55bdfb5208bbb",
+      "title": "مختار الصحاح مقدمة",
+      "author": null,
+      "source": "📔 مليون كتــاب إسـلامي 📚",
+      "relativePath": "https://t.me/c/1010154913/194949",
+      "sourceUrl": "https://t.me/c/1010154913/194949",
+      "primaryCategory": "dictionaries",
+      "tags": [
+        "معجم لغوي"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "دفعة مليون كتاب إسلامي المنقحة",
+          "إدراج جديد بعد مقارنة منطقية مع المكنز الحالي",
+          "التصنيف المعتمد: dictionaries"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 194949,
+          "date": "2024-10-28T14:07:27",
+          "file_name": "مختار الصحاح مقدمة.pdf",
+          "file_size": 300693,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-million-80f55bdfb5208bbb"
+      ],
+      "notes": "دفعة مليون كتاب إسلامي؛ أُبقي التصنيف كما ورد في الملف المرسل."
+    },
+    {
+      "id": "tg-million-048cd8a27c47ce0c",
+      "title": "معجم اعراب القرآن",
+      "author": null,
+      "source": "📔 مليون كتــاب إسـلامي 📚",
+      "relativePath": "https://t.me/c/1010154913/31690",
+      "sourceUrl": "https://t.me/c/1010154913/31690",
+      "primaryCategory": "dictionaries",
+      "tags": [
+        "معجم لغوي"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "دفعة مليون كتاب إسلامي المنقحة",
+          "إدراج جديد بعد مقارنة منطقية مع المكنز الحالي",
+          "التصنيف المعتمد: dictionaries"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 31690,
+          "date": "2018-02-25T11:31:14",
+          "file_name": "معجم اعراب القرآن.pdf",
+          "file_size": 22911965,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-million-048cd8a27c47ce0c"
+      ],
+      "notes": "دفعة مليون كتاب إسلامي؛ أُبقي التصنيف كما ورد في الملف المرسل."
+    },
+    {
+      "id": "tg-million-49b142a9a4b8361f",
+      "title": "معجم الرسم العثماني د بشير الحميري",
+      "author": null,
+      "source": "📔 مليون كتــاب إسـلامي 📚",
+      "relativePath": "https://t.me/c/1010154913/46918",
+      "sourceUrl": "https://t.me/c/1010154913/46918",
+      "primaryCategory": "dictionaries",
+      "tags": [
+        "معجم لغوي"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "دفعة مليون كتاب إسلامي المنقحة",
+          "إدراج جديد بعد مقارنة منطقية مع المكنز الحالي",
+          "التصنيف المعتمد: dictionaries"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 46918,
+          "date": "2019-03-27T16:55:53",
+          "file_name": "معجم_الرسم_العثماني___د_بشير_الحميري.pdf",
+          "file_size": 84642744,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-million-49b142a9a4b8361f"
+      ],
+      "notes": "دفعة مليون كتاب إسلامي؛ أُبقي التصنيف كما ورد في الملف المرسل."
+    },
+    {
+      "id": "tg-million-51b0f819de023f43",
+      "title": "معجم العلماء والمشاهير الذين أفردوا",
+      "author": null,
+      "source": "📔 مليون كتــاب إسـلامي 📚",
+      "relativePath": "https://t.me/c/1010154913/28025",
+      "sourceUrl": "https://t.me/c/1010154913/28025",
+      "primaryCategory": "dictionaries",
+      "tags": [
+        "معجم لغوي"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "دفعة مليون كتاب إسلامي المنقحة",
+          "إدراج جديد بعد مقارنة منطقية مع المكنز الحالي",
+          "التصنيف المعتمد: dictionaries"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 28025,
+          "date": "2018-01-01T01:22:43",
+          "file_name": "معجم_العلماء_والمشاهير_الذين_أفردوا.pdf",
+          "file_size": 26794090,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-million-51b0f819de023f43"
+      ],
+      "notes": "دفعة مليون كتاب إسلامي؛ أُبقي التصنيف كما ورد في الملف المرسل."
+    },
+    {
+      "id": "tg-million-e466178f3d829027",
+      "title": "معجم القراءات القرءانية",
+      "author": null,
+      "source": "📔 مليون كتــاب إسـلامي 📚",
+      "relativePath": "https://t.me/c/1010154913/30958",
+      "sourceUrl": "https://t.me/c/1010154913/30958",
+      "primaryCategory": "dictionaries",
+      "tags": [
+        "معجم لغوي"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "دفعة مليون كتاب إسلامي المنقحة",
+          "إدراج جديد بعد مقارنة منطقية مع المكنز الحالي",
+          "التصنيف المعتمد: dictionaries"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 30958,
+          "date": "2018-02-10T17:36:00",
+          "file_name": "معجم القراءات القرءانية.pdf",
+          "file_size": 7857131,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-million-e466178f3d829027"
+      ],
+      "notes": "دفعة مليون كتاب إسلامي؛ أُبقي التصنيف كما ورد في الملف المرسل."
+    },
+    {
+      "id": "tg-million-0ebd434ad3b89c54",
+      "title": "معجم المناهي اللفظية",
+      "author": null,
+      "source": "📔 مليون كتــاب إسـلامي 📚",
+      "relativePath": "https://t.me/c/1010154913/45221",
+      "sourceUrl": "https://t.me/c/1010154913/45221",
+      "primaryCategory": "dictionaries",
+      "tags": [
+        "معجم لغوي"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "دفعة مليون كتاب إسلامي المنقحة",
+          "إدراج جديد بعد مقارنة منطقية مع المكنز الحالي",
+          "التصنيف المعتمد: dictionaries"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 2",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 45221,
+          "date": "2019-02-11T08:28:53",
+          "file_name": "معجم المناهي اللفظية.pdf",
+          "file_size": 12976638,
+          "mime_type": "application/pdf"
+        },
+        {
+          "telegram_message_id": 119849,
+          "date": "2022-08-10T22:14:46",
+          "file_name": "معجم المناهي اللفظية.pdf",
+          "file_size": 10384558,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-million-0ebd434ad3b89c54"
+      ],
+      "notes": "دفعة مليون كتاب إسلامي؛ أُبقي التصنيف كما ورد في الملف المرسل."
+    },
+    {
+      "id": "tg-million-d3a1b478fd7554e8",
+      "title": "📰 كتاب: #معجم المناهي اللفظية 🔎الكاتب: #الشيخ بكر بن عبدالله أبوزيد 📍عدد الصفحات: 780",
+      "author": null,
+      "source": "📔 مليون كتــاب إسـلامي 📚",
+      "relativePath": "https://t.me/c/1010154913/27780",
+      "sourceUrl": "https://t.me/c/1010154913/27780",
+      "primaryCategory": "dictionaries",
+      "tags": [
+        "معجم لغوي"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "دفعة مليون كتاب إسلامي المنقحة",
+          "إدراج جديد بعد مقارنة منطقية مع المكنز الحالي",
+          "التصنيف المعتمد: dictionaries"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 27780,
+          "date": "2017-12-31T23:59:16",
+          "file_name": "معجم المناهي اللفظية.pdf",
+          "file_size": 10384558,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-million-d3a1b478fd7554e8"
+      ],
+      "notes": "دفعة مليون كتاب إسلامي؛ أُبقي التصنيف كما ورد في الملف المرسل."
+    },
+    {
+      "id": "tg-million-22cd39f07a8d16b1",
+      "title": "معجم متشابهات القرءان",
+      "author": null,
+      "source": "📔 مليون كتــاب إسـلامي 📚",
+      "relativePath": "https://t.me/c/1010154913/52247",
+      "sourceUrl": "https://t.me/c/1010154913/52247",
+      "primaryCategory": "dictionaries",
+      "tags": [
+        "معجم لغوي"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "دفعة مليون كتاب إسلامي المنقحة",
+          "إدراج جديد بعد مقارنة منطقية مع المكنز الحالي",
+          "التصنيف المعتمد: dictionaries"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 52247,
+          "date": "2019-09-12T00:42:30",
+          "file_name": "معجم متشابهات القرءان.rar",
+          "file_size": 848813,
+          "mime_type": null
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-million-22cd39f07a8d16b1"
+      ],
+      "notes": "دفعة مليون كتاب إسلامي؛ أُبقي التصنيف كما ورد في الملف المرسل."
+    },
+    {
+      "id": "tg-million-048eb915230223e0",
+      "title": "معجم مختار الصحاح",
+      "author": null,
+      "source": "📔 مليون كتــاب إسـلامي 📚",
+      "relativePath": "https://t.me/c/1010154913/23769",
+      "sourceUrl": "https://t.me/c/1010154913/23769",
+      "primaryCategory": "dictionaries",
+      "tags": [
+        "معجم لغوي"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "دفعة مليون كتاب إسلامي المنقحة",
+          "إدراج جديد بعد مقارنة منطقية مع المكنز الحالي",
+          "التصنيف المعتمد: dictionaries"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 2",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 23769,
+          "date": "2017-10-18T09:22:20",
+          "file_name": "معجم مختار الصحاح.pdf",
+          "file_size": 2445349,
+          "mime_type": "application/pdf"
+        },
+        {
+          "telegram_message_id": 45026,
+          "date": "2019-02-06T18:00:25",
+          "file_name": "معجم مختار الصحاح.pdf",
+          "file_size": 10632665,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-million-048eb915230223e0"
+      ],
+      "notes": "دفعة مليون كتاب إسلامي؛ أُبقي التصنيف كما ورد في الملف المرسل."
+    },
+    {
+      "id": "tg-million-40f8bc881b10fadc",
+      "title": "مفردات ألفاظ القرآن",
+      "author": null,
+      "source": "📔 مليون كتــاب إسـلامي 📚",
+      "relativePath": "https://t.me/c/1010154913/31185",
+      "sourceUrl": "https://t.me/c/1010154913/31185",
+      "primaryCategory": "dictionaries",
+      "tags": [
+        "معجم لغوي"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "دفعة مليون كتاب إسلامي المنقحة",
+          "إدراج جديد بعد مقارنة منطقية مع المكنز الحالي",
+          "التصنيف المعتمد: dictionaries"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 31185,
+          "date": "2018-02-12T07:26:14",
+          "file_name": "106319.pdf",
+          "file_size": 22332044,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-million-40f8bc881b10fadc"
+      ],
+      "notes": "دفعة مليون كتاب إسلامي؛ أُبقي التصنيف كما ورد في الملف المرسل."
+    },
+    {
+      "id": "tg-million-883e488519b73d0d",
+      "title": "مفردات ألفاظ القرآن الكتاب",
+      "author": null,
+      "source": "📔 مليون كتــاب إسـلامي 📚",
+      "relativePath": "https://t.me/c/1010154913/127456",
+      "sourceUrl": "https://t.me/c/1010154913/127456",
+      "primaryCategory": "dictionaries",
+      "tags": [
+        "معجم لغوي"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "دفعة مليون كتاب إسلامي المنقحة",
+          "إدراج جديد بعد مقارنة منطقية مع المكنز الحالي",
+          "التصنيف المعتمد: dictionaries"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 127456,
+          "date": "2022-11-01T20:58:21",
+          "file_name": "مفردات ألفاظ القرآن الكتاب .pdf",
+          "file_size": 22332044,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-million-883e488519b73d0d"
+      ],
+      "notes": "دفعة مليون كتاب إسلامي؛ أُبقي التصنيف كما ورد في الملف المرسل."
+    },
+    {
+      "id": "tg-million-922e886a55c63121",
+      "title": "مفردات ألفاظ القرآن للأصفهاني",
+      "author": null,
+      "source": "📔 مليون كتــاب إسـلامي 📚",
+      "relativePath": "https://t.me/c/1010154913/129926",
+      "sourceUrl": "https://t.me/c/1010154913/129926",
+      "primaryCategory": "dictionaries",
+      "tags": [
+        "معجم لغوي"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "دفعة مليون كتاب إسلامي المنقحة",
+          "إدراج جديد بعد مقارنة منطقية مع المكنز الحالي",
+          "التصنيف المعتمد: dictionaries"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 129926,
+          "date": "2022-11-29T16:45:12",
+          "file_name": "مفردات ألفاظ القرآن للأصفهاني .pdf",
+          "file_size": 22332044,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-million-922e886a55c63121"
+      ],
+      "notes": "دفعة مليون كتاب إسلامي؛ أُبقي التصنيف كما ورد في الملف المرسل."
+    },
+    {
+      "id": "tg-million-6a2ad8c37dd17f75",
+      "title": "مفردات ألفاظ القرآن مقدمة",
+      "author": null,
+      "source": "📔 مليون كتــاب إسـلامي 📚",
+      "relativePath": "https://t.me/c/1010154913/31184",
+      "sourceUrl": "https://t.me/c/1010154913/31184",
+      "primaryCategory": "dictionaries",
+      "tags": [
+        "معجم لغوي"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "دفعة مليون كتاب إسلامي المنقحة",
+          "إدراج جديد بعد مقارنة منطقية مع المكنز الحالي",
+          "التصنيف المعتمد: dictionaries"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 2",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 31184,
+          "date": "2018-02-12T07:25:19",
+          "file_name": "106319p.pdf",
+          "file_size": 579263,
+          "mime_type": "application/pdf"
+        },
+        {
+          "telegram_message_id": 127455,
+          "date": "2022-11-01T20:56:23",
+          "file_name": "مفردات ألفاظ القرآن مقدمة .pdf",
+          "file_size": 579263,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-million-6a2ad8c37dd17f75"
+      ],
+      "notes": "دفعة مليون كتاب إسلامي؛ أُبقي التصنيف كما ورد في الملف المرسل."
+    },
+    {
+      "id": "tg-million-07616cb9c61d43c2",
+      "title": "الكتاب: متن تحفة الأطفال 🖇الكاتب:سليمان الجمزوري 61 بيت شعر للمساعدة في التجويد للقراء",
+      "author": null,
+      "source": "📔 مليون كتــاب إسـلامي 📚",
+      "relativePath": "https://t.me/c/1010154913/15105",
+      "sourceUrl": "https://t.me/c/1010154913/15105",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري",
+        "شعر وأدب"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "دفعة مليون كتاب إسلامي المنقحة",
+          "إدراج جديد بعد مقارنة منطقية مع المكنز الحالي",
+          "التصنيف المعتمد: diwans",
+          "سجل ديوان مستورد ومُصنّف"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 2",
+          "سجلات الدفعة المجمعة: 2"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 15105,
+          "date": "2017-04-08T15:30:50",
+          "file_name": "تحفة الأطفال.pdf",
+          "file_size": 198229,
+          "mime_type": "application/pdf"
+        },
+        {
+          "telegram_message_id": 57222,
+          "date": "2020-03-28T19:44:05",
+          "file_name": "تحفة الأطفال.pdf",
+          "file_size": 198229,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-million-07616cb9c61d43c2",
+        "tg-million-2582314ef8969eef"
+      ],
+      "notes": "دفعة مليون كتاب إسلامي؛ أُبقي التصنيف كما ورد في الملف المرسل."
+    },
+    {
+      "id": "tg-million-7ae6f7323a154193",
+      "title": "ديوان الإمام على بن أبى طالب كرم الله وجهه",
+      "author": null,
+      "source": "📔 مليون كتــاب إسـلامي 📚",
+      "relativePath": "https://t.me/c/1010154913/11736",
+      "sourceUrl": "https://t.me/c/1010154913/11736",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري",
+        "شعر وأدب"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "دفعة مليون كتاب إسلامي المنقحة",
+          "إدراج جديد بعد مقارنة منطقية مع المكنز الحالي",
+          "التصنيف المعتمد: diwans",
+          "سجل ديوان مستورد ومُصنّف"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 11736,
+          "date": "2016-12-25T19:23:03",
+          "file_name": "ديوان الإمام على بن أبى طالب كرم الله وجهه.pdf",
+          "file_size": 13403633,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-million-7ae6f7323a154193"
+      ],
+      "notes": "دفعة مليون كتاب إسلامي؛ أُبقي التصنيف كما ورد في الملف المرسل."
+    },
+    {
+      "id": "tg-million-547159ddb386a732",
+      "title": "ديوان الشافعي محمد بن ادريس الشافعي",
+      "author": null,
+      "source": "📔 مليون كتــاب إسـلامي 📚",
+      "relativePath": "https://t.me/c/1010154913/41525",
+      "sourceUrl": "https://t.me/c/1010154913/41525",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري",
+        "شعر وأدب"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "دفعة مليون كتاب إسلامي المنقحة",
+          "إدراج جديد بعد مقارنة منطقية مع المكنز الحالي",
+          "التصنيف المعتمد: diwans",
+          "سجل ديوان مستورد ومُصنّف"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 41525,
+          "date": "2018-11-26T16:09:39",
+          "file_name": "ديوان_الشافعي_محمد_بن_ادريس_الشافعي.pdf",
+          "file_size": 5490059,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-million-547159ddb386a732"
+      ],
+      "notes": "دفعة مليون كتاب إسلامي؛ أُبقي التصنيف كما ورد في الملف المرسل."
+    },
+    {
+      "id": "tg-million-15dd2f89bef2f8d1",
+      "title": "عائض القرنى قصائد قتلت أصحابها",
+      "author": null,
+      "source": "📔 مليون كتــاب إسـلامي 📚",
+      "relativePath": "https://t.me/c/1010154913/37051",
+      "sourceUrl": "https://t.me/c/1010154913/37051",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري",
+        "شعر وأدب"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "دفعة مليون كتاب إسلامي المنقحة",
+          "إدراج جديد بعد مقارنة منطقية مع المكنز الحالي",
+          "التصنيف المعتمد: diwans",
+          "سجل ديوان مستورد ومُصنّف"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 37051,
+          "date": "2018-07-31T10:58:15",
+          "file_name": "عائض_القرنى_قصائد_قتلت_أصحابها.pdf",
+          "file_size": 15134879,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-million-15dd2f89bef2f8d1"
+      ],
+      "notes": "دفعة مليون كتاب إسلامي؛ أُبقي التصنيف كما ورد في الملف المرسل."
+    },
+    {
+      "id": "tg-million-db1abbfcf8209755",
+      "title": "قواعد الخط العربي - الخط الديواني",
+      "author": null,
+      "source": "📔 مليون كتــاب إسـلامي 📚",
+      "relativePath": "https://t.me/c/1010154913/28526",
+      "sourceUrl": "https://t.me/c/1010154913/28526",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري",
+        "شعر وأدب"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "دفعة مليون كتاب إسلامي المنقحة",
+          "إدراج جديد بعد مقارنة منطقية مع المكنز الحالي",
+          "التصنيف المعتمد: diwans",
+          "سجل ديوان مستورد ومُصنّف"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 28526,
+          "date": "2018-01-04T00:15:44",
+          "file_name": "قواعد الخط العربي - الخط الديواني.pdf",
+          "file_size": 563212,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-million-db1abbfcf8209755"
+      ],
+      "notes": "دفعة مليون كتاب إسلامي؛ أُبقي التصنيف كما ورد في الملف المرسل."
+    },
+    {
+      "id": "tg-million-f25c9441b1120cb8",
+      "title": "متن تحفة الأطفال 🖇الكاتب:سليمان الجمزوري 61 بيت شعر للمساعدة في #التجويد للقراء 2⃣نسخة بصوت سعد الغامدي 🎧👇",
+      "author": null,
+      "source": "📔 مليون كتــاب إسـلامي 📚",
+      "relativePath": "https://t.me/c/1010154913/42593",
+      "sourceUrl": "https://t.me/c/1010154913/42593",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري",
+        "شعر وأدب"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "دفعة مليون كتاب إسلامي المنقحة",
+          "إدراج جديد بعد مقارنة منطقية مع المكنز الحالي",
+          "التصنيف المعتمد: diwans",
+          "سجل ديوان مستورد ومُصنّف"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 42593,
+          "date": "2018-12-18T01:41:38",
+          "file_name": "تحفة الأطفال.pdf",
+          "file_size": 198229,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-million-f25c9441b1120cb8"
+      ],
+      "notes": "دفعة مليون كتاب إسلامي؛ أُبقي التصنيف كما ورد في الملف المرسل."
+    },
+    {
+      "id": "tg-million-298b1006fa63cc7b",
+      "title": "Figh09661 منظومة القرطبي في العبادات",
+      "author": null,
+      "source": "📔 مليون كتــاب إسـلامي 📚",
+      "relativePath": "https://t.me/c/1010154913/43940",
+      "sourceUrl": "https://t.me/c/1010154913/43940",
+      "primaryCategory": "scientific_poems",
+      "tags": [
+        "منظومة علمية"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "دفعة مليون كتاب إسلامي المنقحة",
+          "إدراج جديد بعد مقارنة منطقية مع المكنز الحالي",
+          "التصنيف المعتمد: scientific_poems",
+          "سجل منظومة علمية مستورد ومصنف"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 43940,
+          "date": "2019-01-15T20:13:44",
+          "file_name": "Figh09661_منظومة_القرطبي_في_العبادات.pdf",
+          "file_size": 2552320,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-million-298b1006fa63cc7b"
+      ],
+      "notes": "دفعة مليون كتاب إسلامي؛ أُبقي التصنيف كما ورد في الملف المرسل."
+    },
+    {
+      "id": "tg-million-2ac895a14de95171",
+      "title": "Figh09662 منظومة بلوغ المرام من",
+      "author": null,
+      "source": "📔 مليون كتــاب إسـلامي 📚",
+      "relativePath": "https://t.me/c/1010154913/43944",
+      "sourceUrl": "https://t.me/c/1010154913/43944",
+      "primaryCategory": "scientific_poems",
+      "tags": [
+        "منظومة علمية"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "دفعة مليون كتاب إسلامي المنقحة",
+          "إدراج جديد بعد مقارنة منطقية مع المكنز الحالي",
+          "التصنيف المعتمد: scientific_poems",
+          "سجل منظومة علمية مستورد ومصنف"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 43944,
+          "date": "2019-01-15T20:13:44",
+          "file_name": "Figh09662_منظومة_بلوغ_المرام_من.pdf",
+          "file_size": 8765888,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-million-2ac895a14de95171"
+      ],
+      "notes": "دفعة مليون كتاب إسلامي؛ أُبقي التصنيف كما ورد في الملف المرسل."
+    },
+    {
+      "id": "tg-million-ec049404a5c48343",
+      "title": "Quraan04244 منظومة المقدمة فيما",
+      "author": null,
+      "source": "📔 مليون كتــاب إسـلامي 📚",
+      "relativePath": "https://t.me/c/1010154913/43960",
+      "sourceUrl": "https://t.me/c/1010154913/43960",
+      "primaryCategory": "scientific_poems",
+      "tags": [
+        "منظومة علمية"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "دفعة مليون كتاب إسلامي المنقحة",
+          "إدراج جديد بعد مقارنة منطقية مع المكنز الحالي",
+          "التصنيف المعتمد: scientific_poems",
+          "سجل منظومة علمية مستورد ومصنف"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 43960,
+          "date": "2019-01-15T20:26:01",
+          "file_name": "Quraan04244_منظومة_المقدمة_فيما.pdf",
+          "file_size": 5259167,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-million-ec049404a5c48343"
+      ],
+      "notes": "دفعة مليون كتاب إسلامي؛ أُبقي التصنيف كما ورد في الملف المرسل."
+    },
+    {
+      "id": "tg-million-1a913b12f5c51851",
+      "title": "Quraan04245 منظومة تحفة الصبيان",
+      "author": null,
+      "source": "📔 مليون كتــاب إسـلامي 📚",
+      "relativePath": "https://t.me/c/1010154913/148989",
+      "sourceUrl": "https://t.me/c/1010154913/148989",
+      "primaryCategory": "scientific_poems",
+      "tags": [
+        "منظومة علمية"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "دفعة مليون كتاب إسلامي المنقحة",
+          "إدراج جديد بعد مقارنة منطقية مع المكنز الحالي",
+          "التصنيف المعتمد: scientific_poems",
+          "سجل منظومة علمية مستورد ومصنف"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 148989,
+          "date": "2023-07-17T15:58:19",
+          "file_name": "Quraan04245_منظومة_تحفة_الصبيان.pdf",
+          "file_size": 304208,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-million-1a913b12f5c51851"
+      ],
+      "notes": "دفعة مليون كتاب إسلامي؛ أُبقي التصنيف كما ورد في الملف المرسل."
+    },
+    {
+      "id": "tg-million-2a9e99f9538952fd",
+      "title": "إرشاد السالك إلى حل ألفية ابن مالك",
+      "author": null,
+      "source": "📔 مليون كتــاب إسـلامي 📚",
+      "relativePath": "https://t.me/c/1010154913/11087",
+      "sourceUrl": "https://t.me/c/1010154913/11087",
+      "primaryCategory": "scientific_poems",
+      "tags": [
+        "منظومة علمية"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "دفعة مليون كتاب إسلامي المنقحة",
+          "إدراج جديد بعد مقارنة منطقية مع المكنز الحالي",
+          "التصنيف المعتمد: scientific_poems",
+          "سجل منظومة علمية مستورد ومصنف"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 11087,
+          "date": "2016-12-18T20:14:04",
+          "file_name": "إرشاد_السالك_إلى_حل_ألفية_ابن_مالك.pdf",
+          "file_size": 19458176,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-million-2a9e99f9538952fd"
+      ],
+      "notes": "دفعة مليون كتاب إسلامي؛ أُبقي التصنيف كما ورد في الملف المرسل."
+    },
+    {
+      "id": "tg-million-e99f686c5280e112",
+      "title": "التحفة السنية شرح منظومة ابن أبي",
+      "author": null,
+      "source": "📔 مليون كتــاب إسـلامي 📚",
+      "relativePath": "https://t.me/c/1010154913/26815",
+      "sourceUrl": "https://t.me/c/1010154913/26815",
+      "primaryCategory": "scientific_poems",
+      "tags": [
+        "منظومة علمية"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "دفعة مليون كتاب إسلامي المنقحة",
+          "إدراج جديد بعد مقارنة منطقية مع المكنز الحالي",
+          "التصنيف المعتمد: scientific_poems",
+          "سجل منظومة علمية مستورد ومصنف"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 26815,
+          "date": "2017-12-18T08:41:08",
+          "file_name": "التحفة_السنية_شرح_منظومة_ابن_أبي.pdf",
+          "file_size": 806190,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-million-e99f686c5280e112"
+      ],
+      "notes": "دفعة مليون كتاب إسلامي؛ أُبقي التصنيف كما ورد في الملف المرسل."
+    },
+    {
+      "id": "tg-million-c35c29d6f89b5da9",
+      "title": "التحفة السنية شرح منظومة ابن أبي داود الحائية",
+      "author": null,
+      "source": "📔 مليون كتــاب إسـلامي 📚",
+      "relativePath": "https://t.me/c/1010154913/200386",
+      "sourceUrl": "https://t.me/c/1010154913/200386",
+      "primaryCategory": "scientific_poems",
+      "tags": [
+        "منظومة علمية"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "دفعة مليون كتاب إسلامي المنقحة",
+          "إدراج جديد بعد مقارنة منطقية مع المكنز الحالي",
+          "التصنيف المعتمد: scientific_poems",
+          "سجل منظومة علمية مستورد ومصنف"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 200386,
+          "date": "2024-12-19T15:14:33",
+          "file_name": "التحفة_السنية_شرح_منظومة_ابن_أبي_داود_الحائية.pdf",
+          "file_size": 806190,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-million-c35c29d6f89b5da9"
+      ],
+      "notes": "دفعة مليون كتاب إسلامي؛ أُبقي التصنيف كما ورد في الملف المرسل."
+    },
+    {
+      "id": "tg-million-1fa614f50418f193",
+      "title": "التحفة السنية شرح منظومة أبي داو",
+      "author": null,
+      "source": "📔 مليون كتــاب إسـلامي 📚",
+      "relativePath": "https://t.me/c/1010154913/10356",
+      "sourceUrl": "https://t.me/c/1010154913/10356",
+      "primaryCategory": "scientific_poems",
+      "tags": [
+        "منظومة علمية"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "دفعة مليون كتاب إسلامي المنقحة",
+          "إدراج جديد بعد مقارنة منطقية مع المكنز الحالي",
+          "التصنيف المعتمد: scientific_poems",
+          "سجل منظومة علمية مستورد ومصنف"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 10356,
+          "date": "2016-12-01T16:58:17",
+          "file_name": "التحفة_السنية_شرح_منظومة_أبي_داو.pdf",
+          "file_size": 806190,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-million-1fa614f50418f193"
+      ],
+      "notes": "دفعة مليون كتاب إسلامي؛ أُبقي التصنيف كما ورد في الملف المرسل."
+    },
+    {
+      "id": "tg-million-0a75edc6d6d8436c",
+      "title": "التوضيحات الجلية شرح المنظومة السخاوية في متشابهات الآيات القرآنية المؤلف: محمد سالم محيسن الناشر: موقع الدكتور محمد محيسن",
+      "author": null,
+      "source": "📔 مليون كتــاب إسـلامي 📚",
+      "relativePath": "https://t.me/c/1010154913/13499",
+      "sourceUrl": "https://t.me/c/1010154913/13499",
+      "primaryCategory": "scientific_poems",
+      "tags": [
+        "منظومة علمية"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "دفعة مليون كتاب إسلامي المنقحة",
+          "إدراج جديد بعد مقارنة منطقية مع المكنز الحالي",
+          "التصنيف المعتمد: scientific_poems",
+          "سجل منظومة علمية مستورد ومصنف"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 13499,
+          "date": "2017-03-01T07:28:45",
+          "file_name": "549_almehisen_AttawdeehatAlgleyah.pdf",
+          "file_size": 1160694,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-million-0a75edc6d6d8436c"
+      ],
+      "notes": "دفعة مليون كتاب إسلامي؛ أُبقي التصنيف كما ورد في الملف المرسل."
+    },
+    {
+      "id": "tg-million-0edca2cc1febd537",
+      "title": "¦الكتاب: منظومة الجزرية 📝¦الكاتب: الإمام محمد بن محمد بن علي بن يوسف ابن الجزري 📑¦عدد الصفحات: 21 ✴️¦109 أبيات شعر في علم التجويد للمبتدئين",
+      "author": null,
+      "source": "📔 مليون كتــاب إسـلامي 📚",
+      "relativePath": "https://t.me/c/1010154913/49705",
+      "sourceUrl": "https://t.me/c/1010154913/49705",
+      "primaryCategory": "scientific_poems",
+      "tags": [
+        "منظومة علمية"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "دفعة مليون كتاب إسلامي المنقحة",
+          "إدراج جديد بعد مقارنة منطقية مع المكنز الحالي",
+          "التصنيف المعتمد: scientific_poems",
+          "سجل منظومة علمية مستورد ومصنف"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 49705,
+          "date": "2019-07-01T16:11:31",
+          "file_name": "منظومة الجزرية.pdf",
+          "file_size": 144388,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-million-0edca2cc1febd537"
+      ],
+      "notes": "دفعة مليون كتاب إسلامي؛ أُبقي التصنيف كما ورد في الملف المرسل."
+    },
+    {
+      "id": "tg-million-837c565bfd78b2b6",
+      "title": "الكواكب الدرية على منظومة القواعد",
+      "author": null,
+      "source": "📔 مليون كتــاب إسـلامي 📚",
+      "relativePath": "https://t.me/c/1010154913/9637",
+      "sourceUrl": "https://t.me/c/1010154913/9637",
+      "primaryCategory": "scientific_poems",
+      "tags": [
+        "منظومة علمية"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "دفعة مليون كتاب إسلامي المنقحة",
+          "إدراج جديد بعد مقارنة منطقية مع المكنز الحالي",
+          "التصنيف المعتمد: scientific_poems",
+          "سجل منظومة علمية مستورد ومصنف"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 2",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 9637,
+          "date": "2016-11-17T12:24:28",
+          "file_name": "الكواكب_الدرية_على_منظومة_القواعد.pdf",
+          "file_size": 1286831,
+          "mime_type": "application/pdf"
+        },
+        {
+          "telegram_message_id": 9645,
+          "date": "2016-11-17T12:24:31",
+          "file_name": "الكواكب_الدرية_على_منظومة_القواعد.pdf",
+          "file_size": 1121146,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-million-837c565bfd78b2b6"
+      ],
+      "notes": "دفعة مليون كتاب إسلامي؛ أُبقي التصنيف كما ورد في الملف المرسل."
+    },
+    {
+      "id": "tg-million-9c596d9f531bbfc4",
+      "title": "شرح ابن عقيل على الألفية",
+      "author": null,
+      "source": "📔 مليون كتــاب إسـلامي 📚",
+      "relativePath": "https://t.me/c/1010154913/37089",
+      "sourceUrl": "https://t.me/c/1010154913/37089",
+      "primaryCategory": "scientific_poems",
+      "tags": [
+        "منظومة علمية"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "دفعة مليون كتاب إسلامي المنقحة",
+          "إدراج جديد بعد مقارنة منطقية مع المكنز الحالي",
+          "التصنيف المعتمد: scientific_poems",
+          "سجل منظومة علمية مستورد ومصنف"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 37089,
+          "date": "2018-08-03T00:25:53",
+          "file_name": "شرح ابن عقيل على الألفية.pdf",
+          "file_size": 12275058,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-million-9c596d9f531bbfc4"
+      ],
+      "notes": "دفعة مليون كتاب إسلامي؛ أُبقي التصنيف كما ورد في الملف المرسل."
+    },
+    {
+      "id": "tg-million-b98e072e9190bc43",
+      "title": "شرح ألفية ابن مالك١ - ابن عثيمين",
+      "author": null,
+      "source": "📔 مليون كتــاب إسـلامي 📚",
+      "relativePath": "https://t.me/c/1010154913/252706",
+      "sourceUrl": "https://t.me/c/1010154913/252706",
+      "primaryCategory": "scientific_poems",
+      "tags": [
+        "منظومة علمية"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "دفعة مليون كتاب إسلامي المنقحة",
+          "إدراج جديد بعد مقارنة منطقية مع المكنز الحالي",
+          "التصنيف المعتمد: scientific_poems",
+          "سجل منظومة علمية مستورد ومصنف"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 3",
+          "سجلات الدفعة المجمعة: 3"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 252706,
+          "date": "2026-06-23T00:38:18",
+          "file_name": "شرح ألفية ابن مالك١ - ابن عثيمين.pdf",
+          "file_size": 12437696,
+          "mime_type": "application/pdf"
+        },
+        {
+          "telegram_message_id": 252707,
+          "date": "2026-06-23T00:38:26",
+          "file_name": "شرح ألفية ابن مالك٢ - ابن عثيمين.pdf",
+          "file_size": 8680651,
+          "mime_type": "application/pdf"
+        },
+        {
+          "telegram_message_id": 252708,
+          "date": "2026-06-23T00:38:33",
+          "file_name": "شرح ألفية ابن مالك٣ - ابن عثيمين.pdf",
+          "file_size": 10029910,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-million-b98e072e9190bc43",
+        "tg-million-91b3e988c65648f9",
+        "tg-million-ac50f5fc3ca35a8a"
+      ],
+      "notes": "دفعة مليون كتاب إسلامي؛ أُبقي التصنيف كما ورد في الملف المرسل."
+    },
+    {
+      "id": "tg-million-14c6106f4801974f",
+      "title": "شرح المنظومة البيقونية ابن عثيمين",
+      "author": null,
+      "source": "📔 مليون كتــاب إسـلامي 📚",
+      "relativePath": "https://t.me/c/1010154913/253058",
+      "sourceUrl": "https://t.me/c/1010154913/253058",
+      "primaryCategory": "scientific_poems",
+      "tags": [
+        "منظومة علمية"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "دفعة مليون كتاب إسلامي المنقحة",
+          "إدراج جديد بعد مقارنة منطقية مع المكنز الحالي",
+          "التصنيف المعتمد: scientific_poems",
+          "سجل منظومة علمية مستورد ومصنف"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 253058,
+          "date": "2026-06-27T02:57:01",
+          "file_name": "شرح_المنظومة_البيقونية_ابن_عثيمين.pdf",
+          "file_size": 7532170,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-million-14c6106f4801974f"
+      ],
+      "notes": "دفعة مليون كتاب إسلامي؛ أُبقي التصنيف كما ورد في الملف المرسل."
+    },
+    {
+      "id": "tg-million-2a8a2cf72be7cb85",
+      "title": "شرح المنظومة البيقونية في علم مصطلح الحديث",
+      "author": null,
+      "source": "📔 مليون كتــاب إسـلامي 📚",
+      "relativePath": "https://t.me/c/1010154913/122296",
+      "sourceUrl": "https://t.me/c/1010154913/122296",
+      "primaryCategory": "scientific_poems",
+      "tags": [
+        "منظومة علمية"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "دفعة مليون كتاب إسلامي المنقحة",
+          "إدراج جديد بعد مقارنة منطقية مع المكنز الحالي",
+          "التصنيف المعتمد: scientific_poems",
+          "سجل منظومة علمية مستورد ومصنف"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 3",
+          "سجلات الدفعة المجمعة: 2"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 122296,
+          "date": "2022-09-06T23:05:17",
+          "file_name": "شرح_المنظومة_البيقونية_في_علم_مصطلح_الحديث_.pdf",
+          "file_size": 2912254,
+          "mime_type": "application/pdf"
+        },
+        {
+          "telegram_message_id": 80592,
+          "date": "2021-06-05T15:51:46",
+          "file_name": "شرح البيقونية   .pdf",
+          "file_size": 62701330,
+          "mime_type": "application/pdf"
+        },
+        {
+          "telegram_message_id": 233902,
+          "date": "2025-11-19T23:37:14",
+          "file_name": "شرح_المنظومة_البيقونية_في_مصطلح_الحديث.pdf",
+          "file_size": 2999229,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-million-2a8a2cf72be7cb85",
+        "tg-million-cb34e9f4f3fd1b51"
+      ],
+      "notes": "دفعة مليون كتاب إسلامي؛ أُبقي التصنيف كما ورد في الملف المرسل."
+    },
+    {
+      "id": "tg-million-6d6ce2ac5fa1eb2e",
+      "title": "شرح المنظومة البيقونية في علم مصطلح الحديث #شرحها طارق بن عوض الله بن محمد",
+      "author": null,
+      "source": "📔 مليون كتــاب إسـلامي 📚",
+      "relativePath": "https://t.me/c/1010154913/29044",
+      "sourceUrl": "https://t.me/c/1010154913/29044",
+      "primaryCategory": "scientific_poems",
+      "tags": [
+        "منظومة علمية"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "دفعة مليون كتاب إسلامي المنقحة",
+          "إدراج جديد بعد مقارنة منطقية مع المكنز الحالي",
+          "التصنيف المعتمد: scientific_poems",
+          "سجل منظومة علمية مستورد ومصنف"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 29044,
+          "date": "2018-01-13T19:28:39",
+          "file_name": "99186.pdf",
+          "file_size": 2912254,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-million-6d6ce2ac5fa1eb2e"
+      ],
+      "notes": "دفعة مليون كتاب إسلامي؛ أُبقي التصنيف كما ورد في الملف المرسل."
+    },
+    {
+      "id": "tg-million-f75aa322bffeef69",
+      "title": "شرح المنظومة البيقونية في مصطلح الحديث. المؤلف: عبد الله سراج الدين. طبعة: مكتبة الفلاح – حلب – 2009م",
+      "author": null,
+      "source": "📔 مليون كتــاب إسـلامي 📚",
+      "relativePath": "https://t.me/c/1010154913/43647",
+      "sourceUrl": "https://t.me/c/1010154913/43647",
+      "primaryCategory": "scientific_poems",
+      "tags": [
+        "منظومة علمية"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "دفعة مليون كتاب إسلامي المنقحة",
+          "إدراج جديد بعد مقارنة منطقية مع المكنز الحالي",
+          "التصنيف المعتمد: scientific_poems",
+          "سجل منظومة علمية مستورد ومصنف"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 43647,
+          "date": "2019-01-11T12:28:14",
+          "file_name": "شرح البيقونية   .pdf",
+          "file_size": 62701330,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-million-f75aa322bffeef69"
+      ],
+      "notes": "دفعة مليون كتاب إسلامي؛ أُبقي التصنيف كما ورد في الملف المرسل."
+    },
+    {
+      "id": "tg-million-ffb27c3a531e63bd",
+      "title": "شرح المنظومة البيقونية للزرقاني",
+      "author": null,
+      "source": "📔 مليون كتــاب إسـلامي 📚",
+      "relativePath": "https://t.me/c/1010154913/38943",
+      "sourceUrl": "https://t.me/c/1010154913/38943",
+      "primaryCategory": "scientific_poems",
+      "tags": [
+        "منظومة علمية"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "دفعة مليون كتاب إسلامي المنقحة",
+          "إدراج جديد بعد مقارنة منطقية مع المكنز الحالي",
+          "التصنيف المعتمد: scientific_poems",
+          "سجل منظومة علمية مستورد ومصنف"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 38943,
+          "date": "2018-10-11T20:56:32",
+          "file_name": "شرح_المنظومة_البيقونية_للزرقاني.pdf",
+          "file_size": 5181182,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-million-ffb27c3a531e63bd"
+      ],
+      "notes": "دفعة مليون كتاب إسلامي؛ أُبقي التصنيف كما ورد في الملف المرسل."
+    },
+    {
+      "id": "tg-million-ada8cdccbcc2587b",
+      "title": "شرح المنظومة الميمية في الوصايا",
+      "author": null,
+      "source": "📔 مليون كتــاب إسـلامي 📚",
+      "relativePath": "https://t.me/c/1010154913/54006",
+      "sourceUrl": "https://t.me/c/1010154913/54006",
+      "primaryCategory": "scientific_poems",
+      "tags": [
+        "منظومة علمية"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "دفعة مليون كتاب إسلامي المنقحة",
+          "إدراج جديد بعد مقارنة منطقية مع المكنز الحالي",
+          "التصنيف المعتمد: scientific_poems",
+          "سجل منظومة علمية مستورد ومصنف"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 54006,
+          "date": "2019-11-30T06:38:16",
+          "file_name": "شرح_المنظومة_الميمية_في_الوصايا.pdf",
+          "file_size": 5825571,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-million-ada8cdccbcc2587b"
+      ],
+      "notes": "دفعة مليون كتاب إسلامي؛ أُبقي التصنيف كما ورد في الملف المرسل."
+    },
+    {
+      "id": "tg-million-1b67e5e296741467",
+      "title": "شرح حسن البيان في نظم مشترك القرآن",
+      "author": null,
+      "source": "📔 مليون كتــاب إسـلامي 📚",
+      "relativePath": "https://t.me/c/1010154913/49338",
+      "sourceUrl": "https://t.me/c/1010154913/49338",
+      "primaryCategory": "scientific_poems",
+      "tags": [
+        "منظومة علمية"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "دفعة مليون كتاب إسلامي المنقحة",
+          "إدراج جديد بعد مقارنة منطقية مع المكنز الحالي",
+          "التصنيف المعتمد: scientific_poems",
+          "سجل منظومة علمية مستورد ومصنف"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 49338,
+          "date": "2019-06-21T15:46:22",
+          "file_name": "شرح_حسن_البيان_في_نظم_مشترك_القرآن.pdf",
+          "file_size": 2738951,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-million-1b67e5e296741467"
+      ],
+      "notes": "دفعة مليون كتاب إسلامي؛ أُبقي التصنيف كما ورد في الملف المرسل."
+    },
+    {
+      "id": "tg-million-230319640907084e",
+      "title": "شرح منظومة السير إلى الله",
+      "author": null,
+      "source": "📔 مليون كتــاب إسـلامي 📚",
+      "relativePath": "https://t.me/c/1010154913/52138",
+      "sourceUrl": "https://t.me/c/1010154913/52138",
+      "primaryCategory": "scientific_poems",
+      "tags": [
+        "منظومة علمية"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "دفعة مليون كتاب إسلامي المنقحة",
+          "إدراج جديد بعد مقارنة منطقية مع المكنز الحالي",
+          "التصنيف المعتمد: scientific_poems",
+          "سجل منظومة علمية مستورد ومصنف"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 52138,
+          "date": "2019-09-05T12:19:15",
+          "file_name": "شرح منظومة السير إلى الله .pdf",
+          "file_size": 1433600,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-million-230319640907084e"
+      ],
+      "notes": "دفعة مليون كتاب إسلامي؛ أُبقي التصنيف كما ورد في الملف المرسل."
+    },
+    {
+      "id": "tg-million-c095d57a8808dc59",
+      "title": "شرح منظومة الكبائر للسفاريني ت وليد",
+      "author": null,
+      "source": "📔 مليون كتــاب إسـلامي 📚",
+      "relativePath": "https://t.me/c/1010154913/44102",
+      "sourceUrl": "https://t.me/c/1010154913/44102",
+      "primaryCategory": "scientific_poems",
+      "tags": [
+        "منظومة علمية"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "دفعة مليون كتاب إسلامي المنقحة",
+          "إدراج جديد بعد مقارنة منطقية مع المكنز الحالي",
+          "التصنيف المعتمد: scientific_poems",
+          "سجل منظومة علمية مستورد ومصنف"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 44102,
+          "date": "2019-01-17T05:33:36",
+          "file_name": "شرح_منظومة_الكبائر_للسفاريني_ت_وليد.pdf",
+          "file_size": 10644106,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-million-c095d57a8808dc59"
+      ],
+      "notes": "دفعة مليون كتاب إسلامي؛ أُبقي التصنيف كما ورد في الملف المرسل."
+    },
+    {
+      "id": "tg-million-2e3e9a5d7c8f2dcc",
+      "title": "شرح منظومة في السياسة الشرعية",
+      "author": null,
+      "source": "📔 مليون كتــاب إسـلامي 📚",
+      "relativePath": "https://t.me/c/1010154913/33143",
+      "sourceUrl": "https://t.me/c/1010154913/33143",
+      "primaryCategory": "scientific_poems",
+      "tags": [
+        "منظومة علمية"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "دفعة مليون كتاب إسلامي المنقحة",
+          "إدراج جديد بعد مقارنة منطقية مع المكنز الحالي",
+          "التصنيف المعتمد: scientific_poems",
+          "سجل منظومة علمية مستورد ومصنف"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 33143,
+          "date": "2018-03-26T08:14:37",
+          "file_name": "شرح منظومة في السياسة الشرعية.pdf",
+          "file_size": 798314,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-million-2e3e9a5d7c8f2dcc"
+      ],
+      "notes": "دفعة مليون كتاب إسلامي؛ أُبقي التصنيف كما ورد في الملف المرسل."
+    },
+    {
+      "id": "tg-million-0a163071e5971995",
+      "title": "ضبط منظومة تحفة الأطفال",
+      "author": null,
+      "source": "📔 مليون كتــاب إسـلامي 📚",
+      "relativePath": "https://t.me/c/1010154913/39395",
+      "sourceUrl": "https://t.me/c/1010154913/39395",
+      "primaryCategory": "scientific_poems",
+      "tags": [
+        "منظومة علمية"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "دفعة مليون كتاب إسلامي المنقحة",
+          "إدراج جديد بعد مقارنة منطقية مع المكنز الحالي",
+          "التصنيف المعتمد: scientific_poems",
+          "سجل منظومة علمية مستورد ومصنف"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 39395,
+          "date": "2018-10-20T20:01:48",
+          "file_name": "ضبط منظومة تحفة الأطفال.pdf",
+          "file_size": 497912,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-million-0a163071e5971995"
+      ],
+      "notes": "دفعة مليون كتاب إسلامي؛ أُبقي التصنيف كما ورد في الملف المرسل."
+    },
+    {
+      "id": "tg-million-4779b934e6b5362b",
+      "title": "عنوان الكتاب: شرح المنظومة البيقونية في علم مصطلح الحديث المؤلف: طارق بن عوض الله بن محمد أبو معاذ",
+      "author": null,
+      "source": "📔 مليون كتــاب إسـلامي 📚",
+      "relativePath": "https://t.me/c/1010154913/65091",
+      "sourceUrl": "https://t.me/c/1010154913/65091",
+      "primaryCategory": "scientific_poems",
+      "tags": [
+        "منظومة علمية"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "دفعة مليون كتاب إسلامي المنقحة",
+          "إدراج جديد بعد مقارنة منطقية مع المكنز الحالي",
+          "التصنيف المعتمد: scientific_poems",
+          "سجل منظومة علمية مستورد ومصنف"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 65091,
+          "date": "2020-09-08T20:18:08",
+          "file_name": "99186.pdf",
+          "file_size": 2912254,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-million-4779b934e6b5362b"
+      ],
+      "notes": "دفعة مليون كتاب إسلامي؛ أُبقي التصنيف كما ورد في الملف المرسل."
+    },
+    {
+      "id": "tg-million-f55b941056b3087c",
+      "title": "منظومة الجزرية",
+      "author": null,
+      "source": "📔 مليون كتــاب إسـلامي 📚",
+      "relativePath": "https://t.me/c/1010154913/22802",
+      "sourceUrl": "https://t.me/c/1010154913/22802",
+      "primaryCategory": "scientific_poems",
+      "tags": [
+        "منظومة علمية"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "دفعة مليون كتاب إسلامي المنقحة",
+          "إدراج جديد بعد مقارنة منطقية مع المكنز الحالي",
+          "التصنيف المعتمد: scientific_poems",
+          "سجل منظومة علمية مستورد ومصنف"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 22802,
+          "date": "2017-10-03T02:27:30",
+          "file_name": "منظومة الجزرية.pdf",
+          "file_size": 144388,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-million-f55b941056b3087c"
+      ],
+      "notes": "دفعة مليون كتاب إسلامي؛ أُبقي التصنيف كما ورد في الملف المرسل."
+    },
+    {
+      "id": "tg-million-0133efa3c2d09992",
+      "title": "منظومة الدرة المضية في القراءات",
+      "author": null,
+      "source": "📔 مليون كتــاب إسـلامي 📚",
+      "relativePath": "https://t.me/c/1010154913/22793",
+      "sourceUrl": "https://t.me/c/1010154913/22793",
+      "primaryCategory": "scientific_poems",
+      "tags": [
+        "منظومة علمية"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "دفعة مليون كتاب إسلامي المنقحة",
+          "إدراج جديد بعد مقارنة منطقية مع المكنز الحالي",
+          "التصنيف المعتمد: scientific_poems",
+          "سجل منظومة علمية مستورد ومصنف"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 2",
+          "سجلات الدفعة المجمعة: 2"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 22793,
+          "date": "2017-10-03T02:27:29",
+          "file_name": "منظومة_الدرة_المضية_في_القراءات.pdf",
+          "file_size": 12626727,
+          "mime_type": "application/pdf"
+        },
+        {
+          "telegram_message_id": 11098,
+          "date": "2016-12-18T20:25:17",
+          "file_name": "منظومة_الدرة_المضية_في_القراءات_الثل.pdf",
+          "file_size": 12626727,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-million-0133efa3c2d09992",
+        "tg-million-085f79ee17a579ec"
+      ],
+      "notes": "دفعة مليون كتاب إسلامي؛ أُبقي التصنيف كما ورد في الملف المرسل."
+    },
+    {
+      "id": "tg-million-a26d2e0bd11c1f8f",
+      "title": "منظومة الدرة في القراءات الثلاث تحقيق الدكتور",
+      "author": null,
+      "source": "📔 مليون كتــاب إسـلامي 📚",
+      "relativePath": "https://t.me/c/1010154913/30928",
+      "sourceUrl": "https://t.me/c/1010154913/30928",
+      "primaryCategory": "scientific_poems",
+      "tags": [
+        "منظومة علمية"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "دفعة مليون كتاب إسلامي المنقحة",
+          "إدراج جديد بعد مقارنة منطقية مع المكنز الحالي",
+          "التصنيف المعتمد: scientific_poems",
+          "سجل منظومة علمية مستورد ومصنف"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 30928,
+          "date": "2018-02-10T17:35:59",
+          "file_name": "منظومة_الدرة_في_القراءات_الثلاث_تحقيق_الدكتور.pdf",
+          "file_size": 10623980,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-million-a26d2e0bd11c1f8f"
+      ],
+      "notes": "دفعة مليون كتاب إسلامي؛ أُبقي التصنيف كما ورد في الملف المرسل."
+    },
+    {
+      "id": "tg-million-8d7e0cab1b92be9c",
+      "title": "منظومة المقدمة فيما يجب على قارئ القرآن أن يعلمه",
+      "author": null,
+      "source": "📔 مليون كتــاب إسـلامي 📚",
+      "relativePath": "https://t.me/c/1010154913/191506",
+      "sourceUrl": "https://t.me/c/1010154913/191506",
+      "primaryCategory": "scientific_poems",
+      "tags": [
+        "منظومة علمية"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "دفعة مليون كتاب إسلامي المنقحة",
+          "إدراج جديد بعد مقارنة منطقية مع المكنز الحالي",
+          "التصنيف المعتمد: scientific_poems",
+          "سجل منظومة علمية مستورد ومصنف"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 2",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 191506,
+          "date": "2024-09-23T15:02:00",
+          "file_name": "منظومة_المقدمة_فيما_يجب_على_قارئ_القرآن_أن_يعلمه_.pdf",
+          "file_size": 5259204,
+          "mime_type": "application/pdf"
+        },
+        {
+          "telegram_message_id": 201201,
+          "date": "2024-12-27T15:11:10",
+          "file_name": "منظومة_المقدمة_فيما_يجب_على_قارئ_القرآن_أن_يعلمه_.pdf",
+          "file_size": 5554287,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-million-8d7e0cab1b92be9c"
+      ],
+      "notes": "دفعة مليون كتاب إسلامي؛ أُبقي التصنيف كما ورد في الملف المرسل."
+    },
+    {
+      "id": "tg-million-922331f6e726d58a",
+      "title": "منظومة تحفة الصبيان في تجويد القرآن 📚 ✏ أبو البراء المصري",
+      "author": null,
+      "source": "📔 مليون كتــاب إسـلامي 📚",
+      "relativePath": "https://t.me/c/1010154913/43955",
+      "sourceUrl": "https://t.me/c/1010154913/43955",
+      "primaryCategory": "scientific_poems",
+      "tags": [
+        "منظومة علمية"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "دفعة مليون كتاب إسلامي المنقحة",
+          "إدراج جديد بعد مقارنة منطقية مع المكنز الحالي",
+          "التصنيف المعتمد: scientific_poems",
+          "سجل منظومة علمية مستورد ومصنف"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 43955,
+          "date": "2019-01-15T20:26:01",
+          "file_name": "Quraan04245_منظومة_تحفة_الصبيان.pdf",
+          "file_size": 304208,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-million-922331f6e726d58a"
+      ],
+      "notes": "دفعة مليون كتاب إسلامي؛ أُبقي التصنيف كما ورد في الملف المرسل."
+    },
+    {
+      "id": "tg-million-515b1a42e6f35fdb",
+      "title": "منظومة سلم الوصول",
+      "author": null,
+      "source": "📔 مليون كتــاب إسـلامي 📚",
+      "relativePath": "https://t.me/c/1010154913/34922",
+      "sourceUrl": "https://t.me/c/1010154913/34922",
+      "primaryCategory": "scientific_poems",
+      "tags": [
+        "منظومة علمية"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "دفعة مليون كتاب إسلامي المنقحة",
+          "إدراج جديد بعد مقارنة منطقية مع المكنز الحالي",
+          "التصنيف المعتمد: scientific_poems",
+          "سجل منظومة علمية مستورد ومصنف"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 34922,
+          "date": "2018-05-01T09:47:04",
+          "file_name": "منظومة سلم الوصول.pdf",
+          "file_size": 695825,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-million-515b1a42e6f35fdb"
+      ],
+      "notes": "دفعة مليون كتاب إسلامي؛ أُبقي التصنيف كما ورد في الملف المرسل."
+    },
+    {
+      "id": "tg-million-0fab1f9fa5719aa5",
+      "title": "منظومة غريب القرآن",
+      "author": null,
+      "source": "📔 مليون كتــاب إسـلامي 📚",
+      "relativePath": "https://t.me/c/1010154913/52369",
+      "sourceUrl": "https://t.me/c/1010154913/52369",
+      "primaryCategory": "scientific_poems",
+      "tags": [
+        "منظومة علمية"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "دفعة مليون كتاب إسلامي المنقحة",
+          "إدراج جديد بعد مقارنة منطقية مع المكنز الحالي",
+          "التصنيف المعتمد: scientific_poems",
+          "سجل منظومة علمية مستورد ومصنف"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 52369,
+          "date": "2019-09-18T08:18:56",
+          "file_name": "منظومة غريب القرآن.pdf",
+          "file_size": 1459481,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-million-0fab1f9fa5719aa5"
+      ],
+      "notes": "دفعة مليون كتاب إسلامي؛ أُبقي التصنيف كما ورد في الملف المرسل."
+    },
+    {
+      "id": "tg-million-60c1bc3ed162c7bc",
+      "title": "نظم الفرائد 1",
+      "author": null,
+      "source": "📔 مليون كتــاب إسـلامي 📚",
+      "relativePath": "https://t.me/c/1010154913/15053",
+      "sourceUrl": "https://t.me/c/1010154913/15053",
+      "primaryCategory": "scientific_poems",
+      "tags": [
+        "منظومة علمية"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "دفعة مليون كتاب إسلامي المنقحة",
+          "إدراج جديد بعد مقارنة منطقية مع المكنز الحالي",
+          "التصنيف المعتمد: scientific_poems",
+          "سجل منظومة علمية مستورد ومصنف"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 15053,
+          "date": "2017-04-08T06:49:07",
+          "file_name": "نظم الفرائد 1.pdf",
+          "file_size": 8846158,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-million-60c1bc3ed162c7bc"
+      ],
+      "notes": "دفعة مليون كتاب إسلامي؛ أُبقي التصنيف كما ورد في الملف المرسل."
+    },
+    {
+      "id": "tg-million-c810d099e6cc21fe",
+      "title": "نظم الفرائد 2",
+      "author": null,
+      "source": "📔 مليون كتــاب إسـلامي 📚",
+      "relativePath": "https://t.me/c/1010154913/15054",
+      "sourceUrl": "https://t.me/c/1010154913/15054",
+      "primaryCategory": "scientific_poems",
+      "tags": [
+        "منظومة علمية"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "دفعة مليون كتاب إسلامي المنقحة",
+          "إدراج جديد بعد مقارنة منطقية مع المكنز الحالي",
+          "التصنيف المعتمد: scientific_poems",
+          "سجل منظومة علمية مستورد ومصنف"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 15054,
+          "date": "2017-04-08T06:49:07",
+          "file_name": "نظم الفرائد 2.pdf",
+          "file_size": 8364827,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-million-c810d099e6cc21fe"
+      ],
+      "notes": "دفعة مليون كتاب إسلامي؛ أُبقي التصنيف كما ورد في الملف المرسل."
+    },
+    {
+      "id": "tg-million-a961161d0ee3859e",
+      "title": "كتاب: #نظم الفرائد مما في #سلسلتي الألباني من فوائد 🔍الكاتب: عبداللطيف بن محمد بن أحمد بن أبي ربيع 📂 المجلد: الأول",
+      "author": null,
+      "source": "📔 مليون كتــاب إسـلامي 📚",
+      "relativePath": "https://t.me/c/1010154913/27764",
+      "sourceUrl": "https://t.me/c/1010154913/27764",
+      "primaryCategory": "scientific_poems",
+      "tags": [
+        "منظومة علمية"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "دفعة مليون كتاب إسلامي المنقحة",
+          "إدراج جديد بعد مقارنة منطقية مع المكنز الحالي",
+          "التصنيف المعتمد: scientific_poems",
+          "سجل منظومة علمية مستورد ومصنف"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 2",
+          "سجلات الدفعة المجمعة: 2"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 27764,
+          "date": "2017-12-31T23:59:15",
+          "file_name": "نظم الفرائد 1.pdf",
+          "file_size": 8846158,
+          "mime_type": "application/pdf"
+        },
+        {
+          "telegram_message_id": 27765,
+          "date": "2017-12-31T23:59:15",
+          "file_name": "نظم الفرائد 2.pdf",
+          "file_size": 8364827,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-million-a961161d0ee3859e",
+        "tg-million-4b26ae3db176ef47"
+      ],
+      "notes": "دفعة مليون كتاب إسلامي؛ أُبقي التصنيف كما ورد في الملف المرسل."
+    }
+  ]
+}

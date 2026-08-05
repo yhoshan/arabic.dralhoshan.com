@@ -14,6 +14,7 @@ import gapResourcesJson from "@/data/gap-resources-materials.json";
 import osoolLinguisticJson from "@/data/osool-linguistic-materials.json";
 import userCuratedJson from "@/data/user-curated-materials.json";
 import curatedHeritageJson from "@/data/curated-heritage-materials.json";
+import millionBooksJson from "@/data/million-books-materials.json";
 
 export type MaterialCategory =
   | "all"
@@ -244,6 +245,7 @@ const gapResourcesCatalog = gapResourcesJson as unknown as CuratedMaterialCatalo
 const osoolLinguisticCatalog = osoolLinguisticJson as unknown as CuratedMaterialCatalogPayload;
 const userCuratedCatalog = userCuratedJson as unknown as CuratedMaterialCatalogPayload;
 const curatedHeritageCatalog = curatedHeritageJson as unknown as CuratedMaterialCatalogPayload;
+const millionBooksCatalog = millionBooksJson as unknown as CuratedMaterialCatalogPayload;
 const CURATED_DIWAN_SIGNAL = "سجل ديوان موثّق";
 const IMPORTED_DIWAN_SIGNAL = "سجل ديوان مستورد ومُصنّف";
 const CURATED_CURRICULUM_SIGNAL = "سجل منهج ومقرر منقّى";
@@ -762,9 +764,30 @@ const CURATED_HERITAGE_MATERIALS = curatedHeritageCatalog.materials.filter(
     !MATERIAL_TITLES_BEFORE_CURATED_HERITAGE.has(normalizeCatalogTitle(material.title)),
 );
 
-export const MATERIALS: Material[] = [
+const MATERIALS_BEFORE_MILLION_BOOKS = [
   ...MATERIALS_BEFORE_CURATED_HERITAGE,
   ...CURATED_HERITAGE_MATERIALS,
+];
+const MATERIAL_IDS_BEFORE_MILLION_BOOKS = new Set(
+  MATERIALS_BEFORE_MILLION_BOOKS.map((material) => material.id),
+);
+const MATERIAL_URLS_BEFORE_MILLION_BOOKS = new Set(
+  MATERIALS_BEFORE_MILLION_BOOKS.map((material) => material.sourceUrl).filter(Boolean),
+);
+const MATERIAL_TITLES_BEFORE_MILLION_BOOKS = new Set(
+  MATERIALS_BEFORE_MILLION_BOOKS.map((material) => normalizeCatalogTitle(material.title)).filter(Boolean),
+);
+/** دفعة مليون كتاب إسلامي: لا تمر إلا إذا لم تطابق معرّفًا أو رابطًا أو عنوانًا مطبعًا حاضرًا. */
+const MILLION_BOOKS_MATERIALS = millionBooksCatalog.materials.filter(
+  (material) =>
+    !MATERIAL_IDS_BEFORE_MILLION_BOOKS.has(material.id) &&
+    (!material.sourceUrl || !MATERIAL_URLS_BEFORE_MILLION_BOOKS.has(material.sourceUrl)) &&
+    !MATERIAL_TITLES_BEFORE_MILLION_BOOKS.has(normalizeCatalogTitle(material.title)),
+);
+
+export const MATERIALS: Material[] = [
+  ...MATERIALS_BEFORE_MILLION_BOOKS,
+  ...MILLION_BOOKS_MATERIALS,
 ];
 /** العداد العام التاريخي للدواوين والمنظومات؛ يُبقي بطاقات الإحصاء الحالية دون تعديل. */
 export const DIWAN_COUNT = DISPLAY_STAT_MATERIALS.filter(isStandalonePoetryDiwan).length;
@@ -868,7 +891,10 @@ export function isStandalonePoetryDiwan(
 
 /** سجلات المنظومات العلمية تُستمد من المصدر الموثق نفسه، من غير أي تغيير في ملفها الخام. */
 export function isScientificPoem(material: Pick<Material, "primaryCategory" | "source">): boolean {
-  return material.primaryCategory === "diwans" && material.source === SCIENTIFIC_POEMS_SOURCE;
+  return (
+    material.primaryCategory === "scientific_poems" ||
+    (material.primaryCategory === "diwans" && material.source === SCIENTIFIC_POEMS_SOURCE)
+  );
 }
 
 /** الدواوين الشعرية وحدها: السجلات الموثقة التي لا تنتمي إلى مصدر المنظومات العلمية. */
