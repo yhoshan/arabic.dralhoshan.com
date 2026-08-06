@@ -17,6 +17,7 @@ import curatedHeritageJson from "@/data/curated-heritage-materials.json";
 import millionBooksJson from "@/data/million-books-materials.json";
 import largeArchiveBatch01Json from "@/data/large-archive-batch-01-materials.json";
 import largeArchiveBatch02Json from "@/data/large-archive-batch-02-materials.json";
+import largeArchiveBatch03Json from "@/data/large-archive-batch-03-materials.json";
 
 export type MaterialCategory =
   | "all"
@@ -250,6 +251,7 @@ const curatedHeritageCatalog = curatedHeritageJson as unknown as CuratedMaterial
 const millionBooksCatalog = millionBooksJson as unknown as CuratedMaterialCatalogPayload;
 const largeArchiveBatch01Catalog = largeArchiveBatch01Json as unknown as CuratedMaterialCatalogPayload;
 const largeArchiveBatch02Catalog = largeArchiveBatch02Json as unknown as CuratedMaterialCatalogPayload;
+const largeArchiveBatch03Catalog = largeArchiveBatch03Json as unknown as CuratedMaterialCatalogPayload;
 const CURATED_DIWAN_SIGNAL = "سجل ديوان موثّق";
 const IMPORTED_DIWAN_SIGNAL = "سجل ديوان مستورد ومُصنّف";
 const CURATED_CURRICULUM_SIGNAL = "سجل منهج ومقرر منقّى";
@@ -831,9 +833,30 @@ const LARGE_ARCHIVE_BATCH_02_MATERIALS = largeArchiveBatch02Catalog.materials.fi
     !MATERIAL_TITLES_BEFORE_LARGE_ARCHIVE_BATCH_02.has(normalizeCatalogTitle(material.title)),
 );
 
-export const MATERIALS: Material[] = [
+const MATERIALS_BEFORE_LARGE_ARCHIVE_BATCH_03 = [
   ...MATERIALS_BEFORE_LARGE_ARCHIVE_BATCH_02,
   ...LARGE_ARCHIVE_BATCH_02_MATERIALS,
+];
+const MATERIAL_IDS_BEFORE_LARGE_ARCHIVE_BATCH_03 = new Set(
+  MATERIALS_BEFORE_LARGE_ARCHIVE_BATCH_03.map((material) => material.id),
+);
+const MATERIAL_URLS_BEFORE_LARGE_ARCHIVE_BATCH_03 = new Set(
+  MATERIALS_BEFORE_LARGE_ARCHIVE_BATCH_03.map((material) => material.sourceUrl).filter(Boolean),
+);
+const MATERIAL_TITLES_BEFORE_LARGE_ARCHIVE_BATCH_03 = new Set(
+  MATERIALS_BEFORE_LARGE_ARCHIVE_BATCH_03.map((material) => normalizeCatalogTitle(material.title)).filter(Boolean),
+);
+/** الدفعة الثالثة من المصدر الضخم: لا تمر إلا إذا لم تطابق معرّفًا أو رابطًا أو عنوانًا مطبعًا حاضرًا. */
+const LARGE_ARCHIVE_BATCH_03_MATERIALS = largeArchiveBatch03Catalog.materials.filter(
+  (material) =>
+    !MATERIAL_IDS_BEFORE_LARGE_ARCHIVE_BATCH_03.has(material.id) &&
+    (!material.sourceUrl || !MATERIAL_URLS_BEFORE_LARGE_ARCHIVE_BATCH_03.has(material.sourceUrl)) &&
+    !MATERIAL_TITLES_BEFORE_LARGE_ARCHIVE_BATCH_03.has(normalizeCatalogTitle(material.title)),
+);
+
+export const MATERIALS: Material[] = [
+  ...MATERIALS_BEFORE_LARGE_ARCHIVE_BATCH_03,
+  ...LARGE_ARCHIVE_BATCH_03_MATERIALS,
 ];
 /** العدادات الحية للدواوين والمنظومات من كامل الكتالوج القابل للبحث. */
 export const DIWAN_COUNT = MATERIALS.filter(

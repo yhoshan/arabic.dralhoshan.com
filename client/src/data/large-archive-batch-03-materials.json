@@ -1,0 +1,2368 @@
+{
+  "metadata": {
+    "sourceName": "المصدر الضخم من تيليجرام",
+    "batch": 3,
+    "selectionMethod": "دفعة قابلة للتكرار؛ جُمعت الأجزاء والملفات المتعددة واستُبعدت الأعمال الموجودة بالمقارنة المنطقية مع الكتالوج الحي.",
+    "inputRecordCount": 100,
+    "logicalWorkCount": 81,
+    "excludedDuplicateCount": 18,
+    "addedRecordCount": 63,
+    "addedByCategory": {
+      "references": 36,
+      "dictionaries": 15,
+      "diwans": 6,
+      "scientific_poems": 6
+    }
+  },
+  "materials": [
+    {
+      "id": "tg-mega-4ae49d46a8c97bd5",
+      "title": "فی اصول النحو سعید افغانی",
+      "author": null,
+      "source": "المصدر الضخم من تيليجرام",
+      "relativePath": "",
+      "sourceUrl": "",
+      "primaryCategory": "references",
+      "tags": [
+        "دراسات لغوية"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "الدفعة 3 من المصدر الضخم",
+          "إدراج جديد بعد مقارنة منطقية مع الكتالوج الحي",
+          "التصنيف المعتمد: references"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 35140,
+          "date": "2025-10-27T08:54:09",
+          "file_name": "فی اصول النحو  سعید افغانی.pdf",
+          "file_size": 5709036,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-mega-4ae49d46a8c97bd5"
+      ],
+      "notes": "الدفعة 3 من المصدر الضخم؛ أُبقي العنوان والتصنيف كما وردا في الملف المرسل."
+    },
+    {
+      "id": "tg-mega-303c02a7f7de200e",
+      "title": "اصول النحو العربى فى نظر النحاة",
+      "author": null,
+      "source": "المصدر الضخم من تيليجرام",
+      "relativePath": "",
+      "sourceUrl": "",
+      "primaryCategory": "references",
+      "tags": [
+        "دراسات لغوية"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "الدفعة 3 من المصدر الضخم",
+          "إدراج جديد بعد مقارنة منطقية مع الكتالوج الحي",
+          "التصنيف المعتمد: references"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 35144,
+          "date": "2025-10-27T08:54:19",
+          "file_name": "اصول_النحو_العربى_فى_نظر_النحاة.pdf",
+          "file_size": 4856889,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-mega-303c02a7f7de200e"
+      ],
+      "notes": "الدفعة 3 من المصدر الضخم؛ أُبقي العنوان والتصنيف كما وردا في الملف المرسل."
+    },
+    {
+      "id": "tg-mega-0c8c4a15a3da06c5",
+      "title": "الاتجاهات الحديثة في الأدب العربي",
+      "author": null,
+      "source": "المصدر الضخم من تيليجرام",
+      "relativePath": "",
+      "sourceUrl": "",
+      "primaryCategory": "references",
+      "tags": [
+        "دراسات لغوية"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "الدفعة 3 من المصدر الضخم",
+          "إدراج جديد بعد مقارنة منطقية مع الكتالوج الحي",
+          "التصنيف المعتمد: references"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 35176,
+          "date": "2025-10-27T08:55:43",
+          "file_name": "الاتجاهات_الحديثة_في_الأدب_العربي.pdf",
+          "file_size": 747160,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-mega-0c8c4a15a3da06c5"
+      ],
+      "notes": "الدفعة 3 من المصدر الضخم؛ أُبقي العنوان والتصنيف كما وردا في الملف المرسل."
+    },
+    {
+      "id": "tg-mega-8e91fd48ac311ba4",
+      "title": "الكلاسيكية والأدب العربي عمر محمد",
+      "author": null,
+      "source": "المصدر الضخم من تيليجرام",
+      "relativePath": "",
+      "sourceUrl": "",
+      "primaryCategory": "references",
+      "tags": [
+        "دراسات لغوية"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "الدفعة 3 من المصدر الضخم",
+          "إدراج جديد بعد مقارنة منطقية مع الكتالوج الحي",
+          "التصنيف المعتمد: references"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 35178,
+          "date": "2025-10-27T08:55:48",
+          "file_name": "الكلاسيكية_والأدب_العربي_عمر_محمد.pdf",
+          "file_size": 1320057,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-mega-8e91fd48ac311ba4"
+      ],
+      "notes": "الدفعة 3 من المصدر الضخم؛ أُبقي العنوان والتصنيف كما وردا في الملف المرسل."
+    },
+    {
+      "id": "tg-mega-030d3b37205d9848",
+      "title": "إحياء الأدب العربي عباس محمود العقاد",
+      "author": null,
+      "source": "المصدر الضخم من تيليجرام",
+      "relativePath": "",
+      "sourceUrl": "",
+      "primaryCategory": "references",
+      "tags": [
+        "دراسات لغوية"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "الدفعة 3 من المصدر الضخم",
+          "إدراج جديد بعد مقارنة منطقية مع الكتالوج الحي",
+          "التصنيف المعتمد: references"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 35274,
+          "date": "2025-10-27T08:59:59",
+          "file_name": "إحياء_الأدب_العربي_عباس_محمود_العقاد.pdf",
+          "file_size": 459937,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-mega-030d3b37205d9848"
+      ],
+      "notes": "الدفعة 3 من المصدر الضخم؛ أُبقي العنوان والتصنيف كما وردا في الملف المرسل."
+    },
+    {
+      "id": "tg-mega-cb5c462e8fa2cee4",
+      "title": "الكافي في البلاغة",
+      "author": null,
+      "source": "المصدر الضخم من تيليجرام",
+      "relativePath": "",
+      "sourceUrl": "",
+      "primaryCategory": "references",
+      "tags": [
+        "دراسات لغوية"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "الدفعة 3 من المصدر الضخم",
+          "إدراج جديد بعد مقارنة منطقية مع الكتالوج الحي",
+          "التصنيف المعتمد: references"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 35346,
+          "date": "2025-10-27T09:03:08",
+          "file_name": "الكافي في البلاغة.pdf",
+          "file_size": 7844271,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-mega-cb5c462e8fa2cee4"
+      ],
+      "notes": "الدفعة 3 من المصدر الضخم؛ أُبقي العنوان والتصنيف كما وردا في الملف المرسل."
+    },
+    {
+      "id": "tg-mega-85617d7931ceb005",
+      "title": "الميسر في البلاغة العربية",
+      "author": null,
+      "source": "المصدر الضخم من تيليجرام",
+      "relativePath": "",
+      "sourceUrl": "",
+      "primaryCategory": "references",
+      "tags": [
+        "دراسات لغوية"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "الدفعة 3 من المصدر الضخم",
+          "إدراج جديد بعد مقارنة منطقية مع الكتالوج الحي",
+          "التصنيف المعتمد: references"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 35364,
+          "date": "2025-10-27T09:03:56",
+          "file_name": "الميسر في البلاغة العربية.pdf",
+          "file_size": 8223706,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-mega-85617d7931ceb005"
+      ],
+      "notes": "الدفعة 3 من المصدر الضخم؛ أُبقي العنوان والتصنيف كما وردا في الملف المرسل."
+    },
+    {
+      "id": "tg-mega-a27a26bb2823dc27",
+      "title": "معجم الأخطاء الشائعة معجم يعالج",
+      "author": null,
+      "source": "المصدر الضخم من تيليجرام",
+      "relativePath": "",
+      "sourceUrl": "",
+      "primaryCategory": "dictionaries",
+      "tags": [
+        "معجم لغوي"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "الدفعة 3 من المصدر الضخم",
+          "إدراج جديد بعد مقارنة منطقية مع الكتالوج الحي",
+          "التصنيف المعتمد: dictionaries"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 35396,
+          "date": "2025-10-27T09:05:20",
+          "file_name": "معجم_الأخطاء_الشائعة_معجم_يعالج.pdf",
+          "file_size": 13103443,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-mega-a27a26bb2823dc27"
+      ],
+      "notes": "الدفعة 3 من المصدر الضخم؛ أُبقي العنوان والتصنيف كما وردا في الملف المرسل."
+    },
+    {
+      "id": "tg-mega-439bf182e179c33e",
+      "title": "الدرة النحوية في شرح الآجرومية",
+      "author": null,
+      "source": "المصدر الضخم من تيليجرام",
+      "relativePath": "",
+      "sourceUrl": "",
+      "primaryCategory": "references",
+      "tags": [
+        "دراسات لغوية"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "الدفعة 3 من المصدر الضخم",
+          "إدراج جديد بعد مقارنة منطقية مع الكتالوج الحي",
+          "التصنيف المعتمد: references"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 35424,
+          "date": "2025-10-27T09:06:34",
+          "file_name": "الدرة النحوية في شرح الآجرومية.pdf",
+          "file_size": 1349577,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-mega-439bf182e179c33e"
+      ],
+      "notes": "الدفعة 3 من المصدر الضخم؛ أُبقي العنوان والتصنيف كما وردا في الملف المرسل."
+    },
+    {
+      "id": "tg-mega-ea6ce9d401d38b55",
+      "title": "قواعد الصرف الصوتية بين القدماء",
+      "author": null,
+      "source": "المصدر الضخم من تيليجرام",
+      "relativePath": "",
+      "sourceUrl": "",
+      "primaryCategory": "references",
+      "tags": [
+        "دراسات لغوية"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "الدفعة 3 من المصدر الضخم",
+          "إدراج جديد بعد مقارنة منطقية مع الكتالوج الحي",
+          "التصنيف المعتمد: references"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 35460,
+          "date": "2025-10-27T09:08:08",
+          "file_name": "قواعد_الصرف_الصوتية_بين_القدماء.pdf",
+          "file_size": 5446210,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-mega-ea6ce9d401d38b55"
+      ],
+      "notes": "الدفعة 3 من المصدر الضخم؛ أُبقي العنوان والتصنيف كما وردا في الملف المرسل."
+    },
+    {
+      "id": "tg-mega-71d0757c817cf9b9",
+      "title": "علم الدلالة محمد الخولي",
+      "author": null,
+      "source": "المصدر الضخم من تيليجرام",
+      "relativePath": "",
+      "sourceUrl": "",
+      "primaryCategory": "references",
+      "tags": [
+        "دراسات لغوية"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "الدفعة 3 من المصدر الضخم",
+          "إدراج جديد بعد مقارنة منطقية مع الكتالوج الحي",
+          "التصنيف المعتمد: references"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 35478,
+          "date": "2025-10-27T09:08:56",
+          "file_name": "علم الدلالة محمد الخولي.pdf",
+          "file_size": 4386472,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-mega-71d0757c817cf9b9"
+      ],
+      "notes": "الدفعة 3 من المصدر الضخم؛ أُبقي العنوان والتصنيف كما وردا في الملف المرسل."
+    },
+    {
+      "id": "tg-mega-bd3bca5d6de21ca9",
+      "title": "علم الدلالة جون لاينز",
+      "author": null,
+      "source": "المصدر الضخم من تيليجرام",
+      "relativePath": "",
+      "sourceUrl": "",
+      "primaryCategory": "references",
+      "tags": [
+        "دراسات لغوية"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "الدفعة 3 من المصدر الضخم",
+          "إدراج جديد بعد مقارنة منطقية مع الكتالوج الحي",
+          "التصنيف المعتمد: references"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 35480,
+          "date": "2025-10-27T09:09:01",
+          "file_name": "علم الدلالة جون لاينز.pdf",
+          "file_size": 5992306,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-mega-bd3bca5d6de21ca9"
+      ],
+      "notes": "الدفعة 3 من المصدر الضخم؛ أُبقي العنوان والتصنيف كما وردا في الملف المرسل."
+    },
+    {
+      "id": "tg-mega-4fb32752cf52f76b",
+      "title": "الرواية العربية ومصادر دراستها ونقدها",
+      "author": null,
+      "source": "المصدر الضخم من تيليجرام",
+      "relativePath": "",
+      "sourceUrl": "",
+      "primaryCategory": "references",
+      "tags": [
+        "دراسات لغوية"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "الدفعة 3 من المصدر الضخم",
+          "إدراج جديد بعد مقارنة منطقية مع الكتالوج الحي",
+          "التصنيف المعتمد: references"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 35504,
+          "date": "2025-10-27T09:10:04",
+          "file_name": "الرواية_العربية_ومصادر_دراستها_ونقدها.pdf",
+          "file_size": 1975432,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-mega-4fb32752cf52f76b"
+      ],
+      "notes": "الدفعة 3 من المصدر الضخم؛ أُبقي العنوان والتصنيف كما وردا في الملف المرسل."
+    },
+    {
+      "id": "tg-mega-d7ce006304b9a399",
+      "title": "جماليات الشعر العربي - هلال جهاد",
+      "author": null,
+      "source": "المصدر الضخم من تيليجرام",
+      "relativePath": "",
+      "sourceUrl": "",
+      "primaryCategory": "references",
+      "tags": [
+        "دراسات لغوية"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "الدفعة 3 من المصدر الضخم",
+          "إدراج جديد بعد مقارنة منطقية مع الكتالوج الحي",
+          "التصنيف المعتمد: references"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 35530,
+          "date": "2025-10-27T09:11:12",
+          "file_name": "جماليات الشعر العربي - هلال جهاد.pdf",
+          "file_size": 11493859,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-mega-d7ce006304b9a399"
+      ],
+      "notes": "الدفعة 3 من المصدر الضخم؛ أُبقي العنوان والتصنيف كما وردا في الملف المرسل."
+    },
+    {
+      "id": "tg-mega-47471b3c170cda6a",
+      "title": "تعلم اللغة الاسبانية بدون معلم",
+      "author": null,
+      "source": "المصدر الضخم من تيليجرام",
+      "relativePath": "",
+      "sourceUrl": "",
+      "primaryCategory": "references",
+      "tags": [
+        "دراسات لغوية"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "الدفعة 3 من المصدر الضخم",
+          "إدراج جديد بعد مقارنة منطقية مع الكتالوج الحي",
+          "التصنيف المعتمد: references"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 35564,
+          "date": "2025-10-27T09:12:42",
+          "file_name": "تعلم اللغة الاسبانية بدون معلم.pdf",
+          "file_size": 5557018,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-mega-47471b3c170cda6a"
+      ],
+      "notes": "الدفعة 3 من المصدر الضخم؛ أُبقي العنوان والتصنيف كما وردا في الملف المرسل."
+    },
+    {
+      "id": "tg-mega-f5cd8fd4d1af2186",
+      "title": "جواهر البلاغة أحمد الهاشمي نسخة",
+      "author": null,
+      "source": "المصدر الضخم من تيليجرام",
+      "relativePath": "",
+      "sourceUrl": "",
+      "primaryCategory": "references",
+      "tags": [
+        "دراسات لغوية"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "الدفعة 3 من المصدر الضخم",
+          "إدراج جديد بعد مقارنة منطقية مع الكتالوج الحي",
+          "التصنيف المعتمد: references"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 35756,
+          "date": "2025-10-27T09:21:05",
+          "file_name": "جواهر_البلاغة_أحمد_الهاشمي_نسخة.pdf",
+          "file_size": 12963612,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-mega-f5cd8fd4d1af2186"
+      ],
+      "notes": "الدفعة 3 من المصدر الضخم؛ أُبقي العنوان والتصنيف كما وردا في الملف المرسل."
+    },
+    {
+      "id": "tg-mega-10d7785473c88110",
+      "title": "المنجد في البلاغة والإعراب والإم",
+      "author": null,
+      "source": "المصدر الضخم من تيليجرام",
+      "relativePath": "",
+      "sourceUrl": "",
+      "primaryCategory": "references",
+      "tags": [
+        "دراسات لغوية"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "الدفعة 3 من المصدر الضخم",
+          "إدراج جديد بعد مقارنة منطقية مع الكتالوج الحي",
+          "التصنيف المعتمد: references"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 35764,
+          "date": "2025-10-27T09:21:26",
+          "file_name": "المنجد_في_البلاغة_والإعراب_والإم.pdf",
+          "file_size": 4373032,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-mega-10d7785473c88110"
+      ],
+      "notes": "الدفعة 3 من المصدر الضخم؛ أُبقي العنوان والتصنيف كما وردا في الملف المرسل."
+    },
+    {
+      "id": "tg-mega-8a66e0b3b16d8b58",
+      "title": "دروس في البلاغة شرح مختصر المعان",
+      "author": null,
+      "source": "المصدر الضخم من تيليجرام",
+      "relativePath": "",
+      "sourceUrl": "",
+      "primaryCategory": "references",
+      "tags": [
+        "دراسات لغوية"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "الدفعة 3 من المصدر الضخم",
+          "إدراج جديد بعد مقارنة منطقية مع الكتالوج الحي",
+          "التصنيف المعتمد: references"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 35768,
+          "date": "2025-10-27T09:21:37",
+          "file_name": "دروس_في_البلاغة_شرح_مختصر_المعان.pdf",
+          "file_size": 24336603,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-mega-8a66e0b3b16d8b58"
+      ],
+      "notes": "الدفعة 3 من المصدر الضخم؛ أُبقي العنوان والتصنيف كما وردا في الملف المرسل."
+    },
+    {
+      "id": "tg-mega-e450b46e89912366",
+      "title": "خصائص الجملة🥀 الاسمية في النحو العربي",
+      "author": null,
+      "source": "المصدر الضخم من تيليجرام",
+      "relativePath": "",
+      "sourceUrl": "",
+      "primaryCategory": "references",
+      "tags": [
+        "دراسات لغوية"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "الدفعة 3 من المصدر الضخم",
+          "إدراج جديد بعد مقارنة منطقية مع الكتالوج الحي",
+          "التصنيف المعتمد: references"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 35806,
+          "date": "2025-10-27T09:23:16",
+          "file_name": "خصائص_الجملة🥀_الاسمية_في_النحو_العربي.pdf",
+          "file_size": 1904996,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-mega-e450b46e89912366"
+      ],
+      "notes": "الدفعة 3 من المصدر الضخم؛ أُبقي العنوان والتصنيف كما وردا في الملف المرسل."
+    },
+    {
+      "id": "tg-mega-235608c13be9b548",
+      "title": "ديوان كوخ الأشواق للشاعر الهادي ا",
+      "author": null,
+      "source": "المصدر الضخم من تيليجرام",
+      "relativePath": "",
+      "sourceUrl": "",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري",
+        "شعر وأدب"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "الدفعة 3 من المصدر الضخم",
+          "إدراج جديد بعد مقارنة منطقية مع الكتالوج الحي",
+          "التصنيف المعتمد: diwans",
+          "سجل ديوان مستورد ومُصنّف"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 35976,
+          "date": "2025-10-27T09:30:43",
+          "file_name": "ديوان_كوخ_الأشواق_للشاعر_الهادي_ا.pdf",
+          "file_size": 2750166,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-mega-235608c13be9b548"
+      ],
+      "notes": "الدفعة 3 من المصدر الضخم؛ أُبقي العنوان والتصنيف كما وردا في الملف المرسل."
+    },
+    {
+      "id": "tg-mega-2370b88dc297042e",
+      "title": "المعنى وظلال المعنى انظمة الدلالة",
+      "author": null,
+      "source": "المصدر الضخم من تيليجرام",
+      "relativePath": "",
+      "sourceUrl": "",
+      "primaryCategory": "references",
+      "tags": [
+        "دراسات لغوية"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "الدفعة 3 من المصدر الضخم",
+          "إدراج جديد بعد مقارنة منطقية مع الكتالوج الحي",
+          "التصنيف المعتمد: references"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 36038,
+          "date": "2025-10-27T09:33:27",
+          "file_name": "المعنى_وظلال_المعنى_انظمة_الدلالة.pdf",
+          "file_size": 8939852,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-mega-2370b88dc297042e"
+      ],
+      "notes": "الدفعة 3 من المصدر الضخم؛ أُبقي العنوان والتصنيف كما وردا في الملف المرسل."
+    },
+    {
+      "id": "tg-mega-3b819b53a1153647",
+      "title": "الحرب والسلم في الشعر الجاهلي صالح",
+      "author": null,
+      "source": "المصدر الضخم من تيليجرام",
+      "relativePath": "",
+      "sourceUrl": "",
+      "primaryCategory": "references",
+      "tags": [
+        "دراسات لغوية"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "الدفعة 3 من المصدر الضخم",
+          "إدراج جديد بعد مقارنة منطقية مع الكتالوج الحي",
+          "التصنيف المعتمد: references"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 36056,
+          "date": "2025-10-27T09:34:14",
+          "file_name": "الحرب_والسلم_في_الشعر_الجاهلي_صالح.pdf",
+          "file_size": 555286,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-mega-3b819b53a1153647"
+      ],
+      "notes": "الدفعة 3 من المصدر الضخم؛ أُبقي العنوان والتصنيف كما وردا في الملف المرسل."
+    },
+    {
+      "id": "tg-mega-77fe452710ce6ea2",
+      "title": "يبوس وقصائد أخرى ل إتيل عدنان",
+      "author": null,
+      "source": "المصدر الضخم من تيليجرام",
+      "relativePath": "",
+      "sourceUrl": "",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري",
+        "شعر وأدب"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "الدفعة 3 من المصدر الضخم",
+          "إدراج جديد بعد مقارنة منطقية مع الكتالوج الحي",
+          "التصنيف المعتمد: diwans",
+          "سجل ديوان مستورد ومُصنّف"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 36192,
+          "date": "2025-10-27T09:40:12",
+          "file_name": "يبوس وقصائد أخرى ل إتيل عدنان.pdf",
+          "file_size": 5482017,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-mega-77fe452710ce6ea2"
+      ],
+      "notes": "الدفعة 3 من المصدر الضخم؛ أُبقي العنوان والتصنيف كما وردا في الملف المرسل."
+    },
+    {
+      "id": "tg-mega-b26eb3047d6f1639",
+      "title": "الوافي في علمي العروض والقوافي لعبيدالله",
+      "author": null,
+      "source": "المصدر الضخم من تيليجرام",
+      "relativePath": "",
+      "sourceUrl": "",
+      "primaryCategory": "references",
+      "tags": [
+        "دراسات لغوية"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "الدفعة 3 من المصدر الضخم",
+          "إدراج جديد بعد مقارنة منطقية مع الكتالوج الحي",
+          "التصنيف المعتمد: references"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 36306,
+          "date": "2025-10-27T09:45:12",
+          "file_name": "الوافي_في_علمي_العروض_والقوافي_لعبيدالله.zip",
+          "file_size": 12514315,
+          "mime_type": "application/zip"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-mega-b26eb3047d6f1639"
+      ],
+      "notes": "الدفعة 3 من المصدر الضخم؛ أُبقي العنوان والتصنيف كما وردا في الملف المرسل."
+    },
+    {
+      "id": "tg-mega-c764bef78f44d80c",
+      "title": "ديوان النثر العربي ج3 ل أدونيس",
+      "author": null,
+      "source": "المصدر الضخم من تيليجرام",
+      "relativePath": "",
+      "sourceUrl": "",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري",
+        "شعر وأدب"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "الدفعة 3 من المصدر الضخم",
+          "إدراج جديد بعد مقارنة منطقية مع الكتالوج الحي",
+          "التصنيف المعتمد: diwans",
+          "سجل ديوان مستورد ومُصنّف"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 36354,
+          "date": "2025-10-27T09:47:18",
+          "file_name": "ديوان النثر العربي ج3 ل أدونيس.pdf",
+          "file_size": 5054148,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-mega-c764bef78f44d80c"
+      ],
+      "notes": "الدفعة 3 من المصدر الضخم؛ أُبقي العنوان والتصنيف كما وردا في الملف المرسل."
+    },
+    {
+      "id": "tg-mega-5cf0504ab4489936",
+      "title": "قاموس الأسماء العربية وتفسيرها",
+      "author": null,
+      "source": "المصدر الضخم من تيليجرام",
+      "relativePath": "",
+      "sourceUrl": "",
+      "primaryCategory": "dictionaries",
+      "tags": [
+        "معجم لغوي"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "الدفعة 3 من المصدر الضخم",
+          "إدراج جديد بعد مقارنة منطقية مع الكتالوج الحي",
+          "التصنيف المعتمد: dictionaries"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 36386,
+          "date": "2025-10-27T09:48:41",
+          "file_name": "قاموس الأسماء العربية وتفسيرها.pdf",
+          "file_size": 4332679,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-mega-5cf0504ab4489936"
+      ],
+      "notes": "الدفعة 3 من المصدر الضخم؛ أُبقي العنوان والتصنيف كما وردا في الملف المرسل."
+    },
+    {
+      "id": "tg-mega-4f666422aed803b6",
+      "title": "مهارات اعداد التقارير والعروض المالية",
+      "author": null,
+      "source": "المصدر الضخم من تيليجرام",
+      "relativePath": "",
+      "sourceUrl": "",
+      "primaryCategory": "references",
+      "tags": [
+        "دراسات لغوية"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "الدفعة 3 من المصدر الضخم",
+          "إدراج جديد بعد مقارنة منطقية مع الكتالوج الحي",
+          "التصنيف المعتمد: references"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 36398,
+          "date": "2025-10-27T09:49:13",
+          "file_name": "مهارات_اعداد_التقارير_والعروض_المالية.pdf",
+          "file_size": 242737,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-mega-4f666422aed803b6"
+      ],
+      "notes": "الدفعة 3 من المصدر الضخم؛ أُبقي العنوان والتصنيف كما وردا في الملف المرسل."
+    },
+    {
+      "id": "tg-mega-6da58ad423313fa2",
+      "title": "التهجد وما ور في ذلك من الكتب الصحاح",
+      "author": null,
+      "source": "المصدر الضخم من تيليجرام",
+      "relativePath": "",
+      "sourceUrl": "",
+      "primaryCategory": "dictionaries",
+      "tags": [
+        "معجم لغوي"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "الدفعة 3 من المصدر الضخم",
+          "إدراج جديد بعد مقارنة منطقية مع الكتالوج الحي",
+          "التصنيف المعتمد: dictionaries"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 36470,
+          "date": "2025-10-27T09:52:22",
+          "file_name": "التهجد_وما_ور_في_ذلك_من_الكتب_الصحاح.pdf",
+          "file_size": 10787822,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-mega-6da58ad423313fa2"
+      ],
+      "notes": "الدفعة 3 من المصدر الضخم؛ أُبقي العنوان والتصنيف كما وردا في الملف المرسل."
+    },
+    {
+      "id": "tg-mega-53541526daefd7a3",
+      "title": "Arabi04226 المعين في العروض والقافية",
+      "author": null,
+      "source": "المصدر الضخم من تيليجرام",
+      "relativePath": "",
+      "sourceUrl": "",
+      "primaryCategory": "references",
+      "tags": [
+        "دراسات لغوية"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "الدفعة 3 من المصدر الضخم",
+          "إدراج جديد بعد مقارنة منطقية مع الكتالوج الحي",
+          "التصنيف المعتمد: references"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 36636,
+          "date": "2025-10-27T09:59:37",
+          "file_name": "Arabi04226 المعين في العروض والقافية.pdf",
+          "file_size": 7964259,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-mega-53541526daefd7a3"
+      ],
+      "notes": "الدفعة 3 من المصدر الضخم؛ أُبقي العنوان والتصنيف كما وردا في الملف المرسل."
+    },
+    {
+      "id": "tg-mega-5a93cf3e190a54db",
+      "title": "العروض والشعر الحر-نازك الملائكة",
+      "author": null,
+      "source": "المصدر الضخم من تيليجرام",
+      "relativePath": "",
+      "sourceUrl": "",
+      "primaryCategory": "references",
+      "tags": [
+        "دراسات لغوية"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "الدفعة 3 من المصدر الضخم",
+          "إدراج جديد بعد مقارنة منطقية مع الكتالوج الحي",
+          "التصنيف المعتمد: references"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 36640,
+          "date": "2025-10-27T09:59:48",
+          "file_name": "العروض والشعر الحر-نازك الملائكة.pdf",
+          "file_size": 4769874,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-mega-5a93cf3e190a54db"
+      ],
+      "notes": "الدفعة 3 من المصدر الضخم؛ أُبقي العنوان والتصنيف كما وردا في الملف المرسل."
+    },
+    {
+      "id": "tg-mega-34600b5271d0520d",
+      "title": "إليك كتابي علم العروض والقافية",
+      "author": null,
+      "source": "المصدر الضخم من تيليجرام",
+      "relativePath": "",
+      "sourceUrl": "",
+      "primaryCategory": "references",
+      "tags": [
+        "دراسات لغوية"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "الدفعة 3 من المصدر الضخم",
+          "إدراج جديد بعد مقارنة منطقية مع الكتالوج الحي",
+          "التصنيف المعتمد: references"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 36646,
+          "date": "2025-10-27T10:00:04",
+          "file_name": "إليك كتابي_علم العروض والقافية.pdf",
+          "file_size": 2565130,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-mega-34600b5271d0520d"
+      ],
+      "notes": "الدفعة 3 من المصدر الضخم؛ أُبقي العنوان والتصنيف كما وردا في الملف المرسل."
+    },
+    {
+      "id": "tg-mega-afea8c3a84401f39",
+      "title": "شرح الدرة العروضية منظومة الدرة",
+      "author": null,
+      "source": "المصدر الضخم من تيليجرام",
+      "relativePath": "",
+      "sourceUrl": "",
+      "primaryCategory": "references",
+      "tags": [
+        "دراسات لغوية"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "الدفعة 3 من المصدر الضخم",
+          "إدراج جديد بعد مقارنة منطقية مع الكتالوج الحي",
+          "التصنيف المعتمد: references"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 36652,
+          "date": "2025-10-27T10:00:19",
+          "file_name": "شرح_الدرة_العروضية_منظومة_الدرة.pdf",
+          "file_size": 1702532,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-mega-afea8c3a84401f39"
+      ],
+      "notes": "الدفعة 3 من المصدر الضخم؛ أُبقي العنوان والتصنيف كما وردا في الملف المرسل."
+    },
+    {
+      "id": "tg-mega-5cd1f09cc1f04575",
+      "title": "تمهيد العروض ويليه إتمام الأنس في",
+      "author": null,
+      "source": "المصدر الضخم من تيليجرام",
+      "relativePath": "",
+      "sourceUrl": "",
+      "primaryCategory": "references",
+      "tags": [
+        "دراسات لغوية"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "الدفعة 3 من المصدر الضخم",
+          "إدراج جديد بعد مقارنة منطقية مع الكتالوج الحي",
+          "التصنيف المعتمد: references"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 36658,
+          "date": "2025-10-27T10:00:35",
+          "file_name": "تمهيد_العروض_ويليه_إتمام_الأنس_في.pdf",
+          "file_size": 2475606,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-mega-5cd1f09cc1f04575"
+      ],
+      "notes": "الدفعة 3 من المصدر الضخم؛ أُبقي العنوان والتصنيف كما وردا في الملف المرسل."
+    },
+    {
+      "id": "tg-mega-4fc8860043eb4c5c",
+      "title": "تعلم القراءة والكتابة",
+      "author": null,
+      "source": "المصدر الضخم من تيليجرام",
+      "relativePath": "",
+      "sourceUrl": "",
+      "primaryCategory": "references",
+      "tags": [
+        "دراسات لغوية"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "الدفعة 3 من المصدر الضخم",
+          "إدراج جديد بعد مقارنة منطقية مع الكتالوج الحي",
+          "التصنيف المعتمد: references"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 36742,
+          "date": "2025-10-27T10:04:16",
+          "file_name": "تعلم القراءة والكتابة.pdf",
+          "file_size": 10569344,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-mega-4fc8860043eb4c5c"
+      ],
+      "notes": "الدفعة 3 من المصدر الضخم؛ أُبقي العنوان والتصنيف كما وردا في الملف المرسل."
+    },
+    {
+      "id": "tg-mega-e4f808ec52cbd539",
+      "title": "حروف اللغة العربية بالحركات",
+      "author": null,
+      "source": "المصدر الضخم من تيليجرام",
+      "relativePath": "",
+      "sourceUrl": "",
+      "primaryCategory": "references",
+      "tags": [
+        "دراسات لغوية"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "الدفعة 3 من المصدر الضخم",
+          "إدراج جديد بعد مقارنة منطقية مع الكتالوج الحي",
+          "التصنيف المعتمد: references"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 36754,
+          "date": "2025-10-27T10:04:48",
+          "file_name": "حروف اللغة العربية بالحركات.pdf",
+          "file_size": 1734948,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-mega-e4f808ec52cbd539"
+      ],
+      "notes": "الدفعة 3 من المصدر الضخم؛ أُبقي العنوان والتصنيف كما وردا في الملف المرسل."
+    },
+    {
+      "id": "tg-mega-cf3056bdaf077144",
+      "title": "المساعد في القراءة والكتابة",
+      "author": null,
+      "source": "المصدر الضخم من تيليجرام",
+      "relativePath": "",
+      "sourceUrl": "",
+      "primaryCategory": "references",
+      "tags": [
+        "دراسات لغوية"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "الدفعة 3 من المصدر الضخم",
+          "إدراج جديد بعد مقارنة منطقية مع الكتالوج الحي",
+          "التصنيف المعتمد: references"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 36758,
+          "date": "2025-10-27T10:04:58",
+          "file_name": "المساعد في القراءة والكتابة.pdf",
+          "file_size": 1907503,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-mega-cf3056bdaf077144"
+      ],
+      "notes": "الدفعة 3 من المصدر الضخم؛ أُبقي العنوان والتصنيف كما وردا في الملف المرسل."
+    },
+    {
+      "id": "tg-mega-233ce7ef35379d86",
+      "title": "الخط العربي والزخرفة الإسلامية",
+      "author": null,
+      "source": "المصدر الضخم من تيليجرام",
+      "relativePath": "",
+      "sourceUrl": "",
+      "primaryCategory": "scientific_poems",
+      "tags": [
+        "منظومة علمية"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "الدفعة 3 من المصدر الضخم",
+          "إدراج جديد بعد مقارنة منطقية مع الكتالوج الحي",
+          "التصنيف المعتمد: scientific_poems",
+          "سجل منظومة علمية مستورد ومصنف"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 36892,
+          "date": "2025-10-27T10:10:50",
+          "file_name": "الخط العربي والزخرفة الإسلامية.pdf",
+          "file_size": 6301518,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-mega-233ce7ef35379d86"
+      ],
+      "notes": "الدفعة 3 من المصدر الضخم؛ أُبقي العنوان والتصنيف كما وردا في الملف المرسل."
+    },
+    {
+      "id": "tg-mega-84b8db18d142a9cb",
+      "title": "الجواهري - ديوان أيها الأرق",
+      "author": null,
+      "source": "المصدر الضخم من تيليجرام",
+      "relativePath": "",
+      "sourceUrl": "",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري",
+        "شعر وأدب"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "الدفعة 3 من المصدر الضخم",
+          "إدراج جديد بعد مقارنة منطقية مع الكتالوج الحي",
+          "التصنيف المعتمد: diwans",
+          "سجل ديوان مستورد ومُصنّف"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 37140,
+          "date": "2025-10-27T10:21:43",
+          "file_name": "الجواهري - ديوان أيها الأرق.pdf",
+          "file_size": 957429,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-mega-84b8db18d142a9cb"
+      ],
+      "notes": "الدفعة 3 من المصدر الضخم؛ أُبقي العنوان والتصنيف كما وردا في الملف المرسل."
+    },
+    {
+      "id": "tg-mega-23b15c5dcfbed0e0",
+      "title": "معجم المصطلاحات الاسلامية",
+      "author": null,
+      "source": "المصدر الضخم من تيليجرام",
+      "relativePath": "",
+      "sourceUrl": "",
+      "primaryCategory": "scientific_poems",
+      "tags": [
+        "منظومة علمية"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "الدفعة 3 من المصدر الضخم",
+          "إدراج جديد بعد مقارنة منطقية مع الكتالوج الحي",
+          "التصنيف المعتمد: scientific_poems",
+          "سجل منظومة علمية مستورد ومصنف"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 37272,
+          "date": "2025-10-27T10:27:29",
+          "file_name": "معجم المصطلاحات الاسلامية.doc",
+          "file_size": 1464320,
+          "mime_type": "application/msword"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-mega-23b15c5dcfbed0e0"
+      ],
+      "notes": "الدفعة 3 من المصدر الضخم؛ أُبقي العنوان والتصنيف كما وردا في الملف المرسل."
+    },
+    {
+      "id": "tg-mega-d5cd453d80e34833",
+      "title": "ديوان عمرو بن كلثوم -أيمن ميدان",
+      "author": null,
+      "source": "المصدر الضخم من تيليجرام",
+      "relativePath": "",
+      "sourceUrl": "",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري",
+        "شعر وأدب"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "الدفعة 3 من المصدر الضخم",
+          "إدراج جديد بعد مقارنة منطقية مع الكتالوج الحي",
+          "التصنيف المعتمد: diwans",
+          "سجل ديوان مستورد ومُصنّف"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 37342,
+          "date": "2025-10-27T10:30:33",
+          "file_name": "ديوان عمرو بن كلثوم -أيمن ميدان.pdf",
+          "file_size": 9129161,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-mega-d5cd453d80e34833"
+      ],
+      "notes": "الدفعة 3 من المصدر الضخم؛ أُبقي العنوان والتصنيف كما وردا في الملف المرسل."
+    },
+    {
+      "id": "tg-mega-8df1122f5d4accac",
+      "title": "حماية البيئة في الشريعة الإسلامية",
+      "author": null,
+      "source": "المصدر الضخم من تيليجرام",
+      "relativePath": "",
+      "sourceUrl": "",
+      "primaryCategory": "scientific_poems",
+      "tags": [
+        "منظومة علمية"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "الدفعة 3 من المصدر الضخم",
+          "إدراج جديد بعد مقارنة منطقية مع الكتالوج الحي",
+          "التصنيف المعتمد: scientific_poems",
+          "سجل منظومة علمية مستورد ومصنف"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 37480,
+          "date": "2025-10-27T10:36:36",
+          "file_name": "حماية_البيئة_في_الشريعة_الإسلامية.pdf",
+          "file_size": 1499511,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-mega-8df1122f5d4accac"
+      ],
+      "notes": "الدفعة 3 من المصدر الضخم؛ أُبقي العنوان والتصنيف كما وردا في الملف المرسل."
+    },
+    {
+      "id": "tg-mega-f7da9cf09131548c",
+      "title": "الإثبات في الشريعة الإسلامية محمد",
+      "author": null,
+      "source": "المصدر الضخم من تيليجرام",
+      "relativePath": "",
+      "sourceUrl": "",
+      "primaryCategory": "scientific_poems",
+      "tags": [
+        "منظومة علمية"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "الدفعة 3 من المصدر الضخم",
+          "إدراج جديد بعد مقارنة منطقية مع الكتالوج الحي",
+          "التصنيف المعتمد: scientific_poems",
+          "سجل منظومة علمية مستورد ومصنف"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 37484,
+          "date": "2025-10-27T10:36:47",
+          "file_name": "الإثبات_في_الشريعة_الإسلامية_محمد.pdf",
+          "file_size": 3400589,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-mega-f7da9cf09131548c"
+      ],
+      "notes": "الدفعة 3 من المصدر الضخم؛ أُبقي العنوان والتصنيف كما وردا في الملف المرسل."
+    },
+    {
+      "id": "tg-mega-7cfe3076199a80dc",
+      "title": "معجم الجمع فی اللغة العربية لأدما",
+      "author": null,
+      "source": "المصدر الضخم من تيليجرام",
+      "relativePath": "",
+      "sourceUrl": "",
+      "primaryCategory": "dictionaries",
+      "tags": [
+        "معجم لغوي"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "الدفعة 3 من المصدر الضخم",
+          "إدراج جديد بعد مقارنة منطقية مع الكتالوج الحي",
+          "التصنيف المعتمد: dictionaries"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 37554,
+          "date": "2025-10-27T10:39:51",
+          "file_name": "معجم_الجمع_فی_اللغة_العربية_لأدما.pdf",
+          "file_size": 27475866,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-mega-7cfe3076199a80dc"
+      ],
+      "notes": "الدفعة 3 من المصدر الضخم؛ أُبقي العنوان والتصنيف كما وردا في الملف المرسل."
+    },
+    {
+      "id": "tg-mega-23c27e8daa2441a0",
+      "title": "ديوان أبو العلاء المعري سقط الزند",
+      "author": null,
+      "source": "المصدر الضخم من تيليجرام",
+      "relativePath": "",
+      "sourceUrl": "",
+      "primaryCategory": "diwans",
+      "tags": [
+        "ديوان شعري",
+        "شعر وأدب"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "الدفعة 3 من المصدر الضخم",
+          "إدراج جديد بعد مقارنة منطقية مع الكتالوج الحي",
+          "التصنيف المعتمد: diwans",
+          "سجل ديوان مستورد ومُصنّف"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 37578,
+          "date": "2025-10-27T10:40:54",
+          "file_name": "ديوان_أبو_العلاء_المعري_سقط_الزند.pdf",
+          "file_size": 4887007,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-mega-23c27e8daa2441a0"
+      ],
+      "notes": "الدفعة 3 من المصدر الضخم؛ أُبقي العنوان والتصنيف كما وردا في الملف المرسل."
+    },
+    {
+      "id": "tg-mega-4a15cd3767e18e63",
+      "title": "تنمية مهارات إعداد التقارير والعروض",
+      "author": null,
+      "source": "المصدر الضخم من تيليجرام",
+      "relativePath": "",
+      "sourceUrl": "",
+      "primaryCategory": "references",
+      "tags": [
+        "دراسات لغوية"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "الدفعة 3 من المصدر الضخم",
+          "إدراج جديد بعد مقارنة منطقية مع الكتالوج الحي",
+          "التصنيف المعتمد: references"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 37620,
+          "date": "2025-10-27T10:42:45",
+          "file_name": "تنمية_مهارات_إعداد_التقارير_والعروض.pdf",
+          "file_size": 242737,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-mega-4a15cd3767e18e63"
+      ],
+      "notes": "الدفعة 3 من المصدر الضخم؛ أُبقي العنوان والتصنيف كما وردا في الملف المرسل."
+    },
+    {
+      "id": "tg-mega-df389452f58b61a1",
+      "title": "دراسات في الأدب الجاهلي ج2 د عادل",
+      "author": null,
+      "source": "المصدر الضخم من تيليجرام",
+      "relativePath": "",
+      "sourceUrl": "",
+      "primaryCategory": "references",
+      "tags": [
+        "دراسات لغوية"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "الدفعة 3 من المصدر الضخم",
+          "إدراج جديد بعد مقارنة منطقية مع الكتالوج الحي",
+          "التصنيف المعتمد: references"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 37692,
+          "date": "2025-10-27T10:45:54",
+          "file_name": "دراسات_في_الأدب_الجاهلي_ج2_د_عادل.pdf",
+          "file_size": 17475780,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-mega-df389452f58b61a1"
+      ],
+      "notes": "الدفعة 3 من المصدر الضخم؛ أُبقي العنوان والتصنيف كما وردا في الملف المرسل."
+    },
+    {
+      "id": "tg-mega-cd6617e8a463582b",
+      "title": "دراسات في الأدب الجاهلي والاسلامي",
+      "author": null,
+      "source": "المصدر الضخم من تيليجرام",
+      "relativePath": "",
+      "sourceUrl": "",
+      "primaryCategory": "references",
+      "tags": [
+        "دراسات لغوية"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "الدفعة 3 من المصدر الضخم",
+          "إدراج جديد بعد مقارنة منطقية مع الكتالوج الحي",
+          "التصنيف المعتمد: references"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 37720,
+          "date": "2025-10-27T10:47:08",
+          "file_name": "دراسات_في_الأدب_الجاهلي_والاسلامي.pdf",
+          "file_size": 5545200,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-mega-cd6617e8a463582b"
+      ],
+      "notes": "الدفعة 3 من المصدر الضخم؛ أُبقي العنوان والتصنيف كما وردا في الملف المرسل."
+    },
+    {
+      "id": "tg-mega-626cffe25a892c24",
+      "title": "تاريخ الأدب العربي الجزيرة العربية",
+      "author": null,
+      "source": "المصدر الضخم من تيليجرام",
+      "relativePath": "",
+      "sourceUrl": "",
+      "primaryCategory": "references",
+      "tags": [
+        "دراسات لغوية"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "الدفعة 3 من المصدر الضخم",
+          "إدراج جديد بعد مقارنة منطقية مع الكتالوج الحي",
+          "التصنيف المعتمد: references"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 37724,
+          "date": "2025-10-27T10:47:19",
+          "file_name": "تاريخ_الأدب_العربي_الجزيرة_العربية.pdf",
+          "file_size": 13829308,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-mega-626cffe25a892c24"
+      ],
+      "notes": "الدفعة 3 من المصدر الضخم؛ أُبقي العنوان والتصنيف كما وردا في الملف المرسل."
+    },
+    {
+      "id": "tg-mega-5d1f98dea783f45f",
+      "title": "تاريخ الأدب العربي الجزائر ، المغرب",
+      "author": null,
+      "source": "المصدر الضخم من تيليجرام",
+      "relativePath": "",
+      "sourceUrl": "",
+      "primaryCategory": "references",
+      "tags": [
+        "دراسات لغوية"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "الدفعة 3 من المصدر الضخم",
+          "إدراج جديد بعد مقارنة منطقية مع الكتالوج الحي",
+          "التصنيف المعتمد: references"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 37732,
+          "date": "2025-10-27T10:47:40",
+          "file_name": "تاريخ_الأدب_العربي_الجزائر_،_المغرب.pdf",
+          "file_size": 17062207,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-mega-5d1f98dea783f45f"
+      ],
+      "notes": "الدفعة 3 من المصدر الضخم؛ أُبقي العنوان والتصنيف كما وردا في الملف المرسل."
+    },
+    {
+      "id": "tg-mega-6bdaf7771c52f04f",
+      "title": "المختصر في النحو20",
+      "author": null,
+      "source": "المصدر الضخم من تيليجرام",
+      "relativePath": "",
+      "sourceUrl": "",
+      "primaryCategory": "references",
+      "tags": [
+        "دراسات لغوية"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "الدفعة 3 من المصدر الضخم",
+          "إدراج جديد بعد مقارنة منطقية مع الكتالوج الحي",
+          "التصنيف المعتمد: references"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 37752,
+          "date": "2025-10-27T10:48:33",
+          "file_name": "المختصر في النحو20.pdf",
+          "file_size": 253380,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-mega-6bdaf7771c52f04f"
+      ],
+      "notes": "الدفعة 3 من المصدر الضخم؛ أُبقي العنوان والتصنيف كما وردا في الملف المرسل."
+    },
+    {
+      "id": "tg-mega-85b47f60e144d4d1",
+      "title": "الفن والعمارة الإسلامية شيلا بلير",
+      "author": null,
+      "source": "المصدر الضخم من تيليجرام",
+      "relativePath": "",
+      "sourceUrl": "",
+      "primaryCategory": "scientific_poems",
+      "tags": [
+        "منظومة علمية"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "الدفعة 3 من المصدر الضخم",
+          "إدراج جديد بعد مقارنة منطقية مع الكتالوج الحي",
+          "التصنيف المعتمد: scientific_poems",
+          "سجل منظومة علمية مستورد ومصنف"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 37890,
+          "date": "2025-10-27T10:54:36",
+          "file_name": "الفن_والعمارة_الإسلامية_شيلا_بلير.pdf",
+          "file_size": 68476152,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-mega-85b47f60e144d4d1"
+      ],
+      "notes": "الدفعة 3 من المصدر الضخم؛ أُبقي العنوان والتصنيف كما وردا في الملف المرسل."
+    },
+    {
+      "id": "tg-mega-81b287b18a07c415",
+      "title": "القبائل اليمنية بين النصرة الإسلامية",
+      "author": null,
+      "source": "المصدر الضخم من تيليجرام",
+      "relativePath": "",
+      "sourceUrl": "",
+      "primaryCategory": "scientific_poems",
+      "tags": [
+        "منظومة علمية"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "الدفعة 3 من المصدر الضخم",
+          "إدراج جديد بعد مقارنة منطقية مع الكتالوج الحي",
+          "التصنيف المعتمد: scientific_poems",
+          "سجل منظومة علمية مستورد ومصنف"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 37972,
+          "date": "2025-10-27T10:58:12",
+          "file_name": "القبائل_اليمنية_بين_النصرة_الإسلامية.pdf",
+          "file_size": 376855,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-mega-81b287b18a07c415"
+      ],
+      "notes": "الدفعة 3 من المصدر الضخم؛ أُبقي العنوان والتصنيف كما وردا في الملف المرسل."
+    },
+    {
+      "id": "tg-mega-c71905556c548859",
+      "title": "تاج العروس31",
+      "author": null,
+      "source": "المصدر الضخم من تيليجرام",
+      "relativePath": "",
+      "sourceUrl": "",
+      "primaryCategory": "dictionaries",
+      "tags": [
+        "معجم لغوي"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "الدفعة 3 من المصدر الضخم",
+          "إدراج جديد بعد مقارنة منطقية مع الكتالوج الحي",
+          "التصنيف المعتمد: dictionaries"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 38128,
+          "date": "2025-10-27T11:05:03",
+          "file_name": "تاج العروس31.pdf",
+          "file_size": 10594033,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-mega-c71905556c548859"
+      ],
+      "notes": "الدفعة 3 من المصدر الضخم؛ أُبقي العنوان والتصنيف كما وردا في الملف المرسل."
+    },
+    {
+      "id": "tg-mega-1ae1ab1fba86de25",
+      "title": "تاج العروس32",
+      "author": null,
+      "source": "المصدر الضخم من تيليجرام",
+      "relativePath": "",
+      "sourceUrl": "",
+      "primaryCategory": "dictionaries",
+      "tags": [
+        "معجم لغوي"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "الدفعة 3 من المصدر الضخم",
+          "إدراج جديد بعد مقارنة منطقية مع الكتالوج الحي",
+          "التصنيف المعتمد: dictionaries"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 38130,
+          "date": "2025-10-27T11:05:08",
+          "file_name": "تاج العروس32.pdf",
+          "file_size": 10203553,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-mega-1ae1ab1fba86de25"
+      ],
+      "notes": "الدفعة 3 من المصدر الضخم؛ أُبقي العنوان والتصنيف كما وردا في الملف المرسل."
+    },
+    {
+      "id": "tg-mega-00a5d54f337c3a70",
+      "title": "تاج العروس33",
+      "author": null,
+      "source": "المصدر الضخم من تيليجرام",
+      "relativePath": "",
+      "sourceUrl": "",
+      "primaryCategory": "dictionaries",
+      "tags": [
+        "معجم لغوي"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "الدفعة 3 من المصدر الضخم",
+          "إدراج جديد بعد مقارنة منطقية مع الكتالوج الحي",
+          "التصنيف المعتمد: dictionaries"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 38132,
+          "date": "2025-10-27T11:05:13",
+          "file_name": "تاج العروس33.pdf",
+          "file_size": 10566840,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-mega-00a5d54f337c3a70"
+      ],
+      "notes": "الدفعة 3 من المصدر الضخم؛ أُبقي العنوان والتصنيف كما وردا في الملف المرسل."
+    },
+    {
+      "id": "tg-mega-cc779f305f8a25ff",
+      "title": "تاج العروس34",
+      "author": null,
+      "source": "المصدر الضخم من تيليجرام",
+      "relativePath": "",
+      "sourceUrl": "",
+      "primaryCategory": "dictionaries",
+      "tags": [
+        "معجم لغوي"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "الدفعة 3 من المصدر الضخم",
+          "إدراج جديد بعد مقارنة منطقية مع الكتالوج الحي",
+          "التصنيف المعتمد: dictionaries"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 38134,
+          "date": "2025-10-27T11:05:19",
+          "file_name": "تاج العروس34.pdf",
+          "file_size": 10253673,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-mega-cc779f305f8a25ff"
+      ],
+      "notes": "الدفعة 3 من المصدر الضخم؛ أُبقي العنوان والتصنيف كما وردا في الملف المرسل."
+    },
+    {
+      "id": "tg-mega-63403accd3922550",
+      "title": "تاج العروس35",
+      "author": null,
+      "source": "المصدر الضخم من تيليجرام",
+      "relativePath": "",
+      "sourceUrl": "",
+      "primaryCategory": "dictionaries",
+      "tags": [
+        "معجم لغوي"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "الدفعة 3 من المصدر الضخم",
+          "إدراج جديد بعد مقارنة منطقية مع الكتالوج الحي",
+          "التصنيف المعتمد: dictionaries"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 38136,
+          "date": "2025-10-27T11:05:24",
+          "file_name": "تاج العروس35.pdf",
+          "file_size": 10286210,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-mega-63403accd3922550"
+      ],
+      "notes": "الدفعة 3 من المصدر الضخم؛ أُبقي العنوان والتصنيف كما وردا في الملف المرسل."
+    },
+    {
+      "id": "tg-mega-b52910319cd6c21b",
+      "title": "تاج العروس36",
+      "author": null,
+      "source": "المصدر الضخم من تيليجرام",
+      "relativePath": "",
+      "sourceUrl": "",
+      "primaryCategory": "dictionaries",
+      "tags": [
+        "معجم لغوي"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "الدفعة 3 من المصدر الضخم",
+          "إدراج جديد بعد مقارنة منطقية مع الكتالوج الحي",
+          "التصنيف المعتمد: dictionaries"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 38138,
+          "date": "2025-10-27T11:05:29",
+          "file_name": "تاج العروس36.pdf",
+          "file_size": 9917185,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-mega-b52910319cd6c21b"
+      ],
+      "notes": "الدفعة 3 من المصدر الضخم؛ أُبقي العنوان والتصنيف كما وردا في الملف المرسل."
+    },
+    {
+      "id": "tg-mega-55468908670c518d",
+      "title": "تاج العروس37",
+      "author": null,
+      "source": "المصدر الضخم من تيليجرام",
+      "relativePath": "",
+      "sourceUrl": "",
+      "primaryCategory": "dictionaries",
+      "tags": [
+        "معجم لغوي"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "الدفعة 3 من المصدر الضخم",
+          "إدراج جديد بعد مقارنة منطقية مع الكتالوج الحي",
+          "التصنيف المعتمد: dictionaries"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 38140,
+          "date": "2025-10-27T11:05:34",
+          "file_name": "تاج العروس37.pdf",
+          "file_size": 9851635,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-mega-55468908670c518d"
+      ],
+      "notes": "الدفعة 3 من المصدر الضخم؛ أُبقي العنوان والتصنيف كما وردا في الملف المرسل."
+    },
+    {
+      "id": "tg-mega-5a27c45138c411b8",
+      "title": "تاج العروس4",
+      "author": null,
+      "source": "المصدر الضخم من تيليجرام",
+      "relativePath": "",
+      "sourceUrl": "",
+      "primaryCategory": "dictionaries",
+      "tags": [
+        "معجم لغوي"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "الدفعة 3 من المصدر الضخم",
+          "إدراج جديد بعد مقارنة منطقية مع الكتالوج الحي",
+          "التصنيف المعتمد: dictionaries"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 38174,
+          "date": "2025-10-27T11:07:03",
+          "file_name": "تاج العروس4.pdf",
+          "file_size": 12125636,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-mega-5a27c45138c411b8"
+      ],
+      "notes": "الدفعة 3 من المصدر الضخم؛ أُبقي العنوان والتصنيف كما وردا في الملف المرسل."
+    },
+    {
+      "id": "tg-mega-ba9015d35fa66067",
+      "title": "تاج العروس38",
+      "author": null,
+      "source": "المصدر الضخم من تيليجرام",
+      "relativePath": "",
+      "sourceUrl": "",
+      "primaryCategory": "dictionaries",
+      "tags": [
+        "معجم لغوي"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "الدفعة 3 من المصدر الضخم",
+          "إدراج جديد بعد مقارنة منطقية مع الكتالوج الحي",
+          "التصنيف المعتمد: dictionaries"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 38176,
+          "date": "2025-10-27T11:07:09",
+          "file_name": "تاج العروس38.pdf",
+          "file_size": 9404831,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-mega-ba9015d35fa66067"
+      ],
+      "notes": "الدفعة 3 من المصدر الضخم؛ أُبقي العنوان والتصنيف كما وردا في الملف المرسل."
+    },
+    {
+      "id": "tg-mega-b992c0bd11c63270",
+      "title": "تاج العروس39",
+      "author": null,
+      "source": "المصدر الضخم من تيليجرام",
+      "relativePath": "",
+      "sourceUrl": "",
+      "primaryCategory": "dictionaries",
+      "tags": [
+        "معجم لغوي"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "الدفعة 3 من المصدر الضخم",
+          "إدراج جديد بعد مقارنة منطقية مع الكتالوج الحي",
+          "التصنيف المعتمد: dictionaries"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 38178,
+          "date": "2025-10-27T11:07:14",
+          "file_name": "تاج العروس39.pdf",
+          "file_size": 10485930,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-mega-b992c0bd11c63270"
+      ],
+      "notes": "الدفعة 3 من المصدر الضخم؛ أُبقي العنوان والتصنيف كما وردا في الملف المرسل."
+    },
+    {
+      "id": "tg-mega-4ce543c9d781bff2",
+      "title": "تاج العروس40",
+      "author": null,
+      "source": "المصدر الضخم من تيليجرام",
+      "relativePath": "",
+      "sourceUrl": "",
+      "primaryCategory": "dictionaries",
+      "tags": [
+        "معجم لغوي"
+      ],
+      "matchEvidence": {
+        "strongSignals": [
+          "الدفعة 3 من المصدر الضخم",
+          "إدراج جديد بعد مقارنة منطقية مع الكتالوج الحي",
+          "التصنيف المعتمد: dictionaries"
+        ],
+        "supportingSignals": [
+          "ملفات المصدر: 1",
+          "سجلات الدفعة المجمعة: 1"
+        ],
+        "explicitLanguageSource": true
+      },
+      "sourceFiles": [
+        {
+          "telegram_message_id": 38180,
+          "date": "2025-10-27T11:07:19",
+          "file_name": "تاج العروس40.pdf",
+          "file_size": 11196013,
+          "mime_type": "application/pdf"
+        }
+      ],
+      "sourceRecordIds": [
+        "tg-mega-4ce543c9d781bff2"
+      ],
+      "notes": "الدفعة 3 من المصدر الضخم؛ أُبقي العنوان والتصنيف كما وردا في الملف المرسل."
+    }
+  ]
+}
