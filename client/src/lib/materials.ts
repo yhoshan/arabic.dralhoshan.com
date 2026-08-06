@@ -559,7 +559,12 @@ const BILINGUAL_DICTIONARY_IDS = new Set<string>([
   "507d3750745e9265",
 ]);
 
-const DYNAMIC_DIWANS: Material[] = diwanCatalog.materials.map((material) => ({
+/** استبعاد يدوي لسجل أوقاف غير شعري من كتالوج الدواوين الحي. */
+const EXCLUDED_DIWAN_IDS = new Set(["archive-20260411_20260411_1046"]);
+
+const DYNAMIC_DIWANS: Material[] = diwanCatalog.materials
+  .filter((material) => !EXCLUDED_DIWAN_IDS.has(material.id))
+  .map((material) => ({
   ...material,
   relativePath: material.sourceUrl,
   matchEvidence: {

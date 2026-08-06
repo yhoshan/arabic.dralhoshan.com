@@ -27479,28 +27479,6 @@
       }
     },
     {
-      "id": "archive-20260411_20260411_1046",
-      "title": "ديوان أوقاف الصوام بأشيقر النسخة الكاملة",
-      "author": "إبراهيم بن محمد السماعيل",
-      "source": "Internet Archive",
-      "relativePath": "20260411_20260411_1046",
-      "sourceUrl": "https://archive.org/details/20260411_20260411_1046",
-      "primaryCategory": "diwans",
-      "tags": [
-        "ديوان شعري"
-      ],
-      "matchEvidence": {
-        "strongSignals": [
-          "ديوان شعري",
-          "دليل البيانات الوصفية: العنوان يصرح بأن السجل ديوان"
-        ],
-        "supportingSignals": [
-          "أشيقر، ديوان أوقاف الصوام، الصيام، وثائق،"
-        ],
-        "explicitLanguageSource": true
-      }
-    },
-    {
       "id": "archive-dewan.aeam.ashora",
       "title": "ديوان أيام عاشوراء",
       "author": "أيام عاشوراء",
