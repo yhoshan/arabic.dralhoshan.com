@@ -19,6 +19,7 @@ import largeArchiveBatch01Json from "@/data/large-archive-batch-01-materials.jso
 import largeArchiveBatch02Json from "@/data/large-archive-batch-02-materials.json";
 import largeArchiveBatch03Json from "@/data/large-archive-batch-03-materials.json";
 import largeArchiveBatch04Json from "@/data/large-archive-batch-04-materials.json";
+import largeArchiveBatches05To09Json from "@/data/large-archive-batches-05-09-materials.json";
 
 export type MaterialCategory =
   | "all"
@@ -254,6 +255,8 @@ const largeArchiveBatch01Catalog = largeArchiveBatch01Json as unknown as Curated
 const largeArchiveBatch02Catalog = largeArchiveBatch02Json as unknown as CuratedMaterialCatalogPayload;
 const largeArchiveBatch03Catalog = largeArchiveBatch03Json as unknown as CuratedMaterialCatalogPayload;
 const largeArchiveBatch04Catalog = largeArchiveBatch04Json as unknown as CuratedMaterialCatalogPayload;
+const largeArchiveBatches05To09Catalog =
+  largeArchiveBatches05To09Json as unknown as CuratedMaterialCatalogPayload;
 const CURATED_DIWAN_SIGNAL = "سجل ديوان موثّق";
 const IMPORTED_DIWAN_SIGNAL = "سجل ديوان مستورد ومُصنّف";
 const CURATED_CURRICULUM_SIGNAL = "سجل منهج ومقرر منقّى";
@@ -877,9 +880,33 @@ const LARGE_ARCHIVE_BATCH_04_MATERIALS = largeArchiveBatch04Catalog.materials.fi
     !MATERIAL_TITLES_BEFORE_LARGE_ARCHIVE_BATCH_04.has(normalizeCatalogTitle(material.title)),
 );
 
-export const MATERIALS: Material[] = [
+const MATERIALS_BEFORE_LARGE_ARCHIVE_BATCHES_05_TO_09 = [
   ...MATERIALS_BEFORE_LARGE_ARCHIVE_BATCH_04,
   ...LARGE_ARCHIVE_BATCH_04_MATERIALS,
+];
+const MATERIAL_IDS_BEFORE_LARGE_ARCHIVE_BATCHES_05_TO_09 = new Set(
+  MATERIALS_BEFORE_LARGE_ARCHIVE_BATCHES_05_TO_09.map((material) => material.id),
+);
+const MATERIAL_URLS_BEFORE_LARGE_ARCHIVE_BATCHES_05_TO_09 = new Set(
+  MATERIALS_BEFORE_LARGE_ARCHIVE_BATCHES_05_TO_09.map((material) => material.sourceUrl).filter(Boolean),
+);
+const MATERIAL_TITLES_BEFORE_LARGE_ARCHIVE_BATCHES_05_TO_09 = new Set(
+  MATERIALS_BEFORE_LARGE_ARCHIVE_BATCHES_05_TO_09
+    .map((material) => normalizeCatalogTitle(material.title))
+    .filter(Boolean),
+);
+/** الدفعات المنقحة 05 إلى 09: لا تمر إلا إذا لم تطابق معرّفًا أو رابطًا أو عنوانًا مطبعًا حاضرًا. */
+const LARGE_ARCHIVE_BATCHES_05_TO_09_MATERIALS = largeArchiveBatches05To09Catalog.materials.filter(
+  (material) =>
+    !MATERIAL_IDS_BEFORE_LARGE_ARCHIVE_BATCHES_05_TO_09.has(material.id) &&
+    (!material.sourceUrl ||
+      !MATERIAL_URLS_BEFORE_LARGE_ARCHIVE_BATCHES_05_TO_09.has(material.sourceUrl)) &&
+    !MATERIAL_TITLES_BEFORE_LARGE_ARCHIVE_BATCHES_05_TO_09.has(normalizeCatalogTitle(material.title)),
+);
+
+export const MATERIALS: Material[] = [
+  ...MATERIALS_BEFORE_LARGE_ARCHIVE_BATCHES_05_TO_09,
+  ...LARGE_ARCHIVE_BATCHES_05_TO_09_MATERIALS,
 ];
 /** العدادات الحية للدواوين والمنظومات من كامل الكتالوج القابل للبحث. */
 export const DIWAN_COUNT = MATERIALS.filter(
