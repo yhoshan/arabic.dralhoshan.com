@@ -4,6 +4,7 @@
  * شريط فلاتر المناهج يستعير الهوية المرجعية نفسها ويظهر داخل نتائج «المناهج والمقررات» وحدها.
  * تبدأ واجهة المواد بعناوين تحوي «معلقة»؛ وتبقى مقدمتها خالية من الشارة والعبارة الزخرفيتين.
  * الهيدر السفلي يقتصر على المشاركة والتنبيهات والتوقيع؛ ويعرض مصادر المكنز الثابتة والقنوات الموثقة ضمن القائمة الحالية.
+ * أزرار الأقسام تحافظ على هندستها الحالية، وتضيف شارات عدد حية داخلية فقط بمحاذاة البداية المرئية للزر في RTL.
  */
 import { useEffect, useMemo, useState } from "react";
 import {
@@ -116,6 +117,14 @@ const STAT_CARDS: StatCard[] = [
     count: MATERIALS.filter((material) => matchesStatFilter(material, "diwans")).length,
   },
 ];
+
+/** عدادات حية لأزرار الأقسام؛ تستخدم مرشح الكتالوج نفسه الذي يحدد نتائج كل قسم. */
+const CATEGORY_BUTTON_COUNTS = Object.fromEntries(
+  (Object.keys(MATERIAL_CATEGORY_LABELS) as MaterialCategory[]).map((category) => [
+    category,
+    filterMaterials(MATERIALS, "", category, "all").length,
+  ]),
+) as Record<MaterialCategory, number>;
 
 const CURRICULUM_FILTER_LABELS: Record<
   CurriculumFilterKey,
@@ -552,6 +561,37 @@ export default function Home() {
             border-color: #ffffff;
             background: #ffffff;
             color: #075bc8;
+          }
+
+          .hero.hero--blue + .reference-search .filter-button__count {
+            display: inline-flex;
+            min-width: 1.78rem;
+            align-items: center;
+            justify-content: center;
+            padding: 0.18rem 0.35rem;
+            border: 1px solid currentColor;
+            border-radius: 5px;
+            background: rgba(255, 255, 255, 0.1);
+            color: inherit;
+            direction: ltr;
+            font-family: "Tajawal", "Noto Kufi Arabic", sans-serif;
+            font-size: 0.78em;
+            font-variant-numeric: tabular-nums;
+            font-weight: 700;
+            line-height: 1;
+            white-space: nowrap;
+          }
+
+          .hero.hero--blue + .reference-search .filter-button--active .filter-button__count {
+            background: rgba(7, 91, 200, 0.08);
+          }
+
+          @media (max-width: 639px) {
+            .hero.hero--blue + .reference-search .filter-button__count {
+              min-width: 1.62rem;
+              padding-inline: 0.28rem;
+              font-size: 0.74em;
+            }
           }
 
           .disclaimer-modal {
@@ -1011,10 +1051,20 @@ export default function Home() {
                     setStatFilter("all");
                   }}
                   aria-pressed={category === filter}
+                  aria-label={`${
+                    filter === "curricula"
+                      ? "المناهج والمقررات حول العالم"
+                      : MATERIAL_CATEGORY_LABELS[filter]
+                  }: ${displayCount(CATEGORY_BUTTON_COUNTS[filter])} مادة`}
                 >
-                  {filter === "curricula"
-                    ? "المناهج والمقررات حول العالم"
-                    : MATERIAL_CATEGORY_LABELS[filter]}
+                  <span>
+                    {filter === "curricula"
+                      ? "المناهج والمقررات حول العالم"
+                      : MATERIAL_CATEGORY_LABELS[filter]}
+                  </span>
+                  <span className="filter-button__count" aria-hidden="true">
+                    {displayCount(CATEGORY_BUTTON_COUNTS[filter])}
+                  </span>
                 </button>
               ))}
             </div>
