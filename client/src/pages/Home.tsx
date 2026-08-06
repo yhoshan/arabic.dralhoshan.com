@@ -1054,12 +1054,16 @@ export default function Home() {
                   aria-label={`${
                     filter === "curricula"
                       ? "المناهج والمقررات حول العالم"
+                      : filter === "academies"
+                        ? "المجامع والمراكز"
                       : MATERIAL_CATEGORY_LABELS[filter]
                   }: ${displayCount(CATEGORY_BUTTON_COUNTS[filter])} مادة`}
                 >
                   <span>
                     {filter === "curricula"
                       ? "المناهج والمقررات حول العالم"
+                      : filter === "academies"
+                        ? "المجامع والمراكز"
                       : MATERIAL_CATEGORY_LABELS[filter]}
                   </span>
                   <span className="filter-button__count" aria-hidden="true">
