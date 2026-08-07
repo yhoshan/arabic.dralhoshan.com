@@ -1,1 +1,15 @@
-[]
+{
+  "id": "arabic",
+  "name": "مكنز اللغة العربية وعلومها",
+  "source_file": "arabic-materials.pre-ddl-2026-07-21.json",
+  "records_path": "materials",
+  "fields": {
+    "id": "id",
+    "title": "title",
+    "url": "sourceUrl",
+    "author": "author",
+    "source": "source",
+    "category": "primaryCategory",
+    "tags": "tags"
+  }
+}
